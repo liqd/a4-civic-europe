@@ -3,14 +3,14 @@ from django.utils.translation import ugettext as _
 
 REACH_OUT_TITLE = _('Reach out – get feedback, '
                     'ideas and inspiration from '
-                    'the Advocate Europe online '
+                    'the Civic Europe online '
                     'Community!')
 REACH_OUT_HELP = _('What kind of advice, comments or '
                    'feedback would you like to receive '
                    'about your idea from others on the '
                    'platform? (max. 300 characters)')
 HOW_DID_YOU_HEAR_TITLE = _('How did you hear about '
-                           'Advocate Europe?')
+                           'Civic Europe?')
 HOW_DID_YOU_HEAR_CHOICES = (
     ('personal_contact', _('Personal contact')),
     ('websites', _('Website')),

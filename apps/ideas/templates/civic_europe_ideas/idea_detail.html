@@ -7,7 +7,7 @@
 {% block social_meta %}
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Advocate Europe | {{ idea.idea_title }}">
+    <meta name="twitter:title" content="Civic Europe | {{ idea.idea_title }}">
     <meta name="twitter:description" content="{{ idea.idea_pitch }}">
     {% if idea.idea_image %}
         <meta name="twitter:image" content="{% get_absolute_uri obj=idea.idea_image.url %}">
@@ -17,7 +17,7 @@
 
 
     <meta property="og:url" content="{{ request.build_absolute_uri }}">
-    <meta property="og:title" content="Advocate Europe | {{ idea.idea_title }}">
+    <meta property="og:title" content="Civic Europe | {{ idea.idea_title }}">
     <meta property="og:description" content="{{ idea.idea_pitch }}">
     {% if idea.idea_image %}
         <meta property="og:image" content="{% get_absolute_uri obj=idea.idea_image.url %}">

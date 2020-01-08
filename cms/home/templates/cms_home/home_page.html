@@ -4,8 +4,8 @@
 
 {% block social_meta %}
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Advocate Europe">
-    <meta name="twitter:description" content="Do you have an idea that can inspire Europe? The open idea challenge Advocate Europe is an opportunity for game-changers. We invite active citizens and transnational changemakers to share their non-profit project ideas with us.">
+    <meta name="twitter:title" content="Civic Europe">
+    <meta name="twitter:description" content="Do you have an idea that can inspire Europe? The open idea challenge Civic Europe is an opportunity for game-changers. We invite active citizens and transnational changemakers to share their non-profit project ideas with us.">
     {% if page.image_1 %}
         {% image page.image_1 width-770 as image %}
         <meta name="twitter:image" content="{% get_absolute_uri obj=image.url %}" />
@@ -14,8 +14,8 @@
     {% endif %}
 
     <meta property="og:url" content="{{ request.build_absolute_uri }}">
-    <meta property="og:title" content="Advocate Europe">
-    <meta property="og:description" content="Do you have an idea that can inspire Europe? The open idea challenge Advocate Europe is an opportunity for game-changers. We invite active citizens and transnational changemakers to share their non-profit project ideas with us.">
+    <meta property="og:title" content="Civic Europe">
+    <meta property="og:description" content="Do you have an idea that can inspire Europe? The open idea challenge Civic Europe is an opportunity for game-changers. We invite active citizens and transnational changemakers to share their non-profit project ideas with us.">
     {% if page.image_1 %}
         {% image page.image_1 original as image %}
         <meta property="og:image" content="{% get_absolute_uri obj=image.url %}" />

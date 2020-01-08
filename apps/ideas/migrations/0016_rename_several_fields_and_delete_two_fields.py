@@ -37,7 +37,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='idea',
             name='how_did_you_hear',
-            field=models.CharField(choices=[('personal_contact', 'Personal contact'), ('websites', 'Website'), ('facebook', 'Facebook'), ('twitter', 'Twitter'), ('newsletter', 'Newsletter'), ('other', 'Other')], max_length=255, verbose_name='How did you hear about Advocate Europe?'),
+            field=models.CharField(choices=[('personal_contact', 'Personal contact'), ('websites', 'Website'), ('facebook', 'Facebook'), ('twitter', 'Twitter'), ('newsletter', 'Newsletter'), ('other', 'Other')], max_length=255, verbose_name='How did you hear about Civic Europe?'),
         ),
         migrations.AlterField(
             model_name='idea',
@@ -112,7 +112,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='ideasketcharchived',
             name='how_did_you_hear',
-            field=models.CharField(choices=[('personal_contact', 'Personal contact'), ('websites', 'Website'), ('facebook', 'Facebook'), ('twitter', 'Twitter'), ('newsletter', 'Newsletter'), ('other', 'Other')], max_length=255, verbose_name='How did you hear about Advocate Europe?'),
+            field=models.CharField(choices=[('personal_contact', 'Personal contact'), ('websites', 'Website'), ('facebook', 'Facebook'), ('twitter', 'Twitter'), ('newsletter', 'Newsletter'), ('other', 'Other')], max_length=255, verbose_name='How did you hear about Civic Europe?'),
         ),
         migrations.AlterField(
             model_name='ideasketcharchived',

@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='proposal',
             name='network',
-            field=models.TextField(default='-', help_text='The Advocate Europe network includes all previous winning projects, jury members, the online community, the partner organisations Stiftung Mercator, MitOst e.V. and Liquid Democracy e.V. and the Advocate Europe team. Winning projects meet at least one time per year in network meetings. Tell us about your expectations. Think about your skills, resources, networks and partners when describing what you could offer and ‚what you would like to take away. (max. 800 characters)', max_length=800, verbose_name='How will you contribute to and benefit from the Advocate Europe network?'),
+            field=models.TextField(default='-', help_text='The Civic Europe network includes all previous winning projects, jury members, the online community, the partner organisations Stiftung Mercator, MitOst e.V. and Liquid Democracy e.V. and the Civic Europe team. Winning projects meet at least one time per year in network meetings. Tell us about your expectations. Think about your skills, resources, networks and partners when describing what you could offer and ‚what you would like to take away. (max. 800 characters)', max_length=800, verbose_name='How will you contribute to and benefit from the Civic Europe network?'),
             preserve_default=False,
         ),
         migrations.AddField(
@@ -77,7 +77,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='idea',
             name='reach_out',
-            field=models.TextField(blank=True, help_text='What kind of advice, comments or feedback would you like to receive about your idea from others on the platform? (max. 300 characters)', max_length=300, verbose_name='Reach out – get feedback, ideas and inspiration from the Advocate Europe online Community!'),
+            field=models.TextField(blank=True, help_text='What kind of advice, comments or feedback would you like to receive about your idea from others on the platform? (max. 300 characters)', max_length=300, verbose_name='Reach out – get feedback, ideas and inspiration from the Civic Europe online Community!'),
         ),
         migrations.AlterField(
             model_name='idea',
@@ -122,7 +122,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='ideasketcharchived',
             name='reach_out',
-            field=models.TextField(blank=True, help_text='What kind of advice, comments or feedback would you like to receive about your idea from others on the platform? (max. 300 characters)', max_length=300, verbose_name='Reach out – get feedback, ideas and inspiration from the Advocate Europe online Community!'),
+            field=models.TextField(blank=True, help_text='What kind of advice, comments or feedback would you like to receive about your idea from others on the platform? (max. 300 characters)', max_length=300, verbose_name='Reach out – get feedback, ideas and inspiration from the Civic Europe online Community!'),
         ),
         migrations.AlterField(
             model_name='ideasketcharchived',

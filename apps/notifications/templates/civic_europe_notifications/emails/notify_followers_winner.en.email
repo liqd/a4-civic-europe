@@ -10,7 +10,7 @@ The proposal "{{ idea.idea_title }}" is a winning idea.
 {% endblock %}
 
 {% block content %}
- The proposal "{{ idea.idea_title }}" is a winning idea of the Advocate Europe {{ site.name }}
+ The proposal "{{ idea.idea_title }}" is a winning idea of the Civic Europe {{ site.name }}
 {{ idea.module.name }}.
 {% endblock %}
 

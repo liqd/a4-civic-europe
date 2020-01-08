@@ -106,7 +106,7 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
     )
 
     get_newsletters = models.BooleanField(
-        verbose_name=_('Send me Advocate Europe news.'),
+        verbose_name=_('Send me Civic Europe news.'),
         default=False
     )
 

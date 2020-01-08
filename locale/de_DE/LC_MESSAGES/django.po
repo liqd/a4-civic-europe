@@ -928,7 +928,7 @@ msgstr ""
 
 #: apps/ideas/forms.py:30
 msgid ""
-"I hereby agree to the {}terms and conditions{} of the Advocate Europe idea "
+"I hereby agree to the {}terms and conditions{} of the Civic Europe idea "
 "challenge."
 msgstr ""
 
@@ -951,7 +951,7 @@ msgstr ""
 #: apps/ideas/forms.py:43
 msgid ""
 "Here you can insert the email addresses of up to 5 team members. They will "
-"receive an email inviting them to register on the Advocate Europe website. "
+"receive an email inviting them to register on the Civic Europe website. "
 "After registering they will appear with their user name on your idea page "
 "and will be able to edit your idea. "
 msgstr ""
@@ -1138,7 +1138,7 @@ msgstr ""
 
 #: apps/ideas/models/abstracts/community_section.py:4
 msgid ""
-"Reach out – get feedback, ideas and inspiration from the Advocate Europe "
+"Reach out – get feedback, ideas and inspiration from the Civic Europe "
 "online Community!"
 msgstr ""
 
@@ -1149,7 +1149,7 @@ msgid ""
 msgstr ""
 
 #: apps/ideas/models/abstracts/community_section.py:12
-msgid "How did you hear about Advocate Europe?"
+msgid "How did you hear about Civic Europe?"
 msgstr ""
 
 #: apps/ideas/models/abstracts/community_section.py:15
@@ -1181,12 +1181,12 @@ msgstr ""
 
 #: apps/ideas/models/abstracts/finances_duration_section.py:9
 #: apps/ideas/views.py:210
-msgid "Funding requested from Advocate Europe"
+msgid "Funding requested from Civic Europe"
 msgstr ""
 
 #: apps/ideas/models/abstracts/finances_duration_section.py:10
 msgid ""
-"Funding requested from Advocate Europe can range from 1 to 50,000 EUR. "
+"Funding requested from Civic Europe can range from 1 to 50,000 EUR. "
 "Depending on your planning, the amount entered here can be the same as the "
 "“total budget” figure entered above."
 msgstr ""
@@ -1210,7 +1210,7 @@ msgstr ""
 
 #: apps/ideas/models/abstracts/finances_duration_section.py:23
 msgid ""
-"This will not be published and will only be seen by the Advocate Europe team "
+"This will not be published and will only be seen by the Civic Europe team "
 "and the jury. Do you anticipate receiving funding for your activity or "
 "initiative from other sources (e.g. own contribution, other grants or "
 "financial aid)?"
@@ -1433,14 +1433,14 @@ msgstr ""
 
 #: apps/ideas/models/abstracts/network_section.py:4
 msgid ""
-"How will you contribute to and benefit from the Advocate Europe network?"
+"How will you contribute to and benefit from the Civic Europe network?"
 msgstr ""
 
 #: apps/ideas/models/abstracts/network_section.py:7
 msgid ""
-"The Advocate Europe network includes all previous winning projects, jury "
+"The Civic Europe network includes all previous winning projects, jury "
 "members, the online community, the partner organisations Stiftung Mercator, "
-"MitOst e.V. and Liquid Democracy e.V. and the Advocate Europe team. Winning "
+"MitOst e.V. and Liquid Democracy e.V. and the Civic Europe team. Winning "
 "projects meet at least one time per year in network meetings. Tell us about "
 "your expectations. Think about your skills, resources, networks and partners "
 "when describing what you could offer and what you would like to take away. "
@@ -1515,7 +1515,7 @@ msgstr ""
 
 #: apps/ideas/phases.py:14 apps/ideas/phases.py:46 apps/ideas/phases.py:85
 #: apps/ideas/phases.py:138
-msgid "Advocate Europe"
+msgid "Civic Europe"
 msgstr ""
 
 #: apps/ideas/phases.py:25
@@ -1804,7 +1804,7 @@ msgid "Who are you doing it for?"
 msgstr ""
 
 #: apps/ideas/views.py:206
-msgid "What do you need from the Advocate Europe community?"
+msgid "What do you need from the Civic Europe community?"
 msgstr ""
 
 #: apps/ideas/views.py:212
@@ -1812,7 +1812,7 @@ msgid "Total budget"
 msgstr ""
 
 #: apps/ideas/views.py:215
-msgid "Funding granted from Advocate Europe"
+msgid "Funding granted from Civic Europe"
 msgstr ""
 
 #: apps/ideas/views.py:267
@@ -2055,7 +2055,7 @@ msgid "my own ideas and ideas that I'm watching"
 msgstr ""
 
 #: apps/users/models.py:109
-msgid "Send me Advocate Europe news."
+msgid "Send me Civic Europe news."
 msgstr ""
 
 #: apps/users/templates/civic_europe_users/base_accounts_settings_form.html:9
@@ -2326,7 +2326,7 @@ msgstr ""
 
 #: civic_europe/templates/500.html:32
 #: civic_europe/templates/base_errors.html:18
-msgid "Back to Advocate Europe"
+msgid "Back to Civic Europe"
 msgstr ""
 
 #: civic_europe/templates/account/account_inactive.html:5
@@ -2393,7 +2393,7 @@ msgstr ""
 
 #: civic_europe/templates/account/email_confirm.html:14
 #: civic_europe/templates/account/email_confirm.html:26
-msgid "Welcome to Advocate Europe!"
+msgid "Welcome to Civic Europe!"
 msgstr ""
 
 #: civic_europe/templates/account/email_confirm.html:15
@@ -2512,7 +2512,7 @@ msgstr ""
 #: civic_europe/templates/account/password_set.html:16
 msgid ""
 "You logged in with a social account. If you want to be able to also login "
-"with email and password, you can set a password for your advocate europe "
+"with email and password, you can set a password for your Civic Europe "
 "account here."
 msgstr ""
 

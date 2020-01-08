@@ -15,6 +15,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='user',
             name='get_newsletters',
-            field=models.BooleanField(default=False, verbose_name='Send me Advocate Europe news.'),
+            field=models.BooleanField(default=False, verbose_name='Send me Civic Europe news.'),
         ),
     ]

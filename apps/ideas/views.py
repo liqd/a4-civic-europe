@@ -203,16 +203,16 @@ class IdeaDetailView(generic.DetailView):
                                 self.object.proposal.major_expenses))
 
         if self.object.reach_out:
-            idea_list_2.append((_('What do you need from the Advocate Europe '
+            idea_list_2.append((_('What do you need from the Civic Europe '
                                 'community?'), self.object.reach_out))
 
         if hasattr(self.object, 'proposal') and self.object.proposal:
-            budget_list.append((_('Funding requested from Advocate Europe'),
+            budget_list.append((_('Funding requested from Civic Europe'),
                                 self.object.proposal.budget_requested))
             budget_list.append((_('Total budget'),
                                 self.object.proposal.total_budget))
             if self.object.budget_granted:
-                budget_list.append((_('Funding granted from Advocate Europe'),
+                budget_list.append((_('Funding granted from Civic Europe'),
                                     self.object.proposal.budget_granted))
 
         partner_list = []

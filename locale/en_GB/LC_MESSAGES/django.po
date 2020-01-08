@@ -909,10 +909,10 @@ msgstr ""
 
 #: apps/ideas/forms.py:30
 msgid ""
-"I hereby agree to the {}terms and conditions{} of the Advocate Europe idea "
+"I hereby agree to the {}terms and conditions{} of the Civic Europe idea "
 "challenge."
 msgstr ""
-"I hereby agree to the {}terms and conditions{} of the Advocate Europe idea "
+"I hereby agree to the {}terms and conditions{} of the Civic Europe idea "
 "challenge."
 
 #: apps/ideas/forms.py:33
@@ -938,12 +938,12 @@ msgstr "Please add your team members here."
 #: apps/ideas/forms.py:43
 msgid ""
 "Here you can insert the email addresses of up to 5 team members. They will "
-"receive an email inviting them to register on the Advocate Europe website. "
+"receive an email inviting them to register on the Civic Europe website. "
 "After registering they will appear with their user name on your idea page "
 "and will be able to edit your idea. "
 msgstr ""
 "Here you can insert the email addresses of up to 5 team members. They will "
-"receive an email inviting them to register on the Advocate Europe website. "
+"receive an email inviting them to register on the Civic Europe website. "
 "After registering they will appear with their user name on your idea page "
 "and will be able to edit your idea. "
 
@@ -1148,10 +1148,10 @@ msgstr "Organisation email"
 
 #: apps/ideas/models/abstracts/community_section.py:4
 msgid ""
-"Reach out – get feedback, ideas and inspiration from the Advocate Europe "
+"Reach out – get feedback, ideas and inspiration from the Civic Europe "
 "online Community!"
 msgstr ""
-"Reach out – get feedback, ideas and inspiration from the Advocate Europe "
+"Reach out – get feedback, ideas and inspiration from the Civic Europe "
 "online Community!"
 
 #: apps/ideas/models/abstracts/community_section.py:8
@@ -1163,8 +1163,8 @@ msgstr ""
 "your idea from others on the platform? (max. 300 characters)"
 
 #: apps/ideas/models/abstracts/community_section.py:12
-msgid "How did you hear about Advocate Europe?"
-msgstr "How did you hear about Advocate Europe?"
+msgid "How did you hear about Civic Europe?"
+msgstr "How did you hear about Civic Europe?"
 
 #: apps/ideas/models/abstracts/community_section.py:15
 msgid "Personal contact"
@@ -1198,16 +1198,16 @@ msgstr ""
 
 #: apps/ideas/models/abstracts/finances_duration_section.py:9
 #: apps/ideas/views.py:210
-msgid "Funding requested from Advocate Europe"
-msgstr "Funding requested from Advocate Europe"
+msgid "Funding requested from Civic Europe"
+msgstr "Funding requested from Civic Europe"
 
 #: apps/ideas/models/abstracts/finances_duration_section.py:10
 msgid ""
-"Funding requested from Advocate Europe can range from 1 to 50,000 EUR. "
+"Funding requested from Civic Europe can range from 1 to 50,000 EUR. "
 "Depending on your planning, the amount entered here can be the same as the "
 "“total budget” figure entered above."
 msgstr ""
-"Funding requested from Advocate Europe can range from 1 to 50,000 EUR. "
+"Funding requested from Civic Europe can range from 1 to 50,000 EUR. "
 "Depending on your planning, the amount entered here can be the same as the "
 "“total budget” figure entered above."
 
@@ -1234,12 +1234,12 @@ msgstr "Other sources of income"
 
 #: apps/ideas/models/abstracts/finances_duration_section.py:23
 msgid ""
-"This will not be published and will only be seen by the Advocate Europe team "
+"This will not be published and will only be seen by the Civic Europe team "
 "and the jury. Do you anticipate receiving funding for your activity or "
 "initiative from other sources (e.g. own contribution, other grants or "
 "financial aid)?"
 msgstr ""
-"This will not be published and will only be seen by the Advocate Europe team "
+"This will not be published and will only be seen by the Civic Europe team "
 "and the jury. Do you anticipate receiving funding for your activity or "
 "initiative from other sources (e.g. own contribution, other grants or "
 "financial aid)?"
@@ -1496,23 +1496,23 @@ msgstr ""
 
 #: apps/ideas/models/abstracts/network_section.py:4
 msgid ""
-"How will you contribute to and benefit from the Advocate Europe network?"
+"How will you contribute to and benefit from the Civic Europe network?"
 msgstr ""
-"How will you contribute to and benefit from the Advocate Europe network?"
+"How will you contribute to and benefit from the Civic Europe network?"
 
 #: apps/ideas/models/abstracts/network_section.py:7
 msgid ""
-"The Advocate Europe network includes all previous winning projects, jury "
+"The Civic Europe network includes all previous winning projects, jury "
 "members, the online community, the partner organisations Stiftung Mercator, "
-"MitOst e.V. and Liquid Democracy e.V. and the Advocate Europe team. Winning "
+"MitOst e.V. and Liquid Democracy e.V. and the Civic Europe team. Winning "
 "projects meet at least one time per year in network meetings. Tell us about "
 "your expectations. Think about your skills, resources, networks and partners "
 "when describing what you could offer and what you would like to take away. "
 "(max. 800 characters)"
 msgstr ""
-"The Advocate Europe network includes all previous winning projects, jury "
+"The Civic Europe network includes all previous winning projects, jury "
 "members, the online community, the partner organisations Stiftung Mercator, "
-"MitOst e.V. and Liquid Democracy e.V. and the Advocate Europe team. Winning "
+"MitOst e.V. and Liquid Democracy e.V. and the Civic Europe team. Winning "
 "projects meet at least one time per year in network meetings. Tell us about "
 "your expectations. Think about your skills, resources, networks and partners "
 "when describing what you could offer and what you would like to take away. "
@@ -1599,8 +1599,8 @@ msgstr ""
 
 #: apps/ideas/phases.py:14 apps/ideas/phases.py:46 apps/ideas/phases.py:85
 #: apps/ideas/phases.py:138
-msgid "Advocate Europe"
-msgstr "Advocate Europe"
+msgid "Civic Europe"
+msgstr "Civic Europe"
 
 #: apps/ideas/phases.py:25
 msgid "Pre call phase"
@@ -1896,16 +1896,16 @@ msgid "Who are you doing it for?"
 msgstr "Who are you doing it for?"
 
 #: apps/ideas/views.py:206
-msgid "What do you need from the Advocate Europe community?"
-msgstr "What do you need from the Advocate Europe community?"
+msgid "What do you need from the Civic Europe community?"
+msgstr "What do you need from the Civic Europe community?"
 
 #: apps/ideas/views.py:212
 msgid "Total budget"
 msgstr "Total budget"
 
 #: apps/ideas/views.py:215
-msgid "Funding granted from Advocate Europe"
-msgstr "Funding granted from Advocate Europe"
+msgid "Funding granted from Civic Europe"
+msgstr "Funding granted from Civic Europe"
 
 #: apps/ideas/views.py:267
 msgid "Submit your idea!"
@@ -2162,8 +2162,8 @@ msgid "my own ideas and ideas that I'm watching"
 msgstr "my own ideas and ideas that I'm watching"
 
 #: apps/users/models.py:109
-msgid "Send me Advocate Europe news."
-msgstr "Send me Advocate Europe news."
+msgid "Send me Civic Europe news."
+msgstr "Send me Civic Europe news."
 
 #: apps/users/templates/civic_europe_users/base_accounts_settings_form.html:9
 msgid "Account settings"
@@ -2475,8 +2475,8 @@ msgstr "Internal server error."
 
 #: civic_europe/templates/500.html:32
 #: civic_europe/templates/base_errors.html:18
-msgid "Back to Advocate Europe"
-msgstr "Back to Advocate Europe"
+msgid "Back to Civic Europe"
+msgstr "Back to Civic Europe"
 
 #: civic_europe/templates/account/account_inactive.html:5
 #: civic_europe/templates/account/account_inactive.html:9
@@ -2542,8 +2542,8 @@ msgstr "Activate your account"
 
 #: civic_europe/templates/account/email_confirm.html:14
 #: civic_europe/templates/account/email_confirm.html:26
-msgid "Welcome to Advocate Europe!"
-msgstr "Welcome to Advocate Europe!"
+msgid "Welcome to Civic Europe!"
+msgstr "Welcome to Civic Europe!"
 
 #: civic_europe/templates/account/email_confirm.html:15
 #, python-format
@@ -2672,11 +2672,11 @@ msgstr "set password"
 #: civic_europe/templates/account/password_set.html:16
 msgid ""
 "You logged in with a social account. If you want to be able to also login "
-"with email and password, you can set a password for your advocate europe "
+"with email and password, you can set a password for your Civic Europe "
 "account here."
 msgstr ""
 "You logged in with a social account. If you want to be able to also login "
-"with email and password, you can set a password for your advocate europe "
+"with email and password, you can set a password for your Civic Europe "
 "account here."
 
 #: civic_europe/templates/account/signup.html:5

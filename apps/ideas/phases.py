@@ -11,7 +11,7 @@ class IdeaPhase(phases.PhaseContent):
     weight = 10
     view = None
 
-    module_name = _('Advocate Europe')
+    module_name = _('Civic Europe')
 
     def get_phase_filters(self, active_project_pk):
         if 'project' in self.default_filters:
@@ -43,7 +43,7 @@ class IdeaSketchPhase(IdeaPhase):
     description = _(
         'issue and edit idea sketches, but also collect some early feedback'
     )
-    module_name = _('Advocate Europe')
+    module_name = _('Civic Europe')
 
     features = {
         'crud': (models.IdeaSketch,),
@@ -82,7 +82,7 @@ class CommunityAwardRatingPhase(IdeaPhase):
 
     name = _('Community award rating')
     description = _('submit your rating for the community award')
-    module_name = _('Advocate Europe')
+    module_name = _('Civic Europe')
 
     features = {
         'rate': (models.Idea,),
@@ -135,7 +135,7 @@ class FullProposalPhase(IdeaPhase):
 
     name = _('Full proposal phase')
     description = _('extend idea sketches to a full proposals')
-    module_name = _('Advocate Europe')
+    module_name = _('Civic Europe')
 
     features = {
         'crud': (models.Idea, models.Proposal,),

@@ -6,8 +6,8 @@ TOTAL_BUDGET_HELP = _('Please indicate your overall budget. '
                       'The total budget may (but does not have to) '
                       'include the applicant’s own contribution and/or '
                       'external sources of funding.')
-BUDGET_REQUESTED_TITLE = _('Funding requested from Advocate Europe')
-BUDGET_REQUESTED_HELP = _('Funding requested from Advocate Europe can '
+BUDGET_REQUESTED_TITLE = _('Funding requested from Civic Europe')
+BUDGET_REQUESTED_HELP = _('Funding requested from Civic Europe can '
                           'range from 1 to 50,000 EUR. Depending on your '
                           'planning, the amount entered here can '
                           'be the same as the “total budget” '
@@ -21,7 +21,7 @@ MAJOR_EXPENSES_HELP = _('Which are the major expenses you foresee '
                         'public relations 2000 EUR, personnel costs etc.)')
 OTHER_SOURCES_TITLE = _('Other sources of income')
 OTHER_SOURCES_HELP = _('This will not be published and will only be seen'
-                       ' by the Advocate Europe team and the jury. '
+                       ' by the Civic Europe team and the jury. '
                        'Do you anticipate receiving funding for your activity '
                        'or initiative from other sources '
                        '(e.g. own contribution, other grants '

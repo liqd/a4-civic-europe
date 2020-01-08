@@ -1,6 +1,6 @@
-#  Platform for the idea challenge Advocate Europe
+#  Platform for the idea challenge Civic Europe
 
-Advocate Europe is a platform for an idea challenge. It is
+Civic Europe is a platform for an idea challenge. It is
 based on [adhocracy 4](https://github.com/liqd/adhocracy4).
 
 ## Requirements

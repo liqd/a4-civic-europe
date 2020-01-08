@@ -1,4 +1,4 @@
-# Phase Types for Advocate Europe
+# Phase Types for Civic Europe
 
 This document explains, which phase types exist and are implemented for a project (one idea challenge).
 

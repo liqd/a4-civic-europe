@@ -65,7 +65,7 @@ class NotificationsForm(forms.ModelForm):
             Fieldset(
                 _('Newsletter & Notifications'),
                 Div(
-                    HTML("<p>I want to receive Advocate Europe news</p>"),
+                    HTML("<p>I want to receive Civic Europe news</p>"),
                     Field('get_newsletters'),
                     css_class='notification-settings'
                 ),
