@@ -1,5 +1,5 @@
 """
-Django settings for a4-advocate-europe project.
+Django settings for a4-civic-europe project.
 
 """
 import os

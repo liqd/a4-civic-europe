@@ -1,5 +1,5 @@
 """
-WSGI config for a4-advocate-europe project.
+WSGI config for a4-civic-europe project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

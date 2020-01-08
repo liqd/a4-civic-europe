@@ -6,7 +6,7 @@ all: help
 
 .PHONY: help
 help:
-	@echo advocate-europe development tools
+	@echo civic-europe development tools
 	@echo
 	@echo It will either use a exisiting virtualenv if it was entered
 	@echo before or create a new one in the same directory.

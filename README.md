@@ -13,11 +13,11 @@ based on [adhocracy 4](https://github.com/liqd/adhocracy4).
 
 ## Installation
 
-    git clone https://github.com/liqd/a4-advocate-europe.git
-    cd a4-advocate-europe
+    git clone https://github.com/liqd/a4-civic-europe.git
+    cd a4-civic-europe
     make install
     make fixtures
     make watch
 
 
-[![Coverage Status](https://coveralls.io/repos/github/liqd/a4-advocate-europe/badge.svg?branch=master)](https://coveralls.io/github/liqd/a4-advocate-europe?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/liqd/a4-civic-europe/badge.svg?branch=master)](https://coveralls.io/github/liqd/a4-civic-europe?branch=master)
