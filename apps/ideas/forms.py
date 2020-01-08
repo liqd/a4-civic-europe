@@ -280,21 +280,6 @@ class CommunitySectionForm(CoWorkersEmailsFormMixin, BaseForm):
     confirm_idea_challenge_camp = forms.BooleanField(
         label=CONFIRM_IDEA_CHALLENGE_CAMP_WITHOUT_DATE)
 
-    def __init__(self, *args, **kwargs):
-        self.display_idea_challenge_camp_section = \
-            kwargs.pop('display_idea_challenge_camp_checkbox')
-        super().__init__(*args, **kwargs)
-        self.fields['accept_conditions'].label = helpers.add_link_to_helptext(
-            self.fields['accept_conditions'].label, "terms_of_use_page",
-            ACCEPT_CONDITIONS_LABEL)
-        settings = helpers.get_idea_challenge_camp_settings()
-        if settings.start_date and settings.end_date:
-            self.fields['confirm_idea_challenge_camp'].label = \
-                CONFIRM_IDEA_CHALLENGE_CAMP_WITH_DATE.format(
-                    settings.start_date, settings.end_date)
-        if not self.display_idea_challenge_camp_section:
-            del self.fields['confirm_idea_challenge_camp']
-
     class Meta:
         model = AbstractCommunitySection
         fields = [
