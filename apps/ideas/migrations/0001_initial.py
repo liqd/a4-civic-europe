@@ -127,7 +127,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='IdeaSketch',
             fields=[
-                ('idea_ptr', models.OneToOneField(auto_created=True, primary_key=True, parent_link=True, serialize=False, to='advocate_europe_ideas.Idea', on_delete=models.CASCADE)),
+                ('idea_ptr', models.OneToOneField(auto_created=True, primary_key=True, parent_link=True, serialize=False, to='civic_europe_ideas.Idea', on_delete=models.CASCADE)),
                 ('collaboration_camp_option', models.CharField(help_text='Choose one of the following options. More information about the two tracks is available here: (Link).', choices=[('single_track', 'Single track'), ('partner_track', 'Partner track'), ('not_sure', "I'm not sure yet")], max_length=255)),
                 ('collaboration_camp_represent', models.TextField(help_text='(Specify one person only. (max 150 characters))', verbose_name='Who will represent your idea at the Collaboration Camp and why?', max_length=150)),
                 ('collaboration_camp_email', models.EmailField(verbose_name='Email address for contacting your representative on the collaboration camp.', max_length=254)),
@@ -137,12 +137,12 @@ class Migration(migrations.Migration):
                 'abstract': False,
                 'ordering': ['-created'],
             },
-            bases=('advocate_europe_ideas.idea', models.Model),
+            bases=('civic_europe_ideas.idea', models.Model),
         ),
         migrations.CreateModel(
             name='Proposal',
             fields=[
-                ('idea_ptr', models.OneToOneField(auto_created=True, primary_key=True, parent_link=True, serialize=False, to='advocate_europe_ideas.Idea', on_delete=models.CASCADE)),
+                ('idea_ptr', models.OneToOneField(auto_created=True, primary_key=True, parent_link=True, serialize=False, to='civic_europe_ideas.Idea', on_delete=models.CASCADE)),
                 ('total_budget', models.IntegerField(help_text='Please indicate your overall budget. The total budget may (but does not have to) include the applicant’s own contribution and/or external sources of funding.', verbose_name='Total Budget')),
                 ('budget_requested', models.IntegerField(help_text='Funding requested from Advocate Europe can range from 1 to 50,000 EUR. Depending on your planning, the amount entered here can be the same as the “total budget” figure entered above.', verbose_name='Funding requested from Advocate Europe')),
                 ('major_expenses', models.TextField(help_text='Which are the major expenses you foresee for the implementation of your idea? Please share a rough estimate by cost category (e.g. office expenses 1000 EUR, travel and accommodation costs 3000 EUR, public relations 2000 EUR, personnel costs etc.)', verbose_name='Major expenses', max_length=500)),
@@ -158,12 +158,12 @@ class Migration(migrations.Migration):
                 'abstract': False,
                 'ordering': ['-created'],
             },
-            bases=('advocate_europe_ideas.idea', models.Model),
+            bases=('civic_europe_ideas.idea', models.Model),
         ),
         migrations.AddField(
             model_name='ideasketcharchived',
             name='idea',
-            field=models.OneToOneField(to='advocate_europe_ideas.Idea', on_delete=models.CASCADE),
+            field=models.OneToOneField(to='civic_europe_ideas.Idea', on_delete=models.CASCADE),
         ),
         migrations.AddField(
             model_name='idea',

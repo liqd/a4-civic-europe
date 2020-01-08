@@ -19,7 +19,7 @@
                     {% endif %}
                 </div>
             </div>
-            {% has_perm 'advocate_europe_ideas.may_rate_idea' request.user idea as may_rate_idea %}
+            {% has_perm 'civic_europe_ideas.may_rate_idea' request.user idea as may_rate_idea %}
             {% if may_rate_idea and view.display_type == 'idea' %}
             <div class="col-md-3 col-sm-4 hidden-xs ideadetailheader-right">
                 {% react_supports idea False %}

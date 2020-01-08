@@ -8,7 +8,7 @@ from tests.helpers import active_phase, intercept_emails
 @pytest.mark.django_db
 def test_extra_object_tools(client, admin, module):
     client.force_login(admin)
-    changelist_url = reverse('admin:advocate_europe_ideas_idea_changelist')
+    changelist_url = reverse('admin:civic_europe_ideas_idea_changelist')
 
     response = client.get(changelist_url)
     object_tools = response.context_data['cl']\
@@ -44,7 +44,7 @@ def test_notify_shortlist(
 
     # notify shortlist followers
     notifyshortlist_url = reverse(
-        'admin:advocate_europe_ideas_idea_notify_shortlist'
+        'admin:civic_europe_ideas_idea_notify_shortlist'
     )
     with active_phase(module, InterimShortlistPublicationPhase):
         response = client.get(notifyshortlist_url)
@@ -95,7 +95,7 @@ def test_notify_winners(
 
     # notify winner followers
     notifywinners_url = reverse(
-        'admin:advocate_europe_ideas_idea_notify_winners'
+        'admin:civic_europe_ideas_idea_notify_winners'
     )
 
     with active_phase(module, InterimShortlistPublicationPhase):

@@ -36,19 +36,19 @@
     <div class="ideadetail">
         <div class="container">
 
-            {% include 'advocate_europe_ideas/includes/idea_detail_header.html' %}
+            {% include 'civic_europe_ideas/includes/idea_detail_header.html' %}
 
             <div class="row hidden-lg hidden-md hidden-sm ideadetail-xs-support">
                 <ul class="nav">
                     {% if view.display_type == 'idea' %}
                     <li class="nav-idea nav-support">
-                        {% has_perm 'advocate_europe_ideas.may_rate_idea' request.user idea as may_rate_idea %}
+                        {% has_perm 'civic_europe_ideas.may_rate_idea' request.user idea as may_rate_idea %}
                         {% if may_rate_idea and view.display_type == 'idea' %}
                         {% react_supports idea True %}
                         {% endif %}
                     </li>
                     {% endif %}
-                    {% include 'advocate_europe_ideas/includes/idea_detail_watch_btns.html' with xs_class="" spacing="<br>" %}
+                    {% include 'civic_europe_ideas/includes/idea_detail_watch_btns.html' with xs_class="" spacing="<br>" %}
                 </ul>
             </div>
 
@@ -69,20 +69,20 @@
                         </li>
                     {% endif %}
 
-                    {% include 'advocate_europe_ideas/includes/idea_detail_watch_btns.html' with xs_class="hidden-xs" %}
+                    {% include 'civic_europe_ideas/includes/idea_detail_watch_btns.html' with xs_class="hidden-xs" %}
                 </ul>
             </div>
 
             <div class="row tab-content ideadetail-content">
                 <div role="tabpanel" class="col-md-offset-1 col-md-7 col-sm-8 col-xs-12 tab-pane" id="info">
-                    {% include 'advocate_europe_ideas/includes/idea_detail_tab_info.html' %}
+                    {% include 'civic_europe_ideas/includes/idea_detail_tab_info.html' %}
                 </div>
                 <div role="tabpanel" class="col-md-offset-1 col-md-7 col-sm-8 col-xs-12 tab-pane  {% if not idea.proposal or not idea.is_winner or idea.journeyentry_set.all.count == 0 %} active {% endif %}" id="idea">
-                    {% include 'advocate_europe_ideas/includes/idea_detail_tab_idea.html' %}
+                    {% include 'civic_europe_ideas/includes/idea_detail_tab_idea.html' %}
                 </div>
                 {% if idea.is_winner %}
                     <div role="tabpanel" class="col-md-offset-1 col-md-7 col-sm-8 col-xs-12 tab-pane {% if idea.proposal and idea.is_winner and idea.journeyentry_set.all.count > 0 %} active {% endif %}" id="journey">
-                        {% include 'advocate_europe_ideas/includes/idea_detail_tab_journey.html' %}
+                        {% include 'civic_europe_ideas/includes/idea_detail_tab_journey.html' %}
                     </div>
                 {% endif %}
 

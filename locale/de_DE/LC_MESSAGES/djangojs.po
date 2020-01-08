@@ -317,7 +317,7 @@ msgstr ""
 msgid "Watch"
 msgstr ""
 
-#: apps/ideas/static/advocate_europe_ideas/SupportButton.jsx:80
-#: apps/ideas/static/advocate_europe_ideas/SupportButton.jsx:93
+#: apps/ideas/static/civic_europe_ideas/SupportButton.jsx:80
+#: apps/ideas/static/civic_europe_ideas/SupportButton.jsx:93
 msgid "Support"
 msgstr ""

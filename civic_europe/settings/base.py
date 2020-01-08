@@ -107,7 +107,7 @@ MIDDLEWARE = [
 
 SITE_ID = 1
 
-ROOT_URLCONF = 'advocate_europe.urls'
+ROOT_URLCONF = 'civic_europe.urls'
 
 LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
 
@@ -130,7 +130,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'advocate_europe.wsgi.application'
+WSGI_APPLICATION = 'civic_europe.wsgi.application'
 
 
 # Database
@@ -311,7 +311,7 @@ MEDIA_URL = '/media/'
 # Wagtail settings
 
 
-WAGTAIL_SITE_NAME = "advocate_europe"
+WAGTAIL_SITE_NAME = "civic_europe"
 WAGTAILIMAGES_IMAGE_MODEL = 'cms_images.CustomImage'
 
 
@@ -336,7 +336,7 @@ ACCOUNT_LOGIN_ON_PASSWORD_RESET = True
 SOCIALACCOUNT_EMAIL_VERIFICATION = False
 
 
-AUTH_USER_MODEL = 'advocate_europe_users.User'
+AUTH_USER_MODEL = 'civic_europe_users.User'
 # Rest framework
 
 REST_FRAMEWORK = {
@@ -349,13 +349,13 @@ REST_FRAMEWORK = {
 A4_ORGANISATIONS_MODEL = "a4organisations.Organisation"
 
 A4_COMMENTABLES = (
-    ('advocate_europe_ideas', 'idea'),
+    ('civic_europe_ideas', 'idea'),
     ('a4comments', 'comment'),
 )
 
 A4_RATEABLES = (
     ('a4comments', 'comment'),
-    ('advocate_europe_ideas', 'idea')
+    ('civic_europe_ideas', 'idea')
 )
 
 A4_REPORTABLES = (
@@ -363,12 +363,12 @@ A4_REPORTABLES = (
 )
 
 A4_ACTIONABLES = (
-    ('advocate_europe_ideas', 'ideasketch'),
-    ('advocate_europe_ideas', 'proposal'),
+    ('civic_europe_ideas', 'ideasketch'),
+    ('civic_europe_ideas', 'proposal'),
     ('a4comments', 'comment'),
     ('cms_blog', 'blogpage'),
-    ('advocate_europe_journeys', 'journeyentry'),
-    ('advocate_europe_ideas', 'ideafollow')
+    ('civic_europe_journeys', 'journeyentry'),
+    ('civic_europe_ideas', 'ideafollow')
 )
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'

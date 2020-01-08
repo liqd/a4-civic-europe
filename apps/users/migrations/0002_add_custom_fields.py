@@ -9,7 +9,7 @@ import adhocracy4.images.fields
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('advocate_europe_users', '0001_initial'),
+        ('civic_europe_users', '0001_initial'),
     ]
 
     operations = [

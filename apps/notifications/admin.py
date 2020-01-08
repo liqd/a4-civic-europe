@@ -18,7 +18,7 @@ class NotifyMixin:
 
     # Required to have the extra_list_object_tools working
     change_list_template = (
-        'admin/advocate_europe_notifications/object_tools_change_list.html'
+        'admin/civic_europe_notifications/object_tools_change_list.html'
     )
 
     @property
@@ -50,12 +50,12 @@ class NotifyMixin:
             url(
                 r'^notify/shortlist$',
                 self.admin_site.admin_view(self.notify_shortlist),
-                name='advocate_europe_ideas_idea_notify_shortlist',
+                name='civic_europe_ideas_idea_notify_shortlist',
             ),
             url(
                 r'^notify/winners$',
                 self.admin_site.admin_view(self.notify_winners),
-                name='advocate_europe_ideas_idea_notify_winners',
+                name='civic_europe_ideas_idea_notify_winners',
             ),
         ] + super().get_urls()
 

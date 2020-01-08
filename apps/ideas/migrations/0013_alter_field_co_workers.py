@@ -9,7 +9,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('advocate_europe_ideas', '0012_rename_collaborators_to_co_workers'),
+        ('civic_europe_ideas', '0012_rename_collaborators_to_co_workers'),
     ]
 
     operations = [

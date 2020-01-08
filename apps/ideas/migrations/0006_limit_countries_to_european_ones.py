@@ -10,7 +10,7 @@ import django_countries.fields
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('advocate_europe_ideas', '0005_increase_length_of_url_fields'),
+        ('civic_europe_ideas', '0005_increase_length_of_url_fields'),
     ]
 
     operations = [

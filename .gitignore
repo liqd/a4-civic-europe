@@ -41,10 +41,10 @@ npm-debug.log*
 db.sqlite3*
 
 # Local instance specific settings
-/advocate_europe/settings/local.py
+/civic_europe/settings/local.py
 
 # Generated static files
-/advocate_europe/static
+/civic_europe/static
 static/
 
 # Media

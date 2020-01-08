@@ -9,7 +9,7 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('advocate_europe_ideas', '0001_initial'),
+        ('civic_europe_ideas', '0001_initial'),
     ]
 
     operations = [
@@ -46,7 +46,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='ideasketcharchived',
             name='idea',
-            field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='idea_sketch_archived', to='advocate_europe_ideas.Idea'),
+            field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='idea_sketch_archived', to='civic_europe_ideas.Idea'),
         ),
         migrations.AlterField(
             model_name='ideasketcharchived',

@@ -7,7 +7,7 @@ from django.db import migrations, transaction
 
 
 def copy_images(apps, schema_editor):
-    IdeaSketchArchived = apps.get_model('advocate_europe_ideas', 'IdeaSketchArchived')
+    IdeaSketchArchived = apps.get_model('civic_europe_ideas', 'IdeaSketchArchived')
     for archive in IdeaSketchArchived.objects.all():
         idea = archive.idea
         if idea.idea_image:
@@ -22,7 +22,7 @@ def copy_images(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('advocate_europe_ideas', '0021_typo_and_longer_field'),
+        ('civic_europe_ideas', '0021_typo_and_longer_field'),
     ]
 
     operations = [

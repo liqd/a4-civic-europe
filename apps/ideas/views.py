@@ -39,7 +39,7 @@ class IdeaExportView(PermissionRequiredMixin,
                      filter_views.FilteredListView,
                      ):
 
-    permission_required = 'advocate_europe_ideas.export_idea'
+    permission_required = 'civic_europe_ideas.export_idea'
     model = Idea
     filter_set = filters.IdeaFilterSet
     exclude = ['module', 'item_ptr', 'slug', 'idea_ptr',
@@ -93,7 +93,7 @@ class IdeaSketchCreateWizard(PermissionRequiredMixin,
                              mixins.ModuleMixin,
                              wizard_mixins.CustomWizardMixin,
                              SessionWizardView):
-    permission_required = 'advocate_europe_ideas.add_ideasketch'
+    permission_required = 'civic_europe_ideas.add_ideasketch'
     file_storage = FileSystemStorage(
         location=os.path.join(settings.MEDIA_ROOT, 'idea_sketch_images'))
     title = _('Idea Sketch')
@@ -150,9 +150,9 @@ class IdeaSketchEditView(
     SuccessMessageMixin,
     generic.UpdateView
 ):
-    permission_required = 'advocate_europe_ideas.change_idea'
+    permission_required = 'civic_europe_ideas.change_idea'
     model = IdeaSketch
-    template_name = 'advocate_europe_ideas/idea_update_form.html'
+    template_name = 'civic_europe_ideas/idea_update_form.html'
     success_message = _('Idea Sketch saved')
     next_view = 'idea-sketch-update-form'
     title = _('Update Idea Sketch')
@@ -246,7 +246,7 @@ class IdeaDetailView(generic.DetailView):
 class IdeaSketchArchivedDetailView(IdeaDetailView):
     display_type = 'idea_sketch_archive'
     model = IdeaSketchArchived
-    template_name = 'advocate_europe_ideas/idea_detail.html'
+    template_name = 'civic_europe_ideas/idea_detail.html'
     context_object_name = 'idea'
     slug_field = 'idea__slug'
     queryset = IdeaSketchArchived.objects.all()
@@ -257,7 +257,7 @@ class ProposalCreateWizard(PermissionRequiredMixin,
                            wizard_mixins.CustomWizardMixin,
                            SessionWizardView,
                            ):
-    permission_required = 'advocate_europe_ideas.add_proposal'
+    permission_required = 'civic_europe_ideas.add_proposal'
     file_storage = FileSystemStorage(
         location=os.path.join(settings.MEDIA_ROOT, 'idea_sketch_images'))
     title = _('Proposal')
@@ -339,9 +339,9 @@ class ProposalEditView(
     SuccessMessageMixin,
     generic.UpdateView
 ):
-    permission_required = 'advocate_europe_ideas.change_idea'
+    permission_required = 'civic_europe_ideas.change_idea'
     model = Proposal
-    template_name = 'advocate_europe_ideas/idea_update_form.html'
+    template_name = 'civic_europe_ideas/idea_update_form.html'
     success_message = _('Proposal saved')
     next_view = 'proposal-update-form'
     title = _('Update proposal')

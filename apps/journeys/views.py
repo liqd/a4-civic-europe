@@ -12,8 +12,8 @@ from .models import JourneyEntry
 
 class JourneyEntryCreateView(PermissionRequiredMixin, generic.CreateView):
     form_class = JourneyEntryForm
-    template_name = 'advocate_europe_journeys/journey_entry_form.html'
-    permission_required = 'advocate_europe_ideas.add_journey'
+    template_name = 'civic_europe_journeys/journey_entry_form.html'
+    permission_required = 'civic_europe_ideas.add_journey'
 
     @property
     def raise_exception(self):
@@ -40,8 +40,8 @@ class JourneyEntryCreateView(PermissionRequiredMixin, generic.CreateView):
 class JourneyEntryUpdateView(PermissionRequiredMixin, generic.UpdateView):
     form_class = JourneyEntryForm
     model = JourneyEntry
-    template_name = 'advocate_europe_journeys/journey_entry_form.html'
-    permission_required = 'advocate_europe_ideas.add_journey'
+    template_name = 'civic_europe_journeys/journey_entry_form.html'
+    permission_required = 'civic_europe_ideas.add_journey'
 
     @property
     def raise_exception(self):
@@ -51,7 +51,7 @@ class JourneyEntryUpdateView(PermissionRequiredMixin, generic.UpdateView):
 class JourneyEntryDeleteView(PermissionRequiredMixin, generic.DeleteView):
     model = JourneyEntry
     success_message = _("Your Journey entry has been deleted")
-    permission_required = 'advocate_europe_ideas.add_journey'
+    permission_required = 'civic_europe_ideas.add_journey'
 
     @property
     def raise_exception(self):

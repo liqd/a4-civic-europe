@@ -9,7 +9,7 @@ import django.utils.timezone
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('advocate_europe_journeys', '0006_update_helptext'),
+        ('civic_europe_journeys', '0006_update_helptext'),
     ]
 
     operations = [

@@ -58,7 +58,7 @@
                             </div>
                         </div>
                     </div>
-                    {% has_perm 'advocate_europe_ideas.export_idea' request.user as can_export %}
+                    {% has_perm 'civic_europe_ideas.export_idea' request.user as can_export %}
                     {% if can_export %}
                         <a class="btn btn-ae-secondary export-btn btn-wide" href="
                                 {% url 'idea-export' %}{{ '?'|add:view.filter.data.urlencode }}">{% trans "export" %}</a>
@@ -73,12 +73,12 @@
                     <div class="idealist-list">
                         {% if page_obj.number == 1 and view.is_cta_enabled %}
                         <div class="idealist-itemwrapper">
-                            {% include 'advocate_europe_ideas/includes/call_to_action_tile.html' with module=view.cta_object %}
+                            {% include 'civic_europe_ideas/includes/call_to_action_tile.html' with module=view.cta_object %}
                         </div>
                         {% endif %}
                         {% for idea in idea_list %}
                         <div class="idealist-itemwrapper">
-                            {% include 'advocate_europe_ideas/includes/idealist_item.html' %}
+                            {% include 'civic_europe_ideas/includes/idealist_item.html' %}
                         </div>
                         {% endfor %}
                     </div>

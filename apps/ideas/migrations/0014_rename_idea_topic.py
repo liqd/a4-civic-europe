@@ -9,7 +9,7 @@ import multiselectfield.db.fields
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('advocate_europe_ideas', '0013_alter_field_co_workers'),
+        ('civic_europe_ideas', '0013_alter_field_co_workers'),
     ]
 
     operations = [

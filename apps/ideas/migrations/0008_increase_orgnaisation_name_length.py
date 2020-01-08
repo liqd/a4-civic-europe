@@ -8,7 +8,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('advocate_europe_ideas', '0007_increase_subtitle_size'),
+        ('civic_europe_ideas', '0007_increase_subtitle_size'),
     ]
 
     operations = [

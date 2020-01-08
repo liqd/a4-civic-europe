@@ -10,7 +10,7 @@ def MultiSelectField__from_db_value(self, value, expression,
 
 class Config(AppConfig):
     name = 'apps.contrib'
-    label = 'advocate_europe_contrib'
+    label = 'civic_europe_contrib'
 
     def ready(self):
         from multiselectfield.db.fields import (

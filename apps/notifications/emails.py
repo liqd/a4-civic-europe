@@ -22,7 +22,7 @@ def _exclude_notifications_disabled(receivers):
 
 class SubmitIdeaSketchNotification(emails.UserNotification):
     template_name = (
-        'advocate_europe_notifications/emails/submit_ideasketch_notification'
+        'civic_europe_notifications/emails/submit_ideasketch_notification'
     )
 
     def get_context(self):
@@ -37,7 +37,7 @@ class SubmitIdeaSketchNotification(emails.UserNotification):
 
 class SubmitProposalNotification(emails.UserNotification):
     template_name = (
-        'advocate_europe_notifications/emails/submit_proposal_notification'
+        'civic_europe_notifications/emails/submit_proposal_notification'
     )
 
     def get_context(self):
@@ -48,7 +48,7 @@ class SubmitProposalNotification(emails.UserNotification):
 
 class SubmitJourneyNotification(emails.UserNotification):
     template_name = \
-        'advocate_europe_notifications/emails/submit_journey_notification'
+        'civic_europe_notifications/emails/submit_journey_notification'
 
     def get_context(self):
         context = super().get_context()
@@ -57,7 +57,7 @@ class SubmitJourneyNotification(emails.UserNotification):
 
 
 class NotifyCreatorEmail(emails.UserNotification):
-    template_name = 'advocate_europe_notifications/emails/notify_creator'
+    template_name = 'civic_europe_notifications/emails/notify_creator'
     user_attr_name = 'actor'
 
     def get_receivers(self):
@@ -88,7 +88,7 @@ class NotifyFollowers(emails.UserNotification):
 
 class NotifyFollowersOnNewComment(NotifyFollowers):
     template_name = \
-        'advocate_europe_notifications/emails/notify_followers_new_comment'
+        'civic_europe_notifications/emails/notify_followers_new_comment'
 
     def get_receivers(self):
         action = self.object
@@ -113,7 +113,7 @@ class NotifyFollowersOnNewComment(NotifyFollowers):
 
 class NotifyFollowersOnNewProposal(NotifyFollowers):
     template_name = \
-        'advocate_europe_notifications/emails/notify_followers_new_proposal'
+        'civic_europe_notifications/emails/notify_followers_new_proposal'
 
     def get_receivers(self):
         action = self.object
@@ -130,12 +130,12 @@ class NotifyFollowersOnNewProposal(NotifyFollowers):
 
 class NotifyFollowersOnNewJourney(NotifyFollowersOnNewProposal):
     template_name = \
-        'advocate_europe_notifications/emails/notify_followers_new_journey'
+        'civic_europe_notifications/emails/notify_followers_new_journey'
 
 
 class NotifyFollowersOnWinner(emails.UserNotification):
     template_name = \
-        'advocate_europe_notifications/emails/notify_followers_winner'
+        'civic_europe_notifications/emails/notify_followers_winner'
 
     def get_receivers(self):
         idea = self.object
@@ -152,9 +152,9 @@ class NotifyFollowersOnWinner(emails.UserNotification):
 
 class NotifyFollowersOnShortlist(NotifyFollowersOnWinner):
     template_name = \
-        'advocate_europe_notifications/emails/notify_followers_shortlist'
+        'civic_europe_notifications/emails/notify_followers_shortlist'
 
 
 class NotifyFollowersOnCommunityAward(NotifyFollowersOnWinner):
-    template_name = ('advocate_europe_notifications/emails/'
+    template_name = ('civic_europe_notifications/emails/'
                      'notify_followers_community_award')

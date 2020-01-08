@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('advocate_europe_ideas', '0009_move_jurystatement'),
+        ('civic_europe_ideas', '0009_move_jurystatement'),
     ]
 
     operations = [
@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
                 ('modified', models.DateTimeField(blank=True, editable=False, null=True)),
                 ('enabled', models.BooleanField(default=True)),
                 ('creator', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
-                ('followable', models.ForeignKey(editable=False, on_delete=django.db.models.deletion.CASCADE, to='advocate_europe_ideas.Idea')),
+                ('followable', models.ForeignKey(editable=False, on_delete=django.db.models.deletion.CASCADE, to='civic_europe_ideas.Idea')),
             ],
             options={
                 'abstract': False,

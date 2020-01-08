@@ -9,7 +9,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('advocate_europe_users', '0010_change_notification_wording'),
+        ('civic_europe_users', '0010_change_notification_wording'),
     ]
 
     operations = [

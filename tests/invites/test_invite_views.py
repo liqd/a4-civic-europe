@@ -12,7 +12,7 @@ def test_invite_non_loggedin_user(client, invite):
 
     url = invite.get_absolute_url()
     response = client.get(url)
-    detail_template = 'advocate_europe_invites/invite_detail.html'
+    detail_template = 'civic_europe_invites/invite_detail.html'
     assert response.status_code == 200
     assert detail_template in templates_used(response)
 
@@ -26,7 +26,7 @@ def test_invite_loggedin_user(client, user, invite):
 
     url = reverse('ideainvite-update', args=[invite.token])
     response = client.get(url)
-    form_template = 'advocate_europe_invites/invite_form.html'
+    form_template = 'civic_europe_invites/invite_form.html'
     assert form_template in templates_used(response)
 
 

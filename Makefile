@@ -1,5 +1,5 @@
 VIRTUAL_ENV ?= venv
-SOURCE_DIRS = apps advocate_europe cms tests
+SOURCE_DIRS = apps civic_europe cms tests
 
 .PHONY: all
 all: help
@@ -46,10 +46,10 @@ clean:
 
 .PHONY: fixtures
 fixtures:
-	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata advocate_europe/fixtures/site-dev.json
-	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata advocate_europe/fixtures/users-dev.json
-	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata advocate_europe/fixtures/projects-dev.json
-	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata advocate_europe/fixtures/ideas-dev.json
+	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata civic_europe/fixtures/site-dev.json
+	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata civic_europe/fixtures/users-dev.json
+	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata civic_europe/fixtures/projects-dev.json
+	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata civic_europe/fixtures/ideas-dev.json
 
 .PHONY: server
 server:
@@ -111,7 +111,7 @@ mo:
 	$(VIRTUAL_ENV)/bin/python manage.py compilemessages
 
 .PHONY: release
-release: export DJANGO_SETTINGS_MODULE ?= advocate_europe.settings.build
+release: export DJANGO_SETTINGS_MODULE ?= civic_europe.settings.build
 release:
 	npm install --silent
 	npm run build:prod

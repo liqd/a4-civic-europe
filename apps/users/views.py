@@ -17,7 +17,7 @@ class ProfileView(
         idea_mixins.CtaPaginatorMixin,
         filter_views.FilteredListView
 ):
-    template_name = 'advocate_europe_users/profile.html'
+    template_name = 'civic_europe_users/profile.html'
     paginator_class = None
     paginate_by = 9
     filter_set = filters.ProfileIdeaFilterSet
@@ -50,7 +50,7 @@ class EditProfileView(mixins.LoginRequiredMixin,
                       SuccessMessageMixin,
                       generic.UpdateView):
     model = user_models.User
-    template_name = "advocate_europe_users/profile_form.html"
+    template_name = "civic_europe_users/profile_form.html"
     success_message = _('Your profile has been updated')
     form_class = forms.UserProfileForm
 
@@ -69,7 +69,7 @@ class NotificationsView(mixins.LoginRequiredMixin,
                         SuccessMessageMixin,
                         generic.UpdateView):
     model = user_models.User
-    template_name = "advocate_europe_users/notifications_form.html"
+    template_name = "civic_europe_users/notifications_form.html"
     success_message = _('Your notification settings have been updated')
     form_class = forms.NotificationsForm
 

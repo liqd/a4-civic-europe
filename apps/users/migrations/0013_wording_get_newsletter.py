@@ -8,7 +8,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('advocate_europe_users', '0012_user_get_newsletters'),
+        ('civic_europe_users', '0012_user_get_newsletters'),
     ]
 
     operations = [

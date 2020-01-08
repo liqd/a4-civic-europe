@@ -9,7 +9,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('advocate_europe_users', '0007_add_europe_field'),
+        ('civic_europe_users', '0007_add_europe_field'),
     ]
 
     operations = [

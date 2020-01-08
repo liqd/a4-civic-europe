@@ -5,7 +5,7 @@ from adhocracy4.actions.verbs import Verbs
 
 class Config(AppConfig):
     name = 'apps.actions'
-    label = 'advocate_europe_actions'
+    label = 'civic_europe_actions'
 
     def ready(self):
         from adhocracy4.actions.models import configure_icon, configure_type
@@ -14,18 +14,18 @@ class Config(AppConfig):
         configure_type(
             'comment',
             ('a4comments', 'comment'),
-            ('advocate_europe_ideas', 'idea'),
+            ('civic_europe_ideas', 'idea'),
         )
         configure_type('rating', ('a4ratings', 'rating'))
         configure_type(
             'idea',
-            ('advocate_europe_ideas', 'proposal'),
-            ('advocate_europe_ideas', 'ideasketch'),
+            ('civic_europe_ideas', 'proposal'),
+            ('civic_europe_ideas', 'ideasketch'),
         )
         configure_type('blog', ('cms_blog', 'blogpage'))
         configure_type('journey entry',
-                       ('advocate_europe_journeys', 'journeyentry'))
-        configure_type('follows', ('advocate_europe_ideas', 'ideafollow'))
+                       ('civic_europe_journeys', 'journeyentry'))
+        configure_type('follows', ('civic_europe_ideas', 'ideafollow'))
 
         configure_icon('comment', type='comment')
         configure_icon('lightbulb-o', type='item')

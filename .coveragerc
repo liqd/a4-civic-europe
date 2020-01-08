@@ -1,6 +1,6 @@
 [run]
 source =
-    advocate_europe
+    civic_europe
     apps
 omit =
     */migrations/*

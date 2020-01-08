@@ -4,7 +4,7 @@
     <div class="ideadetailtab-header">
         <h2>{% trans "Project Journey" %}</h2>
     </div>
-    {% has_perm 'advocate_europe_ideas.add_journey' request.user idea as can_write_journey %}
+    {% has_perm 'civic_europe_ideas.add_journey' request.user idea as can_write_journey %}
     {% if can_write_journey %}
         <a class="btn btn-primary journey-btn" href="{% url 'journey-entry-create' idea.slug %}">{% trans "New entry" %}</a>
     {% endif %}
@@ -25,7 +25,7 @@
             </div>
         </div>
         {% url 'journey-entry-delete' entry.pk as delete_view_url %}
-        {% include 'advocate_europe_contrib/delete_modal.html' with delete_modal=delete_pk name=entry.title delete_action=delete_view_url %}
+        {% include 'civic_europe_contrib/delete_modal.html' with delete_modal=delete_pk name=entry.title delete_action=delete_view_url %}
     {% empty %}
         <h3>{% trans 'No entries yet' %}</h3>
     {% endfor %}

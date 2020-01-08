@@ -1,5 +1,5 @@
 {
-  "name": "advocate_europe",
+  "name": "civic_europe",
   "version": "0.10.0-release.1",
   "license": "AGPL-3.0+",
   "description": "Frontend for Advocate Europe",
@@ -51,7 +51,7 @@
     "build:prod": "webpack --config ./webpack.prod.js --mode production",
     "build": "webpack --config ./webpack.dev.js --progress --mode development",
     "watch": "webpack --config ./webpack.dev.js --progress --colors --watch --mode development",
-    "lint": "standard '{apps,cms,advocate_europe}/**/*.{js,jsx}' && stylelint 'advocate_europe/assets/scss/**/*.scss' --syntax scss"
+    "lint": "standard '{apps,cms,civic_europe}/**/*.{js,jsx}' && stylelint 'civic_europe/assets/scss/**/*.scss' --syntax scss"
   },
   "browserslist": "last 3 versions, ie >= 11",
   "husky": {

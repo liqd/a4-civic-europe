@@ -8,7 +8,7 @@ import django.core.validators
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('advocate_europe_users', '0002_add_custom_fields'),
+        ('civic_europe_users', '0002_add_custom_fields'),
     ]
 
     operations = [

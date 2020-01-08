@@ -1,4 +1,4 @@
-{% extends 'advocate_europe_notifications/emails/follow.en.email' %}
+{% extends 'civic_europe_notifications/emails/follow.en.email' %}
 
 {% block subject %}
 "{{ idea.idea_title }}" has won the community award.

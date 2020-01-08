@@ -8,7 +8,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('advocate_europe_ideas', '0010_add_idea_follow_model'),
+        ('civic_europe_ideas', '0010_add_idea_follow_model'),
     ]
 
     operations = [

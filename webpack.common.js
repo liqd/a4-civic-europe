@@ -23,8 +23,8 @@ var autoprefixer = require('autoprefixer');
 module.exports = {
   entry: {
     adhocracy4: [
-      './advocate_europe/assets/scss/all.scss',
-      './advocate_europe/assets/js/app.js'
+      './civic_europe/assets/scss/all.scss',
+      './civic_europe/assets/js/app.js'
     ],
     vendor: [
       'jquery',
@@ -36,7 +36,7 @@ module.exports = {
       '@fortawesome/fontawesome-free/scss/brands.scss',
       '@fortawesome/fontawesome-free/scss/regular.scss',
       '@fortawesome/fontawesome-free/scss/solid.scss',
-      './advocate_europe/assets/js/jquery-fix.js',
+      './civic_europe/assets/js/jquery-fix.js',
       'bootstrap-sass',
       'slick-carousel/slick/slick.min.js',
       'slick-carousel/slick/slick.css'
@@ -45,7 +45,7 @@ module.exports = {
   output: {
     libraryTarget: 'var',
     library: '[name]',
-    path: path.resolve('./advocate_europe/static/'),
+    path: path.resolve('./civic_europe/static/'),
     publicPath: '/static/',
     filename: '[name].js'
   },
@@ -117,12 +117,12 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {
-        from: './advocate_europe/assets/images/**/*',
+        from: './civic_europe/assets/images/**/*',
         to: 'images/',
         flatten: true
       },
       {
-        from: './advocate_europe/assets/icons/**/*',
+        from: './civic_europe/assets/icons/**/*',
         to: 'icons/',
         flatten: true
       }

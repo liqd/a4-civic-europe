@@ -72,7 +72,7 @@ class CtaPaginatorMixin:
     """
     Leaves space for cta tile if cta_permission is given for current user.
     """
-    cta_permission = 'advocate_europe_ideas.add_ideasketch'
+    cta_permission = 'civic_europe_ideas.add_ideasketch'
 
     @property
     def cta_object(self):

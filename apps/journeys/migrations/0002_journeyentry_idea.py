@@ -9,15 +9,15 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('advocate_europe_ideas', '0002_alter_help_texts'),
-        ('advocate_europe_journeys', '0001_initial'),
+        ('civic_europe_ideas', '0002_alter_help_texts'),
+        ('civic_europe_journeys', '0001_initial'),
     ]
 
     operations = [
         migrations.AddField(
             model_name='journeyentry',
             name='idea',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='advocate_europe_ideas.Idea'),
+            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='civic_europe_ideas.Idea'),
             preserve_default=False,
         ),
     ]

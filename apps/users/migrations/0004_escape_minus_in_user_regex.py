@@ -9,7 +9,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('advocate_europe_users', '0003_increase_username_length_to_75'),
+        ('civic_europe_users', '0003_increase_username_length_to_75'),
     ]
 
     operations = [

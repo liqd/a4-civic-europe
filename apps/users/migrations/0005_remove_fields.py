@@ -8,7 +8,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('advocate_europe_users', '0004_escape_minus_in_user_regex'),
+        ('civic_europe_users', '0004_escape_minus_in_user_regex'),
     ]
 
     operations = [

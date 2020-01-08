@@ -8,28 +8,28 @@ from adhocracy4.phases import predicates as phase_predicates
 from . import models, predicates
 
 rules.add_perm(
-    'advocate_europe_ideas.view_idea',
+    'civic_europe_ideas.view_idea',
     always_allow
 )
 
 rules.add_perm(
-    'advocate_europe_ideas.follow_idea',
+    'civic_europe_ideas.follow_idea',
     is_authenticated
 )
 
 rules.add_perm(
-    'advocate_europe_ideas.export_idea',
+    'civic_europe_ideas.export_idea',
     is_staff |
     is_superuser
 )
 
 rules.add_perm(
-    'advocate_europe_ideas.add_ideasketch',
+    'civic_europe_ideas.add_ideasketch',
     mod_predicates.is_allowed_add_item(models.IdeaSketch)
 )
 
 rules.add_perm(
-    'advocate_europe_ideas.change_idea',
+    'civic_europe_ideas.change_idea',
     mod_predicates.is_project_admin |
     mod_predicates.is_context_member &
     (
@@ -40,7 +40,7 @@ rules.add_perm(
 )
 
 rules.add_perm(
-    'advocate_europe_ideas.add_proposal',
+    'civic_europe_ideas.add_proposal',
     mod_predicates.is_project_admin |
     mod_predicates.is_context_member &
     (
@@ -54,7 +54,7 @@ rules.add_perm(
 
 
 rules.add_perm(
-    'advocate_europe_ideas.comment_idea',
+    'civic_europe_ideas.comment_idea',
     is_superuser |
     mod_predicates.is_context_moderator |
     mod_predicates.is_context_initiator |
@@ -65,7 +65,7 @@ rules.add_perm(
 
 
 rules.add_perm(
-    'advocate_europe_ideas.add_journey',
+    'civic_europe_ideas.add_journey',
     mod_predicates.is_context_member &
     (
         mod_predicates.is_owner |
@@ -76,7 +76,7 @@ rules.add_perm(
 )
 
 rules.add_perm(
-    'advocate_europe_ideas.rate_idea',
+    'civic_europe_ideas.rate_idea',
     (
         predicates.is_innovator &
         phase_predicates.phase_allows_rate &
@@ -87,7 +87,7 @@ rules.add_perm(
 )
 
 rules.add_perm(
-    'advocate_europe_ideas.may_rate_idea',
+    'civic_europe_ideas.may_rate_idea',
     (
         predicates.is_innovator &
         ~mod_predicates.is_owner &

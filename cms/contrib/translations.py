@@ -1,7 +1,7 @@
 from django.utils import translation
 from wagtail.core.blocks.stream_block import StreamValue
 
-from advocate_europe.settings import LANGUAGES
+from civic_europe.settings import LANGUAGES
 
 
 class TranslatedField(object):

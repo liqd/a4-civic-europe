@@ -106,7 +106,7 @@ msgstr ""
 
 #: adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:27
 #: adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:27
-#: apps/journeys/templates/advocate_europe_journeys/journey_entry_form.html:27
+#: apps/journeys/templates/civic_europe_journeys/journey_entry_form.html:27
 msgid "Publish"
 msgstr ""
 
@@ -158,7 +158,7 @@ msgstr ""
 
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:45
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:45
-#: apps/ideas/templates/advocate_europe_ideas/includes/idea_detail_tab_journey.html:22
+#: apps/ideas/templates/civic_europe_ideas/includes/idea_detail_tab_journey.html:22
 msgid "Edit"
 msgstr ""
 
@@ -405,13 +405,13 @@ msgid "Telephone"
 msgstr ""
 
 #: adhocracy4/dashboard/forms.py:105
-#: advocate_europe/templates/account/password_reset.html:25
+#: civic_europe/templates/account/password_reset.html:25
 msgid "Email"
 msgstr ""
 
 #: adhocracy4/dashboard/forms.py:107
 #: apps/ideas/models/abstracts/community_section.py:16 apps/users/models.py:98
-#: apps/users/templates/advocate_europe_users/profile.html:100
+#: apps/users/templates/civic_europe_users/profile.html:100
 msgid "Website"
 msgstr ""
 
@@ -844,16 +844,16 @@ msgstr ""
 msgid "Report"
 msgstr ""
 
-#: apps/contrib/templates/advocate_europe_contrib/delete_modal.html:4
+#: apps/contrib/templates/civic_europe_contrib/delete_modal.html:4
 msgid "Are you sure you want to delete"
 msgstr ""
 
-#: apps/contrib/templates/advocate_europe_contrib/delete_modal.html:21
-#: apps/ideas/templates/advocate_europe_ideas/includes/idea_detail_tab_journey.html:23
+#: apps/contrib/templates/civic_europe_contrib/delete_modal.html:21
+#: apps/ideas/templates/civic_europe_ideas/includes/idea_detail_tab_journey.html:23
 msgid "Delete"
 msgstr ""
 
-#: apps/contrib/templates/advocate_europe_contrib/delete_modal.html:25
+#: apps/contrib/templates/civic_europe_contrib/delete_modal.html:25
 msgid "Abort"
 msgstr ""
 
@@ -874,7 +874,7 @@ msgid "Shortlist"
 msgstr ""
 
 #: apps/ideas/filters.py:18
-#: apps/ideas/templates/advocate_europe_ideas/includes/idea_detail_tab_idea.html:19
+#: apps/ideas/templates/civic_europe_ideas/includes/idea_detail_tab_idea.html:19
 #: apps/ideas/views.py:263
 msgid "Proposal"
 msgstr ""
@@ -1007,8 +1007,8 @@ msgid "Partner Organisation 3"
 msgstr ""
 
 #: apps/ideas/forms.py:192
-#: apps/ideas/templates/advocate_europe_ideas/idea_detail.html:63
-#: apps/ideas/templates/advocate_europe_ideas/includes/idea_detail_tab_idea.html:21
+#: apps/ideas/templates/civic_europe_ideas/idea_detail.html:63
+#: apps/ideas/templates/civic_europe_ideas/includes/idea_detail_tab_idea.html:21
 msgid "Idea"
 msgstr ""
 
@@ -1590,58 +1590,58 @@ msgstr ""
 msgid "winning ideas are from the current idea challenge are shown"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/idea_detail.html:59
-#: apps/ideas/templates/advocate_europe_ideas/includes/idea_detail_tab_info.html:5
+#: apps/ideas/templates/civic_europe_ideas/idea_detail.html:59
+#: apps/ideas/templates/civic_europe_ideas/includes/idea_detail_tab_info.html:5
 msgid "Creators"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/idea_detail.html:68
-#: apps/ideas/templates/advocate_europe_ideas/includes/idea_detail_tab_journey.html:5
+#: apps/ideas/templates/civic_europe_ideas/idea_detail.html:68
+#: apps/ideas/templates/civic_europe_ideas/includes/idea_detail_tab_journey.html:5
 msgid "Project Journey"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/idea_detail.html:93
+#: apps/ideas/templates/civic_europe_ideas/idea_detail.html:93
 msgid "Why this idea?"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/idea_detail.html:100
+#: apps/ideas/templates/civic_europe_ideas/idea_detail.html:100
 msgid "Team"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/idea_detail.html:118
+#: apps/ideas/templates/civic_europe_ideas/idea_detail.html:118
 msgid "Idea created on"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/idea_detail.html:122
+#: apps/ideas/templates/civic_europe_ideas/idea_detail.html:122
 msgid "Last edit on"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/idea_detail.html:131
+#: apps/ideas/templates/civic_europe_ideas/idea_detail.html:131
 msgid "Write comment"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/idea_list.html:5
-#: apps/ideas/templates/advocate_europe_ideas/idea_list.html:12
+#: apps/ideas/templates/civic_europe_ideas/idea_list.html:5
+#: apps/ideas/templates/civic_europe_ideas/idea_list.html:12
 msgid "All ideas"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/idea_list.html:17
+#: apps/ideas/templates/civic_europe_ideas/idea_list.html:17
 msgid "Ideas from past idea challenges"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/idea_list.html:42
+#: apps/ideas/templates/civic_europe_ideas/idea_list.html:42
 msgid "Filters"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/idea_list.html:64
+#: apps/ideas/templates/civic_europe_ideas/idea_list.html:64
 msgid "export"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/idea_list.html:70
+#: apps/ideas/templates/civic_europe_ideas/idea_list.html:70
 msgid "Sorry, no ideas exist for the chosen filters."
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/idea_list.html:90
+#: apps/ideas/templates/civic_europe_ideas/idea_list.html:90
 #, python-format
 msgid ""
 "\n"
@@ -1654,106 +1654,106 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: apps/ideas/templates/advocate_europe_ideas/idea_update_form.html:4
+#: apps/ideas/templates/civic_europe_ideas/idea_update_form.html:4
 msgid "update idea"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/idea_update_form.html:11
-#: apps/journeys/templates/advocate_europe_journeys/journey_entry_form.html:11
+#: apps/ideas/templates/civic_europe_ideas/idea_update_form.html:11
+#: apps/journeys/templates/civic_europe_journeys/journey_entry_form.html:11
 msgid "Back to idea"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/idea_update_form.html:37
+#: apps/ideas/templates/civic_europe_ideas/idea_update_form.html:37
 msgid "You have unsaved changes"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/idea_update_form.html:40
+#: apps/ideas/templates/civic_europe_ideas/idea_update_form.html:40
 msgid "discard"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/idea_update_form.html:41
-#: apps/ideas/templates/advocate_europe_ideas/idea_update_form.html:54
+#: apps/ideas/templates/civic_europe_ideas/idea_update_form.html:41
+#: apps/ideas/templates/civic_europe_ideas/idea_update_form.html:54
 msgid "save"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/includes/call_to_action_tile.html:11
+#: apps/ideas/templates/civic_europe_ideas/includes/call_to_action_tile.html:11
 msgid "Got an idea? Share it!"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/includes/call_to_action_tile.html:12
+#: apps/ideas/templates/civic_europe_ideas/includes/call_to_action_tile.html:12
 msgid "Apply now and get funding for your project!"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/includes/call_to_action_tile.html:14
+#: apps/ideas/templates/civic_europe_ideas/includes/call_to_action_tile.html:14
 msgid "Read about the criteria"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/includes/call_to_action_tile.html:18
+#: apps/ideas/templates/civic_europe_ideas/includes/call_to_action_tile.html:18
 msgid "Create your idea sketch!"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/includes/idea_detail_header.html:8
+#: apps/ideas/templates/civic_europe_ideas/includes/idea_detail_header.html:8
 msgid "Idea Space"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/includes/idea_detail_tab_info.html:8
+#: apps/ideas/templates/civic_europe_ideas/includes/idea_detail_tab_info.html:8
 msgid "Who is behind this?"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/includes/idea_detail_tab_info.html:27
+#: apps/ideas/templates/civic_europe_ideas/includes/idea_detail_tab_info.html:27
 msgid "Who is joining forces?"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/includes/idea_detail_tab_journey.html:9
-#: apps/journeys/templates/advocate_europe_journeys/journey_entry_form.html:15
+#: apps/ideas/templates/civic_europe_ideas/includes/idea_detail_tab_journey.html:9
+#: apps/journeys/templates/civic_europe_journeys/journey_entry_form.html:15
 msgid "New entry"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/includes/idea_detail_tab_journey.html:19
+#: apps/ideas/templates/civic_europe_ideas/includes/idea_detail_tab_journey.html:19
 #: cms/blog/templates/cms_blog/blog_index_page.html:71
 #: cms/blog/templates/cms_blog/blog_page.html:53
 #: cms/blog/templates/cms_blog/includes/blog_index_featured_item.html:30
 msgid "on"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/includes/idea_detail_tab_journey.html:30
+#: apps/ideas/templates/civic_europe_ideas/includes/idea_detail_tab_journey.html:30
 msgid "No entries yet"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/includes/idea_detail_watch_btns.html:15
+#: apps/ideas/templates/civic_europe_ideas/includes/idea_detail_watch_btns.html:15
 #: cms/home/templates/cms_home/blocks/blog_block.html:48
 msgid "More"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/includes/idea_detail_watch_btns.html:19
+#: apps/ideas/templates/civic_europe_ideas/includes/idea_detail_watch_btns.html:19
 msgid "edit ideasketch"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/includes/idea_detail_watch_btns.html:21
+#: apps/ideas/templates/civic_europe_ideas/includes/idea_detail_watch_btns.html:21
 msgid "edit proposal"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/includes/idea_detail_watch_btns.html:24
+#: apps/ideas/templates/civic_europe_ideas/includes/idea_detail_watch_btns.html:24
 msgid "add full proposal"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/includes/idea_detail_watch_btns.html:34
+#: apps/ideas/templates/civic_europe_ideas/includes/idea_detail_watch_btns.html:34
 msgid "Share"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/includes/idea_detail_watch_btns.html:38
+#: apps/ideas/templates/civic_europe_ideas/includes/idea_detail_watch_btns.html:38
 msgid "Share on Twitter"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/includes/idea_detail_watch_btns.html:41
+#: apps/ideas/templates/civic_europe_ideas/includes/idea_detail_watch_btns.html:41
 msgid "Share on Facebook"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/includes/idea_detail_watch_btns.html:44
+#: apps/ideas/templates/civic_europe_ideas/includes/idea_detail_watch_btns.html:44
 msgid "Share on Google+"
 msgstr ""
 
-#: apps/ideas/templates/advocate_europe_ideas/includes/idea_detail_watch_btns.html:59
+#: apps/ideas/templates/civic_europe_ideas/includes/idea_detail_watch_btns.html:59
 msgid "Watch"
 msgstr ""
 
@@ -1827,41 +1827,41 @@ msgstr ""
 msgid "Update proposal"
 msgstr ""
 
-#: apps/invites/templates/advocate_europe_invites/invite_404.html:4
-#: apps/invites/templates/advocate_europe_invites/invite_base.html:4
+#: apps/invites/templates/civic_europe_invites/invite_404.html:4
+#: apps/invites/templates/civic_europe_invites/invite_base.html:4
 msgid "Invitation to collaborate"
 msgstr ""
 
-#: apps/invites/templates/advocate_europe_invites/invite_404.html:10
+#: apps/invites/templates/civic_europe_invites/invite_404.html:10
 msgid " Your invitation is not valid. "
 msgstr ""
 
-#: apps/invites/templates/advocate_europe_invites/invite_404.html:12
+#: apps/invites/templates/civic_europe_invites/invite_404.html:12
 msgid ""
 "You either already accepted or declined the invitation or you were uninvited."
 msgstr ""
 
-#: apps/invites/templates/advocate_europe_invites/invite_base.html:10
+#: apps/invites/templates/civic_europe_invites/invite_base.html:10
 #, python-format
 msgid " Do you want to collaborate on \"%(object)s\"?"
 msgstr ""
 
-#: apps/invites/templates/advocate_europe_invites/invite_base.html:13
+#: apps/invites/templates/civic_europe_invites/invite_base.html:13
 msgid ""
 "If you accept you will be able to edit the idea and appear as a team member "
 "in the proposal. You can edit the text altogether until the application "
 "deadline."
 msgstr ""
 
-#: apps/invites/templates/advocate_europe_invites/invite_detail.html:4
+#: apps/invites/templates/civic_europe_invites/invite_detail.html:4
 msgid "Proceed to login"
 msgstr ""
 
-#: apps/invites/templates/advocate_europe_invites/invite_form.html:6
+#: apps/invites/templates/civic_europe_invites/invite_form.html:6
 msgid "Accept"
 msgstr ""
 
-#: apps/invites/templates/advocate_europe_invites/invite_form.html:7
+#: apps/invites/templates/civic_europe_invites/invite_form.html:7
 msgid "Decline"
 msgstr ""
 
@@ -1903,11 +1903,11 @@ msgstr ""
 msgid "Anything else?"
 msgstr ""
 
-#: apps/journeys/templates/advocate_europe_journeys/journey_entry_form.html:4
+#: apps/journeys/templates/civic_europe_journeys/journey_entry_form.html:4
 msgid "journey entry"
 msgstr ""
 
-#: apps/journeys/templates/advocate_europe_journeys/journey_entry_form.html:18
+#: apps/journeys/templates/civic_europe_journeys/journey_entry_form.html:18
 msgid "Update entry"
 msgstr ""
 
@@ -1962,7 +1962,7 @@ msgid "I accept the terms of use."
 msgstr ""
 
 #: apps/users/forms.py:29
-#: apps/users/templates/advocate_europe_users/base_accounts_settings_form.html:15
+#: apps/users/templates/civic_europe_users/base_accounts_settings_form.html:15
 msgid "Your Profile"
 msgstr ""
 
@@ -1971,7 +1971,7 @@ msgid "Social Media"
 msgstr ""
 
 #: apps/users/forms.py:66
-#: apps/users/templates/advocate_europe_users/base_accounts_settings_form.html:47
+#: apps/users/templates/civic_europe_users/base_accounts_settings_form.html:47
 msgid "Newsletter & Notifications"
 msgstr ""
 
@@ -2058,31 +2058,31 @@ msgstr ""
 msgid "Send me Advocate Europe news."
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/base_accounts_settings_form.html:9
+#: apps/users/templates/civic_europe_users/base_accounts_settings_form.html:9
 msgid "Account settings"
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/base_accounts_settings_form.html:23
-#: advocate_europe/templates/account/password_change.html:5
-#: advocate_europe/templates/account/password_change.html:43
-#: advocate_europe/templates/account/password_set.html:5
-#: advocate_europe/templates/account/password_set.html:40
+#: apps/users/templates/civic_europe_users/base_accounts_settings_form.html:23
+#: civic_europe/templates/account/password_change.html:5
+#: civic_europe/templates/account/password_change.html:43
+#: civic_europe/templates/account/password_set.html:5
+#: civic_europe/templates/account/password_set.html:40
 msgid "Change Password"
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/base_accounts_settings_form.html:25
+#: apps/users/templates/civic_europe_users/base_accounts_settings_form.html:25
 msgid "Set Password"
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/base_accounts_settings_form.html:33
+#: apps/users/templates/civic_europe_users/base_accounts_settings_form.html:33
 msgid "Mail adresses"
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/base_accounts_settings_form.html:40
+#: apps/users/templates/civic_europe_users/base_accounts_settings_form.html:40
 msgid "Account Connections"
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/includes/activity_list.html:14
+#: apps/users/templates/civic_europe_users/includes/activity_list.html:14
 #, python-format
 msgid ""
 "\n"
@@ -2091,7 +2091,7 @@ msgid ""
 "            "
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/includes/activity_list.html:20
+#: apps/users/templates/civic_europe_users/includes/activity_list.html:20
 #, python-format
 msgid ""
 "\n"
@@ -2100,8 +2100,8 @@ msgid ""
 "            "
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/includes/activity_list.html:26
-#: apps/users/templates/advocate_europe_users/includes/activity_list.html:54
+#: apps/users/templates/civic_europe_users/includes/activity_list.html:26
+#: apps/users/templates/civic_europe_users/includes/activity_list.html:54
 #, python-format
 msgid ""
 "\n"
@@ -2111,7 +2111,7 @@ msgid ""
 "            "
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/includes/activity_list.html:33
+#: apps/users/templates/civic_europe_users/includes/activity_list.html:33
 #, python-format
 msgid ""
 "\n"
@@ -2121,7 +2121,7 @@ msgid ""
 "            "
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/includes/activity_list.html:40
+#: apps/users/templates/civic_europe_users/includes/activity_list.html:40
 #, python-format
 msgid ""
 "\n"
@@ -2131,15 +2131,15 @@ msgid ""
 "            "
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/includes/activity_list.html:47
+#: apps/users/templates/civic_europe_users/includes/activity_list.html:47
 msgid "New participation started"
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/includes/activity_list.html:50
+#: apps/users/templates/civic_europe_users/includes/activity_list.html:50
 msgid "Participation phase will end soon:"
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/includes/activity_list.html:61
+#: apps/users/templates/civic_europe_users/includes/activity_list.html:61
 #, python-format
 msgid ""
 "\n"
@@ -2149,7 +2149,7 @@ msgid ""
 "                "
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/includes/activity_list.html:72
+#: apps/users/templates/civic_europe_users/includes/activity_list.html:72
 #, python-format
 msgid ""
 "\n"
@@ -2157,7 +2157,7 @@ msgid ""
 "                "
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/includes/activity_list.html:78
+#: apps/users/templates/civic_europe_users/includes/activity_list.html:78
 #, python-format
 msgid ""
 "\n"
@@ -2166,7 +2166,7 @@ msgid ""
 "                "
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/includes/activity_list.html:83
+#: apps/users/templates/civic_europe_users/includes/activity_list.html:83
 #, python-format
 msgid ""
 "\n"
@@ -2174,59 +2174,59 @@ msgid ""
 "                "
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/indicator_menu.html:10
+#: apps/users/templates/civic_europe_users/indicator_menu.html:10
 msgid "toggle user menu"
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/indicator_menu.html:17
+#: apps/users/templates/civic_europe_users/indicator_menu.html:17
 msgid "Admin"
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/indicator_menu.html:21
+#: apps/users/templates/civic_europe_users/indicator_menu.html:21
 msgid "Account Settings"
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/indicator_menu.html:29
+#: apps/users/templates/civic_europe_users/indicator_menu.html:29
 msgid "add idea sketch"
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/indicator_menu.html:39
+#: apps/users/templates/civic_europe_users/indicator_menu.html:39
 msgid "logout"
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/indicator_menu.html:49
-#: advocate_europe/templates/account/advocate_europe/includes/header.html:8
-#: advocate_europe/templates/account/login.html:46
+#: apps/users/templates/civic_europe_users/indicator_menu.html:49
+#: civic_europe/templates/account/civic_europe/includes/header.html:8
+#: civic_europe/templates/account/login.html:46
 msgid "login"
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/indicator_menu.html:50
-#: advocate_europe/templates/account/advocate_europe/includes/header.html:11
-#: advocate_europe/templates/account/signup.html:76
+#: apps/users/templates/civic_europe_users/indicator_menu.html:50
+#: civic_europe/templates/account/civic_europe/includes/header.html:11
+#: civic_europe/templates/account/signup.html:76
 msgid "register"
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/notifications_form.html:5
+#: apps/users/templates/civic_europe_users/notifications_form.html:5
 msgid "Newsletters & Notifications"
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/profile.html:5
+#: apps/users/templates/civic_europe_users/profile.html:5
 msgid "Profile"
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/profile.html:37
+#: apps/users/templates/civic_europe_users/profile.html:37
 msgid "Info"
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/profile.html:42
+#: apps/users/templates/civic_europe_users/profile.html:42
 msgid "Ideas"
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/profile.html:47
+#: apps/users/templates/civic_europe_users/profile.html:47
 msgid "Activity"
 msgstr ""
 
-#: apps/users/templates/advocate_europe_users/profile_form.html:5
+#: apps/users/templates/civic_europe_users/profile_form.html:5
 msgid "Edit Profile"
 msgstr ""
 
@@ -2294,197 +2294,197 @@ msgstr ""
 msgid "close"
 msgstr ""
 
-#: advocate_europe/settings/base.py:262
+#: civic_europe/settings/base.py:262
 msgid "English"
 msgstr ""
 
-#: advocate_europe/settings/base.py:263
+#: civic_europe/settings/base.py:263
 msgid "German"
 msgstr ""
 
-#: advocate_europe/templates/403.html:6
+#: civic_europe/templates/403.html:6
 msgid "You are not allowed to access this page."
 msgstr ""
 
-#: advocate_europe/templates/404.html:6
+#: civic_europe/templates/404.html:6
 msgid "This page couldn’t be found."
 msgstr ""
 
-#: advocate_europe/templates/500.html:9
-#: advocate_europe/templates/includes/top_menu.html:4
+#: civic_europe/templates/500.html:9
+#: civic_europe/templates/includes/top_menu.html:4
 msgid "main menu"
 msgstr ""
 
-#: advocate_europe/templates/500.html:30
-#: advocate_europe/templates/base_errors.html:16
+#: civic_europe/templates/500.html:30
+#: civic_europe/templates/base_errors.html:16
 msgid "Sorry, something went wrong."
 msgstr ""
 
-#: advocate_europe/templates/500.html:31
+#: civic_europe/templates/500.html:31
 msgid "Internal server error."
 msgstr ""
 
-#: advocate_europe/templates/500.html:32
-#: advocate_europe/templates/base_errors.html:18
+#: civic_europe/templates/500.html:32
+#: civic_europe/templates/base_errors.html:18
 msgid "Back to Advocate Europe"
 msgstr ""
 
-#: advocate_europe/templates/account/account_inactive.html:5
-#: advocate_europe/templates/account/account_inactive.html:9
+#: civic_europe/templates/account/account_inactive.html:5
+#: civic_europe/templates/account/account_inactive.html:9
 msgid "Account Inactive"
 msgstr ""
 
-#: advocate_europe/templates/account/account_inactive.html:10
+#: civic_europe/templates/account/account_inactive.html:10
 msgid "This account is inactive."
 msgstr ""
 
-#: advocate_europe/templates/account/advocate_europe/base_form.html:18
+#: civic_europe/templates/account/civic_europe/base_form.html:18
 msgid "or use your social media account"
 msgstr ""
 
-#: advocate_europe/templates/account/email.html:5
+#: civic_europe/templates/account/email.html:5
 msgid "E-mail Addresses"
 msgstr ""
 
-#: advocate_europe/templates/account/email.html:12
+#: civic_europe/templates/account/email.html:12
 msgid "E-mail Adresses"
 msgstr ""
 
-#: advocate_europe/templates/account/email.html:21
+#: civic_europe/templates/account/email.html:21
 msgid "Primary"
 msgstr ""
 
-#: advocate_europe/templates/account/email.html:24
+#: civic_europe/templates/account/email.html:24
 msgid "Verified"
 msgstr ""
 
-#: advocate_europe/templates/account/email.html:26
+#: civic_europe/templates/account/email.html:26
 msgid "Unverified"
 msgstr ""
 
-#: advocate_europe/templates/account/email.html:31
+#: civic_europe/templates/account/email.html:31
 msgid "Make Primary"
 msgstr ""
 
-#: advocate_europe/templates/account/email.html:32
+#: civic_europe/templates/account/email.html:32
 msgid "Re-send Verification"
 msgstr ""
 
-#: advocate_europe/templates/account/email.html:33
-#: advocate_europe/templates/socialaccount/connections.html:35
+#: civic_europe/templates/account/email.html:33
+#: civic_europe/templates/socialaccount/connections.html:35
 msgid "Remove"
 msgstr ""
 
-#: advocate_europe/templates/account/email.html:48
+#: civic_europe/templates/account/email.html:48
 msgid "Add another E-mail"
 msgstr ""
 
-#: advocate_europe/templates/account/email.html:52
+#: civic_europe/templates/account/email.html:52
 msgid "Add E-mail"
 msgstr ""
 
-#: advocate_europe/templates/account/email.html:60
+#: civic_europe/templates/account/email.html:60
 msgid "Do you really want to remove the selected e-mail address?"
 msgstr ""
 
-#: advocate_europe/templates/account/email_confirm.html:6
+#: civic_europe/templates/account/email_confirm.html:6
 msgid "Activate your account"
 msgstr ""
 
-#: advocate_europe/templates/account/email_confirm.html:14
-#: advocate_europe/templates/account/email_confirm.html:26
+#: civic_europe/templates/account/email_confirm.html:14
+#: civic_europe/templates/account/email_confirm.html:26
 msgid "Welcome to Advocate Europe!"
 msgstr ""
 
-#: advocate_europe/templates/account/email_confirm.html:15
+#: civic_europe/templates/account/email_confirm.html:15
 #, python-format
 msgid ""
 "Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
 "address for user %(user_display)s."
 msgstr ""
 
-#: advocate_europe/templates/account/email_confirm.html:23
+#: civic_europe/templates/account/email_confirm.html:23
 msgid "Activate account"
 msgstr ""
 
-#: advocate_europe/templates/account/email_confirm.html:28
+#: civic_europe/templates/account/email_confirm.html:28
 #, python-format
 msgid ""
 "This e-mail confirmation link expired or is invalid. Please <a href="
 "\"%(email_url)s\">issue a new e-mail confirmation request</a>."
 msgstr ""
 
-#: advocate_europe/templates/account/login.html:5
+#: civic_europe/templates/account/login.html:5
 msgid "Login"
 msgstr ""
 
-#: advocate_europe/templates/account/login.html:24
+#: civic_europe/templates/account/login.html:24
 msgid "E-mail"
 msgstr ""
 
-#: advocate_europe/templates/account/login.html:33
-#: advocate_europe/templates/account/password_reset_from_key.html:34
+#: civic_europe/templates/account/login.html:33
+#: civic_europe/templates/account/password_reset_from_key.html:34
 msgid "Password"
 msgstr ""
 
-#: advocate_europe/templates/account/login.html:42
+#: civic_europe/templates/account/login.html:42
 msgid "reset password"
 msgstr ""
 
-#: advocate_europe/templates/account/password_change.html:13
-#: advocate_europe/templates/account/password_reset_from_key.html:48
-#: advocate_europe/templates/account/password_reset_from_key_done.html:5
-#: advocate_europe/templates/account/password_reset_from_key_done.html:9
+#: civic_europe/templates/account/password_change.html:13
+#: civic_europe/templates/account/password_reset_from_key.html:48
+#: civic_europe/templates/account/password_reset_from_key_done.html:5
+#: civic_europe/templates/account/password_reset_from_key_done.html:9
 msgid "Change password"
 msgstr ""
 
-#: advocate_europe/templates/account/password_change.html:25
+#: civic_europe/templates/account/password_change.html:25
 msgid "Old password"
 msgstr ""
 
-#: advocate_europe/templates/account/password_change.html:32
-#: advocate_europe/templates/account/password_set.html:29
+#: civic_europe/templates/account/password_change.html:32
+#: civic_europe/templates/account/password_set.html:29
 msgid "New password"
 msgstr ""
 
-#: advocate_europe/templates/account/password_change.html:39
-#: advocate_europe/templates/account/password_set.html:36
+#: civic_europe/templates/account/password_change.html:39
+#: civic_europe/templates/account/password_set.html:36
 msgid "Repeat new password"
 msgstr ""
 
-#: advocate_europe/templates/account/password_reset.html:7
-#: advocate_europe/templates/account/password_reset.html:12
-#: advocate_europe/templates/account/password_reset_from_key.html:6
-#: advocate_europe/templates/account/password_reset_from_key.html:19
+#: civic_europe/templates/account/password_reset.html:7
+#: civic_europe/templates/account/password_reset.html:12
+#: civic_europe/templates/account/password_reset_from_key.html:6
+#: civic_europe/templates/account/password_reset_from_key.html:19
 msgid "Reset your password"
 msgstr ""
 
-#: advocate_europe/templates/account/password_reset.html:13
+#: civic_europe/templates/account/password_reset.html:13
 msgid ""
 "Enter your e-mail address below, and we'll send you an e-mail allowing you "
 "to reset your password."
 msgstr ""
 
-#: advocate_europe/templates/account/password_reset.html:29
+#: civic_europe/templates/account/password_reset.html:29
 msgid "Reset"
 msgstr ""
 
-#: advocate_europe/templates/account/password_reset_done.html:6
-#: advocate_europe/templates/account/password_reset_done.html:10
+#: civic_europe/templates/account/password_reset_done.html:6
+#: civic_europe/templates/account/password_reset_done.html:10
 msgid "Password reset"
 msgstr ""
 
-#: advocate_europe/templates/account/password_reset_done.html:11
+#: civic_europe/templates/account/password_reset_done.html:11
 msgid ""
 "We have sent you an e-mail. Please contact us if you do not receive it "
 "within a few minutes."
 msgstr ""
 
-#: advocate_europe/templates/account/password_reset_from_key.html:11
+#: civic_europe/templates/account/password_reset_from_key.html:11
 msgid "Bad Token"
 msgstr ""
 
-#: advocate_europe/templates/account/password_reset_from_key.html:14
+#: civic_europe/templates/account/password_reset_from_key.html:14
 #, python-format
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
@@ -2492,88 +2492,88 @@ msgid ""
 "a>."
 msgstr ""
 
-#: advocate_europe/templates/account/password_reset_from_key.html:40
+#: civic_europe/templates/account/password_reset_from_key.html:40
 msgid "Repeat password"
 msgstr ""
 
-#: advocate_europe/templates/account/password_reset_from_key.html:45
+#: civic_europe/templates/account/password_reset_from_key.html:45
 msgid "Reset password"
 msgstr ""
 
-#: advocate_europe/templates/account/password_reset_from_key.html:49
-#: advocate_europe/templates/account/password_reset_from_key_done.html:10
+#: civic_europe/templates/account/password_reset_from_key.html:49
+#: civic_europe/templates/account/password_reset_from_key_done.html:10
 msgid "Your password is now changed."
 msgstr ""
 
-#: advocate_europe/templates/account/password_set.html:13
+#: civic_europe/templates/account/password_set.html:13
 msgid "set password"
 msgstr ""
 
-#: advocate_europe/templates/account/password_set.html:16
+#: civic_europe/templates/account/password_set.html:16
 msgid ""
 "You logged in with a social account. If you want to be able to also login "
 "with email and password, you can set a password for your advocate europe "
 "account here."
 msgstr ""
 
-#: advocate_europe/templates/account/signup.html:5
+#: civic_europe/templates/account/signup.html:5
 msgid "Register an account"
 msgstr ""
 
-#: advocate_europe/templates/account/verification_sent.html:5
-#: advocate_europe/templates/account/verification_sent.html:9
+#: civic_europe/templates/account/verification_sent.html:5
+#: civic_europe/templates/account/verification_sent.html:9
 msgid "Verify Your E-mail Address"
 msgstr ""
 
-#: advocate_europe/templates/account/verification_sent.html:10
+#: civic_europe/templates/account/verification_sent.html:10
 msgid ""
 "We have sent an e-mail to you for verification. Follow the link provided to "
 "finalize the signup process. Please contact us if you do not receive it "
 "within a few minutes."
 msgstr ""
 
-#: advocate_europe/templates/formtools/wizard/wizard_form.html:52
+#: civic_europe/templates/formtools/wizard/wizard_form.html:52
 msgid "Back"
 msgstr ""
 
-#: advocate_europe/templates/formtools/wizard/wizard_form.html:60
+#: civic_europe/templates/formtools/wizard/wizard_form.html:60
 msgid "Continue"
 msgstr ""
 
-#: advocate_europe/templates/formtools/wizard/wizard_form.html:64
+#: civic_europe/templates/formtools/wizard/wizard_form.html:64
 msgid "Almost finished!"
 msgstr ""
 
-#: advocate_europe/templates/formtools/wizard/wizard_form.html:67
+#: civic_europe/templates/formtools/wizard/wizard_form.html:67
 msgid ""
 "You and your team members can edit all the fields of your idea sketch until "
 msgstr ""
 
-#: advocate_europe/templates/includes/top_menu.html:16
+#: civic_europe/templates/includes/top_menu.html:16
 msgid "navigation on/off"
 msgstr ""
 
-#: advocate_europe/templates/socialaccount/connections.html:5
-#: advocate_europe/templates/socialaccount/connections.html:11
+#: civic_europe/templates/socialaccount/connections.html:5
+#: civic_europe/templates/socialaccount/connections.html:11
 msgid "Social Connections"
 msgstr ""
 
-#: advocate_europe/templates/socialaccount/connections.html:13
+#: civic_europe/templates/socialaccount/connections.html:13
 msgid ""
 "You can sign in to your account using any of the following third party\n"
 "                    accounts:"
 msgstr ""
 
-#: advocate_europe/templates/socialaccount/connections.html:42
+#: civic_europe/templates/socialaccount/connections.html:42
 msgid ""
 "You currently have no social network accounts connected to this account."
 msgstr ""
 
-#: advocate_europe/templates/socialaccount/connections.html:45
+#: civic_europe/templates/socialaccount/connections.html:45
 msgid "Add a 3rd Party Account"
 msgstr ""
 
-#: advocate_europe/templates/socialaccount/snippets/provider_list.html:20
-#: advocate_europe/templates/socialaccount/snippets/provider_list.html:22
+#: civic_europe/templates/socialaccount/snippets/provider_list.html:20
+#: civic_europe/templates/socialaccount/snippets/provider_list.html:22
 msgid "Login with "
 msgstr ""

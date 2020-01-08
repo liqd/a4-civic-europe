@@ -10,7 +10,7 @@ import uuid
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('advocate_europe_ideas', '0001_initial'),
+        ('civic_europe_ideas', '0001_initial'),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
                 ('email', models.EmailField(max_length=254)),
                 ('token', models.UUIDField(default=uuid.uuid4, unique=True)),
                 ('creator', models.ForeignKey(to=settings.AUTH_USER_MODEL, on_delete=models.CASCADE)),
-                ('subject', models.ForeignKey(to='advocate_europe_ideas.Idea', on_delete=models.CASCADE)),
+                ('subject', models.ForeignKey(to='civic_europe_ideas.Idea', on_delete=models.CASCADE)),
             ],
             options={
                 'abstract': False,

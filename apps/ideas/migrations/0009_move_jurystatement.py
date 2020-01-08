@@ -7,14 +7,14 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
     def copy_jurystatement(apps, schema_editor):
-        Proposal = apps.get_model('advocate_europe_ideas', 'proposal')
+        Proposal = apps.get_model('civic_europe_ideas', 'proposal')
         for proposal in Proposal.objects.all():
             proposal.jury_statement = proposal.proposal_jury_statement
             proposal.save()
 
 
     dependencies = [
-        ('advocate_europe_ideas', '0008_increase_orgnaisation_name_length'),
+        ('civic_europe_ideas', '0008_increase_orgnaisation_name_length'),
     ]
 
     operations = [

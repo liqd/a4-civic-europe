@@ -36,7 +36,7 @@
     "fields":{
       "name": "Submit idea sketches",
       "description": "Add your idea sketches.",
-      "type": "advocate_europe_ideas:ideas_sketch",
+      "type": "civic_europe_ideas:ideas_sketch",
       "module": 1,
       "start_date": "2017-05-01 12:00:00+01:00",
       "end_date": "2018-05-01 12:00:00+01:00",
@@ -49,7 +49,7 @@
     "fields":{
       "name": "Rate idea sletches",
       "description": "Rate your idea sketches.",
-      "type": "advocate_europe_ideas:010:community_award_rating",
+      "type": "civic_europe_ideas:010:community_award_rating",
       "module": 1,
       "start_date": "2019-05-01 12:00:00+01:00",
       "end_date": "2020-05-01 12:00:00+01:00",

@@ -8,7 +8,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('advocate_europe_journeys', '0003_use_uploadfield'),
+        ('civic_europe_journeys', '0003_use_uploadfield'),
     ]
 
     operations = [
