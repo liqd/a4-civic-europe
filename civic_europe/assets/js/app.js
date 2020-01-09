@@ -19,5 +19,5 @@ var getCurrentPath = function () {
 }
 
 module.exports = {
-  'getCurrentPath': getCurrentPath
+  getCurrentPath: getCurrentPath
 }
