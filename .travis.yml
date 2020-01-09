@@ -18,11 +18,7 @@ script:
 - python manage.py makemigrations --dry-run --check --noinput
 after_success:
 - coveralls
-deploy:
-- provider: script
-  script: scripts/deploy.sh
-  on:
-    branch: master
+
 env:
   global:
     secure: Y5JfQMPHxfkKndOoOEyAhW2G5ixnBFkiMCrRWoPtY8pG94bLGgfNsdLrZLiPyC1z6jZ2ILVsSMIpsUkjSRleVLCWIdLGD3N03xAz0jgJsNu6IeGChieTSQyoH2uKd9ajHoGUda0EyX/yUATS4VgUh5AYFcfqzrRNKorN4jdLNnKrnIkaypbEoXN3zOE/xCIyVEJU5Ty25mfGTuGhM79p7xFTgOzHEAXKlDoOJz8qIwIGbQM0TAfM59AmbMuujUs9MNthoMiuM50Yc9D8au5G0r8lCAcpiCtjSjTvE0lWo+JMkpRZzspX4dKmPCRWn6HO4fF8n2VimN3fjol2QPxi0VZLN7PNZOM0VSS1TUZAjy5RDtk9JrMh4/xuCwMrE7JT+CmyKSYqy5oBJ0fI3jGifCUa55KY9+Gmmziy0J8FM7zwUkPVL+l+jYwn/qEMTM3RBEPkYSCwU4Q1AYGNMpUb3vNBkJgPzehXLPiyLqu8zg3tt2sY3/2bYdd3YYpv32r1hX0sOrzP4A07OrG6Czq7SAP/yOrfbPKxdmdeb+kZFZJ3RrbUaK/B2MqzbqatyIW4MRNY+lhK+4s7gi4b5VnDv9jtA1GuPlkEEmVirb/CLHxxKysGcDf0P5aKbV4bt/V9wtNVEoOqeBuOOE15HUUttf1g/jyLuNSuFn/qvX9DvqA=
