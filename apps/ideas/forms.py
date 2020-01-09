@@ -28,7 +28,7 @@ CONFIRM_PUBLICITY_LABEL = _('I hereby confirm and agree that '
                             'the idea and the visual material '
                             'used in this proposal.')
 ACCEPT_CONDITIONS_LABEL = _('I hereby agree to the {}terms'
-                            ' and conditions{} of the Advocate'
+                            ' and conditions{} of the Civic'
                             ' Europe idea challenge.')
 CONFIRM_IDEA_CHALLENGE_CAMP_WITH_DATE = _('If selected, a representative of '
                                           'my project will commit to joining '
@@ -42,7 +42,7 @@ CONFIRM_IDEA_CHALLENGE_CAMP_WITHOUT_DATE = _('If selected, a representative '
 COWORKERS_TITLE = _('Please add your team members here.')
 COWORKERS_HELP = _('Here you can insert the email addresses of '
                    'up to 5 team members. They will receive an email '
-                   'inviting them to register on the Advocate '
+                   'inviting them to register on the Civic '
                    'Europe website. After registering they '
                    'will appear with their user name on your idea '
                    'page and will be able to edit your idea. ')
