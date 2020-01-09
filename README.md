@@ -3,6 +3,9 @@
 Civic Europe is a platform for an idea challenge. It is
 based on [adhocracy 4](https://github.com/liqd/adhocracy4).
 
+[![Build Status](https://travis-ci.org/liqd/a4-civic-europe.svg?branch=master)](https://travis-ci.org/liqd/a4-civic-europe)
+[![Coverage Status](https://coveralls.io/repos/github/liqd/a4-civic-europe/badge.svg?branch=master)](https://coveralls.io/github/liqd/a4-civic-europe?branch=master)
+
 ## Requirements
 
 *   nodejs (+ npm)
@@ -19,5 +22,3 @@ based on [adhocracy 4](https://github.com/liqd/adhocracy4).
     make fixtures
     make watch
 
-
-[![Coverage Status](https://coveralls.io/repos/github/liqd/a4-civic-europe/badge.svg?branch=master)](https://coveralls.io/github/liqd/a4-civic-europe?branch=master)
