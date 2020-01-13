@@ -9,8 +9,6 @@ from wagtail.core.fields import StreamField
 from wagtail.core.models import Page
 from wagtail.images.edit_handlers import ImageChooserPanel
 
-from cms.contrib import translations
-
 from . import blocks as custom_blocks
 
 
@@ -23,21 +21,12 @@ class HomePage(Page):
         ('three_images_block', custom_blocks.ThreeImagesBlock())
     ]
 
-    # translated fields
-    title_en = models.CharField(
-        max_length=255, blank=True, verbose_name="Header Title")
-    title_de = models.CharField(
+    translated_title = models.CharField(
         max_length=255, blank=True, verbose_name="Header Title")
 
-    description_en = models.TextField(blank=True)
-    description_de = models.TextField(blank=True, null=True)
+    description = models.TextField(blank=True)
 
-    body_en = StreamField(block_types, null=True)
-    body_de = StreamField(block_types, null=True, blank=True)
-
-    body = translations.TranslatedField('body')
-    description = translations.TranslatedField('description')
-    translated_title = translations.TranslatedField('title')
+    body = StreamField(block_types, null=True)
 
     # shared fields
     image_1 = models.ForeignKey(
@@ -91,20 +80,12 @@ class HomePage(Page):
     )
 
     videoplayer_url = models.URLField(blank=True, verbose_name='Video URL')
-    video_button_text_de = models.CharField(
-        default='Video abspielen', blank=True, max_length=100)
-    video_button_text_en = models.CharField(
+    video_button_text = models.CharField(
         default='Play Video', blank=True, max_length=100)
 
-    video_button_text = translations.TranslatedField('video_button_text')
-
     website = models.URLField(blank=True, verbose_name='Website')
-    website_link_text_de = models.CharField(
-        default='mehr', blank=True, max_length=100)
-    website_link_text_en = models.CharField(
+    website_link_text = models.CharField(
         default='more', blank=True, max_length=100)
-
-    website_link_text = translations.TranslatedField('website_link_text')
 
     subpage_types = ['cms_blog.BlogIndexPage',
                      'cms_home.SimplePage',
@@ -133,8 +114,7 @@ class HomePage(Page):
         MultiFieldPanel(
             [
                 FieldPanel('videoplayer_url'),
-                FieldPanel('video_button_text_en'),
-                FieldPanel('video_button_text_de')
+                FieldPanel('video_button_text')
             ],
             heading="Video",
             classname="collapsible"
@@ -142,8 +122,7 @@ class HomePage(Page):
         MultiFieldPanel(
             [
                 FieldPanel('website'),
-                FieldPanel('website_link_text_en'),
-                FieldPanel('website_link_text_de')
+                FieldPanel('website_link_text')
             ],
             heading="Link",
             classname="collapsible"
@@ -151,20 +130,13 @@ class HomePage(Page):
     ]
 
     en_panels = [
-        FieldPanel('title_en'),
-        FieldPanel('description_en'),
-        StreamFieldPanel('body_en')
-    ]
-
-    de_panels = [
-        FieldPanel('title_de'),
-        FieldPanel('description_de'),
-        StreamFieldPanel('body_de')
+        FieldPanel('translated_title'),
+        FieldPanel('description'),
+        StreamFieldPanel('body')
     ]
 
     edit_handler = TabbedInterface([
         ObjectList(en_panels, heading='English'),
-        ObjectList(de_panels, heading='German'),
         ObjectList(content_panels, heading='Header'),
         ObjectList(Page.promote_panels, heading='Promote')
     ])
@@ -177,25 +149,14 @@ class SimplePage(Page):
     ]
 
     # translated fields
-    title_en = models.CharField(
+    translated_title = models.CharField(
         max_length=255, verbose_name="Title")
-    title_de = models.CharField(
-        max_length=255, blank=True, verbose_name="Title")
 
-    body_en = StreamField(block_types, null=True)
-    body_de = StreamField(block_types, null=True, blank=True)
-
-    body = translations.TranslatedField('body')
-    translated_title = translations.TranslatedField('title')
+    body = StreamField(block_types, null=True)
 
     en_panels = [
-        FieldPanel('title_en'),
-        StreamFieldPanel('body_en')
-    ]
-
-    de_panels = [
-        FieldPanel('title_de'),
-        StreamFieldPanel('body_de')
+        FieldPanel('title'),
+        StreamFieldPanel('body')
     ]
 
     Page.promote_panels[0].children.insert(0,
@@ -204,7 +165,6 @@ class SimplePage(Page):
 
     edit_handler = TabbedInterface([
         ObjectList(en_panels, heading='English'),
-        ObjectList(de_panels, heading='German'),
         ObjectList(Page.promote_panels, heading='Promote')
     ])
 
@@ -215,29 +175,17 @@ class StructuredTextPage(Page):
     ]
 
     # translated fields
-    title_en = models.CharField(
+    translated_title = models.CharField(
         max_length=255, verbose_name="Title")
-    title_de = models.CharField(
-        max_length=255, blank=True, verbose_name="Title")
 
-    body_en = StreamField(block_types, null=True)
-    body_de = StreamField(block_types, null=True, blank=True)
-
-    body = translations.TranslatedField('body')
-    translated_title = translations.TranslatedField('title')
+    body = StreamField(block_types, null=True)
 
     en_panels = [
-        FieldPanel('title_en'),
-        StreamFieldPanel('body_en')
-    ]
-
-    de_panels = [
-        FieldPanel('title_de'),
-        StreamFieldPanel('body_de')
+        FieldPanel('title'),
+        StreamFieldPanel('body')
     ]
 
     edit_handler = TabbedInterface([
         ObjectList(en_panels, heading='English'),
-        ObjectList(de_panels, heading='German'),
         ObjectList(Page.promote_panels, heading='Promote')
     ])

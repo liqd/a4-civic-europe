@@ -7,15 +7,11 @@ from wagtail.admin import edit_handlers
 from wagtail.core.fields import StreamField
 from wagtail.core.models import Orderable
 
-from cms.contrib import translations
 from cms.snippets import blocks as snippets_blocks
 
 
 class MenuItem(models.Model):
-    menu_title_en = models.CharField(max_length=255)
-    menu_title_de = models.CharField(max_length=255, blank=True)
-
-    translated_menu_title = translations.TranslatedField('menu_title')
+    menu_title = models.CharField(max_length=255)
 
     link_page = models.ForeignKey(
         'wagtailcore.Page',
@@ -52,7 +48,7 @@ class MenuItem(models.Model):
         blank=True,
         null=True,
         help_text=(
-            'These Links will be displayed in as a dropdown menu'
+            'These Links will be displayed in a dropdown menu'
         ),
         verbose_name='Submenu'
     )
@@ -87,13 +83,12 @@ class MenuItem(models.Model):
     panels = [
         edit_handlers.MultiFieldPanel(
             [
-                edit_handlers.FieldPanel('menu_title_en'),
-                edit_handlers.FieldPanel('menu_title_de'),
+                edit_handlers.FieldPanel('menu_title'),
                 edit_handlers.FieldPanel('link_view'),
                 edit_handlers.PageChooserPanel('link_page'),
                 edit_handlers.StreamFieldPanel('subpages')
             ],
-            heading="Translations",
+            heading="Menu Item Info",
             classname="collapsible collapsed"
         )]
 
