@@ -97,18 +97,6 @@ lint:
 	$(VIRTUAL_ENV)/bin/python manage.py makemigrations --dry-run --check --noinput || EXIT_STATUS=$$?; \
 	exit $${EXIT_STATUS}
 
-.PHONY: po
-po:
-	$(VIRTUAL_ENV)/bin/python manage.py makemessages -d djangojs
-	$(VIRTUAL_ENV)/bin/python manage.py makemessages -d django
-	sed -i 's%#: .*/adhocracy4%#: adhocracy4%' locale/*/LC_MESSAGES/django*.po
-	msgen locale/en_GB/LC_MESSAGES/django.po -o locale/en_GB/LC_MESSAGES/django.po
-	msgen locale/en_GB/LC_MESSAGES/djangojs.po -o locale/en_GB/LC_MESSAGES/djangojs.po
-
-.PHONY: mo
-mo:
-	$(VIRTUAL_ENV)/bin/python manage.py compilemessages
-
 .PHONY: release
 release: export DJANGO_SETTINGS_MODULE ?= civic_europe.settings.build
 release:
