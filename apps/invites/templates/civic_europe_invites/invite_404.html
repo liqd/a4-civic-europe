@@ -1,9 +1,8 @@
 {% extends "base.html" %}
-{% load i18n force_translation %}
+{% load i18n %}
 
 {% block title %}{% trans 'Invitation to collaborate' %}{% endblock %}
 {% block content %}
-    {% force_translation 'en' %}
     <div class="account-top custompage">
         <div class="container-medium">
             <div class="account-box">
@@ -14,5 +13,4 @@
             </div>
         </div>
     </div>
-    {% endforce_translation %}
 {% endblock %}

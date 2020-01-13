@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load i18n force_translation rules rule_tags %}
+{% load i18n rules rule_tags %}
 
 {% block title %}
     {% trans "Profile" %} {{ view.user.username }}
@@ -7,7 +7,6 @@
 
 
 {% block content %}
-    {% force_translation 'en' %}
     <div class="profile">
         <div class="profile-header">
             <div class="container">
@@ -139,5 +138,4 @@
             </div>
         </div>
     </div>
-{% endforce_translation %}
 {% endblock %}
