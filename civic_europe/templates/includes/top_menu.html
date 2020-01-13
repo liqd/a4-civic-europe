@@ -1,5 +1,4 @@
-{% load i18n wagtailcore_tags userindicator snippet_tags url_translations static %}
-{% get_current_language as LANGUAGE_CODE %}
+{% load i18n wagtailcore_tags userindicator snippet_tags static %}
 {% load_site_menu "topmenu" as top_menu_items %}
 <nav class="navbar navbar-default navbar-fixed-top" aria-label="{% trans 'main menu' %}">
     <div class="container">
@@ -38,25 +37,6 @@
                 <li><a href="{{ menuitem.url }}" class="{% if request.path == menuitem.url %}is-active {% else %}not-active{% endif %}">{{ menuitem.menu_title }}</a></li>
                 {% endif %}
                 {% endfor %}
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ LANGUAGE_CODE|upper }} <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        {% get_available_languages as languages %}
-                        {% for lang_code, lang_name in languages %}
-                            {% if lang_code != LANGUAGE_CODE %}
-                                {% get_language_info for lang_code as lang %}
-                                <li>
-                                    <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-                                        <input name="next" type="hidden" value="{{ redirect_to }}" />
-                                        <input name="language" type="hidden" value="{{ lang_code }}">
-                                        <button type="submit">{{ lang.name_local }}</button>
-                                    </form>
-                                </li>
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
-                </li>
             </ul>
         </div>
     </div>
