@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load i18n react_comments rules static force_translation idea_tags absolute_url rules %}
+{% load i18n react_comments rules static idea_tags absolute_url rules %}
 
 {% block title %} {{ idea.idea_title }} {% endblock %}
 
@@ -32,7 +32,6 @@
 {% endblock %}
 
 {% block content %}
-    {% force_translation 'en' %}
     <div class="ideadetail">
         <div class="container">
 
@@ -134,5 +133,4 @@
             {% endif %}
         </div>
     </div>
- {% endforce_translation %}
 {% endblock %}

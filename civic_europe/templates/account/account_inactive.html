@@ -1,12 +1,10 @@
 {% extends 'account/civic_europe/base_account.html' %}
 
-{% load i18n force_translation %}
+{% load i18n %}
 
 {% block title %}{% trans "Account Inactive" %}{% endblock %}
 
 {% block account_content %}
-{% force_translation 'en' %}
     <h2>{% trans "Account Inactive" %}</h2>
     <p>{% trans "This account is inactive." %}</p>
-{% endforce_translation %}
 {% endblock %}

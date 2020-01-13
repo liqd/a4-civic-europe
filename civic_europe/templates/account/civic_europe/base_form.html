@@ -1,11 +1,10 @@
 {% extends 'base.html' %}
 
-{% load i18n force_translation %}
+{% load i18n %}
 
 {% block title %}{% endblock %}
 
 {% block content %}
-{% force_translation 'en' %}
 <div class="login-register-top">
     <div class="container login-register">
         <div class="container-medium">
@@ -21,5 +20,4 @@
         </div>
     </div>
 </div>
-{% endforce_translation %}
 {% endblock %}

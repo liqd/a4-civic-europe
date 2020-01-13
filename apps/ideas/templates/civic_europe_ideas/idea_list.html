@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 
-{% load i18n rules idea_tags force_translation %}
+{% load i18n rules idea_tags %}
 
 {% block title %} {% trans 'All ideas' %} {% endblock %}
 
 {% block content %}
-    {% force_translation 'en' %}
     <div class="custompage-blue">
         <div class="container">
             <header class="custompage-header">
@@ -98,8 +97,4 @@
             </div>
         </div>
     </div>
-
-
-
-    {% endforce_translation %}
 {% endblock %}

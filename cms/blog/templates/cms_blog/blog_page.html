@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load i18n static wagtailcore_tags wagtailimages_tags absolute_url force_translation %}
+{% load i18n static wagtailcore_tags wagtailimages_tags absolute_url %}
 
 {% block title %} {{ page.title }} {% endblock %}
 
@@ -35,7 +35,6 @@
 {% endblock %}
 
 {% block content %}
-    {% force_translation 'en' %}
 
     <div class="container blogpage">
         <div class="container-narrow">
@@ -66,5 +65,4 @@
             </div>
         </div>
     </div>
-    {% endforce_translation %}
 {% endblock %}

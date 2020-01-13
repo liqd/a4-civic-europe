@@ -1,10 +1,9 @@
 {% extends "base.html" %}
-{% load widget_tweaks i18n idea_tags crispy_forms_tags static force_translation %}
+{% load widget_tweaks i18n idea_tags crispy_forms_tags static %}
 
 {% block title %} {% trans 'update idea' %} {% endblock %}
 
 {% block content %}
-    {% force_translation 'en' %}
     <div class="wizard-page">
         <div class="container-narrow breadcrumps">
             <a href="{% url 'idea-detail' object.slug %}" class="btn-back-to" data-safe-exit="wizard">
@@ -56,7 +55,6 @@
             </div>
         </form>
     </div>
-{% endforce_translation %}
 {% endblock %}
 
 {% block extra_js %}
