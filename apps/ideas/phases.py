@@ -24,7 +24,7 @@ class PreCallPhase(IdeaPhase):
 
     name = _('Pre call phase')
     description = _(
-        'look at previous ideas, get an idea how the idea challenge is run'
+        'get an idea how the idea challenge is run'
     )
 
     default_filters = QueryDict('ordering=newest&'
@@ -86,7 +86,7 @@ class CommunityAwardRatingPhase(IdeaPhase):
 
     features = {
         'rate': (models.Idea,),
-        # rating only for users, that added an idea in this or previous years
+        # rating only for users, that added an idea in this (or previous) years
     }
 
     default_filters = QueryDict('ordering=comments&'
@@ -128,43 +128,6 @@ class InterimShortlistPublicationPhase(IdeaPhase):
 
 
 phases.content.register(InterimShortlistPublicationPhase())
-
-
-class FullProposalPhase(IdeaPhase):
-    phase = 'full_proposal'
-
-    name = _('Full proposal phase')
-    description = _('extend idea sketches to a full proposals')
-    module_name = _('Civic Europe')
-
-    features = {
-        'crud': (models.Idea, models.Proposal,),
-    }
-
-    default_filters = QueryDict('ordering=title&'
-                                'status=shortlist&'
-                                'project=',
-                                mutable=True
-                                )
-
-
-phases.content.register(FullProposalPhase())
-
-
-class InterimWinnersSelectionPhase(IdeaPhase):
-    phase = 'interim_winners_selection'
-
-    name = _('Interim winners selection phase')
-    description = _('winning ideas are chosen by the jury')
-
-    default_filters = QueryDict('ordering=title&'
-                                'status=proposal&'
-                                'project=',
-                                mutable=True
-                                )
-
-
-phases.content.register(InterimWinnersSelectionPhase())
 
 
 class InterimWinnersPhase(IdeaPhase):
