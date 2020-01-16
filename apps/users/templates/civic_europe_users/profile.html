@@ -11,14 +11,14 @@
         <div class="profile-header">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-4 profile-image-holder">
+                    <div class="col-4 profile-image-holder">
                         <span
                             class="circled profile-image"
                             style="background-image: url({{ view.user.avatar_or_fallback_url }})"
                         ></span>
                     </div>
-                    <div class="col-xs-8">
-                        <h1 class="visible-xs profile-title">
+                    <div class="col-8">
+                        <h1 class="d-md-none profile-title">
                             {{ view.user.username }}
                         </h1>
                     </div>
@@ -29,20 +29,20 @@
         <div class="profile-navbar">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-offset-3 col-sm-9 tabs">
+                    <div class="offset-sm-3 col-sm-9 mb-1 tabs">
                         <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="visible-xs nav-item">
+                            <li role="presentation" class="d-sm-none nav-item">
                                 <a href="#info" aria-controls="info" role="tab" data-toggle="tab">
                                     {% trans "Info" %}
                                 </a>
                             </li>
                             <li role="presentation" class="active nav-item">
-                                <a href="#ideas" aria-controls="ideas" role="tab" data-toggle="tab">
+                                <a href="#ideas" aria-controls="ideas" id="ideas_tab" role="tab" data-toggle="tab" aria-selected="true">
                                     {% trans "Ideas" %}
                                 </a>
                             </li>
                             <li role="presentation" class="nav-item">
-                                <a href="#activities" aria-controls="activities" role="tab" data-toggle="tab">
+                                <a href="#activities" aria-controls="activities" id="activities_tab" role="tab" data-toggle="tab" aria-selected="false">
                                     {% trans "Activity" %}
                                 </a>
                             </li>
@@ -53,9 +53,9 @@
         </div>
 
         <div class="container">
-            <div class="row">
                 <main class="tab-content profile-tab-content">
-                    <div role="tabpanel" class="profile-info-pane tab-pane col-sm-3" id="info">
+                  <div class="row">
+                    <div role="tabpanel" class="profile-info-pane tab-pane col-md-3" id="info">
                         <h1 class="profile-title">{{ view.user.username }}</h1>
                         <div>
                             <P>{{ view.user.europe }}</P>
@@ -105,7 +105,7 @@
                         </ul>
                     </div>
 
-                    <div role="tabpanel" class="tab-pane active col-sm-9" id="ideas">
+                    <div role="tabpanel" class="tab-pane active fade show col-sm-9" id="ideas" aria-labelledby="ideas_tab">
                         <div class="filter-bar idealist-filter clearfix">
                             {% for field in view.filter.form %}
                                 {% if field.name != 'ordering' or idea_list.count > 1 %}
@@ -130,12 +130,12 @@
                         {% if is_paginated %}{% include 'includes/pagination.html' %}{% endif %}
                     </div>
 
-                    <div role="tabpanel" class="tab-pane col-sm-9" id="activities">
+                    <div role="tabpanel" class="tab-pane col-sm-9" id="activities" aria-labelledby="activities_tab">
                         {% include 'civic_europe_users/includes/activity_list.html'%}
                     </div>
+                  </div>
                 </main>
 
-            </div>
         </div>
     </div>
 {% endblock %}
