@@ -1,7 +1,7 @@
 {% load i18n wagtailcore_tags userindicator snippet_tags static %}
 {% load_site_menu "topmenu" as top_menu_items %}
-<nav class="navbar navbar-default navbar-fixed-top" aria-label="{% trans 'main menu' %}">
-    <div class="container">
+<nav class="navbar navbar--default navbar-expand-lg fixed-top" aria-label="{% trans 'main menu' %}">
+  <div class="container px-0">
         <a class="navbar-brand" href="/">
             {% with logo_number='12345'|random %}
             <img
@@ -11,30 +11,28 @@
             >
             {% endwith %}
         </a>
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-label="{% trans 'navigation on/off' %}">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
 
-        <div id="navbar-collapse" class="navbar-collapse collapse">
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="#navbarCollapse" aria-expanded="false" aria-label="{% trans 'navigation on/off' %}">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div id="navbarCollapse" class="collapse navbar-collapse ml-auto">
+
             {% userindicator_menu %}
 
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="navbar-nav ml-auto order-first">
                 {% for menuitem in top_menu_items %}
                 {% if menuitem.subpages %}
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ menuitem.menu_title }} <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ menuitem.translated_menu_title }} <span class="caret"></span></a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         {% for subpage in menuitem.subpages %}
-                        <li><a href="{{ subpage.value.link.url }}">{{ subpage.value.link_text }}</a></li>
+                        <a class="dropdown-item" href="{{ subpage.value.link.url }}">{{ subpage.value.link_text }}</a>
                         {% endfor %}
-                    </ul>
+                    </div>
                 </li>
                 {% else %}
-                <li><a href="{{ menuitem.url }}" class="{% if request.path == menuitem.url %}is-active {% else %}not-active{% endif %}">{{ menuitem.menu_title }}</a></li>
+                <li class="nav-item"><a href="{{ menuitem.url }}" class="nav-link {% if request.path == menuitem.url %}is-active {% else %}not-active{% endif %}">{{ menuitem.menu_title }}</a></li>
                 {% endif %}
                 {% endfor %}
             </ul>

@@ -2,8 +2,8 @@
 {% image image fill-700x500 as smallImage %}
 {% image image fill-1700x500-c100 as bigImage %}
 <header class="herounit">
-    <div class="herounit-image visible-lg-block visible-xl-block" style="background-image: url({{ bigImage.url }})"></div>
-    <div class="herounit-image visible-xs-block visible-sm-block visible-md-block" style="background-image: url({{ smallImage.url }})"></div>
+    <div class="herounit-image d-none d-lg-block" style="background-image: url({{ bigImage.url }})"></div>
+    <div class="herounit-image d-lg-none" style="background-image: url({{ smallImage.url }})"></div>
     <div class="container herounit-container">
         <div class="herounit-header">
             <h1 class="herounit-title">{{ title }}</h1>
