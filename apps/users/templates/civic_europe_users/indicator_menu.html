@@ -1,50 +1,42 @@
 {% load i18n static thumbnail rules rule_tags %}
 
-<ul class="nav navbar-nav navbar-right user-indicator" id="user-indicator">
+<ul class="navbar-nav user-indicator d-flex justify-content-end" id="user-indicator">
     {% if request.user.is_authenticated %}
-    <li class="dropdown">
-        <div class="btn-group user-indicator-btn-group clearfix">
+    <li class="nav-item">
+        <div class="btn-group user-indicator-btn-group">
             <a href="{% url 'profile' request.user.username %}" class="btn user-indicator-profile-btn">
-                <span class="user-indicator-profile-avatar avatar-square-small" style="background-image: url({{ request.user.avatar_or_fallback_url }})"></span><span class="user-indicator-profile-username"> {{ request.user.username }}</span>
-            </a>
-            <button href="#" class="btn dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="{% trans 'toggle user menu' %}">
-                <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
-            </button>
-
-            <ul class="dropdown-menu user-indicator-menu">
-                {% if request.user.is_superuser or request.user.is_staff  %}
-                <li>
-                    <a href="{% url 'admin:index' %}"><i class="far fa-hand-spock fa-fw" aria-hidden="true"></i> <span class="dropdown-text">{% trans "Admin" %}</span></a>
-                </li>
+              <span class="user-indicator-profile-avatar avatar-square-small" style="background-image: url({{ request.user.avatar_or_fallback_url }})"></span><span class="user-indicator-profile-username">{{ request.user.username }}</span>
+            </a><button href="#" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="{% trans 'toggle user menu' %}"><span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></button>
+            <div class="dropdown-menu user-indicator-menu">
+                {% if request.user.is_superuser or request.user.is_staff %}
+                <a href="{% url 'admin:index' %}" class="dropdown-item">
+                    <i class="far fa-hand-spock fa-fw" aria-hidden="true"></i> <span class="dropdown-text">{% trans "Admin" %}</span>
+                </a>
                 {% endif %}
-                <li>
-                    <a href="{% url 'edit_profile' %}"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span class="dropdown-text">{% trans "Account Settings" %}</span></a>
-                </li>
+                    <a href="{% url 'edit_profile' %}" class="dropdown-item">
+                        <i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span class="dropdown-text">{% trans "Account Settings" %}</span>
+                    </a>
                 {% get_modules as modules %}
                 {% for module in modules %}
                     {% has_perm 'civic_europe_ideas.add_ideasketch' request.user module as can_add %}
                     {% if can_add %}
-                    <li>
-                        <a href="{% url 'idea-sketch-create' module.slug %}">
-                            <i class="fa fa-plus fa-fw" aria-hidden="true"></i>{% trans 'add idea sketch' %}
-                        </a>
-                    </li>
+                    <a href="{% url 'idea-sketch-create' module.slug %}" class="dropdown-item">
+                        <i class="fa fa-plus fa-fw" aria-hidden="true"></i>{% trans 'add idea sketch' %}
+                    </a>
                     {% endif %}
                 {% endfor %}
-                <li>
-                    <form class="user-indicator-logout-form" action="{% url 'account_logout' %}" method="post" >
-                        {% csrf_token %}
-                        <input type="hidden" name="next" value="{{ redirect_field_value }}">
-                        <button type="submit" value="Register">
-                            <i class="fas fa-sign-out-alt fa-fw" aria-hidden="true"></i>{% trans "logout" %}
-                        </button>
-                    </form>
-                </li>
-            </ul>
+                <form class="user-indicator-logout-form" action="{% url 'account_logout' %}" method="post" >
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ redirect_field_value }}">
+                    <button class="dropdown-item" type="submit" value="Register">
+                        <i class="fas fa-sign-out-alt fa-fw" aria-hidden="true"></i>{% trans "logout" %}
+                    </button>
+                </form>
+            </div>
         </div>
     </li>
     {% else %}
-    <li>
+    <li class="nav-item">
         <div class="login-register-btn-group">
             <a class="btn btn-default" href="{% url 'account_login' %}?next={{redirect_field_value|urlencode }}">{% trans "login" %}</a>
             <a class="btn btn-primary" href="{% url 'account_signup' %}?next={{redirect_field_value|urlencode }}">{% trans "register" %}</a>
