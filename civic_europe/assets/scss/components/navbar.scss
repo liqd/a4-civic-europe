@@ -1,0 +1,57 @@
+
+.navbar--default {
+    color: $gray-dark;
+    background-color: $white;
+    border: $ae-border--light;
+    height: $navbar-height;
+    padding: 0 0.5 * $padding;
+}
+
+.navbar-brand.navbar-brand {
+    padding: rem(10px 0 10px 0);
+
+    .navbar-brand-logo {
+        height: 3rem;
+    }
+}
+
+.navbar--default {
+    .nav-link {
+        background-color: $white;
+        font-size: $font-size-base;
+        color: $gray-dark;
+        text-align: left;
+
+        @media screen and (min-width: $screen-md) {
+            padding: 1.5rem 1rem 1rem 1rem !important;
+        }
+    }
+}
+
+.navbar--default .nav-link.is-active:after {
+    display: block;
+    content: '';
+    border-bottom: solid $navbar-underline-height $brand-primary;
+}
+
+.navbar--default .nav-link.not-active:after {
+    display: block;
+    content: '';
+    border-bottom: solid $navbar-underline-height $brand-primary;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.navbar--default .nav-link.not-active:hover:after {
+    transform: scaleX(1);
+}
+
+.navbar-collapse {
+    background-color: $white;
+    padding-right: $padding;
+    padding-left: $padding;
+    overflow-x: visible;
+    margin-right: -$spacer;
+    margin-left: -$spacer;
+    margin-bottom: 0.5*$spacer;
+}
