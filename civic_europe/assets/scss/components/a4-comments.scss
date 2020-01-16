@@ -1,0 +1,57 @@
+.a4-comments__submit-input {
+    @extend .btn-primary;
+}
+
+.a4-comments__nav__text {
+    margin-bottom: $spacer;
+}
+
+.a4-a4-comments__nav_parent {
+    margin-top: $spacer;
+}
+
+.a4-comments__nav__btn {
+    i:before {
+        content: "\f078";
+        padding-left: 0.2*$padding;
+    }
+}
+
+.a4-comments__nav__search-btn {
+    @extend .btn-default;
+}
+
+.a4-comments__nav {
+    padding: 0 $padding;
+}
+
+.a4-comments__box--left {
+    @extend .col-3;
+}
+
+.a4-comments__box--right {
+    @extend .col-9;
+}
+
+.a4-comments__dropdown {
+    float: right;
+    padding: 0;
+
+    @extend .btn;
+    @extend .btn-default;
+}
+
+.a4-comments__navbar {
+    margin: $spacer 0 2*$spacer 0;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.rating-button {
+    @extend .btn;
+    @extend .btn-default;
+}
+
+.a4-comments__nav {
+    margin-top: 0;
+}
