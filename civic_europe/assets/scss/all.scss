@@ -1,4 +1,12 @@
-@import "core/bootstrap";
+// Required
+@import "~bootstrap/scss/functions";
+
+// @import "core/bootstrap-variables";
+@import "core/variables";
+
+// Must be loaded after above due to use of default
+@import "~bootstrap/scss/bootstrap.scss";
+
 @import "core/mixins";
 @import "core/type";
 @import "core/basics";
@@ -8,7 +16,9 @@
 @import "core/buttons";
 @import "core/layout";
 
+// @import "core/bootstrap";
 
+@import "components/a4-comments";
 @import "components/alert";
 @import "components/account";
 @import "components/activity";
@@ -28,6 +38,7 @@
 @import "components/home";
 @import "components/hover_image";
 @import "components/ideas";
+@import "components/navbar";
 @import "components/pagination";
 @import "components/profile";
 @import "components/slick_slider";

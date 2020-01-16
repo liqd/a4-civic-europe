@@ -37,7 +37,6 @@ module.exports = {
       '@fortawesome/fontawesome-free/scss/regular.scss',
       '@fortawesome/fontawesome-free/scss/solid.scss',
       './civic_europe/assets/js/jquery-fix.js',
-      'bootstrap-sass',
       'slick-carousel/slick/slick.min.js',
       'slick-carousel/slick/slick.css'
     ]
