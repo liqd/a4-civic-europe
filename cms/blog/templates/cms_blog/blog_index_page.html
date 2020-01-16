@@ -24,14 +24,14 @@
             <div class="row"></div>
         {% endif %}
 
-        <div class="hidden-sm hidden-md hidden-lg {% if blogs.has_previous or category or not page.featured_page.live %}topics-no-featured{% endif %}">
+        <div class="d-md-none {% if blogs.has_previous or category or not page.featured_page.live %}topics-no-featured{% endif %}">
             <div class="row">
                 <div class="col-xs-12">
                     {% include 'cms_blog/includes/blog_index_category_buttons.html' %}
                 </div>
             </div>
         </div>
-        <div class="row col-sm-3 col-md-2 hidden-xs blogindex-topics-neg-margin {% if blogs.has_previous or category or not page.featured_page.live %}topics-no-featured{% endif %}">
+        <div class="row col-sm-3 col-md-2 d-none d-md-block blogindex-topics-neg-margin {% if blogs.has_previous or category or not page.featured_page.live %}topics-no-featured{% endif %}">
             {% include 'cms_blog/includes/blog_index_category_buttons.html' %}
         </div>
 
@@ -45,7 +45,7 @@
                         {% if post.image %}
                             {% image post.image fill-470x300 as image%}
                         {% endif %}
-                        <div class="hover-parent blogindex-img col-xs-12 col-sm-5 col-sm-offset-3 col-md-5 col-md-offset-2">
+                        <div class="hover-parent blogindex-img col-xs-12 col-sm-5 offset-sm-3 col-md-5 offset-md-2">
                             <a href="{% pageurl post %}" class="hover-child-img" style="background-image: url({% if post.image %} {{ image.url }} {% else %} {% static 'images/placeholder_yellow.svg' %} {% endif %});">
                             </a>
                         </div>
@@ -55,15 +55,15 @@
                                 <h4><a href="{% pageurl post %}">{{ post.title }}</a></h4>
                             </div>
                             <!--lg and xs-->
-                            <div class="blogindex-teaser hidden-md hidden-sm">
+                            <div class="blogindex-teaser d-sm-none d-lg-block">
                                 {{ post.teasertext|truncatechars:150 }}
                             </div>
                             <!--md-->
-                            <div class="blogindex-teaser hidden-lg hidden-sm hidden-xs">
+                            <div class="blogindex-teaser d-none d-md-block d-lg-none">
                                 {{ post.teasertext|truncatechars:80 }}
                             </div>
                             <!--sm-->
-                            <div class="blogindex-teaser hidden-lg hidden-md hidden-xs">
+                            <div class="blogindex-teaser d-none d-sm-block d-md-none">
                                 {{ post.teasertext|truncatechars:60 }}
                             </div>
                             <div class="blog-createdates">

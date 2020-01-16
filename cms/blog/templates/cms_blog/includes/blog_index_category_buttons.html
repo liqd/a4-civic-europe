@@ -10,5 +10,5 @@
     {% else %}
         <a href="?category={{ categ.pk }}" class="btn btn-sm btn-primary blogindex-category-btn category-name" role="button" aria-label="{% trans "Filter for category" %} {{ categ }}">{{ categ }}</a>
     {% endif %}
-    <br class="hidden-xs">
+    <br class="d-none d-sm-block">
 {% endfor %}
