@@ -29,12 +29,12 @@
     flex-wrap: wrap;
 
     .idealist-itemwrapper {
-        @media screen and (min-width: $screen-md-min) {
+        @media screen and (min-width: $screen-md) {
             flex-basis: 50%;
             max-width: 50%;
         }
 
-        @media screen and (min-width: $screen-lg-min) {
+        @media screen and (min-width: $screen-lg) {
             flex-basis: 33.33%;
             max-width: 33.33%;
         }
@@ -130,40 +130,42 @@
         // background-image and gradient in ideasketch_detail_header.html
         background-position: center center;
         background-size: cover;
-        height: rem(320px);
+        height: 22rem;
+        width: 100%;
         border-top-left-radius: rem(5px);
         border-top-right-radius: rem(5px);
 
-        @media screen and (min-width: $screen-md-min) {
-            height: rem(350px);
-            margin-top: rem(40px);
+        @media screen and (min-width: $screen-md) {
+            height: 25rem;
+            margin-top: 2.5*$spacer;
         }
     }
 
-    .ideadetailheader-content {
-        height: 100%;
-        margin-left: rem(20px);
 
-        @media screen and (max-width: $screen-xs-max) {
-            margin-left: rem(10px);
-        }
-    }
+    // .ideadetailheader-content {
+    //     height: 100%;
+    //     margin-left: 0.5 * $spacer;
+    //
+    //     @media screen and (min-width: $screen-sm) {
+    //         margin-left: $spacer;
+    //     }
+    // }
 
-    .ideadetailheader-left {
-        height: 100%;
-        padding: 0;
-    }
+    // .ideadetailheader-left {
+    //     height: 100%;
+    //     padding: 0;
+    // }
 
-    .ideadetailheader-right {
-        height: 100%;
-        padding: 0;
-    }
+    // .ideadetailheader-right {
+    //     position: relative;
+    //     bottom: $spacer;
+    // }
 
     .ideadetail-title {
         color: #fff;
-        position: absolute;
-        left: 0;
-        bottom: rem(10px);
+        // position: absolute;
+        // left: 0;
+        bottom: $spacer;
 
         @media screen and (max-width: $screen-sm-max) {
             bottom: 0;
@@ -171,11 +173,10 @@
     }
 
     .ideadetail-category {
-        margin-top: rem(15px);
-        margin-bottom: rem(10px);
-        font-size: rem(12px);
+        margin-top: $spacer;
+        margin-bottom: $spacer;
+        font-size: $font-size-sm;
         font-weight: bold;
-        letter-spacing: rem(.8px);
         text-transform: uppercase;
     }
 
@@ -205,9 +206,9 @@
 // -------------------- Idea Detail Header Support Button --------------------
 
 .ideadetail-support-btn-group {
-    margin-top: rem(10px);
+    float: right;
     background-color: $brand-primary;
-    border-radius: rem(5px);
+    border-radius: 5px;
     color: #fff;
 
     .btn {
@@ -215,15 +216,15 @@
         border: 0.5px solid $brand-primary-darker;
     }
 
-    @media screen and (min-width: $screen-sm-min) {
-        position: absolute;
-        right: rem(20px);
-        bottom: rem(10px);
-    }
-
-    @media screen and (min-width: $screen-md-min) {
-        bottom: rem(20px);
-    }
+    // @media screen and (min-width: $screen-sm) {
+    //     // position: absolute;
+    //     // right: rem(20px);
+    //     // bottom: rem(10px);
+    // }
+    //
+    // @media screen and (min-width: $screen-md) {
+    //     // bottom: rem(20px);
+    // }
 }
 
 // ------- Idea Detail XS support, watch, share -----
@@ -234,7 +235,7 @@
 
 // ----------------- Idea Detail Buttons: Watch, Share, ... -----------------
 
-.nav .nav-idea {
+.nav-idea {
     margin-right: 0;
     float: right;
 
@@ -253,9 +254,9 @@
         border-left: 1px solid $ae-dark-gray;
         border-radius: 0;
 
-        color: $gray-base;
+        color: $black;
 
-        font-size: rem(14px);
+        font-size: $font-size-base;
     }
 
     .dropdown-follow {
@@ -339,7 +340,7 @@
 .ideadetail-info-boxes {
     margin-top: rem(20px);
 
-    @media screen and (min-width: $screen-md-min) {
+    @media screen and (min-width: $screen-md) {
         margin-top: rem(40px);
     }
 }
@@ -425,7 +426,7 @@
         }
 
         a {
-            color: $gray-base;
+            color: $black;
         }
     }
 
@@ -448,15 +449,15 @@
     }
 }
 
-.idea_label {
+.idea__badge {
     text-transform: uppercase;
     padding: rem(3px) rem(6px);
     font-size: rem(12px);
     vertical-align: middle;
 }
 
-.idealist-label {
-    @extend .idea_label;
+.idealist__badge {
+    @extend .idea__badge;
     position: absolute;
     bottom: rem(10px);
     left: rem(10px);

@@ -19,7 +19,7 @@
 
 .idealist-filter {
     .filter-element {
-        @media screen and (min-width: $screen-md-min) {
+        @media screen and (min-width: $screen-md) {
             margin: rem(5px) rem(5px) rem(5px) 0;
         }
     }
@@ -27,7 +27,7 @@
     // only pull right on medium and large screens
 
     .right {
-        @media screen and (min-width: $screen-md-min) {
+        @media screen and (min-width: $screen-md) {
             float: right;
         }
     }
@@ -97,7 +97,6 @@
         border: none;
         height: 100%;
         line-height: rem(20px);
-        padding: rem(6px 12px);
         border-radius: 5px;
         width: 100%;
         float: left;
@@ -177,7 +176,7 @@
     list-style: none;
 }
 
-@media screen and (min-width: $screen-sm-min) {
+@media screen and (min-width: $screen-sm) {
     .filter-bar .filter-list {
         float: left;
     }

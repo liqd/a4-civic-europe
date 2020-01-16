@@ -56,7 +56,7 @@
 //---------- Journey Create/Update Views --------------------
 
 .journey-form-top {
-    @media screen and (min-width: $screen-md-min) {
+    @media screen and (min-width: $screen-md) {
         padding-top: rem(40px);
         padding-bottom: rem(60px);
     }
@@ -93,7 +93,7 @@
     background-color: #fff;
     border-radius: 4px;
 
-    @media screen and (min-width: $screen-sm-min) {
+    @media screen and (min-width: $screen-sm) {
         padding: rem(20px);
     }
 

@@ -6,26 +6,22 @@
     font-size: rem(24px);
 }
 
-@media screen and (min-width: $screen-sm-min) {
+.profile-image-holder .profile-image {
+    margin: 1rem;
+    width: 5rem;
+    height: 5rem;
+}
+
+@media screen and (min-width: $screen-md) {
     .profile-image-holder {
         position: relative;
-        height: rem(120px);
+        height: 8rem;
 
         .profile-image {
             position: absolute;
-            bottom: rem(-100px);
-            width: rem(170px);
-            height: rem(170px);
-        }
-    }
-}
-
-@media screen and (max-width: $screen-xs-max) {
-    .profile-image-holder {
-        .profile-image {
-            margin: rem(10px);
-            width: rem(80px);
-            height: rem(80px);
+            bottom: -6rem;
+            width: 11rem;
+            height: 11rem;
         }
     }
 }
@@ -45,33 +41,29 @@
 
 .profile-traits {
     list-style: none;
-    padding: rem(10px 0);
+    padding: $padding 0;
 
     .trait-icon {
         color: $ae-middle-gray;
     }
 }
 
-.profile-info-pane {
-    font-size: rem(16px);
-}
-
 .profile {
-    padding-bottom: rem(60px);
+    padding-bottom: $padding;
 
-    @media screen and (max-width: $screen-sm-min) {
-        padding-bottom: rem(15px);
+    @media screen and (min-width: $screen-sm) {
+        padding-bottom: 4*$padding;
     }
 
     .profile-navbar {
-        margin-bottom: rem(20px);
+        margin-bottom: $spacer;
     }
 }
 
 
-@media screen and (min-width: $screen-sm-min) {
+@media screen and (min-width: $screen-md) {
 
-    /* Ensure that info sidebar is always visible in sm
+    /* Ensure that info sidebar is always visible in md
        and above and only a tab in xs
      */
 

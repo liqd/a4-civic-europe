@@ -37,7 +37,7 @@
             color: $gray-dark;
         }
 
-        .label-subtle {
+        .badge-subtle {
             background-color: $ae-middle-gray;
             text-transform: uppercase;
             padding: rem(3px) rem(6px);
@@ -74,7 +74,7 @@
     }
 
     .comment-text {
-        font-size: rem(16px);
+        font-size: $font-size-md;
         color: $gray-dark;
     }
 
@@ -163,7 +163,7 @@
         }
     }
 
-    .navbar-right {
+    .ml-auto {
         float: right;
         display: block;
 

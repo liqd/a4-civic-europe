@@ -106,7 +106,7 @@
         flex-direction: column;
         flex-basis: 90%;
 
-        @media screen and (min-width: $screen-md-min) {
+        @media screen and (min-width: $screen-md) {
             flex-basis: 30%;
             margin-top: 0;
             margin-bottom: 0;
@@ -172,7 +172,7 @@
     height: rem(30px);
     max-width: 100%;
 
-    @media screen and (max-width: $screen-sm-min) {
+    @media screen and (max-width: $screen-sm) {
         max-width: rem(200px);
     }
 
