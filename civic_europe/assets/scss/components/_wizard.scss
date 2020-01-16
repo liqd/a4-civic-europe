@@ -1,5 +1,5 @@
 .wizard-page {
-    @media screen and (min-width: $screen-md-min) {
+    @media screen and (min-width: $screen-md) {
         padding: rem(60px);
     }
 
@@ -39,7 +39,7 @@
 .wizard {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
 
-    @media screen and (min-width: $screen-sm-min) {
+    @media screen and (min-width: $screen-sm) {
         padding: rem(30px);
     }
 
@@ -52,7 +52,7 @@
     position: relative;
 
     .wizard-progress-side {
-        @media screen and (min-width: $screen-sm-min) {
+        @media screen and (min-width: $screen-sm) {
             position: absolute;
             left: 102%;
             top: rem(20px);

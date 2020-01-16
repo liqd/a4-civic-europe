@@ -169,7 +169,7 @@
         }
     }
 
-    @media screen and (min-width: $screen-sm-min) {
+    @media screen and (min-width: $screen-sm) {
         max-width: rem(150px);
     }
 
@@ -188,7 +188,7 @@
             box-shadow: none;
         }
 
-        @media screen and (min-width: $screen-sm-min) {
+        @media screen and (min-width: $screen-sm) {
             max-width: rem(110px);
         }
     }

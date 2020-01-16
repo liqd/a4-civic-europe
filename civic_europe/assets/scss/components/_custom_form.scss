@@ -17,7 +17,7 @@
         font-size: rem(24px);
     }
 
-    .help-block {
+    .form-text {
         margin-top: 0;
         margin-bottom: rem(5px);
     }
@@ -47,11 +47,11 @@
     }
 
     .has-error {
-        .control-label {
+        .col-form-label {
             color: $text-color;
         }
 
-        .help-block {
+        .form-text {
             color: lighten($text-color, 25%);
         }
 

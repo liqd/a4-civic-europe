@@ -6,6 +6,11 @@
     @include button-variant($btn-ae-light-blue-color, $btn-ae-light-blue-bg, $btn-ae-light-blue-border);
 }
 
+.btn-default {
+    background-color: $btn-default-bg;
+    border-color: $btn-default-border;
+}
+
 .btn-github {
     @include button-variant($btn-ae-github-color, $btn-ae-github-bg, $btn-ae-github-border);
     color: white;
@@ -44,16 +49,16 @@
 }
 
 .btn-filter {
-    @include button-variant($gray-dark, #fff, $ae-light-gray-shadow);
-
+    border: 1px solid $ae-light-gray-shadow;
     font-weight: normal;
     border-radius: 5px;
 }
 
 .search-filter-btn {
-    @include button-variant(#fff, $brand-primary, $brand-primary);
+    @extend .btn-primary;
 
     border: none;
+    height: 100%;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }

@@ -39,7 +39,7 @@
         }
     }
 
-    @media (max-width: $screen-md-min) {
+    @media (max-width: $screen-md) {
         .slick-prev,
         .slick-next {
             display: none;
@@ -57,7 +57,7 @@
 
         @include rem(padding, 20px 0 0);
 
-        @media (max-width: $screen-md-min) {
+        @media (max-width: $screen-md) {
             overflow: hidden;
         }
     }
