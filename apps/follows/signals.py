@@ -20,9 +20,9 @@ def _autofollow(instance, user_pks, reverse, enabled):
 
 @receiver(
     signals.m2m_changed,
-    sender=idea_models.IdeaSketch.co_workers.through
+    sender=idea_models.Idea.co_workers.through
 )
-@receiver(signals.m2m_changed, sender=idea_models.Proposal.co_workers.through)
+@receiver(signals.m2m_changed, sender=idea_models.Idea.co_workers.through)
 def autofollow_collaborateurs(instance, action, pk_set, reverse, **kwargs):
     if action == 'post_add':
         enabled = True
