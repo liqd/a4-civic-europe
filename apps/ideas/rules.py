@@ -25,7 +25,7 @@ rules.add_perm(
 
 rules.add_perm(
     'civic_europe_ideas.add_ideasketch',
-    mod_predicates.is_allowed_add_item(models.IdeaSketch)
+    mod_predicates.is_allowed_add_item(models.Idea)
 )
 
 rules.add_perm(
