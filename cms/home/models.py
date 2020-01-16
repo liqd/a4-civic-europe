@@ -21,9 +21,6 @@ class HomePage(Page):
         ('three_images_block', custom_blocks.ThreeImagesBlock())
     ]
 
-    translated_title = models.CharField(
-        max_length=255, blank=True, verbose_name="Header Title")
-
     description = models.TextField(blank=True)
 
     body = StreamField(block_types, null=True)
@@ -99,7 +96,7 @@ class HomePage(Page):
             return getattr(self,
                            'image_{}'.format(random.choice(image_numbers)))
 
-    content_panels = [
+    header_panels = [
         MultiFieldPanel(
             [
                 ImageChooserPanel('image_1'),
@@ -129,16 +126,16 @@ class HomePage(Page):
         )
     ]
 
-    en_panels = [
-        FieldPanel('translated_title'),
+    content_panels = [
+        FieldPanel('title'),
+        FieldPanel('slug'),
         FieldPanel('description'),
         StreamFieldPanel('body')
     ]
 
     edit_handler = TabbedInterface([
-        ObjectList(en_panels, heading='English'),
-        ObjectList(content_panels, heading='Header'),
-        ObjectList(Page.promote_panels, heading='Promote')
+        ObjectList(content_panels, heading='Content'),
+        ObjectList(header_panels, heading='Header')
     ])
 
 
@@ -148,24 +145,16 @@ class SimplePage(Page):
         ('FAQs', custom_blocks.FAQBlock())
     ]
 
-    # translated fields
-    translated_title = models.CharField(
-        max_length=255, verbose_name="Title")
-
     body = StreamField(block_types, null=True)
 
-    en_panels = [
+    content_panels = [
         FieldPanel('title'),
+        FieldPanel('slug'),
         StreamFieldPanel('body')
     ]
 
-    Page.promote_panels[0].children.insert(0,
-                                           FieldPanel('title')
-                                           )
-
     edit_handler = TabbedInterface([
-        ObjectList(en_panels, heading='English'),
-        ObjectList(Page.promote_panels, heading='Promote')
+        ObjectList(content_panels, heading='Content')
     ])
 
 
@@ -174,18 +163,14 @@ class StructuredTextPage(Page):
         ('section', custom_blocks.SectionBlock())
     ]
 
-    # translated fields
-    translated_title = models.CharField(
-        max_length=255, verbose_name="Title")
-
     body = StreamField(block_types, null=True)
 
-    en_panels = [
+    content_panels = [
         FieldPanel('title'),
+        FieldPanel('slug'),
         StreamFieldPanel('body')
     ]
 
     edit_handler = TabbedInterface([
-        ObjectList(en_panels, heading='English'),
-        ObjectList(Page.promote_panels, heading='Promote')
+        ObjectList(content_panels, heading='Content')
     ])
