@@ -6,8 +6,8 @@
 
 {% block content %}
     <div class="container structured-page">
-        <div class="col-md-3 hidden-sm hidden-xs">
-            <ul id="structured-page-side-nav" class="nav nav-stacked structured-page-side-nav">
+        <div class="col-md-3 d-none d-md-block">
+            <ul id="structured-page-side-nav" class="nav flex-column structured-page-side-nav">
                 {% for block in page.body %}
                     <li role="presentation"><a href="#section{{ forloop.counter }}" class="structured-page-side-nav-link"><i class="fa fa-angle-right" aria-hidden="true"></i> {{ block.value.title }}</a></li>
                 {% endfor %}
