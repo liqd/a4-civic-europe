@@ -46,7 +46,7 @@ class IdeaSketchPhase(IdeaPhase):
     module_name = _('Civic Europe')
 
     features = {
-        'crud': (models.IdeaSketch,),
+        'crud': (models.Idea,),
     }
 
     default_filters = QueryDict('ordering=newest&'
