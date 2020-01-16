@@ -5,11 +5,11 @@
 {% block title %} {% trans 'All ideas' %} {% endblock %}
 
 {% block content %}
-    <div class="custompage-blue">
+    <div class="custompage-blue py-3">
         <div class="container">
             <header class="custompage-header">
                 <h1>{% trans "All ideas" %}</h1>
-                <p>
+                <p class="mb-0">
                     {% if view.active_phase %}
                         {{ view.active_phase.description }}
                     {% else %}
@@ -22,9 +22,9 @@
     <div class="custompage-45">
         <div class="container">
             <div class="row equal idealist-content">
-                <div class="col-md-3 col-sm-3 col-xs-12 idealist-controls">
-                    <div class="filter-bar idealist-filter clearfix">
-                        <div class="hidden-xs">
+                <div class="col-md-3 idealist-controls">
+                    <div class="filter-bar idealist-filter">
+                        <div class="d-none d-md-block">
                             {% for field in view.filter.form %}
                                 <div class="row">
                                     <div class="col-lg-12 filter-{{ field.name }}">
@@ -33,7 +33,7 @@
                                 </div>
                             {% endfor %}
                         </div>
-                        <div class="hidden-sm hidden-md hidden-lg mobile-filter">
+                        <div class="d-md-none mobile-filter">
                             <button class="btn btn-default btn-collapse collapsed" type="button"
                                     data-toggle="collapse" data-target="#filter" aria-expanded="false"
                                     aria-controls="Filter">
@@ -63,7 +63,7 @@
                                 {% url 'idea-export' %}{{ '?'|add:view.filter.data.urlencode }}">{% trans "export" %}</a>
                     {% endif %}
                 </div>
-                <div class="col-md-9 col-sm-9 col-xs-12 idealist-list-container">
+                <div class="col-md-9 idealist-list-container">
                     {% if not idea_list %}
                     <div class="idealist-no-entry">
                         <h4>{% trans "Sorry, no ideas exist for the chosen filters." %}</h4>

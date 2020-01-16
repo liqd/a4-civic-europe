@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load i18n react_comments rules static idea_tags absolute_url rules %}
+{% load i18n react_comments_async rules static idea_tags absolute_url rules %}
 
 {% block title %} {{ idea.idea_title }} {% endblock %}
 
@@ -37,7 +37,7 @@
 
             {% include 'civic_europe_ideas/includes/idea_detail_header.html' %}
 
-            <div class="row hidden-lg hidden-md hidden-sm ideadetail-xs-support">
+            <div class="row d-md-none ideadetail-xs-support">
                 <ul class="nav">
                     {% if view.display_type == 'idea' %}
                     <li class="nav-idea nav-support">
@@ -52,7 +52,8 @@
             </div>
 
             <div class="row ideadetail-tab-bar">
-                <ul class="nav navbar-nav nav-tabs tabs" role="tablist">
+                <div class="col-md-8">
+                <ul class="nav nav-tab tabs" role="tablist">
 
                     <li role="presentation" class="nav-item">
                         <a href="#info" class="nav-link" aria-controls="info" role="tab" data-toggle="tab">{% trans "Creators" %}</a>
@@ -68,19 +69,24 @@
                         </li>
                     {% endif %}
 
-                    {% include 'civic_europe_ideas/includes/idea_detail_watch_btns.html' with xs_class="hidden-xs" %}
                 </ul>
+                </div>
+                <div class="col-md-4">
+                <ul class="nav nav-tab justify-content-end">
+                    {% include 'civic_europe_ideas/includes/idea_detail_watch_btns.html' with xs_class="d-none d-sm-block" %}
+                </ul>
+                </div>
             </div>
 
             <div class="row tab-content ideadetail-content">
-                <div role="tabpanel" class="col-md-offset-1 col-md-7 col-sm-8 col-xs-12 tab-pane" id="info">
+                <div role="tabpanel" class="offset-md-1 col-md-7 col-sm-8 col-xs-12 tab-pane" id="info">
                     {% include 'civic_europe_ideas/includes/idea_detail_tab_info.html' %}
                 </div>
-                <div role="tabpanel" class="col-md-offset-1 col-md-7 col-sm-8 col-xs-12 tab-pane  {% if not idea.proposal or not idea.is_winner or idea.journeyentry_set.all.count == 0 %} active {% endif %}" id="idea">
+                <div role="tabpanel" class="offset-md-1 col-md-7 col-sm-8 col-xs-12 tab-pane  {% if not idea.proposal or not idea.is_winner or idea.journeyentry_set.all.count == 0 %} active {% endif %}" id="idea">
                     {% include 'civic_europe_ideas/includes/idea_detail_tab_idea.html' %}
                 </div>
                 {% if idea.is_winner %}
-                    <div role="tabpanel" class="col-md-offset-1 col-md-7 col-sm-8 col-xs-12 tab-pane {% if idea.proposal and idea.is_winner and idea.journeyentry_set.all.count > 0 %} active {% endif %}" id="journey">
+                    <div role="tabpanel" class="offset-md-1 col-md-7 col-sm-8 col-xs-12 tab-pane {% if idea.proposal and idea.is_winner and idea.journeyentry_set.all.count > 0 %} active {% endif %}" id="journey">
                         {% include 'civic_europe_ideas/includes/idea_detail_tab_journey.html' %}
                     </div>
                 {% endif %}
@@ -128,7 +134,7 @@
             {% if view.display_type == 'idea' %}
                 <div class="container-medium ideadetail-comments">
                     <h4 class="ideadetail-comments-title">{% trans "Write comment" %}</h4>
-                    {% react_comments idea %}
+                    {% react_comments_async idea %}
                 </div>
             {% endif %}
         </div>
