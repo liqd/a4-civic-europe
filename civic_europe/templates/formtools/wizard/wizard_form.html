@@ -11,7 +11,7 @@
         <p>{{ form.section_description }}</p>
         {% endif %}
         <div class="wizard-progress-side">
-            <ul class="wizard-progress hidden-sm hidden-xs">
+            <ul class="wizard-progress d-none d-md-block">
                 {% for step_id, form, status in view.progress %}
                 <li class="wizard-progress-entry{% if status == "active" %} active{% endif %}{% if status == "reachable_with_validate" or status == "reachable_with_store" %} filled{% endif %}">
                     {% if status == "reachable_with_store" %}
@@ -53,7 +53,7 @@
                 {% endif %}
 
                 {% if wizard.steps.next %}
-                <button class="btn btn-ae-secondary pull-right"
+                <button class="btn btn-ae-secondary float-right"
                         type="submit"
                         name="submit">
                     {% trans "Continue" %}
