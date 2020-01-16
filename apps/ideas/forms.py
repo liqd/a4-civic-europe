@@ -276,7 +276,7 @@ class CommunitySectionForm(CoWorkersEmailsFormMixin, BaseForm):
         help_text=COWORKERS_HELP,
         label=COWORKERS_TITLE)
     confirm_publicity = forms.BooleanField(label=CONFIRM_PUBLICITY_LABEL)
-    accept_conditions = forms.BooleanField(label='')
+    accept_conditions = forms.BooleanField(label=ACCEPT_CONDITIONS_LABEL)
     confirm_idea_challenge_camp = forms.BooleanField(
         label=CONFIRM_IDEA_CHALLENGE_CAMP_WITHOUT_DATE)
 
