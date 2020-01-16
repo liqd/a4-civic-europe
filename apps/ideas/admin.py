@@ -3,7 +3,14 @@ from django.db import models
 
 from apps.notifications import admin as notification_admin
 
-from . import models as idea_models
+from .models import Idea
+from .models.sections.applicant_section import ApplicantSection
+from .models.sections.finances_section import FinancesSection
+from .models.sections.idea_section import IdeaSection
+from .models.sections.local_dimension_section import LocalDimensionSection
+from .models.sections.network_community_section import NetworkSection
+from .models.sections.partners_section import PartnersSection
+from .models.sections.road_to_impact_section import RoadToImpactSection
 
 
 def set_is_on_shortlist_true(modeladmin, request, queryset):
@@ -66,7 +73,7 @@ class IdeaAdmin(notification_admin.NotifyMixin, admin.ModelAdmin):
                            'help_text': None},
     }
 
-    list_display = ['idea_title', 'type', 'is_on_shortlist',
+    list_display = ['title', 'type', 'is_on_shortlist',
                     'community_award_winner', 'is_winner',
                     'created', 'modified']
     ordering = ['-created', 'idea_title']
@@ -96,136 +103,45 @@ class IdeaAdmin(notification_admin.NotifyMixin, admin.ModelAdmin):
             'classes': ('collapse',),
             'fields':
                 tuple([field.name for field
-                       in idea_models.AbstractApplicantSection
-                       ._meta.get_fields()]),
+                       in ApplicantSection._meta.get_fields()]),
         }),
         ('Partner Section', {
             'classes': ('collapse',),
             'fields':
                 tuple([field.name for field
-                       in idea_models.AbstractPartnersSection
-                       ._meta.get_fields()]),
+                       in PartnersSection._meta.get_fields()]),
         }),
         ('Idea Section', {
             'classes': ('collapse',),
             'fields':
                 tuple([field.name for field
-                       in idea_models.AbstractIdeaSection
-                       ._meta.get_fields()]),
+                       in IdeaSection._meta.get_fields()]),
         }),
-        ('Impact Section', {
+        ('Local Dimension', {
             'classes': ('collapse',),
             'fields':
                 tuple([field.name for field
-                       in idea_models.AbstractImpactSection
-                       ._meta.get_fields()]),
+                       in LocalDimensionSection._meta.get_fields()]),
         }),
-        ('Community Section', {
+        ('Road to impact & motivation', {
             'classes': ('collapse',),
             'fields':
                 tuple([field.name for field
-                       in idea_models.AbstractCommunitySection
-                       ._meta.get_fields()]),
+                       in RoadToImpactSection._meta.get_fields()]),
+        }),
+        ('Finances', {
+            'classes': ('collapse',),
+            'fields':
+                tuple([field.name for field
+                       in FinancesSection._meta.get_fields()]),
+        }),
+        ('Network & Community', {
+            'classes': ('collapse',),
+            'fields':
+                tuple([field.name for field
+                       in NetworkSection._meta.get_fields()]),
         }),
     )
 
 
-class IdeaSketchArchivedAdmin(admin.ModelAdmin):
-    raw_id_fields = ('creator', 'co_workers')
-    search_fields = ('idea_title',)
-
-    formfield_overrides = {
-        models.TextField: {'max_length': None,
-                           'help_text': None},
-    }
-
-    fieldsets = (
-        ('Creator and Co-workers', {
-            'classes': ('collapse',),
-            'fields': ('creator',
-                       'co_workers')
-        }),
-        ('Applicant Section', {
-            'classes': ('collapse',),
-            'fields':
-                tuple([field.name for field
-                       in idea_models.AbstractApplicantSection
-                       ._meta.get_fields()]),
-        }),
-        ('Partner Section', {
-            'classes': ('collapse',),
-            'fields':
-                tuple([field.name for field
-                       in idea_models.AbstractPartnersSection
-                       ._meta.get_fields()]),
-        }),
-        ('Idea Section', {
-            'classes': ('collapse',),
-            'fields':
-                tuple([field.name for field
-                       in idea_models.AbstractIdeaSection
-                       ._meta.get_fields()]),
-        }),
-        ('Impact Section', {
-            'classes': ('collapse',),
-            'fields':
-                tuple([field.name for field
-                       in idea_models.AbstractImpactSection
-                       ._meta.get_fields()]),
-        }),
-        ('Community Section', {
-            'classes': ('collapse',),
-            'fields':
-                tuple([field.name for field
-                       in idea_models.AbstractCommunitySection
-                       ._meta.get_fields()]),
-        }),
-    )
-
-
-class ProposalAdmin(admin.ModelAdmin):
-    search_fields = ('idea_title',)
-
-    formfield_overrides = {
-        models.TextField: {'max_length': None,
-                           'help_text': None},
-    }
-
-    fieldsets = (
-        ('Finances and Duration', {
-            'fields':
-                tuple([field.name for field
-                       in idea_models.AbstractFinanceAndDurationSection
-                       ._meta.get_fields()]),
-        }),
-        ('Selection', {
-            'fields':
-                tuple([field.name for field
-                       in idea_models.AbstractSelectionCriteriaSection
-                       ._meta.get_fields()]),
-        })
-    )
-
-
-class IdeaSketchAdmin(admin.ModelAdmin):
-    search_fields = ('idea_title',)
-
-    formfield_overrides = {
-        models.TextField: {'max_length': None,
-                           'help_text': None},
-    }
-
-    fieldsets = (
-        ('Collaboration Camp', {
-            'fields':
-                tuple([field.name for field
-                       in idea_models.AbstractIdeaChallengeCampSection
-                       ._meta.get_fields()]),
-        }),
-    )
-
-
-admin.site.register(idea_models.Idea, IdeaAdmin)
-admin.site.register(idea_models.IdeaSketchArchived, IdeaSketchArchivedAdmin)
-admin.site.register(idea_models.Proposal, ProposalAdmin)
-admin.site.register(idea_models.IdeaSketch, IdeaSketchAdmin)
+admin.site.register(Idea, IdeaAdmin)
