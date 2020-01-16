@@ -9,18 +9,14 @@ from django.utils.translation import ugettext_lazy as _
 
 from cms.contrib import helpers
 
-from . import models
-from .models.abstracts import finances_duration_section
-from .models.abstracts.applicant_section import AbstractApplicantSection
-from .models.abstracts.community_section import AbstractCommunitySection
-from .models.abstracts.idea_challenge_camp_section import \
-    AbstractIdeaChallengeCampSection
-from .models.abstracts.idea_section import AbstractIdeaSection
-from .models.abstracts.impact_section import AbstractImpactSection
-from .models.abstracts.network_section import AbstractNetworkSection
-from .models.abstracts.partners_section import AbstractPartnersSection
-from .models.abstracts.selection_criteria_section import \
-    AbstractSelectionCriteriaSection
+from .models import Idea
+from .models.sections import finances_section
+from .models.sections.applicant_section import ApplicantSection
+from .models.sections.idea_section import IdeaSection
+from .models.sections.local_dimension_section import LocalDimensionSection
+from .models.sections.network_community_section import NetworkSection
+from .models.sections.partners_section import PartnersSection
+from .models.sections.road_to_impact_section import RoadToImpactSection
 
 CONFIRM_PUBLICITY_LABEL = _('I hereby confirm and agree that '
                             'my idea will be public once published. '
@@ -103,28 +99,28 @@ class ApplicantSectionForm(BaseForm):
     section_name = _('About You')
 
     class Meta:
-        model = AbstractApplicantSection
+        model = ApplicantSection
         fields = [
             'first_name',
             'last_name',
-            'organisation_status',
-            'organisation_status_extra',
-            'organisation_name',
-            'organisation_website',
-            'organisation_country',
-            'organisation_city',
+            'lead_organisation_name',
+            'lead_organisation_status',
+            'lead_organisation_details',
+            'lead_organisation_website',
+            'lead_organisation_country',
+            'lead_organisation_city',
             'contact_email',
             'year_of_registration'
         ]
 
     def clean(self):
         cleaned_data = super().clean()
-        organisation_status = cleaned_data.get('organisation_status')
-        organisation_status_extra = cleaned_data.get(
-            'organisation_status_extra')
-        if organisation_status and organisation_status == 'other':
-            if not organisation_status_extra:
-                self.add_error('organisation_status_extra',
+        status = cleaned_data.get('lead_organisation_status')
+        details = cleaned_data.get(
+            'lead_organisation_details')
+        if status and status == 'other':
+            if not details:
+                self.add_error('lead_organisation_details',
                                ("You selected 'other' as "
                                 "organisation status. "
                                 "Please provide more information "
@@ -161,7 +157,7 @@ class PartnersSectionForm(BaseForm):
     ]
 
     class Meta:
-        model = AbstractPartnersSection
+        model = PartnersSection
         fields = list(
             chain.from_iterable((
                 'partner_organisation_{}_name'.format(index),
@@ -192,166 +188,63 @@ class IdeaSectionForm(BaseForm):
     section_name = _('Idea')
 
     class Meta:
-        model = AbstractIdeaSection
+        model = IdeaSection
         fields = [
-            'idea_title',
-            'idea_subtitle',
-            'idea_pitch',
-            'idea_image',
-            'idea_topics',
-            'idea_topics_other',
-            'idea_location',
-            'idea_location_specify',
-            'idea_location_ruhr'
+            'title',
+            'subtitle',
+            'pitch',
+            'image',
+            'topics',
+            'topics_other'
         ]
 
-    def clean(self):
-        cleaned_data = super().clean()
-        idea_location = cleaned_data.get('idea_location')
-        idea_location_ruhr = cleaned_data.get('idea_location_ruhr')
-        idea_location_specify = cleaned_data.get('idea_location_specify')
 
-        if idea_location and 'ruhr_linkage' in idea_location:
-            if not idea_location_ruhr:
-                self.add_error('idea_location_ruhr',
-                               _('You indicated that your idea '
-                                 'links to the Ruhr area of Germany. '
-                                 'Please specify.'))
-
-        if idea_location and 'city' in idea_location:
-            if not idea_location_specify:
-                self.add_error('idea_location_specify',
-                               _('You indicated that your idea '
-                                 'will take place in a city, '
-                                 'country and/or region. '
-                                 'Please specify.'))
-
-
-class ImpactSectionForm(BaseForm):
-    section_name = _('Road to Impact')
+class LocalDimenssionSectionForm(BaseForm):
+    section_name = _('Local Dimension')
 
     class Meta:
-        model = AbstractImpactSection
+        model = LocalDimensionSection
         fields = [
+            'location',
             'challenge',
-            'outcome',
-            'plan',
-            'importance',
+            'impact',
             'target_group',
-            'members'
+            'local_embedding',
+            'uniqueness'
         ]
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['challenge'].help_text = helpers.add_link_to_helptext(
-            self.fields['challenge'].help_text,
-            "annual_theme_help_page")
 
-
-class IdeaChallengeCampSectionForm(BaseForm):
-    section_name = _('Idea Challenge Camp')
+class RoadToImpactSectionForm(BaseForm):
+    section_name = _('Road to impact & Motivation')
 
     class Meta:
-        model = AbstractIdeaChallengeCampSection
+        model = RoadToImpactSection
         fields = [
-            'idea_challenge_camp_represent',
-            'idea_challenge_camp_benefit'
-        ]
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        if helpers.get_idea_challenge_camp_settings().description:
-            self.section_description = \
-                helpers.get_idea_challenge_camp_settings().description
-        self.fields['idea_challenge_camp_represent'].help_text = \
-            helpers.add_link_to_helptext(
-            self.fields['idea_challenge_camp_represent'].help_text,
-            "communication_camp_help_page", IDEA_CHALLENGE_CAMP_OPTION_LINK)
-
-
-class CommunitySectionForm(CoWorkersEmailsFormMixin, BaseForm):
-    section_name = _('Community')
-    co_workers_emails = forms.CharField(
-        required=False,
-        help_text=COWORKERS_HELP,
-        label=COWORKERS_TITLE)
-    confirm_publicity = forms.BooleanField(label=CONFIRM_PUBLICITY_LABEL)
-    accept_conditions = forms.BooleanField(label=ACCEPT_CONDITIONS_LABEL)
-    confirm_idea_challenge_camp = forms.BooleanField(
-        label=CONFIRM_IDEA_CHALLENGE_CAMP_WITHOUT_DATE)
-
-    def __init__(self, *args, **kwargs):
-        self.display_idea_challenge_camp_section = \
-            kwargs.pop('display_idea_challenge_camp_checkbox')
-        super().__init__(*args, **kwargs)
-        self.fields['accept_conditions'].label = helpers.add_link_to_helptext(
-            self.fields['accept_conditions'].label, "terms_of_use_page",
-            ACCEPT_CONDITIONS_LABEL)
-        settings = helpers.get_idea_challenge_camp_settings()
-        if settings.start_date and settings.end_date:
-            self.fields['confirm_idea_challenge_camp'].label = \
-                CONFIRM_IDEA_CHALLENGE_CAMP_WITH_DATE.format(
-                    settings.start_date, settings.end_date)
-        if not self.display_idea_challenge_camp_section:
-            del self.fields['confirm_idea_challenge_camp']
-
-    class Meta:
-        model = AbstractCommunitySection
-        fields = [
-            'co_workers_emails',
+            'plan',
             'reach_out',
-            'how_did_you_hear',
-            'accept_conditions'
-        ]
-
-    def clean_co_workers_emails(self):
-        addresses = super().clean_co_workers_emails()
-
-        if len(addresses) > 5:
-            raise ValidationError(_('Maximum 5 team members allowed'))
-
-        return addresses
-
-
-class SelectionCriteriaSectionForm(BaseForm):
-    section_name = _('Outreach and indicators')
-
-    class Meta:
-        model = AbstractSelectionCriteriaSection
-        fields = [
-            'selection_apart',
-            'selection_advocating',
-            'selection_key_indicators'
+            'results',
+            'sustainability',
+            'contribution',
+            'knowledge',
+            'motivation'
         ]
 
 
-class NetworkForm(BaseForm):
-    section_name = _('Network')
-
-    class Meta:
-        model = AbstractNetworkSection
-        fields = [
-            'network'
-        ]
-
-
-class FinanceAndDurationSectionForm(BaseForm):
+class FinanceSectionForm(BaseForm):
     section_name = _('Finances')
 
     budget_requested = forms.IntegerField(
         max_value=50000,
         min_value=0,
-        label=finances_duration_section.BUDGET_REQUESTED_TITLE,
-        help_text=finances_duration_section.BUDGET_REQUESTED_HELP
+        help_text=finances_section.BUDGET_REQUESTED_HELP
     )
     total_budget = forms.IntegerField(
         min_value=0,
-        label=finances_duration_section.TOTAL_BUDGET_TITLE,
-        help_text=finances_duration_section.TOTAL_BUDGET_HELP
+        help_text=finances_section.TOTAL_BUDGET_HELP
     )
 
     class Meta:
-        model = finances_duration_section.AbstractFinanceAndDurationSection
+        model = finances_section.FinancesSection
         fields = [
             'total_budget',
             'budget_requested',
@@ -370,19 +263,52 @@ class FinanceAndDurationSectionForm(BaseForm):
                                             "higher than the total budget"))
 
 
-class CommunitySectionEditForm(CoWorkersEmailsFormMixin, BaseForm):
-    section_name = _('Community')
+class NetworkAndCommunitySectionForm(CoWorkersEmailsFormMixin, BaseForm):
+    section_name = _('Network &Community')
+    co_workers_emails = forms.CharField(
+        required=False,
+        help_text=COWORKERS_HELP,
+        label=COWORKERS_TITLE)
+    confirm_publicity = forms.BooleanField(label=CONFIRM_PUBLICITY_LABEL)
+    accept_conditions = forms.BooleanField(label='')
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['accept_conditions'].label = helpers.add_link_to_helptext(
+            self.fields['accept_conditions'].label, "terms_of_use_page",
+            ACCEPT_CONDITIONS_LABEL)
+
+    class Meta:
+        model = NetworkSection
+        fields = [
+            'network',
+            'co_workers_emails',
+            'feedback',
+            'accept_conditions'
+        ]
+
+    def clean_co_workers_emails(self):
+        addresses = super().clean_co_workers_emails()
+
+        if len(addresses) > 5:
+            raise ValidationError(_('Maximum 5 team members allowed'))
+
+        return addresses
+
+
+class NetworkAndCommunitySectionEditForm(CoWorkersEmailsFormMixin, BaseForm):
+    section_name = _('Network &Community')
     co_workers_emails = forms.CharField(
         required=False,
         help_text=COWORKERS_HELP,
         label=COWORKERS_TITLE)
 
     class Meta:
-        model = models.Idea
+        model = Idea
         fields = [
+            'network',
             'co_workers_emails',
-            'reach_out',
-            'how_did_you_hear',
+            'feedback',
         ]
 
     def __init__(self, *args, **kwargs):
@@ -477,7 +403,7 @@ class CommunitySectionEditForm(CoWorkersEmailsFormMixin, BaseForm):
         """
         Deletes invites and co-workers and adds new invites of instance.
         There is a little hack here, it uses the idea creator and not the
-        current user as creator for the invites. There for no user needs to
+        current user as creator for the invites. Therefor no user needs to
         passed and it can be used in the edit view, just as all other forms.
         """
         super().save(commit)
@@ -505,7 +431,7 @@ class FinishForm(forms.Form):
     section_name = _('Submit and publish')
 
     class Meta:
-        model = models.IdeaSketch
+        model = Idea
         exclude = [
             'co_workers_emails', 'how_did_you_hear', 'creator', 'module'
         ]
