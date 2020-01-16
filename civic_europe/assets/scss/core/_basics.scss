@@ -26,6 +26,17 @@ a,
     font-weight: $demibold;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+    margin-bottom: 0.8 * $spacer;
+    margin-top: 1.5 * $spacer;
+}
+
 @mixin selection {
     ::selection {
         @content;
@@ -39,6 +50,14 @@ a,
 @include selection {
     color: $gray-dark;
     background: $ae-brand-orange;
+}
+
+.container {
+    position: relative;
+
+    @media (max-width: $screen-md-max) {
+        max-width: 100%;
+    }
 }
 
 .footer {
@@ -85,35 +104,6 @@ a,
 
 .container-narrow {
     @extend .col-md-8;
-}
-
-.navbar-brand.navbar-brand {
-
-    padding: rem(10px 0 10px 0);
-
-    .navbar-brand-logo {
-        height: rem(50px);
-    }
-}
-
-.navbar-fixed-top {
-    .is-active:after {
-        display: block;
-        content: '';
-        border-bottom: solid $navbar-underline-height $brand-primary;
-    }
-
-    .not-active:after {
-        display: block;
-        content: '';
-        border-bottom: solid $navbar-underline-height $brand-primary;
-        transform: scaleX(0);
-        transition: transform 250ms ease-in-out;
-    }
-
-    .not-active:hover:after {
-        transform: scaleX(1);
-    }
 }
 
 // wagtail videos without padding
