@@ -82,7 +82,7 @@
     bottom: 100%;
 
     @media screen and (max-width: $screen-xs) {
-        font-size: rem(24px);
+        font-size: $h4-font-size;
     }
 
     &:after {
@@ -99,18 +99,18 @@
 .herounit-content {
     @media screen and (max-width: $screen-xs) {
         padding-top: 0.5*$spacer;
-        padding-bottom: rem(20px);
+        padding-bottom: 1.25*$spacer;
     }
 }
 
 .herounit-description {
     margin-bottom: $spacer;
-    font-size: rem(20px);
+    font-size: 1.25*$spacer;
     font-weight: bold;
     line-height: 1.38;
 
     @media screen and (max-width: $screen-xs) {
-        font-size: rem(18px);
+        font-size: $font-size-lg;
         color: $gray-dark;
     }
 }

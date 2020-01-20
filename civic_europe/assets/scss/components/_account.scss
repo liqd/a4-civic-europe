@@ -28,7 +28,7 @@
     margin-top: 4*$spacer;
 
     h1 {
-        font-size: rem(24px);
+        font-size: $h4-font-size;
         margin-top: 0.25*$spacer;
         margin-left: 0.25*$spacer;
     }
@@ -63,7 +63,7 @@
 
     legend {
         border: none;
-        font-size: rem(24px);
+        font-size: $h4-font-size;
         font-weight: bold;
     }
 
@@ -80,14 +80,14 @@
         a:hover {
             color: $gray-darker;
             text-decoration: none;
-            font-size: rem(16px);
+            font-size: $font-size-md;
         }
     }
 }
 
 .notification-settings {
     p {
-        font-size: rem(16px);
+        font-size: $font-size-md;
         font-weight: $demibold;
     }
 

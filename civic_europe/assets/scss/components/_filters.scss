@@ -1,6 +1,6 @@
 .idealist {
     .idealist-controls {
-        padding: $spacer rem(20px) rem(20px) rem(20px);
+        padding: $spacer 1.25*$spacer 1.25*$spacer 1.25*$spacer;
         background-color: $ce-lighter-gray;
         border-bottom-left-radius: 5px;
         border-top-left-radius: 5px;
@@ -56,7 +56,7 @@
         .drop-down-caret {
             margin-left: 0.5*$spacer;
             float: right;
-            line-height: rem(20px);
+            line-height: $font-size-lg;
         }
 
         width: 100%;
@@ -96,14 +96,14 @@
     .search-filter-input {
         border: none;
         height: 100%;
-        line-height: rem(20px);
+        line-height: 1.25*$spacer;
         border-radius: 5px;
         width: 100%;
         float: left;
     }
 
     .mobile-filter {
-        margin-top: rem(20px);
+        margin-top: 1.25*$spacer;
         float: none;
         width: 100%;
         border-radius: 5px;
@@ -116,7 +116,7 @@
             padding: 0.25*$spacer 0.75*$spacer;
             background-color: $gray-lighter;
             border: none;
-            font-size: rem(18px);
+            font-size: $font-size-lg;
         }
 
         .btn-label {
@@ -138,7 +138,7 @@
             height: 25px;
             border-radius: 50%;
             background-color: $ce-brand-orange;
-            font-size: rem(14px);
+            font-size: $font-size-base;
             text-align: center;
         }
 

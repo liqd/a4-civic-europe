@@ -15,11 +15,11 @@
 
     .breadcrumps {
         max-width: rem(670px);
-        padding: 0 0 rem(20px) 0;
+        padding: 0 0 1.25*$spacer 0;
     }
 
     .wizard-submit-form {
-        font-size: rem(18px);
+        font-size: $font-size-lg;
 
         .wizard-bold {
             font-weight: bold;
@@ -30,7 +30,7 @@
         padding: 0.75*$spacer 1.5*$spacer;
         margin-top: 0.5*$spacer;
         margin-bottom: 0.5*$spacer;
-        font-size: rem(18px);
+        font-size: $font-size-lg;
         font-weight: bold;
     }
 }
@@ -55,7 +55,7 @@
         @media screen and (min-width: $screen-sm) {
             position: absolute;
             left: 102%;
-            top: rem(20px);
+            top: 1.25*$spacer;
         }
     }
 }
@@ -65,7 +65,7 @@
     position: relative;
     width: 25em;
 
-    font-size: rem(10px );
+    font-size: $font-size-sm;
     font-weight: bold;
     color: $ce-dark-gray;
 

@@ -2,7 +2,7 @@
     margin-top: 2*$spacer;
 
     h3 {
-        font-size: rem(18px);
+        font-size: $font-size-lg;
         margin-top: 0.25*$spacer;
         margin-bottom: 0.25*$spacer;
     }
@@ -11,7 +11,7 @@
 .journey-category {
     color: $brand-primary;
     text-transform: uppercase;
-    font-size: rem(12px);
+    font-size: $font-size-sm;
     font-weight: bold;
     letter-spacing: 0.8px;
 }
@@ -48,7 +48,7 @@
     margin: 0;
     padding: 0.5*$spacer $spacer;
     border: none;
-    font-size: rem(16px);
+    font-size: $font-size-md;
     line-height: 1.25;
 }
 
@@ -71,10 +71,10 @@
 
 .journey-form-btn-box {
     padding-left: 0;
-    padding-bottom: rem(20px);
+    padding-bottom: 1.25*$spacer;
 
     .journey-form-btn {
-        font-size: rem(16px);
+        font-size: $font-size-md;
 
         .fa,
         .fas,
@@ -83,7 +83,7 @@
         }
 
         @media screen and (max-width: $screen-sm-max) {
-            font-size: rem(14px);
+            font-size: $font-size-base;
         }
     }
 }
@@ -94,7 +94,7 @@
     border-radius: 4px;
 
     @media screen and (min-width: $screen-sm) {
-        padding: rem(20px);
+        padding: 1.25*$spacer;
     }
 
     @media screen and (max-width: $screen-xs-max) {
@@ -102,7 +102,7 @@
     }
 
     .journey-form-idea {
-        font-size: 16px;
+        font-size: $font-size-md;
         font-weight: $demibold;
     }
 }
@@ -112,6 +112,6 @@
     padding: 0.25*$spacer $spacer;
 
     @media screen and (max-width: $screen-sm-max) {
-        font-size: rem(14px);
+        font-size: $font-size-base;
     }
 }

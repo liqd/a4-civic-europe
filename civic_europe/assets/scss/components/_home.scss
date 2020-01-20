@@ -7,7 +7,7 @@
         font-size: $h1-font-size;
         font-weight: bold;
         margin-top: 0;
-        margin-bottom: rem(20px);
+        margin-bottom: 1.25*$spacer;
     }
 }
 
@@ -44,7 +44,7 @@
     margin-top: 4*$spacer;
 
     li {
-        font-size: rem(16px);
+        font-size: $font-size-md;
         font-weight: bold;
         font-style: normal;
         font-stretch: normal;
