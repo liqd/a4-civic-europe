@@ -61,7 +61,7 @@
     flex-grow: 1;
 
     background-color: $ce-light-gray;
-    min-height: rem(400px);
+    min-height: 400px;
     box-shadow: 0 1px 0 0 $ce-light-gray-shadow;
 
     overflow-wrap: break-word;
@@ -104,7 +104,7 @@
 .idealist-category {
     font-size: 12px;
     font-weight: bold;
-    letter-spacing: rem(.8px);
+    letter-spacing: .8px;
     text-transform: uppercase;
     color: $brand-primary;
 }
@@ -132,8 +132,8 @@
         background-size: cover;
         height: 22rem;
         width: 100%;
-        border-top-left-radius: rem(5px );
-        border-top-right-radius: rem(5px );
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
 
         @media screen and (min-width: $screen-md) {
             height: 25rem;
@@ -264,7 +264,7 @@
     }
 
     .fa-socialshare {
-        @include rem(width, 22px);
+        width: 22px;
     }
 
     @media screen and (max-width: $screen-xs-max) {

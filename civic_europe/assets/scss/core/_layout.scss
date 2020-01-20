@@ -1,7 +1,6 @@
 /* The layout classes are used by a4 widgets(eg. Comments) */
 
 .l-wrapper {
-    @include clearfix;
     position: relative;
     width: 100%;  // required when used in a flex container
     max-width: 81rem;

@@ -36,7 +36,7 @@
         margin-bottom: 2px;
         font-size: $font-size-sm;
         font-weight: $demibold;
-        // letter-spacing: rem(1px);
+        // letter-spacing: 1px;
         text-transform: uppercase;
         color: $ce-middle-gray;
     }
@@ -70,7 +70,7 @@
         text-overflow: ellipsis;
 
         @media screen and (max-width: $screen-md-max) {
-            width: rem(76px);
+            width: 76px;
         }
     }
 
