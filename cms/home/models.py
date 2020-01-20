@@ -16,7 +16,7 @@ class HomePage(Page):
     block_types = [
         ('columns', custom_blocks.ThreeColumnTextBlock()),
         ('call_to_action', custom_blocks.CallToActionBlock()),
-        ('idea_carousel', custom_blocks.ProposalCarouselBlock()),
+        ('idea_carousel', custom_blocks.IdeaCarouselBlock()),
         ('blogs', custom_blocks.ThreeBlogEntriesBlock()),
         ('three_images_block', custom_blocks.ThreeImagesBlock())
     ]

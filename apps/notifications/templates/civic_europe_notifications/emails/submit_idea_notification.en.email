@@ -9,7 +9,7 @@ Thank you for submitting your project idea for the {{ site.name }} idea challeng
 {% endblock  %}
 
 {% block content %}
-{% if idea.project.active_phase %}You can edit your idea sketch until {{ idea.project.active_phase.end_date|date:"d F Y (H:i T)"}}{% endif %}
+{% if idea.project.active_phase %}You can edit your idea until {{ idea.project.active_phase.end_date|date:"d F Y (H:i T)"}}{% endif %}
 <br /><br />
 <h3>What happens next?</h3>
 Following the application deadline, a shortlist of approximately 30 proposals will be made from among the submitted proposals that meet the selection and eligibility criteria and fit our call 2017/2018.
@@ -34,5 +34,5 @@ Your {{ site.name }} Team
 {% block cta_label %}Find out more{% endblock %}
 
 {% block reason %}
-This email was sent to {{ receiver }}. You received this email because you have submitted an idea sketch using this email address. If you have any further questions, please contact us via help@civic-europe.eu.
+This email was sent to {{ receiver }}. You received this email because you have submitted an idea using this email address. If you have any further questions, please contact us via help@civic-europe.eu.
 {% endblock %}

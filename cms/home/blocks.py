@@ -9,7 +9,7 @@ from wagtail.images.blocks import ImageChooserBlock
 
 from adhocracy4.projects.models import Project
 from apps.ideas import filters
-from apps.ideas.models.abstracts import idea_section
+from apps.ideas.models.sections import idea_section
 
 
 class LinkBlock(StructBlock):
@@ -93,10 +93,10 @@ class ProjectChooserBlock(ChooserBlock):
         return super().value_from_form(value)
 
 
-class ProposalCarouselBlock(StructBlock):
+class IdeaCarouselBlock(StructBlock):
     headline = CharBlock(required=False)
     year = ProjectChooserBlock(required=False)
-    topic = ChoiceBlock(choices=idea_section.IDEA_TOPIC_CHOICES,
+    topic = ChoiceBlock(choices=idea_section.TOPIC_CHOICES,
                         required=False)
     ordering = ChoiceBlock(choices=filters.ORDERING_CHOICES, required=False)
     status = ChoiceBlock(choices=filters.STATUS_FILTER_CHOICES, required=False)

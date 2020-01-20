@@ -18,9 +18,9 @@
                     </a>
                 {% get_modules as modules %}
                 {% for module in modules %}
-                    {% has_perm 'civic_europe_ideas.add_ideasketch' request.user module as can_add %}
+                    {% has_perm 'civic_europe_ideas.add_idea' request.user module as can_add %}
                     {% if can_add %}
-                    <a href="{% url 'idea-sketch-create' module.slug %}" class="dropdown-item">
+                    <a href="{% url 'idea-create' module.slug %}" class="dropdown-item">
                         <i class="fa fa-plus fa-fw" aria-hidden="true"></i>{% trans 'add idea sketch' %}
                     </a>
                     {% endif %}

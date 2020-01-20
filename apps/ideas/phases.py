@@ -36,12 +36,12 @@ class PreCallPhase(IdeaPhase):
 phases.content.register(PreCallPhase())
 
 
-class IdeaSketchPhase(IdeaPhase):
-    phase = 'ideas_sketch'
+class IdeaPhase(IdeaPhase):
+    phase = 'ideas'
 
-    name = _('Idea sketch phase')
+    name = _('Idea phase')
     description = _(
-        'issue and edit idea sketches, but also collect some early feedback'
+        'issue and edit ideas, but also collect some early feedback'
     )
     module_name = _('Civic Europe')
 
@@ -56,7 +56,7 @@ class IdeaSketchPhase(IdeaPhase):
                                 )
 
 
-phases.content.register(IdeaSketchPhase())
+phases.content.register(IdeaPhase())
 
 
 class InterimPostSketchPhase(IdeaPhase):
