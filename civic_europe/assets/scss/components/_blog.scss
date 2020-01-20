@@ -9,7 +9,7 @@
 }
 
 .blog-createdates {
-    margin-top: rem(10px);
+    margin-top: 0.5*$spacer;
     font-size: 14px;
     color: $ce-middle-gray;
 }
@@ -34,7 +34,7 @@
 }
 
 .blogindex-no-entry {
-    margin-top: rem(100px);
+    margin-top: 6*$spacer;
     margin-left: 0;
     margin-right: 0;
     text-align: center;
@@ -53,15 +53,15 @@
     }
 
     .blogindex-featured {
-        margin-bottom: rem(30px);
+        margin-bottom: 2*$spacer;
     }
 
     .blogindex-all {
-        margin-bottom: rem(10px);
+        margin-bottom: 0.5*$spacer;
     }
 
     .blogindex-text {
-        padding: rem(15px);
+        padding: $spacer;
         background-color: $ce-light-gray;
         box-shadow: 0 1px 0 0 $ce-light-gray-shadow;
     }
@@ -138,16 +138,16 @@
 // if theres no featured blog entry shown, the categories have to be shown a bit further down, so that they are below the blue header banner
 
 .topics-no-featured {
-    margin-top: rem(70px);
+    margin-top: 4.5*$spacer;
 
     @media screen and (max-width: $screen-xs-max) {
-        margin-top: rem(60px);
+        margin-top: 4*$spacer;
         margin-bottom: rem(20px);
     }
 }
 
 .blogindex-category-btn {
-    margin-bottom: rem(5px);
+    margin-bottom: 0.25*$spacer;
     white-space: normal;
     font-size: rem(12px);
     font-weight: bold;
@@ -198,27 +198,27 @@
 // ---------------------- blog_page --------------------------
 
 .blogpage {
-    margin-top: rem(40px);
-    margin-bottom: rem(60px);
+    margin-top: 2.5*$spacer;
+    margin-bottom: 4*$spacer;
 
     .blog-image {
-        margin-top: rem(30px);
-        margin-bottom: rem(30px);
+        margin-top: 2*$spacer;
+        margin-bottom: 2*$spacer;
     }
 
     .blog-image-caption {
         font-style: italic;
-        margin-top: rem(6px);
-        font-size: rem(14px);
+        margin-top: 0.25*$spacer;
+        font-size: $font-size-base;
     }
 
     .blog-category {
-        margin-top: rem(40px);
+        margin-top: 2.5*$spacer;
         color: $brand-primary;
     }
 
     .blog-createdates {
-        margin-top: rem(10px);
+        margin-top: 0.5*$spacer;
     }
 }
 
@@ -229,7 +229,7 @@
     .fa,
     .fas,
     .far {
-        padding-right: rem(5px);
+        padding-right: 0.25*$spacer;
     }
 }
 

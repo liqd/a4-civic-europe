@@ -1,5 +1,5 @@
 .action {
-    padding: rem(5px 0);
+    padding: 0.25*$spacer 0;
 
     border-bottom: 1px solid $ce-dark-gray;
 
@@ -10,23 +10,23 @@
     .action-icon {
         float: left;
 
-        width: rem(50px);
-        height: rem(50px);
+        width: 3rem;
+        height: 3rem;
 
-        margin-right: rem(5px);
+        margin-right: 0.25*$spacer;
 
         color: $brand-primary;
         background-color: $ce-light-gray;
 
         text-align: center;
-        line-height: rem(50px);
+        line-height: 3rem;
         font-size: rem(24px);
     }
 
     .action-date {
         float: right;
 
-        margin-left: rem(5px);
+        margin-left: 0.25*$spacer;
 
         color: $ce-middle-gray;
     }

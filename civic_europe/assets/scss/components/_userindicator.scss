@@ -58,7 +58,7 @@
         }
 
         .user-indicator-profile-username {
-            padding: rem(6px 12px);
+            padding: 0.5*$spacer 0.75*$spacer;
         }
 
         .user-indicator-profile-btn {
@@ -77,8 +77,8 @@
         &-btn-group {
             display: flex;
             flex-wrap: wrap;
-            margin-left: rem(15px);
-            margin-right: rem(15px);
+            margin-left: $spacer;
+            margin-right: $spacer;
         }
 
         &-btn-group &-profile-avatar {
@@ -117,11 +117,11 @@
     height: rem(31px);
 
     @media screen and (max-width: $screen-md-max) {
-        margin-left: rem(15px);
-        margin-right: rem(15px);
+        margin-left: $spacer;
+        margin-right: $spacer;
     }
 
     .btn-default {
-        margin-right: rem(5px);
+        margin-right: 0.25*$spacer;
     }
 }

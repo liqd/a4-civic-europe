@@ -1,10 +1,10 @@
 .journey {
-    margin-top: rem(30px);
+    margin-top: 2*$spacer;
 
     h3 {
         font-size: rem(18px);
-        margin-top: rem(5px);
-        margin-bottom: rem(5px);
+        margin-top: 0.25*$spacer;
+        margin-bottom: 0.25*$spacer;
     }
 }
 
@@ -17,8 +17,8 @@
 }
 
 .journey-entry {
-    margin-bottom: rem(43px);
-    font-size: rem(16px);
+    margin-bottom: 3*$spacer;
+    font-size: $font-size-md;
 
     img {
         width: 100% !important;
@@ -27,12 +27,12 @@
     }
 
     .co-worker {
-        margin-left: rem(6px);
+        margin-left: 0.5*$spacer;
         color: $ce-middle-gray;
     }
 
     .co-worker-link {
-        margin-right: rem(10px);
+        margin-right: 0.5*$spacer;
         color: $gray-dark;
         font-size: 14px;
     }
@@ -40,13 +40,13 @@
 
 .journey-link {
     padding: 0;
-    margin-left: rem(10px);
+    margin-left: 0.5*$spacer;
     text-decoration: underline $brand-primary;
 }
 
 .journey-btn {
     margin: 0;
-    padding: rem(10px) rem(18px);
+    padding: 0.5*$spacer $spacer;
     border: none;
     font-size: rem(16px);
     line-height: 1.25;
@@ -57,13 +57,13 @@
 
 .journey-form-top {
     @media screen and (min-width: $screen-md) {
-        padding-top: rem(40px);
-        padding-bottom: rem(60px);
+        padding-top: 2.5*$spacer;
+        padding-bottom: 4*$spacer;
     }
 
     @media screen and (max-width: $screen-sm-max) {
-        padding-top: rem(40px);
-        padding-bottom: rem(40px);
+        padding-top: 2.5*$spacer;
+        padding-bottom: 2.5*$spacer;
     }
 
     background: linear-gradient(to bottom, $ce-lighter-gray rem(360px), #fff 0%);
@@ -79,7 +79,7 @@
         .fa,
         .fas,
         .far {
-            padding-right: rem(5px);
+            padding-right: 0.25*$spacer;
         }
 
         @media screen and (max-width: $screen-sm-max) {
@@ -98,7 +98,7 @@
     }
 
     @media screen and (max-width: $screen-xs-max) {
-        padding: rem(10px);
+        padding: 0.5*$spacer;
     }
 
     .journey-form-idea {
@@ -108,8 +108,8 @@
 }
 
 .journey-form-save-btn {
-    font-size: rem(16px);
-    padding: rem(9px 18px);
+    font-size: $font-size-md;
+    padding: 0.25*$spacer $spacer;
 
     @media screen and (max-width: $screen-sm-max) {
         font-size: rem(14px);

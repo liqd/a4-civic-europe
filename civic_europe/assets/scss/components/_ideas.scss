@@ -1,5 +1,5 @@
 .idealist-list-container {
-    padding-bottom: rem(40px);
+    padding-bottom: 2.5*$spacer;
 }
 
 .idealist-content {
@@ -12,8 +12,8 @@
 .idealist-no-entry {
     background-color: $ce-brand-orange;
     margin-top: rem(20px);
-    margin-left: rem(5px);
-    margin-right: rem(5px);
+    margin-left: 0.25*$spacer;
+    margin-right: 0.25*$spacer;
     padding-top: 30px;
     padding-bottom: 30px;
 
@@ -49,7 +49,7 @@
 
     .idealist-item {
         //https://github.com/philipwalton/flexbugs/tree/676abf342f9284c0fc616ee9c69006eb35a0b2d6#7-flex-basis-doesnt-account-for-box-sizingborder-box
-        margin: rem(5px 5px);
+        margin: 0.25*$spacer;
     }
 }
 
@@ -76,7 +76,7 @@
     }
 
     .idealist-text {
-        padding: rem(12px);
+        padding: 0.75*$spacer;
 
         a {
             color: $gray-dark;
@@ -84,13 +84,13 @@
     }
 
     .idealist-footer {
-        padding: rem(12px);
+        padding: 0.75*$spacer;
         box-shadow: 0 -1px 0 0 $ce-dark-gray;
 
         .fa,
         .fas,
         .far {
-            padding-left: rem(10px);
+            padding-left: 0.5*$spacer;
         }
     }
 
@@ -122,7 +122,7 @@
 // ------------------------ Idea Detail Header ------------------------
 
 .ideadetail {
-    background: linear-gradient(to bottom, $brand-primary rem(500px), #fff 0%);
+    background: linear-gradient(to bottom, $brand-primary 500px, #fff 0%);
 }
 
 .ideadetail-header {
@@ -132,8 +132,8 @@
         background-size: cover;
         height: 22rem;
         width: 100%;
-        border-top-left-radius: rem(5px);
-        border-top-right-radius: rem(5px);
+        border-top-left-radius: rem(5px );
+        border-top-right-radius: rem(5px );
 
         @media screen and (min-width: $screen-md) {
             height: 25rem;
@@ -199,7 +199,7 @@
     margin-top: rem(20px);
 
     @media screen and (max-width: $screen-sm-max) {
-        margin-top: rem(10px);
+        margin-top: 0.5*$spacer;
     }
 }
 
@@ -219,7 +219,7 @@
     // @media screen and (min-width: $screen-sm) {
     //     // position: absolute;
     //     // right: rem(20px);
-    //     // bottom: rem(10px);
+    //     // bottom: 0.5*$spacer;
     // }
     //
     // @media screen and (min-width: $screen-md) {
@@ -247,7 +247,7 @@
     .btn-idea,
     .btn-follow {
         background-color: transparent;
-        padding: rem(14px 20px);
+        padding: $spacer 1.25*$spacer;
 
         margin-right: 0;
         border: none;
@@ -275,7 +275,7 @@
 
         .btn-idea,
         .btn-follow {
-            padding: rem(12px 20px 9px 20px);
+            padding: 0.75*$spacer 1.25*$spacer 0.5*$spacer 1.25*$spacer;
             border: none;
             color: #fff;
             background-color: $brand-primary-darker;
@@ -285,7 +285,7 @@
         .btn-idea-label,
         .btn-follow-label {
             display: block;
-            font-size: rem(12px)
+            font-size: $font-size-sm;
         }
     }
 }
@@ -312,7 +312,7 @@
     }
 
     .btn-support {
-        padding: rem(10px) rem(20px) rem(9px) rem(20px);
+        padding: 0.5*$spacer 1.25*$spacer;
     }
 }
 
@@ -323,32 +323,32 @@
 
     .tabs {
         margin-top: 0;
-        padding-left: rem(10px);
+        padding-left: 0.5*$spacer;
         width: 100%;
     }
 }
 
 .ideadetail-content {
-    margin-bottom: rem(60px);
+    margin-bottom: 4*$spacer;
     background-color: #fff;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
-    border-bottom-left-radius: rem(5px);
-    border-bottom-right-radius: rem(5px);
-    padding-bottom: rem(60px);
+    border-bottom-left-radius: 0.25*$spacer;
+    border-bottom-right-radius: 0.25*$spacer;
+    padding-bottom: 4*$spacer;
 }
 
 .ideadetail-info-boxes {
     margin-top: rem(20px);
 
     @media screen and (min-width: $screen-md) {
-        margin-top: rem(40px);
+        margin-top: 2.5*$spacer;
     }
 }
 
 .ideadetail-info-box {
-    margin-bottom: rem(10px);
+    margin-bottom: 0.5*$spacer;
     background-color: $ce-light-gray;
-    padding: rem(10px) rem(12px);
+    padding: 0.5*$spacer 0.75*$spacer;
 
     &.jurystatement {
         background-color: $ce-brand-orange;
@@ -359,7 +359,7 @@
     }
 
     .co-worker {
-        margin-left: rem(6px);
+        margin-left: 0.5*$spacer;
 
         a {
             color: $gray-dark;
@@ -392,7 +392,7 @@
     }
 
     h2 {
-        margin-top: rem(40px);
+        margin-top: 2.5*$spacer;
 
         @media screen and (max-width: $screen-xs-max) {
             margin-top: rem(20px);
@@ -400,8 +400,8 @@
     }
 
     h4 {
-        margin-bottom: rem(5px);
-        margin-top: rem(30px);
+        margin-bottom: 0.25*$spacer;
+        margin-top: 2*$spacer;
 
         @media screen and (max-width: $screen-sm-max) {
             margin-top: rem(20px);
@@ -409,7 +409,7 @@
 
         @media screen and (max-width: $screen-xs-max) {
             font-size: rem(16px);
-            margin-top: rem(10px);
+            margin-top: 0.5*$spacer;
         }
     }
 
@@ -442,7 +442,7 @@
 // -------------------- Idea Detail Comments --------------------
 
 .ideadetail-comments {
-    margin-bottom: rem(60px);
+    margin-bottom: 4*$spacer;
 
     &-title {
         font-weight: $demibold;
@@ -451,16 +451,16 @@
 
 .idea__badge {
     text-transform: uppercase;
-    padding: rem(3px) rem(6px);
-    font-size: rem(12px);
+    padding: 0.25*$spacer 0.5*$spacer;
+    font-size: $font-size-sm;
     vertical-align: middle;
 }
 
 .idealist__badge {
     @extend .idea__badge;
     position: absolute;
-    bottom: rem(10px);
-    left: rem(10px);
+    bottom: 0.5*$spacer;
+    left: 0.5*$spacer;
     z-index: 1;
 }
 

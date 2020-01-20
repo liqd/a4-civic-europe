@@ -21,7 +21,7 @@
     }
 
     .call-to-action-btn {
-        margin-bottom: rem(25px);
-        font-size: 16px;
+        margin-bottom: 1.5*$spacer;
+        font-size: $font-size-md;
     }
 }
