@@ -1,10 +1,10 @@
 .wizard-page {
     @media screen and (min-width: $screen-md) {
-        padding: rem(60px);
+        padding: 4*$spacer;
     }
 
     @media screen and (max-width: $screen-sm-max) {
-        padding: rem(10px);
+        padding: 0.5*$spacer;
     }
 
     background: linear-gradient(to bottom, $ce-lighter-gray rem(360px), #fff 0%);
@@ -27,9 +27,9 @@
     }
 
     .wizard-submit-btn {
-        padding: rem(12px) rem(24px);
-        margin-top: rem(10px);
-        margin-bottom: rem(10px);
+        padding: 0.75*$spacer 1.5*$spacer;
+        margin-top: 0.5*$spacer;
+        margin-bottom: 0.5*$spacer;
         font-size: rem(18px);
         font-weight: bold;
     }
@@ -40,11 +40,11 @@
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
 
     @media screen and (min-width: $screen-sm) {
-        padding: rem(30px);
+        padding: 2*$spacer;
     }
 
     @media screen and (max-width: $screen-xs-max) {
-        padding: rem(5px 10px);
+        padding: 0.25*$spacer 0.5*$spacer;
     }
 
     background-color: #fff;
@@ -65,7 +65,7 @@
     position: relative;
     width: 25em;
 
-    font-size: rem(10px);
+    font-size: rem(10px );
     font-weight: bold;
     color: $ce-dark-gray;
 

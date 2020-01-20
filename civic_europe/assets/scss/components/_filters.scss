@@ -1,6 +1,6 @@
 .idealist {
     .idealist-controls {
-        padding: rem(15px) rem(20px) rem(20px) rem(20px);
+        padding: $spacer rem(20px) rem(20px) rem(20px);
         background-color: $ce-lighter-gray;
         border-bottom-left-radius: 5px;
         border-top-left-radius: 5px;
@@ -12,7 +12,7 @@
         }
 
         .export-btn {
-            margin: rem(5px) rem(5px) rem(5px) rem(5px);
+            margin: 0.25*$spacer;
         }
     }
 }
@@ -20,7 +20,7 @@
 .idealist-filter {
     .filter-element {
         @media screen and (min-width: $screen-md) {
-            margin: rem(5px) rem(5px) rem(5px) 0;
+            margin: 0.25*$spacer 0.25*$spacer 0.25*$spacer 0;
         }
     }
 
@@ -33,10 +33,10 @@
     }
 
     .filter-label {
-        margin-bottom: rem(2px);
-        font-size: rem(10px);
+        margin-bottom: 2px;
+        font-size: $font-size-sm;
         font-weight: $demibold;
-        letter-spacing: rem(1px);
+        // letter-spacing: rem(1px);
         text-transform: uppercase;
         color: $ce-middle-gray;
     }
@@ -54,7 +54,7 @@
 
     .filter-element .btn-filter {
         .drop-down-caret {
-            margin-left: rem(8px);
+            margin-left: 0.5*$spacer;
             float: right;
             line-height: rem(20px);
         }
@@ -111,9 +111,9 @@
 
         .btn-collapse {
             width: 100%;
-            height: rem(40px);
+            height: 2.5*$spacer;
             margin: 0;
-            padding: rem(8px) rem(12px);
+            padding: 0.25*$spacer 0.75*$spacer;
             background-color: $gray-lighter;
             border: none;
             font-size: rem(18px);
@@ -127,15 +127,15 @@
         .btn-collapse .fas,
         .btn-collapse .far {
             float: right;
-            margin-top: rem(5px);
+            margin-top: 0.25*$spacer;
         }
 
         .number-of-filters {
             position: absolute;
-            margin-left: rem(10px);
-            padding: rem(3px);
-            width: rem(25px);
-            height: rem(25px);
+            margin-left: 0.5*$spacer;
+            padding: 0.25*$spacer;
+            width: 25px;
+            height: 25px;
             border-radius: 50%;
             background-color: $ce-brand-orange;
             font-size: rem(14px);
@@ -150,7 +150,7 @@
 
         .card-block {
             text-align: center;
-            padding: rem(15px) 0;
+            padding: $spacer 0;
         }
 
         label {
@@ -159,7 +159,7 @@
 
         .filter-element {
             width: 90%;
-            margin: rem(5px) rem(5px);
+            margin: 0.25*$spacer 0.25*$spacer;
         }
 
         .filter-element:nth-child(2n+3) .dropdown-menu {
@@ -171,8 +171,8 @@
 
 .filter-list {
     padding-left: 0;
-    margin-left: rem(5px);
-    margin-right: rem(5px);
+    margin-left: 0.25*$spacer;
+    margin-right: 0.25*$spacer;
     list-style: none;
 }
 
@@ -203,9 +203,9 @@
 }
 
 .filter-ordering {
-    padding-bottom: rem(40px);
+    padding-bottom: 2.5*$spacer;
 
     .filter-element {
-        padding-top: rem(40px);
+        padding-top: 2.5*$spacer;
     }
 }

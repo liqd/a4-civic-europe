@@ -1,13 +1,13 @@
 .error-top {
-    padding-top: rem(40px);
-    padding-bottom: rem(40px);
+    padding-top: 2.5*$spacer;
+    padding-bottom: 2.5*$spacer;
 }
 
 .error-box {
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
     background-color: #fff;
     border-radius: 4px;
-    padding: rem(40px);
+    padding: 2.5*$spacer;
 
     .fa,
     .fas,
@@ -28,8 +28,8 @@
     }
 
     .error-btn {
-        font-size: rem(16px);
-        padding: rem(10px 20px);
+        font-size: $font-size-md;
+        padding: 0.5*$spacer 1.25*$spacer;
     }
 }
 
@@ -66,7 +66,7 @@
 
 .error-stack-1x {
     line-height: inherit;
-    padding-top: rem(10px);
+    padding-top: 0.5*$spacer;
 }
 
 .error-stack-2x {

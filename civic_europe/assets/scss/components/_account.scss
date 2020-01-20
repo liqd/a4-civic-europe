@@ -1,12 +1,12 @@
 .account-top {
     @media screen and (min-width: $screen-md) {
-        padding-top: rem(60px);
-        padding-bottom: rem(60px);
+        padding-top: 4*$spacer;
+        padding-bottom: 4*$spacer;
     }
 
     @media screen and (max-width: $screen-sm-max) {
-        padding-top: rem(40px);
-        padding-bottom: rem(40px);
+        padding-top: 2.5*$spacer;
+        padding-bottom: 2.5*$spacer;
     }
 }
 
@@ -16,29 +16,29 @@
     border-radius: 4px;
 
     @media screen and (min-width: $screen-sm) {
-        padding: rem(30px 60px);
+        padding: 2*$spacer 4*$spacer;
     }
 
     @media screen and (max-width: $screen-xs-max) {
-        padding: rem(10px 10px);
+        padding: 0.5*$spacer;
     }
 }
 
 .account-settings {
-    margin-top: rem(60px);
+    margin-top: 4*$spacer;
 
     h1 {
         font-size: rem(24px);
-        margin-top: rem(5px);
-        margin-left: rem(5px);
+        margin-top: 0.25*$spacer;
+        margin-left: 0.25*$spacer;
     }
 
     .well {
-        padding: rem(10px);
-        margin-left: rem(15px);
+        padding: 0.5*$spacer;
+        margin-left: $spacer;
         border: none;
         border-radius: 0;
-        margin-right: rem(15px);
+        margin-right: $spacer;
         background-color: $ce-light-gray;
         box-shadow: 0 1px 0 0 $ce-light-gray-shadow;
 
@@ -57,7 +57,7 @@
         .fa,
         .fas,
         .far {
-            margin-right: rem(10px);
+            margin-right: 0.5*$spacer;
         }
     }
 
@@ -74,7 +74,7 @@
     .list-group-item {
         border: none;
         background-color: $ce-light-gray;
-        padding: rem(9px 13px);
+        padding: 0.25*$spacer $spacer;
 
         a,
         a:hover {

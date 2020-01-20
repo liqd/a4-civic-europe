@@ -147,12 +147,12 @@ h6 {
 
     &.left {
         float: left;
-        margin-right: rem(15px);
+        margin-right: $spacer;
     }
 
     &.right {
         float: right;
-        margin-left: rem(15px);
+        margin-left: $spacer;
     }
 }
 
@@ -163,7 +163,7 @@ h6 {
 blockquote {
     background-color: $ce-brand-orange;
     border-left: none;
-    padding: rem(10px) rem(12px);
+    padding: 0.5*$spacer 0.75*$spacer;
     font-size: inherit;
 }
 

@@ -24,12 +24,12 @@
         align-items: center;
         flex-wrap: wrap;
 
-        padding: rem(5px);
+        padding: 0.25*$spacer;
     }
 
     &-label-text {
-        padding-left: rem(6px);
-        font-size: rem(14px);
+        padding-left: 0.25*$spacer;
+        font-size: $font-size-base;
         font-weight: $demibold;
 
         a {

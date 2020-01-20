@@ -40,11 +40,11 @@
     .fa,
     .fas,
     .far {
-        padding-right: rem(5px);
+        padding-right: 0.25*$spacer;
     }
 
     @media screen and (max-width: $screen-sm-max) {
-        margin-top: rem(10px);
+        margin-top: 0.5*$spacer;
         font-size: rem(14px);
     }
 }

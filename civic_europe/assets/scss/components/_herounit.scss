@@ -61,7 +61,7 @@
 
 
     .button {
-        margin-top: rem(13px);
+        margin-top: 0.75*$spacer;
     }
 
     a:not(.btn) {
@@ -75,7 +75,7 @@
 
 .herounit-title {
     font-size: $ce-font-size-extra-large;
-    margin: rem(0 0 10px 0);
+    margin: 0 0 0.5*$spacer 0;
     font-weight: bold;
     color: #fff;
     position: absolute;
@@ -98,13 +98,13 @@
 
 .herounit-content {
     @media screen and (max-width: $screen-xs) {
-        padding-top: rem(10px);
+        padding-top: 0.5*$spacer;
         padding-bottom: rem(20px);
     }
 }
 
 .herounit-description {
-    margin-bottom: rem(15px);
+    margin-bottom: $spacer;
     font-size: rem(20px);
     font-weight: bold;
     line-height: 1.38;

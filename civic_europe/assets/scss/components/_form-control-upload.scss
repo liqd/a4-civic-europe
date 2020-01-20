@@ -18,7 +18,7 @@
     .btn-default,
     .btn-danger {
         font-size: rem(24px);
-        width: rem(40px);
+        width: 2.5*$spacer;
         border: 0;
         border-radius: 0;
         color: #fff;
@@ -35,8 +35,7 @@
 
     .alert-info {
         clear: left;
-
-        @include rem(margin-top, 20px);
+        margin-top: 1.25*$spacer;
     }
 
     .form-control {
