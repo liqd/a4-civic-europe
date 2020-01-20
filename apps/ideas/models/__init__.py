@@ -39,11 +39,11 @@ class AbstractIdea(ApplicantSection,
         ordering = ['-created']
 
     def __str__(self):
-        return self.idea_title
+        return self.title
 
 
 class Idea(AbstractIdea, Item):
-    slug = AutoSlugField(populate_from='idea_title', unique=True)
+    slug = AutoSlugField(populate_from='title', unique=True)
     is_on_shortlist = models.BooleanField(default=False)
     is_winner = models.BooleanField(default=False)
     jury_statement = models.TextField(
@@ -51,10 +51,10 @@ class Idea(AbstractIdea, Item):
     community_award_winner = models.BooleanField(default=False)
     budget_granted = models.IntegerField(null=True, blank=True)
     ratings = GenericRelation(rating_models.Rating,
-                              related_query_name='idea_sketch',
+                              related_query_name='idea',
                               object_id_field='object_pk')
     comments = GenericRelation(comment_models.Comment,
-                               related_query_name='idea_sketch',
+                               related_query_name='idea',
                                object_id_field='object_pk')
     objects = IdeaQuerySet.as_manager()
 
