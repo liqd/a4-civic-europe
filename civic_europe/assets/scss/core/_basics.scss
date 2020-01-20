@@ -21,11 +21,6 @@ body {
     }
 }
 
-a,
-.btn-link {
-    font-weight: $demibold;
-}
-
 h1,
 h2,
 h3,
@@ -35,6 +30,12 @@ h6 {
     line-height: 1.2;
     margin-bottom: 0.8 * $spacer;
     margin-top: 1.5 * $spacer;
+    font-weight: bold;
+}
+
+a,
+.btn-link {
+    font-weight: $demibold;
 }
 
 @mixin selection {
