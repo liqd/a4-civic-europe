@@ -109,8 +109,6 @@ class IdeaCreateWizard(PermissionRequiredMixin,
     def get_form_kwargs(self, step=None):
         if step == '0':
             return {'end_date': self.end_date}
-        if step == '5':
-            return {'display_idea_challenge_camp_checkbox': True}
         return {}
 
     def done(self, form_list, **kwargs):
@@ -133,7 +131,7 @@ class IdeaCreateWizard(PermissionRequiredMixin,
                 email
             )
 
-        return redirect(idea_sketch.get_absolute_url())
+        return redirect(idea.get_absolute_url())
 
     @property
     def raise_exception(self):

@@ -199,7 +199,7 @@ class IdeaSectionForm(BaseForm):
         ]
 
 
-class LocalDimenssionSectionForm(BaseForm):
+class LocalDimensionSectionForm(BaseForm):
     section_name = _('Local Dimension')
 
     class Meta:
@@ -264,7 +264,7 @@ class FinanceSectionForm(BaseForm):
 
 
 class NetworkAndCommunitySectionForm(CoWorkersEmailsFormMixin, BaseForm):
-    section_name = _('Network &Community')
+    section_name = _('Network & Community')
     co_workers_emails = forms.CharField(
         required=False,
         help_text=COWORKERS_HELP,
@@ -297,7 +297,7 @@ class NetworkAndCommunitySectionForm(CoWorkersEmailsFormMixin, BaseForm):
 
 
 class NetworkAndCommunitySectionEditForm(CoWorkersEmailsFormMixin, BaseForm):
-    section_name = _('Network &Community')
+    section_name = _('Network & Community')
     co_workers_emails = forms.CharField(
         required=False,
         help_text=COWORKERS_HELP,
