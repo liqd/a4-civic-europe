@@ -7,14 +7,14 @@
         padding: 0.5*$spacer;
     }
 
-    background: linear-gradient(to bottom, $ce-lighter-gray rem(360px), #fff 0%);
+    background: linear-gradient(to bottom, $ce-lighter-gray 360px, #fff 0%);
 
     .wizard {
-        max-width: rem(670px);
+        max-width: 670px;
     }
 
     .breadcrumps {
-        max-width: rem(670px);
+        max-width: 670px;
         padding: 0 0 1.25*$spacer 0;
     }
 

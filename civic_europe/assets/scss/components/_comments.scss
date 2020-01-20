@@ -107,7 +107,7 @@
         padding: 0;
         border: none;
         border-radius: 5px;
-        min-width: rem(80px);
+        min-width: 80px;
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 
         li.divider {
@@ -193,7 +193,7 @@
         @extend .btn;
         @extend .btn-default;
         border: none;
-        padding: 0 rem(11px);
+        padding: 0 11px;
         height: 2rem;
         vertical-align: baseline;
     }

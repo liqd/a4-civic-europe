@@ -15,7 +15,7 @@
         // margin-top: $navbar-padding-vertical/1.5;
         display: block;
         position: static; // overwrite position relative of button group
-        height: rem(31px);
+        height: 31px;
 
         /* stylelint-disable max-nesting-depth */
 
@@ -45,7 +45,7 @@
         .user-indicator-profile-avatar {
 
             height: 100%;
-            width: rem(31px);
+            width: 31px;
 
             border-top-left-radius: 4px;
             border-bottom-left-radius: 4px;
@@ -114,7 +114,7 @@
 .login-register-btn-group {
     // margin-top: $navbar-padding-vertical/1.5;
     display: block;
-    height: rem(31px);
+    height: 31px;
 
     @media screen and (max-width: $screen-md-max) {
         margin-left: $spacer;
