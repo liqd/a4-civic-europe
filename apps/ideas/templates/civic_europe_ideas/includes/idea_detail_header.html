@@ -18,10 +18,10 @@
                 <div class="ideadetail-category">
                     {{ idea.all_idea_topics_names|join:", " }}
                 </div>
-                <h3>{{ idea.idea_title }} {% if idea.badge %}<span class="badge idea__badge {{ idea.badge|cut:" " }}">{{ idea.badge }}</span>{% endif %}</h3>
-                {% if idea.idea_subtitle %}
+                <h3>{{ idea.title }} {% if idea.badge %}<span class="badge idea__badge {{ idea.badge|cut:" " }}">{{ idea.badge }}</span>{% endif %}</h3>
+                {% if idea.subtitle %}
                 <h4 class="d-none d-md-block">
-                    {{ idea.idea_subtitle }}
+                    {{ idea.subtitle }}
                 </h4>
                 {% endif %}
             </div>

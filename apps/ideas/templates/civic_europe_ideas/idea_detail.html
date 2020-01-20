@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load i18n react_comments_async rules static idea_tags absolute_url rules %}
+{% load i18n react_comments rules static idea_tags absolute_url rules %}
 
 {% block title %} {{ idea.idea_title }} {% endblock %}
 
@@ -8,7 +8,7 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Civic Europe | {{ idea.idea_title }}">
-    <meta name="twitter:description" content="{{ idea.idea_pitch }}">
+    <meta name="twitter:description" content="{{ idea.pitch }}">
     {% if idea.idea_image %}
         <meta name="twitter:image" content="{% get_absolute_uri obj=idea.idea_image.url %}">
     {% else %}
@@ -18,7 +18,7 @@
 
     <meta property="og:url" content="{{ request.build_absolute_uri }}">
     <meta property="og:title" content="Civic Europe | {{ idea.idea_title }}">
-    <meta property="og:description" content="{{ idea.idea_pitch }}">
+    <meta property="og:description" content="{{ idea.pitch }}">
     {% if idea.idea_image %}
         <meta property="og:image" content="{% get_absolute_uri obj=idea.idea_image.url %}">
         <meta property="og:image:width" content="{{ idea.idea_image.width }}">
@@ -134,7 +134,7 @@
             {% if view.display_type == 'idea' %}
                 <div class="container-medium ideadetail-comments">
                     <h4 class="ideadetail-comments-title">{% trans "Write comment" %}</h4>
-                    {% react_comments_async idea %}
+                    {% react_comments idea %}
                 </div>
             {% endif %}
         </div>
