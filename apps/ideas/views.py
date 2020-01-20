@@ -157,6 +157,10 @@ class IdeaEditView(
         forms.ApplicantSectionForm,
         forms.PartnersSectionForm,
         forms.IdeaSectionForm,
+        forms.LocalDimensionSectionForm,
+        forms.RoadToImpactSectionForm,
+        forms.FinanceSectionForm,
+        forms.NetworkAndCommunitySectionEditForm,
     ]
 
     @property
