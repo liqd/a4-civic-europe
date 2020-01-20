@@ -179,15 +179,10 @@ class IdeaDetailView(generic.DetailView):
         idea_list_1 = []
         idea_list_2 = []
         budget_list = []
-        idea_list_1.append((_('Idea pitch'), self.object.idea_pitch))
-        if self.object.idea_location_specify:
-            idea_list_1.append((_('Where will your idea take place?'),
-                                self.object.idea_location_specify))
+        idea_list_1.append((_('Idea pitch'), self.object.pitch))
         idea_list_1.append((_('Why does Europe need your idea?'),
                             self.object.challenge))
-        idea_list_1.append((_('What is your impact?'), self.object.outcome))
         idea_list_1.append((_('How do you get there?'), self.object.plan))
-        idea_list_1.append((_('What is your story?'), self.object.importance))
         idea_list_1.append((_('Who are you doing it for?'),
                             self.object.target_group))
 

@@ -18,7 +18,7 @@
             </div>
 
             <h4 class="idealist-tile-title"><a href="{% url 'idea-detail' slug=idea.slug %}">{{ idea.idea_title }}</a></h4>
-            {{ idea.idea_pitch|truncatechars:240 }}
+            {{ idea.pitch|truncatechars:240 }}
         </div>
     </div>
     <div class="idealist-footer">

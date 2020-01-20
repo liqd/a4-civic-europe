@@ -131,14 +131,11 @@ class IdeaFilterSet(DefaultsFilterSet):
 
     search = FreeTextFilter(
         widget=FreeTextSearchFilterWidget,
-        fields=['idea_title',  # idea section
-                'idea_subtitle',
-                'idea_pitch',
-                'idea_location_specify',
+        fields=['title',  # idea section
+                'subtitle',
+                'pitch',
                 'challenge',
-                'outcome',
                 'plan',
-                'importance',
                 'reach_out',
                 'first_name',  # applicant section
                 'last_name',
