@@ -2,7 +2,7 @@
     color: $gray-dark;
 
     label {
-        font-size: rem(16px);
+        font-size: $font-size-md;
         font-weight: $demibold;
     }
 
@@ -13,8 +13,8 @@
 
     h1 {
         margin-top: 0.5*$spacer;
-        margin-bottom: rem(20px);
-        font-size: rem(24px);
+        margin-bottom: 1.25*$spacer;
+        font-size: $h4-font-size;
     }
 
     .form-text {
@@ -23,7 +23,7 @@
     }
 
     .form-group {
-        margin-bottom: rem(20px);
+        margin-bottom: 1.25*$spacer;
     }
 
     .form-control {
@@ -77,7 +77,7 @@
         list-style-type: none;
         padding-left: 0;
         color: $brand-danger;
-        font-size: rem(16px);
+        font-size: $font-size-md;
     }
 }
 

@@ -6,7 +6,7 @@
 
 .alert-danger {
     background-color: $brand-danger;
-    font-size: rem(16px);
+    font-size: $font-size-md;
     color: #fff;
     font-weight: bold;
     border: none;

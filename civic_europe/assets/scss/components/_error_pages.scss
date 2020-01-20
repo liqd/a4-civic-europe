@@ -16,15 +16,15 @@
     }
 
     .error-status {
-        font-size: rem(72px);
+        font-size: 5*$font-size-base;
         font-weight: bold;
     }
 
     .error-message {
-        font-size: rem(18px);
+        font-size: $font-size-lg;
         font-weight: $demibold;
-        margin-top: rem(20px);
-        margin-bottom: rem(20px);
+        margin-top: 1.25*$spacer;
+        margin-bottom: 1.25*$spacer;
     }
 
     .error-btn {
@@ -39,7 +39,7 @@
 //.fa-3x
 
 .error-stack-size {
-    font-size: rem(72px);
+    font-size: 5*$font-size-base;
 }
 
 //still the same as .fa-stack
@@ -70,5 +70,5 @@
 }
 
 .error-stack-2x {
-    font-size: rem(144px);
+    font-size: 10*$font-size-base;
 }

@@ -11,7 +11,7 @@
 
 .idealist-no-entry {
     background-color: $ce-brand-orange;
-    margin-top: rem(20px);
+    margin-top: 1.25*$spacer;
     margin-left: 0.25*$spacer;
     margin-right: 0.25*$spacer;
     padding-top: 30px;
@@ -24,7 +24,7 @@
 }
 
 .idealist-list {
-    margin-top: rem(20px);
+    margin-top: 1.25*$spacer;
     display: flex;
     flex-wrap: wrap;
 
@@ -113,7 +113,7 @@
     text-align: center;
 
     &.margin {
-        margin-top: rem(20px);
+        margin-top: 1.25*$spacer;
     }
 }
 
@@ -184,19 +184,19 @@
         margin-top: 0;
 
         @media screen and (max-width: $screen-sm-max) {
-            font-size: rem(18px);
+            font-size: $font-size-lg;
         }
     }
 
     h4 {
         @media screen and (max-width: $screen-sm-max) {
-            font-size: rem(14px);
+            font-size: $font-size-base;
         }
     }
 }
 
 .ideadetail-btn {
-    margin-top: rem(20px);
+    margin-top: 1.25*$spacer;
 
     @media screen and (max-width: $screen-sm-max) {
         margin-top: 0.5*$spacer;
@@ -212,18 +212,18 @@
     color: #fff;
 
     .btn {
-        font-size: rem(18px);
+        font-size: $font-size-lg;
         border: 0.5px solid $brand-primary-darker;
     }
 
     // @media screen and (min-width: $screen-sm) {
     //     // position: absolute;
-    //     // right: rem(20px);
+    //     // right: 1.25*$spacer;
     //     // bottom: 0.5*$spacer;
     // }
     //
     // @media screen and (min-width: $screen-md) {
-    //     // bottom: rem(20px);
+    //     // bottom: 1.25*$spacer;
     // }
 }
 
@@ -279,7 +279,7 @@
             border: none;
             color: #fff;
             background-color: $brand-primary-darker;
-            font-size: rem(18px);
+            font-size: $font-size-lg;
         }
 
         .btn-idea-label,
@@ -338,7 +338,7 @@
 }
 
 .ideadetail-info-boxes {
-    margin-top: rem(20px);
+    margin-top: 1.25*$spacer;
 
     @media screen and (min-width: $screen-md) {
         margin-top: 2.5*$spacer;
@@ -379,11 +379,11 @@
 
 .ideadetail-tab {
     .ideadetailtab-header {
-        margin-top: 40px;
+        margin-top: 2.5*$spacer;
 
         h2 {
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin-top: 1.25*$spacer;
+            margin-bottom: 1.25*$spacer;
         }
 
         &-content-switcher {
@@ -395,7 +395,7 @@
         margin-top: 2.5*$spacer;
 
         @media screen and (max-width: $screen-xs-max) {
-            margin-top: rem(20px);
+            margin-top: 1.25*$spacer;
         }
     }
 
@@ -404,20 +404,20 @@
         margin-top: 2*$spacer;
 
         @media screen and (max-width: $screen-sm-max) {
-            margin-top: rem(20px);
+            margin-top: 1.25*$spacer;
         }
 
         @media screen and (max-width: $screen-xs-max) {
-            font-size: rem(16px);
+            font-size: $font-size-md;
             margin-top: 0.5*$spacer;
         }
     }
 
     .ideadetailtab-con-text {
-        font-size: rem(16px);
+        font-size: $font-size-md;
 
         @media screen and (max-width: $screen-xs-max) {
-            font-size: rem(14px);
+            font-size: $font-size-base;
         }
 
         p {
@@ -436,7 +436,7 @@
 }
 
 .ideadetail-controls {
-    padding-top: rem(20px);
+    padding-top: 1.25*$spacer;
 }
 
 // -------------------- Idea Detail Comments --------------------
@@ -497,7 +497,7 @@
     }
 
     h3 {
-        font-size: rem(18px);
+        font-size: $font-size-lg;
         margin-top: 0;
         margin-bottom: 5px;
     }

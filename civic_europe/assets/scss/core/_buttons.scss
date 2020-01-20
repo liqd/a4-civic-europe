@@ -35,7 +35,7 @@
 .btn-back-to {
     @extend .btn;
     @extend .btn-default;
-    font-size: rem(16px);
+    font-size: $font-size-md;
 
     .fa,
     .fas,
@@ -45,7 +45,7 @@
 
     @media screen and (max-width: $screen-sm-max) {
         margin-top: 0.5*$spacer;
-        font-size: rem(14px);
+        font-size: $font-size-base;
     }
 }
 
@@ -67,7 +67,7 @@
 .btn-wide {
     width: 100%;
     text-transform: capitalize;
-    font-size: rem(16px);
+    font-size: $font-size-md;
 }
 
 .btn-support,
@@ -81,15 +81,15 @@
 
     p {
         margin-bottom: 0;
-        font-size: rem(12px);
+        font-size: $font-size-sm;
     }
 
     i {
-        font-size: rem(18px);
+        font-size: $font-size-lg;
     }
 
     span {
-        font-size: rem(18px);
+        font-size: $font-size-lg;
     }
 }
 

@@ -1,5 +1,5 @@
 .block {
-    padding-top: rem(20px);
+    padding-top: 1.25*$spacer;
     padding-bottom: 2*$spacer;
 
     &-title {
@@ -67,7 +67,7 @@
     }
 
     .panel-title {
-        font-size: rem(18px);
+        font-size: $font-size-lg;
         line-height: 1.33;
         font-weight: normal;
     }
@@ -94,8 +94,8 @@
 
 .blockblog {
     &-list {
-        margin-top: rem(20px);
-        margin-bottom: rem(20px);
+        margin-top: 1.25*$spacer;
+        margin-bottom: 1.25*$spacer;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -187,7 +187,7 @@
 .three-image-block {
     .three-image-block-title {
         text-align: center;
-        font-size: 18px;
+        font-size: $font-size-lg;
         line-height: 1.33;
         margin-top: 0.5*$spacer;
         margin-bottom: 2*$spacer;

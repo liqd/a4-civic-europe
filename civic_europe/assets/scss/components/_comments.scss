@@ -31,7 +31,7 @@
         margin-right: 0.5*$spacer;
 
         a {
-            font-size: rem(16px);
+            font-size: $font-size-md;
             line-height: 1.5;
             color: $gray-dark;
         }
@@ -49,13 +49,13 @@
     .comment-deleted-author {
         display: inline-block;
         margin-right: 0.5*$spacer;
-        font-size: rem(16px);
+        font-size: $font-size-md;
         font-weight: $demibold;
         line-height: 1.5;
     }
 
     .comment-child-list {
-        padding-left: rem(20px);
+        padding-left: 1.25*$spacer;
 
         .general-form {
             margin-top: 40px;
@@ -68,7 +68,7 @@
 
     .comment-submission-date {
         display: inline-block;
-        font-size: rem(16px);
+        font-size: $font-size-md;
         color: $ce-middle-gray;
     }
 
@@ -124,7 +124,7 @@
 
         li > button,
         li > a {
-            font-size: rem(14px);
+            font-size: $font-size-base;
             color: $gray-dark;
             text-align: left;
             padding: 0.25*$spacer 0.5*$spacer;
@@ -174,7 +174,7 @@
             padding: 0 0.75*$spacer;
             height: 2rem;
             vertical-align: baseline;
-            font-size: rem(16px);
+            font-size: $font-size-md;
         }
 
         i.fa,

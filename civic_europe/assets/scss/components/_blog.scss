@@ -1,7 +1,7 @@
 //blog_index_page and blog_page
 
 .blog-category {
-    font-size: 12px;
+    font-size: $font-size-sm;
     font-weight: bold;
     letter-spacing: rem(.8px);
     text-transform: uppercase;
@@ -10,7 +10,7 @@
 
 .blog-createdates {
     margin-top: 0.5*$spacer;
-    font-size: 14px;
+    font-size: $font-size-base;
     color: $ce-middle-gray;
 }
 
@@ -40,7 +40,7 @@
     text-align: center;
 
     @media screen and (max-width: $screen-xs-max) {
-        margin-top: rem(20px);
+        margin-top: 1.25*$spacer;
     }
 }
 
@@ -142,14 +142,14 @@
 
     @media screen and (max-width: $screen-xs-max) {
         margin-top: 4*$spacer;
-        margin-bottom: rem(20px);
+        margin-bottom: 1.25*$spacer;
     }
 }
 
 .blogindex-category-btn {
     margin-bottom: 0.25*$spacer;
     white-space: normal;
-    font-size: rem(12px);
+    font-size: $font-size-sm;
     font-weight: bold;
 
     &:hover,
@@ -164,7 +164,7 @@
         .fas,
         .far,
         .category-name {
-            font-size: rem(12px);
+            font-size: $font-size-sm;
             font-weight: bold;
         }
     }
@@ -223,7 +223,7 @@
 }
 
 .blogpage-btn {
-    font-size: rem(16px);
+    font-size: $font-size-md;
     font-weight: bold;
 
     .fa,
@@ -234,9 +234,9 @@
 }
 
 .blogpage-taeser {
-    font-size: rem(18px);
+    font-size: $font-size-lg;
 }
 
 .blogpage-body {
-    font-size: rem(16px);
+    font-size: $font-size-md;
 }

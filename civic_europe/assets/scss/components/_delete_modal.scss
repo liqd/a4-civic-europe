@@ -10,7 +10,7 @@
 
     .modal-body {
         .modal-title {
-            font-size: rem(20px);
+            font-size: $font-size-lg;
         }
     }
 
@@ -20,7 +20,7 @@
         padding: 4*$spacer 0;
 
         .row {
-            padding-top: 10px;
+            padding-top: 0.5*$spacer;
         }
 
         .submit-button {
