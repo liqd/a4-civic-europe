@@ -9,7 +9,8 @@
     }
     > button,
     > li > button,
-    > li > form > button {
+    > li > form > button,
+    > li > a {
         // same as for links in bootstrap
         display: block;
         padding: 3px 20px;
