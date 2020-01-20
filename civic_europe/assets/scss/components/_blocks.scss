@@ -62,8 +62,8 @@
     }
 
     .panel-heading {
-        background-color: $ae-light-gray;
-        border-color: $ae-dark-gray;
+        background-color: $ce-light-gray;
+        border-color: $ce-dark-gray;
     }
 
     .panel-title {
@@ -113,8 +113,8 @@
         }
 
         margin: rem(5px 15px);
-        background-color: $ae-light-gray;
-        box-shadow: 0 1px 0 0 $ae-light-gray-shadow;
+        background-color: $ce-light-gray;
+        box-shadow: 0 1px 0 0 $ce-light-gray-shadow;
     }
 
     &-text {
@@ -136,7 +136,7 @@
         &:hover,
         &:focus {
             text-decoration: none;
-            color: $ae-middle-gray;
+            color: $ce-middle-gray;
         }
     }
 
@@ -152,7 +152,7 @@
 }
 
 .three-column-text-block {
-    background-color: $ae-light-gray;
+    background-color: $ce-light-gray;
 
     &-title {
         margin-top: 0;

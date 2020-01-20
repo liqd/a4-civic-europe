@@ -7,7 +7,7 @@
         padding: rem(10px);
     }
 
-    background: linear-gradient(to bottom, $ae-lighter-gray rem(360px), #fff 0%);
+    background: linear-gradient(to bottom, $ce-lighter-gray rem(360px), #fff 0%);
 
     .wizard {
         max-width: rem(670px);
@@ -67,7 +67,7 @@
 
     font-size: rem(10px);
     font-weight: bold;
-    color: $ae-dark-gray;
+    color: $ce-dark-gray;
 
     &-entry.active {
         color: $gray-darker;
@@ -86,10 +86,10 @@
     &-entry {
         position: relative;
         text-transform: uppercase;
-        color: $ae-middle-gray;
+        color: $ce-middle-gray;
 
         a {
-            color: $ae-middle-gray;
+            color: $ce-middle-gray;
         }
 
         padding-left: 1.4em;
@@ -103,7 +103,7 @@
             height: 1em;
 
             border-radius: 100%;
-            border: solid 2px $ae-dark-gray;
+            border: solid 2px $ce-dark-gray;
 
             background-color: #fff;
             margin: 0 auto;
@@ -134,7 +134,7 @@
 
         width: 2px;
 
-        background: $ae-dark-gray;
+        background: $ce-dark-gray;
         content: '';
     }
 }
