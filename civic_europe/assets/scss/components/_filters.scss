@@ -1,7 +1,7 @@
 .idealist {
     .idealist-controls {
         padding: rem(15px) rem(20px) rem(20px) rem(20px);
-        background-color: $ae-lighter-gray;
+        background-color: $ce-lighter-gray;
         border-bottom-left-radius: 5px;
         border-top-left-radius: 5px;
 
@@ -38,7 +38,7 @@
         font-weight: $demibold;
         letter-spacing: rem(1px);
         text-transform: uppercase;
-        color: $ae-middle-gray;
+        color: $ce-middle-gray;
     }
 
     .filter-element {
@@ -84,7 +84,7 @@
     .filter-element .search-filter {
         border-radius: 5px;
         background-color: #fff;
-        border: solid 1px $ae-light-gray-shadow;
+        border: solid 1px $ce-light-gray-shadow;
         color: $gray-dark;
 
         .search-filter-btn {
@@ -107,7 +107,7 @@
         float: none;
         width: 100%;
         border-radius: 5px;
-        border: solid 1px $ae-dark-gray;
+        border: solid 1px $ce-dark-gray;
 
         .btn-collapse {
             width: 100%;
@@ -137,7 +137,7 @@
             width: rem(25px);
             height: rem(25px);
             border-radius: 50%;
-            background-color: $ae-brand-orange;
+            background-color: $ce-brand-orange;
             font-size: rem(14px);
             text-align: center;
         }

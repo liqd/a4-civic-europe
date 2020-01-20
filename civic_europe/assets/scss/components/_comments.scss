@@ -6,8 +6,8 @@
     & textarea {
         margin-top: rem(10px);
         border-radius: 5px;
-        background-color: $ae-lighter-gray;
-        border: 1px solid $ae-light-gray-shadow;
+        background-color: $ce-lighter-gray;
+        border: 1px solid $ce-light-gray-shadow;
 
         @include rem(font-size, 14px);
     }
@@ -38,7 +38,7 @@
         }
 
         .badge-subtle {
-            background-color: $ae-middle-gray;
+            background-color: $ce-middle-gray;
             text-transform: uppercase;
             padding: rem(3px) rem(6px);
             font-size: rem(12px);
@@ -70,7 +70,7 @@
     .comment-submission-date {
         display: inline-block;
         font-size: rem(16px);
-        color: $ae-middle-gray;
+        color: $ce-middle-gray;
     }
 
     .comment-text {
@@ -113,7 +113,7 @@
 
         li.divider {
             height: rem(1px);
-            background-color: $ae-dark-gray;
+            background-color: $ce-dark-gray;
             margin: 0;
         }
 
@@ -200,7 +200,7 @@
     }
 
     .rating-up {
-        border-right: rem(1px) solid $ae-dark-gray;
+        border-right: rem(1px) solid $ce-dark-gray;
         border-radius: 5px 0 0 5px;
 
         i.fa,

@@ -124,7 +124,7 @@ $theme-colors: map-merge(
 
 //CI custom Buttons
 $btn-ae-light-blue-color:        $black !default;
-$btn-ae-light-blue-bg:           $ae-light-blue !default;
+$btn-ae-light-blue-bg:           $ce-light-blue !default;
 $btn-ae-light-blue-border:       darken($btn-ae-light-blue-bg, 5%) !default;
 
 $btn-ae-secondary-color:         $gray-dark !default;
@@ -132,23 +132,23 @@ $btn-ae-secondary-bg:            $brand-secondary !default;
 $btn-ae-secondary-border:        darken($btn-ae-secondary-bg, 5%) !default;
 
 $btn-ae-github-color:            #fff !default;
-$btn-ae-github-bg:               $ae-github;
-$btn-ae-github-border:           darken($ae-github, 5%) !default;
+$btn-ae-github-bg:               $ce-github;
+$btn-ae-github-border:           darken($ce-github, 5%) !default;
 
 $btn-ae-facebook-color:          #fff !default;
-$btn-ae-facebook-bg:             $ae-facebook;
-$btn-ae-facebook-border:         darken($ae-facebook, 5%) !default;
+$btn-ae-facebook-bg:             $ce-facebook;
+$btn-ae-facebook-border:         darken($ce-facebook, 5%) !default;
 
 $btn-ae-google-color:            #fff !default;
-$btn-ae-google-bg:               $ae-google;
-$btn-ae-google-border:           darken($ae-google, 5%) !default;
+$btn-ae-google-bg:               $ce-google;
+$btn-ae-google-border:           darken($ce-google, 5%) !default;
 
 $btn-ae-instagram-color:         #fff !default;
-$btn-ae-instagram-bg:            $ae-instagram;
-$btn-ae-instagram-border:        darken($ae-instagram, 5%) !default;
+$btn-ae-instagram-bg:            $ce-instagram;
+$btn-ae-instagram-border:        darken($ce-instagram, 5%) !default;
 
-$btn-default-bg:                 $ae-light-gray !default;
-$btn-default-border:             darken($ae-light-gray, 5%) !default;
+$btn-default-bg:                 $ce-light-gray !default;
+$btn-default-border:             darken($ce-light-gray, 5%) !default;
 $btn-primary-bg:                 $brand-primary !default;
 
 // Options
@@ -308,6 +308,9 @@ $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
+
+//custom font size
+$ce-font-size-extra-large:    $font-size-base * 3 !default;
 
 $headings-margin-bottom:      $spacer / 2 !default;
 $headings-font-family:        null !default;

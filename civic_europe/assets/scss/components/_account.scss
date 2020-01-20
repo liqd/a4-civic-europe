@@ -39,8 +39,8 @@
         border: none;
         border-radius: 0;
         margin-right: rem(15px);
-        background-color: $ae-light-gray;
-        box-shadow: 0 1px 0 0 $ae-light-gray-shadow;
+        background-color: $ce-light-gray;
+        box-shadow: 0 1px 0 0 $ce-light-gray-shadow;
 
         .active {
             background-color: #fff;
@@ -73,7 +73,7 @@
 
     .list-group-item {
         border: none;
-        background-color: $ae-light-gray;
+        background-color: $ce-light-gray;
         padding: rem(9px 13px);
 
         a,

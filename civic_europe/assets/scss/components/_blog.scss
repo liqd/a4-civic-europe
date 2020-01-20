@@ -11,7 +11,7 @@
 .blog-createdates {
     margin-top: rem(10px);
     font-size: 14px;
-    color: $ae-middle-gray;
+    color: $ce-middle-gray;
 }
 
 .blog-image {
@@ -30,7 +30,7 @@
 }
 
 .blogindex-category {
-    color: $ae-middle-gray;
+    color: $ce-middle-gray;
 }
 
 .blogindex-no-entry {
@@ -62,8 +62,8 @@
 
     .blogindex-text {
         padding: rem(15px);
-        background-color: $ae-light-gray;
-        box-shadow: 0 1px 0 0 $ae-light-gray-shadow;
+        background-color: $ce-light-gray;
+        box-shadow: 0 1px 0 0 $ce-light-gray-shadow;
     }
 
     .blogindexentry-title {
@@ -75,7 +75,7 @@
     .blogindexentry-title:hover a,
     .blogindexentry-title:focus a {
         text-decoration: none;
-        color: $ae-middle-gray;
+        color: $ce-middle-gray;
     }
 
     .hover-parent {

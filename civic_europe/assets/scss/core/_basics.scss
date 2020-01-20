@@ -49,7 +49,7 @@ h6 {
 
 @include selection {
     color: $gray-dark;
-    background: $ae-brand-orange;
+    background: $ce-brand-orange;
 }
 
 .container {
@@ -66,7 +66,7 @@ h6 {
     bottom: 0;
     left: 0;
     height: $footer-height;
-    background-color: $ae-light-gray;
+    background-color: $ce-light-gray;
 
     @media (max-width: $screen-sm) {
         height: $footer-screen-sm-hight;
@@ -76,7 +76,7 @@ h6 {
         margin-bottom: 0;
         border-bottom: none;
         border-color: #fff;
-        background-color: $ae-light-gray;
+        background-color: $ce-light-gray;
     }
 
     .footer-entry {
@@ -161,12 +161,12 @@ h6 {
 }
 
 blockquote {
-    background-color: $ae-brand-orange;
+    background-color: $ce-brand-orange;
     border-left: none;
     padding: rem(10px) rem(12px);
     font-size: inherit;
 }
 
 quote {
-    background-color: $ae-brand-orange;
+    background-color: $ce-brand-orange;
 }

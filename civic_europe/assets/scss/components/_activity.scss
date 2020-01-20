@@ -1,7 +1,7 @@
 .action {
     padding: rem(5px 0);
 
-    border-bottom: 1px solid $ae-dark-gray;
+    border-bottom: 1px solid $ce-dark-gray;
 
     &:last-child {
         border-bottom: none;
@@ -16,7 +16,7 @@
         margin-right: rem(5px);
 
         color: $brand-primary;
-        background-color: $ae-light-gray;
+        background-color: $ce-light-gray;
 
         text-align: center;
         line-height: rem(50px);
@@ -28,6 +28,6 @@
 
         margin-left: rem(5px);
 
-        color: $ae-middle-gray;
+        color: $ce-middle-gray;
     }
 }
