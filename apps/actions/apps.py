@@ -19,8 +19,7 @@ class Config(AppConfig):
         configure_type('rating', ('a4ratings', 'rating'))
         configure_type(
             'idea',
-            ('civic_europe_ideas', 'proposal'),
-            ('civic_europe_ideas', 'ideasketch'),
+            ('civic_europe_ideas', 'idea'),
         )
         configure_type('blog', ('cms_blog', 'blogpage'))
         configure_type('journey entry',

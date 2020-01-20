@@ -24,7 +24,7 @@ rules.add_perm(
 )
 
 rules.add_perm(
-    'civic_europe_ideas.add_ideasketch',
+    'civic_europe_ideas.add_idea',
     mod_predicates.is_allowed_add_item(models.Idea)
 )
 
@@ -36,19 +36,6 @@ rules.add_perm(
         mod_predicates.is_owner |
         predicates.is_co_worker
     ) &
-    phase_predicates.phase_allows_change
-)
-
-rules.add_perm(
-    'civic_europe_ideas.add_proposal',
-    mod_predicates.is_project_admin |
-    mod_predicates.is_context_member &
-    (
-        mod_predicates.is_owner |
-        predicates.is_co_worker
-    ) &
-    predicates.is_on_shortlist &
-    predicates.has_no_proposal &
     phase_predicates.phase_allows_change
 )
 

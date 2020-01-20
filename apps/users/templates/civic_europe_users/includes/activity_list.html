@@ -74,7 +74,7 @@
                 {% endblocktrans %}
 
             {% elif action.type == 'idea' and action.verb == 'add' %}
-                {% url 'idea-sketch-list' as idea_list %}
+                {% url 'idea-list' as idea_list %}
                 <br> {% blocktrans with url=filtered_list project_pk=action.target.pk project=action.target %}
                 to <a href="{{ idea_list }}?project={{ project_pk }}">{{ project }}</a>
                 {% endblocktrans %}

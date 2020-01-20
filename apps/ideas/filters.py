@@ -12,10 +12,8 @@ from adhocracy4.projects.models import Project
 from . import countries, models
 
 STATUS_FILTER_CHOICES = [
-    ('idea_sketch', _('Idea Sketch')),
     ('community_award', _('Community Award Winner')),
     ('shortlist', _('Shortlist')),
-    ('proposal', _('Proposal')),
     ('winner', _('Winner'))
 ]
 
@@ -39,8 +37,8 @@ class TopicFilterWidget(widgets.DropdownLinkWidget):
 
     def __init__(self, attrs=None):
         choices = (('', _('All')),)
-        choices += (models.abstracts.idea_section.
-                    IDEA_TOPIC_CHOICES)
+        choices += (models.sections.idea_section.
+                    TOPIC_CHOICES)
 
         super().__init__(attrs, choices)
 
@@ -86,7 +84,7 @@ class IdeaFilterSet(DefaultsFilterSet):
 
     def organisation_countries(self, queryset, name, value):
         return queryset.filter(
-            Q(organisation_country=value)
+            Q(lead_organisation_country=value)
             | Q(partner_organisation_1_country=value)
             | Q(partner_organisation_2_country=value)
             | Q(partner_organisation_3_country=value)

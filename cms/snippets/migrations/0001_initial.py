@@ -43,7 +43,7 @@ class Migration(migrations.Migration):
                 ('sort_order', models.IntegerField(blank=True, editable=False, null=True)),
                 ('menu_title_en', models.CharField(max_length=255)),
                 ('menu_title_de', models.CharField(blank=True, max_length=255)),
-                ('link_view', models.CharField(blank=True, choices=[('idea-sketch-list', 'ideaspace')], help_text='Creates a link to a non wagtail view (e.g ideaspace). Leave empty if you add subpages or a link page', max_length=100)),
+                ('link_view', models.CharField(blank=True, choices=[('idea-list', 'ideaspace')], help_text='Creates a link to a non wagtail view (e.g ideaspace). Leave empty if you add subpages or a link page', max_length=100)),
                 ('subpages', wagtail.core.fields.StreamField([('link', wagtail.core.blocks.StructBlock([('link', wagtail.core.blocks.PageChooserBlock(required=True)), ('link_text_en', wagtail.core.blocks.CharBlock(required=True)), ('link_text_de', wagtail.core.blocks.CharBlock(required=False))]))], blank=True, help_text='These Links will be displayed in as a dropdown menu', null=True, verbose_name='Submenu')),
                 ('link_page', models.ForeignKey(blank=True, help_text='Creates a link to a single wagtail page. Leave empty if you add subpages or a link view', null=True, on_delete=django.db.models.deletion.CASCADE, related_name='+', to='wagtailcore.Page')),
                 ('parent', modelcluster.fields.ParentalKey(on_delete=django.db.models.deletion.CASCADE, related_name='menu_items', to='cms_snippets.NavigationMenu')),

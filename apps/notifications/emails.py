@@ -20,9 +20,9 @@ def _exclude_notifications_disabled(receivers):
     return [user for user in receivers if user.get_notifications]
 
 
-class SubmitIdeaSketchNotification(emails.UserNotification):
+class SubmitIdeaNotification(emails.UserNotification):
     template_name = (
-        'civic_europe_notifications/emails/submit_ideasketch_notification'
+        'civic_europe_notifications/emails/submit_idea_notification'
     )
 
     def get_context(self):
@@ -32,17 +32,6 @@ class SubmitIdeaSketchNotification(emails.UserNotification):
         context['community_award_rating_phase'] = module_phases.filter(
             type=phases.CommunityAwardRatingPhase().identifier
         ).first()
-        return context
-
-
-class SubmitProposalNotification(emails.UserNotification):
-    template_name = (
-        'civic_europe_notifications/emails/submit_proposal_notification'
-    )
-
-    def get_context(self):
-        context = super().get_context()
-        context['proposal'] = self.object
         return context
 
 
@@ -111,9 +100,9 @@ class NotifyFollowersOnNewComment(NotifyFollowers):
         return receivers
 
 
-class NotifyFollowersOnNewProposal(NotifyFollowers):
+class NotifyFollowersOnNewJourney(NotifyFollowers):
     template_name = \
-        'civic_europe_notifications/emails/notify_followers_new_proposal'
+        'civic_europe_notifications/emails/notify_followers_new_journey'
 
     def get_receivers(self):
         action = self.object
@@ -126,11 +115,6 @@ class NotifyFollowersOnNewProposal(NotifyFollowers):
         receivers = self._filter(receivers)
 
         return receivers
-
-
-class NotifyFollowersOnNewJourney(NotifyFollowersOnNewProposal):
-    template_name = \
-        'civic_europe_notifications/emails/notify_followers_new_journey'
 
 
 class NotifyFollowersOnWinner(emails.UserNotification):

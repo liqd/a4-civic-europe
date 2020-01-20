@@ -20,7 +20,7 @@ from adhocracy4.phases.models import Phase
 from apps.wizards import mixins as wizard_mixins
 
 from . import filters, forms, mixins
-from .models import Idea, IdeaSketch, IdeaSketchArchived, Proposal
+from .models import Idea
 
 
 class IdeaExportView(PermissionRequiredMixin,
@@ -56,10 +56,6 @@ class IdeaExportView(PermissionRequiredMixin,
             .annotate_positive_rating_count()
         return queryset
 
-    def get_object_list(self):
-        return (idea.proposal if hasattr(idea, 'proposal') else idea.ideasketch
-                for idea in self.get_queryset())
-
     @property
     def raise_exception(self):
         return self.request.user.is_authenticated
@@ -89,14 +85,14 @@ class IdeaExportView(PermissionRequiredMixin,
         return co_workers
 
 
-class IdeaSketchCreateWizard(PermissionRequiredMixin,
-                             mixins.ModuleMixin,
-                             wizard_mixins.CustomWizardMixin,
-                             SessionWizardView):
-    permission_required = 'civic_europe_ideas.add_ideasketch'
+class IdeaCreateWizard(PermissionRequiredMixin,
+                       mixins.ModuleMixin,
+                       wizard_mixins.CustomWizardMixin,
+                       SessionWizardView):
+    permission_required = 'civic_europe_ideas.add_idea'
     file_storage = FileSystemStorage(
-        location=os.path.join(settings.MEDIA_ROOT, 'idea_sketch_images'))
-    title = _('Idea Sketch')
+        location=os.path.join(settings.MEDIA_ROOT, 'idea_images'))
+    title = _('Idea')
     finish_section_text = _('As soon as you have submitted your application, '
                             'it will be published online in the idea space.')
     finish_section_btn = _('Submit your idea')
@@ -104,7 +100,7 @@ class IdeaSketchCreateWizard(PermissionRequiredMixin,
     @property
     def end_date(self):
         if (self.module.active_phase and
-                self.module.active_phase.has_feature('crud', IdeaSketch)):
+                self.module.active_phase.has_feature('crud', Idea)):
             settings_time_zone = timezone(settings.TIME_ZONE)
             end_date = self.module.active_phase.end_date
             return end_date.astimezone(settings_time_zone)\
@@ -122,7 +118,7 @@ class IdeaSketchCreateWizard(PermissionRequiredMixin,
                           'confirm_publicity', 'confirm_idea_challenge_camp']
 
         data = self.get_all_cleaned_data()
-        idea_sketch = IdeaSketch.objects.create(
+        idea = Idea.objects.create(
             creator=self.request.user,
             module=self.module,
             **{
@@ -132,7 +128,7 @@ class IdeaSketchCreateWizard(PermissionRequiredMixin,
         )
 
         for name, email in data['co_workers_emails']:
-            idea_sketch.ideainvite_set.invite(
+            idea.ideainvite_set.invite(
                 self.request.user,
                 email
             )
@@ -144,26 +140,23 @@ class IdeaSketchCreateWizard(PermissionRequiredMixin,
         return self.request.user.is_authenticated
 
 
-class IdeaSketchEditView(
+class IdeaEditView(
     PermissionRequiredMixin,
     mixins.MultiFormEditMixin,
     SuccessMessageMixin,
     generic.UpdateView
 ):
     permission_required = 'civic_europe_ideas.change_idea'
-    model = IdeaSketch
+    model = Idea
     template_name = 'civic_europe_ideas/idea_update_form.html'
     success_message = _('Idea Sketch saved')
-    next_view = 'idea-sketch-update-form'
-    title = _('Update Idea Sketch')
+    next_view = 'idea-update-form'
+    title = _('Update Idea')
 
     form_classes = [
         forms.ApplicantSectionForm,
         forms.PartnersSectionForm,
         forms.IdeaSectionForm,
-        forms.ImpactSectionForm,
-        forms.IdeaChallengeCampSectionForm,
-        forms.CommunitySectionEditForm,
     ]
 
     @property
@@ -196,24 +189,9 @@ class IdeaDetailView(generic.DetailView):
         idea_list_1.append((_('Who are you doing it for?'),
                             self.object.target_group))
 
-        if hasattr(self.object, 'proposal') and self.object.proposal:
-            idea_list_1.append((_('What makes your idea stand apart?'),
-                                self.object.proposal.selection_apart))
-            idea_list_2.append((_('Major expenses'),
-                                self.object.proposal.major_expenses))
-
         if self.object.reach_out:
             idea_list_2.append((_('What do you need from the Civic Europe '
                                 'community?'), self.object.reach_out))
-
-        if hasattr(self.object, 'proposal') and self.object.proposal:
-            budget_list.append((_('Funding requested from Civic Europe'),
-                                self.object.proposal.budget_requested))
-            budget_list.append((_('Total budget'),
-                                self.object.proposal.total_budget))
-            if self.object.budget_granted:
-                budget_list.append((_('Funding granted from Civic Europe'),
-                                    self.object.proposal.budget_granted))
 
         partner_list = []
         if (self.object.partner_organisation_1_name
@@ -241,125 +219,6 @@ class IdeaDetailView(generic.DetailView):
         context['budget_list'] = budget_list
         context['partner_list'] = partner_list
         return context
-
-
-class IdeaSketchArchivedDetailView(IdeaDetailView):
-    display_type = 'idea_sketch_archive'
-    model = IdeaSketchArchived
-    template_name = 'civic_europe_ideas/idea_detail.html'
-    context_object_name = 'idea'
-    slug_field = 'idea__slug'
-    queryset = IdeaSketchArchived.objects.all()
-
-
-class ProposalCreateWizard(PermissionRequiredMixin,
-                           mixins.IdeaMixin,
-                           wizard_mixins.CustomWizardMixin,
-                           SessionWizardView,
-                           ):
-    permission_required = 'civic_europe_ideas.add_proposal'
-    file_storage = FileSystemStorage(
-        location=os.path.join(settings.MEDIA_ROOT, 'idea_sketch_images'))
-    title = _('Proposal')
-    finish_section_text = _('As soon as you have submitted your '
-                            'application, it will be published '
-                            'online in the idea space.')
-    finish_section_btn = _('Submit your idea!')
-
-    def get_form_kwargs(self, step=None):
-        if step == '7':
-            return {'display_idea_challenge_camp_checkbox': False}
-        return {}
-
-    def get_form_initial(self, step):
-        initial = self.initial_dict.get(step, {})
-        form = self.form_list[step]
-        for field in form.base_fields:
-            if hasattr(self.idea, field):
-                initial[field] = getattr(self.idea, field)
-        return initial
-
-    def done(self, form_list, **kwargs):
-        archive = IdeaSketchArchived(id=self.idea.id)
-        for field in archive._meta.get_fields():
-            value = getattr(self.idea.ideasketch, field.name)
-
-            if not (field.many_to_many or field.one_to_many):
-                setattr(archive, field.name, value)
-        archive.save()
-
-        for field in archive._meta.get_fields():
-            value = getattr(self.idea.ideasketch, field.name)
-            if field.many_to_many or field.one_to_many:
-                value = value.all()
-                if field.name == 'co_workers':
-                    archive.co_workers.set(value)
-                else:
-                    setattr(archive, field.name, value)
-
-        archive.save()
-
-        if self.idea.idea_image:
-            picture_copy = ContentFile(self.idea.idea_image.read())
-            new_picture_name = \
-                'archived_{}'.format(self.idea.idea_image.name.split("/")[-1])
-            archive.idea_image.save(new_picture_name, picture_copy)
-            picture_copy.close()
-
-        special_fields = ['accept_conditions', 'co_workers_emails',
-                          'confirm_publicity', 'confirm_idea_challenge_camp']
-        data = self.get_all_cleaned_data()
-        proposal = Proposal(
-            idea_ptr=self.idea,
-            creator=self.request.user,
-            module=self.idea.module,
-            **{
-                field: value for field, value in data.items()
-                if field not in special_fields
-            }
-        )
-        proposal.save()
-
-        for field in Idea._meta.concrete_fields:
-            # FIXME: Item doesn't have item_ptr? Something's wrong here
-            if field.name not in data and field.name != 'item_ptr':
-                setattr(proposal, field.name, getattr(self.idea, field.name))
-
-        if not proposal.idea_image:
-            proposal.idea_image = None
-
-        proposal.save()
-
-        return redirect(proposal.get_absolute_url())
-
-
-class ProposalEditView(
-    PermissionRequiredMixin,
-    mixins.MultiFormEditMixin,
-    SuccessMessageMixin,
-    generic.UpdateView
-):
-    permission_required = 'civic_europe_ideas.change_idea'
-    model = Proposal
-    template_name = 'civic_europe_ideas/idea_update_form.html'
-    success_message = _('Proposal saved')
-    next_view = 'proposal-update-form'
-    title = _('Update proposal')
-
-    form_classes = [
-        forms.ApplicantSectionForm,
-        forms.PartnersSectionForm,
-        forms.IdeaSectionForm,
-        forms.ImpactSectionForm,
-        forms.SelectionCriteriaSectionForm,
-        forms.NetworkForm,
-        forms.FinanceAndDurationSectionForm,
-        forms.CommunitySectionEditForm,
-    ]
-
-    @property
-    def raise_exception(self):
-        return self.request.user.is_authenticated
 
 
 class IdeaListView(mixins.CtaPaginatorMixin, filter_views.FilteredListView):

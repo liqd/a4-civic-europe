@@ -8,7 +8,7 @@ from adhocracy4.modules.models import Module
 from adhocracy4.phases.models import Phase
 from adhocracy4.rules.discovery import NormalUser
 
-from .models import Idea, IdeaSketch, Proposal
+from .models import Idea
 from .paginators import DeltaFirstPagePaginator
 
 
@@ -72,7 +72,7 @@ class CtaPaginatorMixin:
     """
     Leaves space for cta tile if cta_permission is given for current user.
     """
-    cta_permission = 'civic_europe_ideas.add_ideasketch'
+    cta_permission = 'civic_europe_ideas.add_idea'
 
     @property
     def cta_object(self):
@@ -110,10 +110,7 @@ class ExportMultiModelIdeaFieldsMixin(VirtualFieldMixin):
     exclude = None
 
     def get_virtual_fields(self, virtual):
-        ideasketch_fields = IdeaSketch._meta.get_fields()
-        proposal_fields = Proposal._meta.get_fields()
-
-        fields = set(ideasketch_fields + proposal_fields)
+        fields = Idea._meta.get_fields()
         exclude = self.exclude if self.exclude else []
 
         for field in fields:

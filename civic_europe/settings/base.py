@@ -360,8 +360,7 @@ A4_REPORTABLES = (
 )
 
 A4_ACTIONABLES = (
-    ('civic_europe_ideas', 'ideasketch'),
-    ('civic_europe_ideas', 'proposal'),
+    ('civic_europe_ideas', 'idea'),
     ('a4comments', 'comment'),
     ('cms_blog', 'blogpage'),
     ('civic_europe_journeys', 'journeyentry'),

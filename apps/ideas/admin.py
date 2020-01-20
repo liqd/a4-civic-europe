@@ -73,10 +73,10 @@ class IdeaAdmin(notification_admin.NotifyMixin, admin.ModelAdmin):
                            'help_text': None},
     }
 
-    list_display = ['title', 'type', 'is_on_shortlist',
+    list_display = ['title', 'is_on_shortlist',
                     'community_award_winner', 'is_winner',
                     'created', 'modified']
-    ordering = ['-created', 'idea_title']
+    ordering = ['-created', 'title']
     actions = [
         set_is_on_shortlist_true,
         set_is_on_shortlist_false,
@@ -96,8 +96,7 @@ class IdeaAdmin(notification_admin.NotifyMixin, admin.ModelAdmin):
         }),
         ('Creator and Co-workers', {
             'classes': ('collapse',),
-            'fields': ('creator',
-                       'co_workers')
+            'fields': ('creator',)
         }),
         ('Applicant Section', {
             'classes': ('collapse',),

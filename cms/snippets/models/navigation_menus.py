@@ -26,7 +26,7 @@ class MenuItem(models.Model):
     )
 
     allowed_views = (
-        ('idea-sketch-list', 'ideaspace'),
+        ('idea-list', 'ideaspace'),
     )
 
     link_view = models.CharField(
