@@ -1,26 +1,23 @@
-.idealist {
-    .idealist-controls {
-        padding: $spacer 1.25*$spacer 1.25*$spacer 1.25*$spacer;
-        background-color: $ce-lighter-gray;
-        border-bottom-left-radius: 5px;
-        border-top-left-radius: 5px;
+.idealist-controls {
+    background-color: $ce-lighter-gray;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
 
-        @media screen and (max-width: $screen-xs-max) {
-            background-color: white;
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-        }
+    @media screen and (max-width: $screen-xs-max) {
+        background-color: white;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
 
-        .export-btn {
-            margin: 0.25*$spacer;
-        }
+    .export-btn {
+        margin-bottom: $spacer;
     }
 }
 
 .idealist-filter {
     .filter-element {
         @media screen and (min-width: $screen-md) {
-            margin: 0.25*$spacer 0.25*$spacer 0.25*$spacer 0;
+            margin: 0.5*$spacer 0.5*$spacer 0.5*$spacer 0;
         }
     }
 

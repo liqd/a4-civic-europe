@@ -22,11 +22,11 @@
         }
     }
 
-    .nav-item.active {
-        a:link,
-        a:visited,
-        a:hover,
-        a:active {
+    .nav-item > .active {
+        :link,
+        :visited,
+        :hover,
+        :active {
             color: $brand-primary;
             background-color: white;
             border: 1px solid $border-color;
