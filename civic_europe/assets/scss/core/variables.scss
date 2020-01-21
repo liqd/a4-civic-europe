@@ -16,9 +16,6 @@ $ae-light-gray-darker: #e6e6e6;
 $ae-middle-gray: #999;
 $ae-dark-gray: #d8d8d8;
 $ae-font-size-extra-large: 48px;
-$ae-brand-orange: #fcb813;
-$brand-primary-darker: #007099;
-$ae-light-blue: rgba(0, 170, 230, 0.2); // currently only use for active blog category
 $ae-wizard-red: #dc3818;
 $ae-facebook: #3b5999;
 $ae-google: #dd4b39;
@@ -26,6 +23,13 @@ $ae-instagram: #e4405f;
 $ae-github: #24292e;
 $ae-border--dark: 1px solid $ae-light-gray-shadow;
 $ae-border--light: 1px solid $ae-light-gray;
+
+$ae-brand-orange: #d55169;
+$brand-primary-darker: #016166;
+$ae-light-blue: rgba(1, 121, 127, 0.2); // currently only use for active blog category
+// $ae-brand-orange: #fcb813;
+// $brand-primary-darker: #007099;
+// $ae-light-blue: rgba(0, 170, 230, 0.2); // currently only use for active blog category
 
 // Which colors are used for btn-ae-secondary is defined below.
 
@@ -78,8 +82,8 @@ $colors: map-merge(
 );
 
 //CI custom colours
-$brand-primary:         #00aae5 !default;
-$brand-secondary:       #fcb813 !default;
+$brand-primary:         #01797f !default;
+$brand-secondary:       #d55169 !default;
 $brand-success:         #73be46 !default; //was: #5cb85c
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
