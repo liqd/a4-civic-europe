@@ -6,6 +6,6 @@
 {% endcomment %}
 {% if form_show_errors and field.errors %}
     {% for error in field.errors %}
-        <p id="error_{{ forloop.counter }}_{{ field.auto_id }}" class="form-text error-block"><strong>{{ error }}</strong></p>
+        <p id="error_{{ forloop.counter }}_{{ field.auto_id }}" class="form-text error-block"><strong class="ml-3">{{ error }}</strong></p>
     {% endfor %}
 {% endif %}

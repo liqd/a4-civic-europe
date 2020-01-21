@@ -1,13 +1,11 @@
 // Required
 @import "~bootstrap/scss/functions";
 
-// @import "core/bootstrap-variables";
 @import "core/variables";
 
 // Must be loaded after above due to use of default
 @import "~bootstrap/scss/bootstrap.scss";
 
-@import "core/mixins";
 @import "core/type";
 @import "core/basics";
 @import "core/fonts";
@@ -15,8 +13,6 @@
 @import "core/util";
 @import "core/buttons";
 @import "core/layout";
-
-// @import "core/bootstrap";
 
 @import "components/a4-comments";
 @import "components/alert";
