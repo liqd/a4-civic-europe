@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load i18n react_comments_async rules static idea_tags absolute_url rules %}
+{% load i18n react_comments rules static idea_tags absolute_url rules %}
 
 {% block title %} {{ idea.idea_title }} {% endblock %}
 
@@ -134,7 +134,7 @@
             {% if view.display_type == 'idea' %}
                 <div class="container-medium ideadetail-comments">
                     <h4 class="ideadetail-comments-title">{% trans "Write comment" %}</h4>
-                    {% react_comments_async idea %}
+                    {% react_comments idea %}
                 </div>
             {% endif %}
         </div>

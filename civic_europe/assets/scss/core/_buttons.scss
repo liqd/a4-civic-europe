@@ -1,5 +1,6 @@
 .btn-ae-secondary {
-    @include button-variant($btn-ae-secondary-color, $btn-ae-secondary-bg, $btn-ae-secondary-border);
+    @include button-variant($btn-ae-secondary-bg, $btn-ae-secondary-bg, $btn-ae-secondary-border);
+    color: $btn-ae-secondary-color;
 }
 
 .btn-light-blue {

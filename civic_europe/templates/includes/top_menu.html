@@ -3,13 +3,11 @@
 <nav class="navbar navbar--default navbar-expand-lg fixed-top" aria-label="{% trans 'main menu' %}">
   <div class="container px-0">
         <a class="navbar-brand" href="/">
-            {% with logo_number='12345'|random %}
             <img
                 class="navbar-brand-logo"
                 alt="Avocate Europe"
-                src="{% static 'images/logo_0'|add:logo_number|add:'.svg' %}"
+                src="{% static 'images/logo.svg' %}"
             >
-            {% endwith %}
         </a>
 
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="#navbarCollapse" aria-expanded="false" aria-label="{% trans 'navigation on/off' %}">
