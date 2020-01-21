@@ -32,18 +32,18 @@ def test_idea_export_rule(admin, user, module):
 
 @pytest.mark.django_db
 def test_idea_add_rule(admin, user, module):
-    assert not rules.has_perm('civic_europe_ideas.add_ideasketch',
+    assert not rules.has_perm('civic_europe_ideas.add_idea',
                               user,
                               module)
-    assert rules.has_perm('civic_europe_ideas.add_ideasketch',
+    assert rules.has_perm('civic_europe_ideas.add_idea',
                           admin,
                           module)
 
 
 @pytest.mark.django_db
-def test_idea_add_rule_idea_sketch_phase(user, module):
-    with active_phase(module, phases.IdeaSketchPhase):
-        assert rules.has_perm('civic_europe_ideas.add_ideasketch',
+def test_idea_add_rule_idea_phase(user, module):
+    with active_phase(module, phases.IdeaPhase):
+        assert rules.has_perm('civic_europe_ideas.add_idea',
                               user,
                               module)
 
@@ -51,64 +51,64 @@ def test_idea_add_rule_idea_sketch_phase(user, module):
 @pytest.mark.django_db
 def test_idea_add_rule_idea_community_rating_phase(user, module):
     with active_phase(module, phases.CommunityAwardRatingPhase):
-        assert not rules.has_perm('civic_europe_ideas.add_ideasketch',
+        assert not rules.has_perm('civic_europe_ideas.add_idea',
                                   user,
                                   module)
 
 
 @pytest.mark.django_db
-def test_idea_rate_rules(admin, user, idea_sketch_factory, module):
-    idea_sketch = idea_sketch_factory(module=module)
+def test_idea_rate_rules(admin, user, idea_factory, module):
+    idea = idea_factory(module=module)
     user = UserFactory()
     assert not rules.has_perm('civic_europe_ideas.rate_idea',
                               user,
-                              idea_sketch)
-    idea_sketch.creator = user
+                              idea)
+    idea.creator = user
     assert not rules.has_perm('civic_europe_ideas.rate_idea',
                               user,
-                              idea_sketch)
-    idea_sketch.co_workers.add(user)
+                              idea)
+    idea.co_workers.add(user)
     assert not rules.has_perm('civic_europe_ideas.rate_idea',
                               user,
-                              idea_sketch)
+                              idea)
 
     user2 = UserFactory()
-    idea_sketch2 = idea_sketch_factory(creator=user2, module=module)
+    idea2 = idea_factory(creator=user2, module=module)
 
     with active_phase(module, phases.CommunityAwardRatingPhase):
         assert not rules.has_perm('civic_europe_ideas.rate_idea',
                                   user,
-                                  idea_sketch)
+                                  idea)
         assert not rules.has_perm('civic_europe_ideas.rate_idea',
                                   user,
-                                  idea_sketch2)
+                                  idea2)
 
 
 @pytest.mark.django_db
-def test_journey_rules(admin, user, proposal_factory):
-    proposal = proposal_factory()
+def test_journey_rules(admin, user, idea_factory):
+    idea = idea_factory()
     creator = UserFactory()
-    proposal.creator = creator
+    idea.creator = creator
     co_worker = UserFactory()
-    proposal.co_workers.set([co_worker])
+    idea.co_workers.set([co_worker])
 
     # proposal not winner
     assert not rules.has_perm('civic_europe_ideas.add_journey',
-                              user, proposal)
+                              user, idea)
     assert not rules.has_perm('civic_europe_ideas.add_journey',
-                              creator, proposal)
+                              creator, idea)
     assert not rules.has_perm('civic_europe_ideas.add_journey',
-                              co_worker, proposal)
+                              co_worker, idea)
     assert rules.has_perm('civic_europe_ideas.add_journey',
-                          admin, proposal)
+                          admin, idea)
 
     # proposal is winner!
-    proposal.is_winner = True
+    idea.is_winner = True
     assert not rules.has_perm('civic_europe_ideas.add_journey',
-                              user, proposal)
+                              user, idea)
     assert rules.has_perm('civic_europe_ideas.add_journey',
-                          creator, proposal)
+                          creator, idea)
     assert rules.has_perm('civic_europe_ideas.add_journey',
-                          co_worker, proposal)
+                          co_worker, idea)
     assert rules.has_perm('civic_europe_ideas.add_journey',
-                          admin, proposal)
+                          admin, idea)

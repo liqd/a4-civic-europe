@@ -4,8 +4,8 @@ from rest_framework import status
 
 
 @pytest.mark.django_db
-def test_anonymous_can_read_follow(apiclient, idea_sketch_factory, user):
-    idea = idea_sketch_factory(creator=user, co_workers=[])
+def test_anonymous_can_read_follow(apiclient, idea_factory, user):
+    idea = idea_factory(creator=user, co_workers=[])
     url = reverse('follows-detail', args=[idea.pk])
     response = apiclient.get(url)
     assert response.status_code == status.HTTP_200_OK
@@ -13,15 +13,15 @@ def test_anonymous_can_read_follow(apiclient, idea_sketch_factory, user):
 
 
 @pytest.mark.django_db
-def test_anonymous_update(apiclient, idea_sketch):
-    url = reverse('follows-detail', args=[idea_sketch.pk])
+def test_anonymous_update(apiclient, idea):
+    url = reverse('follows-detail', args=[idea.pk])
     response = apiclient.put(url, {'enable': True}, format='json')
     assert response.status_code == status.HTTP_403_FORBIDDEN
 
 
 @pytest.mark.django_db
-def test_read_follow_state(apiclient, user2, idea_sketch_factory):
-    idea = idea_sketch_factory(co_workers=[])
+def test_read_follow_state(apiclient, user2, idea_factory):
+    idea = idea_factory(co_workers=[])
     url = reverse('follows-detail', args=[idea.pk])
     response = apiclient.get(url)
     assert response.status_code == status.HTTP_200_OK
@@ -34,9 +34,9 @@ def test_read_follow_state(apiclient, user2, idea_sketch_factory):
 
 
 @pytest.mark.django_db
-def test_user_create_follow(apiclient, idea_sketch_factory, user2):
-    idea_sketch = idea_sketch_factory(co_workers=[])
-    url = reverse('follows-detail', args=[idea_sketch.pk])
+def test_user_create_follow(apiclient, idea_factory, user2):
+    idea = idea_factory(co_workers=[])
+    url = reverse('follows-detail', args=[idea.pk])
     apiclient.force_authenticate(user=user2)
 
     response = apiclient.put(url, {'enabled': True}, format='json')

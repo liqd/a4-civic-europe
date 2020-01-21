@@ -3,7 +3,6 @@ from datetime import datetime
 
 from django.conf import settings
 from django.contrib.messages.views import SuccessMessageMixin
-from django.core.files.base import ContentFile
 from django.core.files.storage import FileSystemStorage
 from django.forms.models import model_to_dict
 from django.shortcuts import redirect
@@ -24,7 +23,6 @@ from .models import Idea
 
 
 class IdeaExportView(PermissionRequiredMixin,
-
                      export_views.BaseExport,
                      export_mixins.ItemExportWithLinkMixin,
                      mixins.ExportMultiModelIdeaFieldsMixin,
@@ -83,6 +81,9 @@ class IdeaExportView(PermissionRequiredMixin,
             [co_worker.email for co_worker in item.idea.co_workers.all()]
         )
         return co_workers
+
+    def get_object_list(self):
+        return self.get_queryset()
 
 
 class IdeaCreateWizard(PermissionRequiredMixin,

@@ -102,7 +102,7 @@ def test_module_mixin(rf, module):
 @pytest.mark.django_db
 def test_cta_paginator_mixin(rf, user, phase):
     class TestView(mixins.CtaPaginatorMixin, generic.ListView):
-        model = models.IdeaSketch
+        model = models.Idea
 
     view = TestView.as_view()
     module = phase.module
@@ -121,7 +121,7 @@ def test_cta_paginator_mixin(rf, user, phase):
     assert not instance.is_cta_enabled
     assert instance.cta_object is None
 
-    with active_phase(module, phases.IdeaSketchPhase):
+    with active_phase(module, phases.IdeaPhase):
         request = rf.get('/ideas/')
         request.user = user
         response = view(request)

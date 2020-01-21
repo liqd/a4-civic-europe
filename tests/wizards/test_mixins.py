@@ -25,7 +25,7 @@ def test_wizard_view():
     class TestWizardView(mixins.CustomWizardMixin, CookieWizardView):
         form_list = [NumberForm, ChoiceForm, StringForm]
         file_storage = FileSystemStorage(
-            location=os.path.join(settings.MEDIA_ROOT, 'idea_sketch_images'))
+            location=os.path.join(settings.MEDIA_ROOT, 'idea_images'))
 
         def done(self, form_list, **kwargs):
             return HttpResponse(status=204)

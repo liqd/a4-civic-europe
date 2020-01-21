@@ -71,7 +71,7 @@ class IdeaFilterSet(DefaultsFilterSet):
         'status': 'winner',
     }
 
-    idea_topics = django_filters.CharFilter(
+    topics = django_filters.CharFilter(
         lookup_expr='icontains',
         widget=TopicFilterWidget,
     )
@@ -97,11 +97,7 @@ class IdeaFilterSet(DefaultsFilterSet):
     )
 
     def what_status(self, queryset, name, value):
-        if value == 'idea_sketch':
-            qs = queryset.filter(proposal__isnull=True)
-        elif value == 'proposal':
-            qs = queryset.filter(proposal__isnull=False)
-        elif value == 'community_award':
+        if value == 'community_award':
             qs = queryset.filter(community_award_winner=True)
         elif value == 'shortlist':
             qs = queryset.filter(is_on_shortlist=True)
@@ -152,5 +148,5 @@ class IdeaFilterSet(DefaultsFilterSet):
 
     class Meta:
         model = models.Idea
-        fields = ['search', 'project', 'status', 'idea_topics', 'country',
+        fields = ['search', 'project', 'status', 'topics', 'country',
                   'ordering']

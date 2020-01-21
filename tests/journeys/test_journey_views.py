@@ -5,17 +5,17 @@ from apps.journeys import models
 
 
 @pytest.mark.django_db
-def test_journey_create_view(client, user, proposal_factory):
-    proposal = proposal_factory()
-    url = reverse('journey-entry-create', kwargs={'slug': proposal.slug})
+def test_journey_create_view(client, user, idea_factory):
+    idea = idea_factory()
+    url = reverse('journey-entry-create', kwargs={'slug': idea.slug})
 
     client.login(username=user.email, password='password')
     response = client.get(url)
     assert response.status_code == 403
 
-    proposal.creator = user
-    proposal.is_winner = True
-    proposal.save()
+    idea.creator = user
+    idea.is_winner = True
+    idea.save()
 
     response = client.get(url)
     assert response.status_code == 200

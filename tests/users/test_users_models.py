@@ -14,11 +14,11 @@ def test_avatar_or_fallback_url(user):
 
 
 @pytest.mark.django_db
-def test_is_innovator(user, idea_sketch_factory):
+def test_is_innovator(user, idea_factory):
     assert not user.is_innovator
-    idea_sketch = idea_sketch_factory(co_workers=[user])
+    idea = idea_factory(co_workers=[user])
     assert user.is_innovator
-    idea_sketch.delete()
+    idea.delete()
     assert not user.is_innovator
-    idea_sketch_factory(creator=user)
+    idea_factory(creator=user)
     assert user.is_innovator
