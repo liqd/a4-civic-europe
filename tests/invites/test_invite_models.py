@@ -8,16 +8,16 @@ fake = Faker()
 
 
 @pytest.mark.django_db
-def test_invite_on_quyerset(user, idea_sketch):
+def test_invite_on_quyerset(user, idea):
     email = fake.email()
 
-    IdeaInvite.objects.invite(user, email, subject=idea_sketch)
+    IdeaInvite.objects.invite(user, email, subject=idea)
     assert mail.outbox[-1].to == [email]
 
     email = fake.email()
-    invite = idea_sketch.ideainvite_set.invite(user, email)
+    invite = idea.ideainvite_set.invite(user, email)
     assert mail.outbox[-1].to == [email]
-    assert invite.subject == idea_sketch
+    assert invite.subject == idea
 
 
 @pytest.mark.django_db

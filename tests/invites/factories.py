@@ -4,7 +4,7 @@ import factory
 
 from apps.invites.models import IdeaInvite
 from tests.factories import UserFactory
-from tests.ideas.factories import IdeaSketchFactory
+from tests.ideas.factories import IdeaFactory
 
 
 class InviteFactory(factory.django.DjangoModelFactory):
@@ -14,4 +14,4 @@ class InviteFactory(factory.django.DjangoModelFactory):
     email = factory.Faker('email')
     token = factory.LazyFunction(uuid.uuid4)
     creator = factory.SubFactory(UserFactory)
-    subject = factory.SubFactory(IdeaSketchFactory)
+    subject = factory.SubFactory(IdeaFactory)

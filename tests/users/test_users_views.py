@@ -7,13 +7,13 @@ from apps.users.forms import UserProfileForm
 
 @pytest.mark.django_db
 @pytest.mark.parametrize('user__username', ['Üß +-@. ö'])
-def test_profile_view(client, user, idea_sketch_factory):
+def test_profile_view(client, user, idea_factory):
     """
     Check if profile view shows created and collaborated ideas by default.
     """
-    idea1 = idea_sketch_factory(creator=user).idea
-    idea2 = idea_sketch_factory(co_workers=[user]).idea
-    idea3 = idea_sketch_factory().idea
+    idea1 = idea_factory(creator=user).idea
+    idea2 = idea_factory(co_workers=[user]).idea
+    idea3 = idea_factory().idea
 
     url = reverse('profile', kwargs={'username': user.username})
     response = client.get(url)
@@ -27,7 +27,7 @@ def test_profile_view(client, user, idea_sketch_factory):
 
 @pytest.mark.django_db
 def test_profile_view_filter_watch(client, user, user2,
-                                   idea_follow_factory, idea_sketch_factory):
+                                   idea_follow_factory, idea_factory):
     idea_follow1 = idea_follow_factory(followable__creator=user2, creator=user)
     idea_follow2 = idea_follow_factory(
         followable__creator=user2,
@@ -35,7 +35,7 @@ def test_profile_view_filter_watch(client, user, user2,
         enabled=False
     )
     idea1 = idea_follow1.followable.idea
-    idea2 = idea_sketch_factory(creator=user).idea
+    idea2 = idea_factory(creator=user).idea
     idea3 = idea_follow2.followable.idea
 
     url = reverse('profile', kwargs={'username': user.username})

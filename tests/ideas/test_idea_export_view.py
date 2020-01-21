@@ -5,7 +5,7 @@ from apps.ideas import views
 
 
 @pytest.mark.django_db
-def test_idea_sketch_export_view_user(rf, user):
+def test_idea_export_view_user(rf, user):
     view = views.IdeaExportView.as_view()
     request = rf.get('/ideas/list/export')
     request.user = user
@@ -14,12 +14,11 @@ def test_idea_sketch_export_view_user(rf, user):
 
 
 @pytest.mark.django_db
-def test_idea_export_view_admin(rf, admin, idea_sketch_factory,
-                                proposal_factory):
+def test_idea_export_view_admin(rf, admin, idea_factory):
     # the default filters without an active phase set 'status': 'winner'
-    idea_sketch_factory(is_winner=True)
-    proposal_factory(is_winner=True)
-    proposal_factory(is_winner=True)
+    idea_factory(is_winner=True)
+    idea_factory(is_winner=True)
+    idea_factory(is_winner=True)
 
     view = views.IdeaExportView.as_view()
     request = rf.get('/ideas/list/export')

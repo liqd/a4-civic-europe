@@ -11,4 +11,4 @@ class IdeaFollowFactory(factory.django.DjangoModelFactory):
         model = Registry.get_follow_model()
 
     creator = factory.SubFactory(user_factories.UserFactory)
-    followable = factory.SubFactory(idea_factories.IdeaSketchFactory)
+    followable = factory.SubFactory(idea_factories.IdeaFactory)

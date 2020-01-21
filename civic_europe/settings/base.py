@@ -274,7 +274,7 @@ IMAGE_ALIASES = {
     'tileimage': {'min_resolution': (500, 300)},
     'logo': {'min_resolution': (200, 200), 'aspect_ratio': (1, 1)},
     'avatar': {'min_resolution': (340, 340)},
-    'idea_image': {'min_resolution': (400, 200)},
+    'image': {'min_resolution': (400, 200)},
     'tileimage': {'min_resolution': (0, 0)},
 }
 

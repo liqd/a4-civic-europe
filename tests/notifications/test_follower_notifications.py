@@ -33,19 +33,19 @@ choosen as award     -        ✔           ✔
 
 
 @pytest.mark.django_db
-def test_notify_on_create_idea(comment_factory, idea_sketch_factory):
+def test_notify_on_create_idea(comment_factory, idea_factory):
     """
     Check if creator gets email.
     """
     with intercept_emails() as emails:
-        idea_sketch = idea_sketch_factory()
+        idea = idea_factory()
 
         assert len(emails) == 1
 
         creator_email = emails[0]
         assert isinstance(creator_email,
-                          not_emails.SubmitIdeaSketchNotification)
-        assert [idea_sketch.creator] == creator_email.get_receivers()
+                          not_emails.SubmitIdeaNotification)
+        assert [idea.creator] == creator_email.get_receivers()
 
 
 @pytest.mark.django_db
@@ -78,7 +78,7 @@ def test_notify_on_comment(comment_factory, idea_follow_factory):
 def test_notify_on_journey_entry(
         journey_entry_factory,
         idea_follow_factory,
-        proposal_factory,
+        idea_factory,
         user_factory
 ):
     """
@@ -86,13 +86,13 @@ def test_notify_on_journey_entry(
     """
     co_worker1 = user_factory()
     co_worker2 = user_factory()
-    proposal = proposal_factory(co_workers=[co_worker1, co_worker2])
-    follow = idea_follow_factory(followable=proposal.idea)
+    idea = idea_factory(co_workers=[co_worker1, co_worker2])
+    follow = idea_follow_factory(followable=idea)
 
     with intercept_emails() as emails:
         journey_entry_factory(
             creator=co_worker1,
-            idea=proposal,
+            idea=idea,
         )
         assert len(emails) == 2
 

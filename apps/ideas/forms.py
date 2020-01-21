@@ -118,7 +118,7 @@ class ApplicantSectionForm(BaseForm):
         status = cleaned_data.get('lead_organisation_status')
         details = cleaned_data.get(
             'lead_organisation_details')
-        if status and status == 'other':
+        if status and status == 'OT':
             if not details:
                 self.add_error('lead_organisation_details',
                                ("You selected 'other' as "
@@ -433,7 +433,7 @@ class FinishForm(forms.Form):
     class Meta:
         model = Idea
         exclude = [
-            'co_workers_emails', 'how_did_you_hear', 'creator', 'module'
+            'co_workers_emails', 'creator', 'module'
         ]
 
     @property
