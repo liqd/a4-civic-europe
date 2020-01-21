@@ -29,20 +29,20 @@
         <div class="profile-navbar">
             <div class="container">
                 <div class="row">
-                    <div class="offset-sm-3 col-sm-9 mb-1 tabs">
+                    <div class="offset-sm-3 col-sm-9 tabs">
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation" class="d-sm-none nav-item">
-                                <a href="#info" aria-controls="info" role="tab" data-toggle="tab">
+                                <a class="nav-link" href="#info" aria-controls="info" id="info_tab" role="tab" data-toggle="tab">
                                     {% trans "Info" %}
                                 </a>
                             </li>
-                            <li role="presentation" class="active nav-item">
-                                <a href="#ideas" aria-controls="ideas" id="ideas_tab" role="tab" data-toggle="tab" aria-selected="true">
+                            <li role="presentation" class="nav-item">
+                                <a class="nav-link active" href="#ideas" aria-controls="ideas" id="ideas_tab" role="tab" data-toggle="tab" aria-selected="true">
                                     {% trans "Ideas" %}
                                 </a>
                             </li>
                             <li role="presentation" class="nav-item">
-                                <a href="#activities" aria-controls="activities" id="activities_tab" role="tab" data-toggle="tab" aria-selected="false">
+                                <a class="nav-link" href="#activities" aria-controls="activities" id="activities_tab" role="tab" data-toggle="tab" aria-selected="false">
                                     {% trans "Activity" %}
                                 </a>
                             </li>
@@ -53,9 +53,9 @@
         </div>
 
         <div class="container">
-                <main class="tab-content profile-tab-content">
-                  <div class="row">
-                    <div role="tabpanel" class="profile-info-pane tab-pane col-md-3" id="info">
+                <main class="profile-tab-content">
+                  <div class="row tab-content" id="tabContent">
+                    <div role="tabpanel" class="profile-info-pane tab-pane col-md-3" id="info" aria-labelledby="info_tab">
                         <h1 class="profile-title">{{ view.user.username }}</h1>
                         <div>
                             <P>{{ view.user.europe }}</P>
