@@ -24,7 +24,7 @@ $ce-github: #24292e;
 $ce-border--dark: 1px solid $ce-light-gray-shadow;
 $ce-border--light: 1px solid $ce-light-gray;
 
-$ce-brand-orange: #d55169;
+$ce-brand-orange: #dc6f83; //logo colour #d55169
 $brand-primary-darker: #016166;
 $ce-light-blue: rgba(1, 121, 127, 0.2); // currently only use for active blog category
 // $ce-brand-orange: #fcb813;
@@ -83,7 +83,7 @@ $colors: map-merge(
 
 //CI custom colours
 $brand-primary:         #01797f !default;
-$brand-secondary:       #d55169 !default;
+$brand-secondary:       #dc6f83 !default;
 $brand-success:         #73be46 !default; //was: #5cb85c
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
