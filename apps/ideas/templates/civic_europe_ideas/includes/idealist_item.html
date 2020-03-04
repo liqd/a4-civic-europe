@@ -9,7 +9,7 @@
         </a>
         <div class="idealist-text">
             <div class="idealist-category">
-                {% if idea.idea_topics %}
+                {% if idea.topics %}
                     {{ idea.idea_topics_names|join:" | " }}
                 {% else %}
                     &nbsp;
@@ -17,12 +17,11 @@
 
             </div>
 
-            <h4 class="idealist-tile-title"><a href="{% url 'idea-detail' slug=idea.slug %}">{{ idea.idea_title }}</a></h4>
+            <h4 class="idealist-tile-title"><a href="{% url 'idea-detail' slug=idea.slug %}">{{ idea.title }}</a></h4>
             {{ idea.pitch|truncatechars:240 }}
         </div>
     </div>
     <div class="idealist-footer">
-        {{ idea.type }}
         <span class="float-right">
             <i class="fas fa-calendar-alt" aria-hidden="true"></i> {{ idea.created|date:"Y" }}
             <i class="far fa-heart" aria-hidden="true"></i> {{ idea.positive_rating_count }}
