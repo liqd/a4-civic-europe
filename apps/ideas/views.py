@@ -180,16 +180,38 @@ class IdeaDetailView(generic.DetailView):
         idea_list_1 = []
         idea_list_2 = []
         budget_list = []
-        idea_list_1.append((_('Idea pitch'), self.object.pitch))
-        idea_list_1.append((_('Why does Europe need your idea?'),
+        idea_list_1.append((_('Idea pitch'),
+                            self.object.pitch))
+        idea_list_1.append((_('Where will your project idea take place?'),
+                            self.object.location))
+        idea_list_1.append((_('What is the local challenge?'),
                             self.object.challenge))
-        idea_list_1.append((_('How do you get there?'), self.object.plan))
+        idea_list_1.append((_('How does your idea strengthen democracy and '
+                              'citizenship as a living practice?'),
+                            self.object.impact))
         idea_list_1.append((_('Who are you doing it for?'),
                             self.object.target_group))
+        idea_list_1.append((_('How do you plan to get there?'),
+                            self.object.plan))
+        idea_list_1.append((_('What are the expected results?'),
+                            self.object.results))
+        idea_list_1.append((_('How does your initiative contribute to '
+                              'strengthening democracy in Europe?'),
+                            self.object.contribution))
+        idea_list_1.append((_('What is your story?'),
+                            self.object.motivation))
 
-        if self.object.reach_out:
+        budget_list.append((_('Funding requested from Civic Europe'),
+                            self.object.budget_requested))
+        budget_list.append((_('Total budget'),
+                            self.object.total_budget))
+
+        idea_list_2.append((_('Major expenses'),
+                            self.object.major_expenses))
+        if self.object.feedback:
             idea_list_2.append((_('What do you need from the Civic Europe '
-                                'community?'), self.object.reach_out))
+                                'community?'),
+                                self.object.feedback))
 
         partner_list = []
         if (self.object.partner_organisation_1_name
