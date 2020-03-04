@@ -29,22 +29,20 @@
             <p>{{ field.1|linebreaks }}</p>
         </div>
     {% endfor %}
-    {% if idea.proposal %}
-        <div class="row ideadetail-funding">
-            {% for field in budget_list %}
-            <div class="col-lg-4 col-sm-4 col-xs-4 well">
-                <h3>€ {{ field.1 }},-</h3>
-                <p>{{ field.0 }}</p>
-            </div>
-            {% endfor %}
+    <div class="row ideadetail-funding">
+        {% for field in budget_list %}
+        <div class="col-lg-4 col-sm-4 col-xs-4 well">
+            <h3>€ {{ field.1 }},-</h3>
+            <p>{{ field.0 }}</p>
         </div>
-    {% endif  %}
+        {% endfor %}
+    </div>
     {% for field in idea_list_2 %}
         <div class="ideadetailtab-con-header">
             <h4>{{ field.0 }}</h4>
         </div>
         <div class="ideadetailtab-con-text">
-            <p>{{ field.1 }}</p>
+            <p>{{ field.1|linebreaks }}</p>
         </div>
     {% endfor %}
 </div>
