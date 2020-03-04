@@ -24,7 +24,7 @@ CONFIRM_PUBLICITY_LABEL = _('I hereby confirm and agree that '
                             'the idea and the visual material '
                             'used in this proposal.')
 ACCEPT_CONDITIONS_LABEL = _('I hereby agree to the {}terms'
-                            ' and conditions{} of the Civic'
+                            ' of use{} of the Civic'
                             ' Europe idea challenge.')
 CONFIRM_IDEA_CHALLENGE_CAMP_WITH_DATE = _('If selected, a representative of '
                                           'my project will commit to joining '

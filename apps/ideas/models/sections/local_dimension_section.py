@@ -16,9 +16,9 @@ CHALLENGE_HELP = _('Tell us more about the region your project idea is based '
                    'solve? (max. 800 characters)')
 
 IMPACT_HELP = _('We are looking for ideas that strengthen democracy and '
-                'citizenship as a living practice in local communities. '
-                'How does your idea enhance citizens’ engagement and '
-                'participation? (max. 800 characters)')
+                'active citizenship in local communities. How does your idea '
+                'enhance citizens’ engagement and participation? '
+                '(max. 800 characters)')
 
 TARGET_GROUP_HELP = _('We are looking for ideas that try to engage different '
                       'perspectives from all local voices of the communities '
@@ -59,9 +59,9 @@ class LocalDimensionSection(models.Model):
 
     impact = models.TextField(
         max_length=800,
-        verbose_name=_('How does your idea strengthen democracy and '
-                       'citizenship as a living practice at a local '
-                       'and community level? Please refer to your '
+        verbose_name=_('How does your idea strengthen democracy '
+                       'and active citizenship at a local and '
+                       'community level? Please refer to your '
                        'described challenge.'),
         help_text=IMPACT_HELP)
 
