@@ -49,6 +49,8 @@ fixtures:
 	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata civic_europe/fixtures/site-dev.json
 	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata civic_europe/fixtures/users-dev.json
 	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata civic_europe/fixtures/projects-dev.json
+	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata civic_europe/fixtures/idea-dev.json
+
 
 .PHONY: server
 server:
