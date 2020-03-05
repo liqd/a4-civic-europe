@@ -118,7 +118,7 @@ class IdeaFilterSet(DefaultsFilterSet):
             ('-created', 'newest'),
             ('-comment_count', 'comments'),
             ('-positive_rating_count', 'support'),
-            ('idea_title', 'title'),
+            ('title', 'title'),
         ),
         choices=ORDERING_CHOICES,
         empty_label=None,
@@ -130,13 +130,13 @@ class IdeaFilterSet(DefaultsFilterSet):
         fields=['title',  # idea section
                 'subtitle',
                 'pitch',
-                'challenge',
-                'plan',
-                'reach_out',
+                'challenge', # local dimension section
+                'plan', # road to impact section
+                'feedback', # network community section
                 'first_name',  # applicant section
                 'last_name',
-                'organisation_name',
-                'organisation_website',
+                'lead_organisation_name',
+                'lead_organisation_website',
                 'partner_organisation_1_name',  # partners section
                 'partner_organisation_1_website',
                 'partner_organisation_2_name',

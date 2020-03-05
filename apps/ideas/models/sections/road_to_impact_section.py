@@ -41,48 +41,48 @@ MOTIVATION_HELP = _('What motivates you to bring this idea to life? '
 
 
 class RoadToImpactSection(models.Model):
-
     plan = models.TextField(
         max_length=800,
         help_text=PLAN_HELP,
-        verbose_name=_('How do you plan to get there?'))
-
+        verbose_name=_('How do you plan to get there?')
+    )
     reach_out = models.TextField(
         max_length=800,
         help_text=REACH_OUT_HELP,
         verbose_name=_('How will you be reaching out to others '
-                       'and advocating your project idea?'))
-
+                       'and advocating your project idea?')
+    )
     results = models.TextField(
         max_length=800,
         help_text=RESULTS_HELP,
-        verbose_name=_('What are the expected results?'))
-
+        verbose_name=_('What are the expected results?')
+    )
     sustainability = models.TextField(
         max_length=800,
         help_text=SUSTAINABILITY_HELP,
         verbose_name=_('How will you ensure the '
                        'sustainability of your '
-                       'initiative?'))
-
+                       'initiative?')
+    )
     contribution = models.TextField(
         max_length=800,
         help_text=CONTRIBUTION_HELP,
         verbose_name=_('How does your initiative '
                        'contribute to strengthening '
-                       'democracy in Europe? '))
-
+                       'democracy in Europe? ')
+    )
     knowledge = models.TextField(
         max_length=800,
         help_text=KNOWLEDGE_HELP,
         verbose_name=_('Why are you the right people '
-                       'for responding to this challenge?'))
-
+                       'for responding to this challenge?')
+    )
     motivation = models.TextField(
         max_length=800,
         help_text=MOTIVATION_HELP,
         verbose_name=_('Why is this idea '
-                       'important to you?'))
+                       'important to you?')
+    )
 
     class Meta:
         abstract = True

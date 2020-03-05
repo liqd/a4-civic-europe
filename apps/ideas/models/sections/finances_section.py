@@ -22,23 +22,23 @@ DURATION_HELP = _('How many months will it take to implement your idea?')
 
 
 class FinancesSection(models.Model):
-
     total_budget = models.IntegerField(
         verbose_name=_('Total budget'),
-        help_text=TOTAL_BUDGET_HELP)
-
+        help_text=TOTAL_BUDGET_HELP
+    )
     budget_requested = models.IntegerField(
         verbose_name=_('Funding requested from Civic Europe'),
-        help_text=BUDGET_REQUESTED_HELP)
-
+        help_text=BUDGET_REQUESTED_HELP
+    )
     major_expenses = models.TextField(
         max_length=500,
         verbose_name=_('Major expenses'),
-        help_text=MAJOR_EXPENSES_HELP)
-
+        help_text=MAJOR_EXPENSES_HELP
+    )
     duration = models.IntegerField(
         verbose_name=_('Duration of idea (number of months)'),
-        help_text=DURATION_HELP)
+        help_text=DURATION_HELP
+    )
 
     class Meta:
         abstract = True
