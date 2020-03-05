@@ -41,7 +41,7 @@ class IdeaExportView(PermissionRequiredMixin,
     model = Idea
     filter_set = filters.IdeaFilterSet
     exclude = ['module', 'item_ptr', 'slug', 'idea_ptr',
-               'idea_image', 'idea_sketch_archived']
+               'image']
 
     def get_base_filename(self):
         settings_time_zone = timezone(settings.TIME_ZONE)
