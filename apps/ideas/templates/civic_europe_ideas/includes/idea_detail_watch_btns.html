@@ -4,19 +4,13 @@
 
 {% if can_change_idea %}
 
-{% if view.display_type == 'idea' %}
-<li class="dropdown nav-idea {{ xs_class }}">
-    <button class="btn btn-idea" type="button" id="dropdownEdit" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-        <span class="btn-idea-label">{% trans 'More' %}</span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownEdit">
-        {% if can_change_idea %}
-        <li><a href="{% url 'idea-update' idea.slug %}">{% trans "edit ideasketch" %}</a></li>
-        {% endif %}
-    </ul>
+<li class="nav-idea {{ xs_class }}">
+    <a href="{% url 'idea-update' idea.slug %}" class="btn btn-idea" id="idea-edit">
+        <i class="fas fa-pencil-alt" aria-hidden="true"></i>
+        <span class="btn-idea-label">{% trans 'Edit' %}</span>
+    </a>
 </li>
-{% endif %}
+
 {% endif %}
 
 <li class="dropdown nav-idea {{ xs_class }}">
@@ -39,13 +33,13 @@
 
 {% has_perm 'civic_europe_ideas.follow_idea' request.user idea as can_watch_proposal %}
 {% would_have_perm 'civic_europe_ideas.follow_idea' idea as could_watch_proposal %}
-{% if view.display_type == 'idea' and can_watch_proposal %}
+{% if can_watch_proposal %}
 <li class="nav-idea {{ xs_class }}">
     {% react_follows idea %}
 </li>
-{% elif view.display_type == 'idea' and could_watch_proposal %}
+{% elif could_watch_proposal %}
 <li class="nav-idea {{ xs_class }}">
-    <a href="{% url 'account_login' %}?next={% url 'idea-detail' slug=idea.slug %}" class="btn btn-follow" id="idea-create">
+    <a href="{% url 'account_login' %}?next={% url 'idea-detail' slug=idea.slug %}" class="btn btn-follow" id="idea-watch">
         <i class="fa fa-eye" aria-hidden="true"></i>
         <span class="btn-idea-label">{% trans 'Watch' %}</span>
     </a>

@@ -168,7 +168,6 @@ class IdeaEditView(
 
 
 class IdeaDetailView(generic.DetailView):
-    display_type = 'idea'
     model = Idea
     queryset = Idea.objects.annotate_positive_rating_count()
 

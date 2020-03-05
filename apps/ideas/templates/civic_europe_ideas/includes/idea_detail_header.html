@@ -27,7 +27,7 @@
             </div>
 
             {% has_perm 'civic_europe_ideas.may_rate_idea' request.user idea as may_rate_idea %}
-            {% if may_rate_idea and view.display_type == 'idea' %}
+            {% if may_rate_idea %}
             <div class="col-md-3 d-none d-md-block ideadetailheader-right mt-auto mb-3 pr-3">
                 {% react_supports idea False %}
             </div>

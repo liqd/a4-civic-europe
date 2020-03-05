@@ -2,12 +2,12 @@
 
 {% load i18n react_comments rules static idea_tags absolute_url rules %}
 
-{% block title %} {{ idea.idea_title }} {% endblock %}
+{% block title %} {{ idea.title }} {% endblock %}
 
 {% block social_meta %}
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Civic Europe | {{ idea.idea_title }}">
+    <meta name="twitter:title" content="Civic Europe | {{ idea.title }}">
     <meta name="twitter:description" content="{{ idea.pitch }}">
     {% if idea.idea_image %}
         <meta name="twitter:image" content="{% get_absolute_uri obj=idea.idea_image.url %}">
@@ -39,14 +39,12 @@
 
             <div class="row d-md-none ideadetail-xs-support">
                 <ul class="nav">
-                    {% if view.display_type == 'idea' %}
                     <li class="nav-idea nav-support">
                         {% has_perm 'civic_europe_ideas.may_rate_idea' request.user idea as may_rate_idea %}
-                        {% if may_rate_idea and view.display_type == 'idea' %}
+                        {% if may_rate_idea %}
                         {% react_supports idea True %}
                         {% endif %}
                     </li>
-                    {% endif %}
                     {% include 'civic_europe_ideas/includes/idea_detail_watch_btns.html' with xs_class="" spacing="<br>" %}
                 </ul>
             </div>
@@ -131,12 +129,10 @@
 
                 </div>
             </div>
-            {% if view.display_type == 'idea' %}
                 <div class="container-medium ideadetail-comments">
                     <h4 class="ideadetail-comments-title">{% trans "Write comment" %}</h4>
                     {% react_comments idea %}
                 </div>
-            {% endif %}
         </div>
     </div>
 {% endblock %}
