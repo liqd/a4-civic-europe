@@ -1,3 +1,9 @@
+{% block greeting %}{% endblock %}
+
 {% block content %}{% endblock %}
 {% block cta %}{% block cta_url %}{% endblock %}{% endblock %}
+{% block contnt_extra %}{% endblock %}
+
+{% block sign_off %}{% endblock %}
+
 {% block reason %}{% endblock %}

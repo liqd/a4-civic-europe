@@ -52,6 +52,8 @@
   </div>
 
   <div class="content">
+    {% block greeting %}{% endblock %}
+
     <h3>{% block headline %}{% endblock %}</h3>
     {% block content %}{% endblock %}
 
@@ -61,6 +63,10 @@
       </a>
     {% endblock %}
 
+    {% block content_extra %}{% endblock %}
+    <div>
+      {% block sign_off %}{% endblock %}
+    </div>
   </div>
 
  <div class="footer">
