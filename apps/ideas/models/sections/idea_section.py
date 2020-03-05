@@ -48,11 +48,13 @@ TOPIC_HELP = _('Choose 1-2 topics that fit to your idea. Your answer '
 class IdeaSection(models.Model):
     title = models.CharField(
         max_length=50,
-        help_text=TITLE_HELP)
+        help_text=TITLE_HELP
+    )
     subtitle = models.CharField(
         max_length=200,
         help_text=_('(max. 200 characters)'),
-        blank=True)
+        blank=True
+    )
     pitch = models.TextField(
         max_length=500,
         help_text=PITCH_HELP

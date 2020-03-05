@@ -9,21 +9,28 @@ class IdeaFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = Idea
 
-    first_name = factory.Faker('first_name_female')
-    last_name = factory.Faker('last_name')
-    lead_organisation_status = 'non_profit'
-    year_of_registration = 2002
-    location = ['online']
-    topics = ['environment', 'social_inclusion']
-    pitch = factory.Faker('text')
-    challenge = factory.Faker('text')
-    target_group = factory.Faker('text')
-    plan = factory.Faker('text')
-    title = factory.Faker('name')
     creator = factory.SubFactory(UserFactory)
     module = factory.SubFactory(ModuleFactory)
+    # applicant section
+    first_name = factory.Faker('first_name_female')
+    last_name = factory.Faker('last_name')
+    lead_organisation_status = 'NP'
+    year_of_registration = 2002
+    # idea section
+    title = factory.Faker('name')
+    pitch = factory.Faker('text')
+    topics = ['ES', 'SI']
+    # local dimension section
+    location = factory.Faker('city')
+    challenge = factory.Faker('text')
+    impact = factory.Faker('text')
+    target_group = factory.Faker('text')
+    # road to impact section
+    plan = factory.Faker('text')
+    # finances section
     total_budget = factory.Faker('random_number')
     budget_requested = factory.Faker('random_number')
+    major_expenses = factory.Faker('text')
     duration = factory.Faker('random_number')
 
     @factory.post_generation

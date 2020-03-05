@@ -44,42 +44,42 @@ UNIQUENESS_HELP = _('Please describe what niche your initiative '
 
 
 class LocalDimensionSection(models.Model):
-
     location = models.TextField(
         max_length=100,
         verbose_name=_('Where will your project idea take place? '),
-        help_text=LOCATION_HELP)
-
+        help_text=LOCATION_HELP
+    )
     challenge = models.TextField(
         max_length=800,
         verbose_name=_('What is the specific societal challenge '
                        'faced by the region in which your project '
                        'idea is based?'),
-        help_text=CHALLENGE_HELP)
-
+        help_text=CHALLENGE_HELP
+    )
     impact = models.TextField(
         max_length=800,
         verbose_name=_('How does your idea strengthen democracy '
                        'and active citizenship at a local and '
                        'community level? Please refer to your '
                        'described challenge.'),
-        help_text=IMPACT_HELP)
-
+        help_text=IMPACT_HELP
+    )
     target_group = models.TextField(
         max_length=800,
         verbose_name=_('Who are you doing it for? '),
-        help_text=TARGET_GROUP_HELP)
-
+        help_text=TARGET_GROUP_HELP
+    )
     local_embedding = models.TextField(
         max_length=800,
         verbose_name=_('How is your idea embedded locally? '),
-        help_text=LOCAL_EMBEDDING_HELP)
-
+        help_text=LOCAL_EMBEDDING_HELP
+    )
     uniqueness = models.TextField(
         max_length=800,
         verbose_name=_('What makes your idea stand apart in '
                        'its local and regional dimension? '),
-        help_text=UNIQUENESS_HELP)
+        help_text=UNIQUENESS_HELP
+    )
 
     class Meta:
         abstract = True

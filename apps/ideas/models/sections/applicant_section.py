@@ -35,40 +35,49 @@ LEAD_ORGANISATION_DETAILS_HELP = _('Please provide details about '
 
 
 class ApplicantSection(models.Model):
-    first_name = models.CharField(max_length=250)
-    last_name = models.CharField(max_length=250)
-
+    first_name = models.CharField(
+        max_length=250
+    )
+    last_name = models.CharField(
+        max_length=250
+    )
     lead_organisation_name = models.CharField(
         max_length=300,
+        blank=True,
         verbose_name=_('Lead organisation name'),
-        blank=True, help_text=LEAD_ORGANISATION_NAME_HELP)
-
+        help_text=LEAD_ORGANISATION_NAME_HELP
+    )
     lead_organisation_status = models.CharField(
         max_length=255,
         verbose_name=_('Lead organisation status'),
-        choices=LEAD_ORGANISATION_STATUS_CHOICES)
-
+        choices=LEAD_ORGANISATION_STATUS_CHOICES
+    )
     lead_organisation_details = models.TextField(
-        max_length=200, blank=True,
+        max_length=200,
+        blank=True,
         verbose_name=_('Lead organisation details'),
-        help_text=LEAD_ORGANISATION_DETAILS_HELP)
-
+        help_text=LEAD_ORGANISATION_DETAILS_HELP
+    )
     lead_organisation_website = models.URLField(
         max_length=500,
         blank=True
     )
-
     lead_organisation_country = CountryField(
         blank=True,
         countries=EuropeanCountries
     )
-
     lead_organisation_city = models.CharField(
-        max_length=250, blank=True)
-
+        max_length=250,
+        blank=True
+    )
     contact_email = models.EmailField(
-        blank=True, verbose_name=_('Lead organisation email'))
-    year_of_registration = models.IntegerField(blank=True, null=True)
+        blank=True,
+        verbose_name=_('Lead organisation email')
+    )
+    year_of_registration = models.IntegerField(
+        blank=True,
+        null=True
+    )
 
     class Meta:
         abstract = True
