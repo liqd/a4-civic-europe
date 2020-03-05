@@ -59,8 +59,8 @@
                         <a href="#info" class="nav-link" aria-controls="info" role="tab" data-toggle="tab">{% trans "Creators" %}</a>
                     </li>
 
-                    <li role="presentation" class="nav-item {% if not idea.proposal or not idea.is_winner or idea.journeyentry_set.all.count == 0 %}active{% endif %}">
-                        <a href="#idea" class="nav-link" aria-controls="idea" role="tab" data-toggle="tab">{% trans "Idea" %}</a>
+                    <li role="presentation" class="nav-item">
+                        <a href="#idea" class="nav-link {% if not idea.proposal or not idea.is_winner or idea.journeyentry_set.all.count == 0 %}active{% endif %}" aria-controls="idea" role="tab" data-toggle="tab">{% trans "Idea" %}</a>
                     </li>
 
                     {% if idea.is_winner %}
