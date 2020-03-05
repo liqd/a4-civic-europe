@@ -2,24 +2,7 @@
 
 <div class="ideadetail-tab">
     <div class="ideadetailtab-header">
-        <span class="ideadetailtab-header-content-switcher">
-            {% if idea.idea_sketch_archived %}
-            {% if view.display_type == 'idea_sketch_archive' %}
-                <span class="active" >Idea Sketch</span> |
-                <a href="{% url 'idea-detail' idea.slug %}">Proposal</a>
-            {% else %}
-                <a href="{% url 'idea-sketch-archived-detail' idea.slug %}">Idea Sketch</a> |
-                <span class="active">Proposal</span>
-            {% endif %}
-            {% else %}
-            Idea Sketch
-            {% endif %}
-        </span>
-        {% if idea.proposal %}
-        <h2>{% trans "Proposal" %}</h2>
-        {% else %}
         <h2>{% trans "Idea" %}</h2>
-        {% endif %}
     </div>
     {% for field in idea_list_1 %}
         <div class="ideadetailtab-con-header">
