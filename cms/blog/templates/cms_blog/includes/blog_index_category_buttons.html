@@ -3,7 +3,7 @@
 <h4 class="category-title">{% trans "Categories" %}</h4>
 {% for categ in categories %}
     {% if categ.id == category %}
-        <a href="?category=" class="btn-group btn-sm btn-light-blue blogindex-category-btn active" role="button" aria-label="{% trans "Remove category filter" %} {{ categ }}">
+        <a href="?category=" class="btn-group btn-sm btn-light-green blogindex-category-btn active" role="button" aria-label="{% trans "Remove category filter" %} {{ categ }}">
             <span class="btn btn-groupie"><span class="category-name">{{ categ }}</span></span>
             <span class="btn btn-groupie"><i class="fa fa-times" aria-hidden="true"></i></span>
         </a>

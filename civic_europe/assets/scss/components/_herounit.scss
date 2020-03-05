@@ -51,7 +51,7 @@
 
 .herounit-header {
     width: 100%;
-    color: #fff;
+    color: $black;
     position: relative;
     z-index: 1;
 
@@ -65,7 +65,7 @@
     }
 
     a:not(.btn) {
-        color: #fff;
+        color: $black;
 
         &:hover {
             color: $gray-light;
@@ -77,7 +77,7 @@
     font-size: $ce-font-size-extra-large;
     margin: 0 0 0.5*$spacer 0;
     font-weight: bold;
-    color: #fff;
+    color: $black;
     position: absolute;
     bottom: 100%;
 
