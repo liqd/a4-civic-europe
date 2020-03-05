@@ -27,7 +27,7 @@ $ce-border--light: 1px solid $ce-light-gray;
 $ce-brand-red: #d57480; //logo colour #d55169
 $ce-brand-red-lighter: #de8f9d;
 $ce-brand-green: #01797f;
-$ce-brand-green: rgba(1, 121, 127, 0.2); // currently only use for active blog category
+$ce-brand-green-rgb: rgba(1, 121, 127, 0.2); // currently only use for active blog category
 
 // Which colors are used for btn-ce-secondary is defined below.
 
@@ -121,10 +121,6 @@ $theme-colors: map-merge(
 );
 
 //CI custom Buttons
-$btn-ae-light-blue-color:        $black !default;
-$btn-ae-light-blue-bg:           $ce-brand-green !default;
-$btn-ae-light-blue-border:       darken($btn-ae-light-blue-bg, 5%) !default;
-
 $btn-ce-secondary-color:         $gray-dark !default;
 $btn-ce-secondary-bg:            $brand-secondary !default;
 $btn-ce-secondary-border:        darken($btn-ce-secondary-bg, 5%) !default;

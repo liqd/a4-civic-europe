@@ -130,9 +130,9 @@ class IdeaFilterSet(DefaultsFilterSet):
         fields=['title',  # idea section
                 'subtitle',
                 'pitch',
-                'challenge', # local dimension section
-                'plan', # road to impact section
-                'feedback', # network community section
+                'challenge',  # local dimension section
+                'plan',  # road to impact section
+                'feedback',  # network community section
                 'first_name',  # applicant section
                 'last_name',
                 'lead_organisation_name',

@@ -271,7 +271,7 @@
     @media screen and (max-width: $screen-xs-max) {
         .btn-idea:hover,
         .btn-follow:hover {
-            background-color: darken($ce-brand-green, 10%);
+            background-color: darken($ce-brand-green-rgb, 10%);
         }
 
         .btn-idea,
@@ -466,16 +466,18 @@
 }
 
 .winner {
-    background-color: $ce-brand-red-lighter;
+    background-color: $ce-brand-red;
     color: $white;
 }
 
 .shortlist {
     background-color: $ce-brand-green;
+    color: $white;
 }
 
 .communityaward {
-    background-color: $ce-brand-red-lighter;
+    background-color: $ce-brand-red;
+    color: $white;
 }
 
 .ideadetail-funding {
