@@ -24,14 +24,12 @@ $ce-github: #24292e;
 $ce-border--dark: 1px solid $ce-light-gray-shadow;
 $ce-border--light: 1px solid $ce-light-gray;
 
-$ce-brand-orange: #dc6f83; //logo colour #d55169
-$brand-primary-darker: #016166;
-$ce-light-blue: rgba(1, 121, 127, 0.2); // currently only use for active blog category
-// $ce-brand-orange: #fcb813;
-// $brand-primary-darker: #007099;
-// $ce-light-blue: rgba(0, 170, 230, 0.2); // currently only use for active blog category
+$ce-brand-red: #d57480; //logo colour #d55169
+$ce-brand-red-lighter: #de8f9d;
+$ce-brand-green: #01797f;
+$ce-brand-green: rgba(1, 121, 127, 0.2); // currently only use for active blog category
 
-// Which colors are used for btn-ae-secondary is defined below.
+// Which colors are used for btn-ce-secondary is defined below.
 
 // demibold font-weight for buttons, tabs, and links
 $demibold: 600;
@@ -83,7 +81,7 @@ $colors: map-merge(
 
 //CI custom colours
 $brand-primary:         #01797f !default;
-$brand-secondary:       #dc6f83 !default;
+$brand-secondary:       #d57480 !default;
 $brand-success:         #73be46 !default; //was: #5cb85c
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
@@ -124,12 +122,12 @@ $theme-colors: map-merge(
 
 //CI custom Buttons
 $btn-ae-light-blue-color:        $black !default;
-$btn-ae-light-blue-bg:           $ce-light-blue !default;
+$btn-ae-light-blue-bg:           $ce-brand-green !default;
 $btn-ae-light-blue-border:       darken($btn-ae-light-blue-bg, 5%) !default;
 
-$btn-ae-secondary-color:         $gray-dark !default;
-$btn-ae-secondary-bg:            $brand-secondary !default;
-$btn-ae-secondary-border:        darken($btn-ae-secondary-bg, 5%) !default;
+$btn-ce-secondary-color:         $gray-dark !default;
+$btn-ce-secondary-bg:            $brand-secondary !default;
+$btn-ce-secondary-border:        darken($btn-ce-secondary-bg, 5%) !default;
 
 $btn-ae-github-color:            #fff !default;
 $btn-ae-github-bg:               $ce-github;

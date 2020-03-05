@@ -44,7 +44,7 @@
         <div class="row">
             <div class="col-md-12">
                 {% if wizard.steps.prev and wizard.steps.next %}
-                <button class="btn btn-ae-secondary"
+                <button class="btn btn-ce-secondary"
                         name="wizard_store_and_goto_step"
                         type="submit"
                         value="{{ wizard.steps.prev }}">
@@ -53,7 +53,7 @@
                 {% endif %}
 
                 {% if wizard.steps.next %}
-                <button class="btn btn-ae-secondary float-right"
+                <button class="btn btn-ce-secondary float-right"
                         type="submit"
                         name="submit">
                     {% trans "Continue" %}
@@ -65,7 +65,7 @@
                     {% if view.end_date  %}
                     <p>{% trans 'You and your team members can edit all the fields of your idea sketch until ' %}{{ view.end_date }}</p>
                     {% endif %}
-                    <button class="btn btn-ae-secondary wizard-submit-btn"
+                    <button class="btn btn-ce-secondary wizard-submit-btn"
                             type="submit"
                             name="submit">
                         {{ view.finish_section_btn }}

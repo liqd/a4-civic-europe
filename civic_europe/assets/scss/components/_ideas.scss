@@ -10,7 +10,7 @@
 }
 
 .idealist-no-entry {
-    background-color: $ce-brand-orange;
+    background-color: $ce-brand-red-lighter;
     margin-top: 1.25*$spacer;
     margin-left: 0.25*$spacer;
     margin-right: 0.25*$spacer;
@@ -213,7 +213,8 @@
 
     .btn {
         font-size: $font-size-lg;
-        border: 0.5px solid $brand-primary-darker;
+        border: 0.5px solid $ce-brand-green;
+        color: #fff;
     }
 
     // @media screen and (min-width: $screen-sm) {
@@ -230,7 +231,7 @@
 // ------- Idea Detail XS support, watch, share -----
 
 .ideadetail-xs-support {
-    background-color: $brand-primary-darker;
+    background-color: $ce-brand-green;
 }
 
 // ----------------- Idea Detail Buttons: Watch, Share, ... -----------------
@@ -270,7 +271,7 @@
     @media screen and (max-width: $screen-xs-max) {
         .btn-idea:hover,
         .btn-follow:hover {
-            background-color: darken($brand-primary-darker, 10%);
+            background-color: darken($ce-brand-green, 10%);
         }
 
         .btn-idea,
@@ -278,7 +279,7 @@
             padding: 0.75*$spacer 1.25*$spacer 0.5*$spacer 1.25*$spacer;
             border: none;
             color: #fff;
-            background-color: $brand-primary-darker;
+            background-color: $ce-brand-green;
             font-size: $font-size-lg;
         }
 
@@ -351,7 +352,7 @@
     padding: 0.5*$spacer 0.75*$spacer;
 
     &.jurystatement {
-        background-color: $ce-brand-orange;
+        background-color: $ce-brand-red-lighter;
     }
 
     &-co-workers {
@@ -465,16 +466,16 @@
 }
 
 .winner {
-    background-color: $ce-brand-orange;
-    color: $gray-dark;
+    background-color: $ce-brand-red-lighter;
+    color: $white;
 }
 
 .shortlist {
-    background-color: $brand-magenta;
+    background-color: $ce-brand-green;
 }
 
 .communityaward {
-    background-color: $brand-primary;
+    background-color: $ce-brand-red-lighter;
 }
 
 .ideadetail-funding {

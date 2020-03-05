@@ -50,7 +50,7 @@ a,
 
 @include selection {
     color: $gray-dark;
-    background: $ce-brand-orange;
+    background: $ce-brand-red-lighter;
 }
 
 .container {
@@ -162,12 +162,12 @@ a,
 }
 
 blockquote {
-    background-color: $ce-brand-orange;
+    background-color: $ce-brand-red-lighter;
     border-left: none;
     padding: 0.5*$spacer 0.75*$spacer;
     font-size: inherit;
 }
 
 quote {
-    background-color: $ce-brand-orange;
+    background-color: $ce-brand-red-lighter;
 }

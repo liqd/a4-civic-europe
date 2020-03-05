@@ -1,10 +1,11 @@
-.btn-ae-secondary {
-    @include button-variant($btn-ae-secondary-bg, $btn-ae-secondary-bg, $btn-ae-secondary-border);
+.btn-ce-primary {
+    @include button-variant($btn-ce-secondary-bg, $btn-ce-secondary-bg, $btn-ce-secondary-border);
     color: $white;
 }
 
-.btn-light-blue {
-    @include button-variant($btn-ae-light-blue-color, $btn-ae-light-blue-bg, $btn-ae-light-blue-border);
+.btn-ce-secondary {
+    @include button-variant($btn-ce-secondary-bg, $btn-ce-secondary-bg, $btn-ce-secondary-border);
+    color: $white;
 }
 
 .btn-default {
