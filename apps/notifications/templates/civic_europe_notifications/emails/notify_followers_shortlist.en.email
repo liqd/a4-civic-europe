@@ -2,15 +2,11 @@
 {% load verbose_name %}
 
 {% block subject %}
-"{{ idea.idea_title }}" was shortlisted.
+The idea "{{ idea.idea_title }}" was selected for the Civic Europe shortlist
 {% endblock %}
 
 {% block headline %}
-The idea sketch "{{ idea.idea_title }}" was selected for the shortlist.
-{% endblock %}
-
-{% block content %}
- The idea sketch "{{ idea.idea_title }}" was selected for the shortlist. The team behind the idea is now invited to the Idea Challenge Camp. Afterwards they can transform their idea sketch into a project proposal to participate in the final round.
+The idea "{{ idea.idea_title }}" was selected for the Civic Europe shortlist.
 {% endblock %}
 
 {% block cta_url %}
@@ -18,5 +14,5 @@ The idea sketch "{{ idea.idea_title }}" was selected for the shortlist.
 {% endblock %}
 
 {% block cta_label %}
-Visit the idea sketch
+Visit the idea
 {% endblock %}

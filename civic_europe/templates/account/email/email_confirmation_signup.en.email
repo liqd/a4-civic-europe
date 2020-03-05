@@ -1,15 +1,27 @@
 {% extends 'email_base.'|add:part_type %}
 
-{% block subject %}Please confirm your registration on {{ site.name }}{% endblock %}
+{% block subject %}{{ site.name }}: Account verification{% endblock %}
 
-{% block headline %}Your registration on {{ site.name }}{% endblock %}
+{% block greeting %}
+Automatically generated email.
+<br /><br />
+Dear {{ user.username }}
+{% endblock %}
+
+{% block headline %}Thank you for registering on {{ site.name }}{% endblock %}
 
 {% block content %}
-Your email address has been used to register on <i>{{ site.name }}</i> with the username “{{ user.username }}”. Please click on the button below to confirm your email address and activate your account.
+This email has the purpose to validate your identity. Please use the link below to activate your account.
 {% endblock %}
 
 {% block cta_url %}{{ activate_url }}{% endblock %}
 {% block cta_label %}Confirm your email address{% endblock %}
+
+{% block content_extra %}
+Have fun and be inspired!
+{% endblock %}
+
+{% block sign_off %}Your {{ site.name }}-Team{% endblock %}
 
 {% block reason %}
 This email was sent to {{ user.email }}. If you think this email was sent to you by mistake, you can ignore it. We will not send you any further emails. If you have any further questions, please contact us via help@civic-europe.eu
