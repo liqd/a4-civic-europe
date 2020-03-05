@@ -2,25 +2,21 @@
 {% load verbose_name %}
 
 {% block subject %}
+A {{ action.obj|verbose_name|lower }} was created by {{ action.actor.username }}
+{% endblock %}
+
+{% block content %}
 A {{ action.obj|verbose_name|lower }} was added to your {{ action.target|verbose_name|lower }}
 {% endblock %}
 
-{% block headline %}
-{{ action.actor.username }} created a {{ action.obj|verbose_name|lower }} on your {{ action.target|verbose_name|lower }}
-{% endblock  %}
-
-{% block content %}
-On your {{ action.target|verbose_name|lower }}{% if action.target.idea_title %} "{{ action.target.idea_title }}"{% endif %} a {{ action.obj|verbose_name|lower }} was added by {{ action.actor.username }}. Checkout what happend on{% if action.target.get_absolute_url %} your {{ action.target|verbose_name|lower }}{% else %} the project "{{ action.project.name }}"{% endif %} on {{ site.name }} by clicking the {% if part_type == 'txt' %}link{% else %}button{% endif %} below.
-{% endblock %}
-
 {% block cta_url %}
-{% if action.target.get_absolute_url %}{{ email.get_host }}{{ action.target.get_absolute_url }}{% else %}{{ email.get_host }}{{ action.project.get_absolute_url }}{% endif %}
+{% if action.target.get_absolute_url %}{{ email.get_host }}{{ action.target.get_absolute_url }}{% else %}{{ email.get_host }}{{ action.idea.get_absolute_url }}{% endif %}
 {% endblock %}
 
 {% block cta_label %}
-{% if action.target.get_absolute_url %}Visit the {{ action.target|verbose_name|lower }}{% else %}Visit the project{% endif %}
+{% if action.target.get_absolute_url %}Visit the {{ action.target|verbose_name|lower }}{% else %}Visit the idea{% endif %}
 {% endblock %}
 
 {% block reason %}
-This email was sent to {{ receiver }}. You receive this email because you have submitted a {{ action.target|verbose_name|lower }} using this email address. If you no longer wish to receive these notifications, you can disable notifications in your account settings.
+This email was sent to {{ receiver }}. This email was sent to you because you are watching an idea. If you no longer wish to receive these notifications, you can unwatch the idea or disable notifications completely in your account settings.
 {% endblock %}

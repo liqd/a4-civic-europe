@@ -2,15 +2,11 @@
 {% load verbose_name %}
 
 {% block subject %}
-"{{ idea.idea_title }}" has won.
-{% endblock %}
-
-{% block headline %}
-The proposal "{{ idea.idea_title }}" is a winning idea.
+The idea "{{ idea.idea_title }}" is a winning idea
 {% endblock %}
 
 {% block content %}
- The proposal "{{ idea.idea_title }}" is a winning idea of the Civic Europe {{ site.name }}
+The idea "{{ idea.idea_title }}" is a winning idea of the {{ site.name }}
 {{ idea.module.name }}.
 {% endblock %}
 
@@ -19,5 +15,5 @@ The proposal "{{ idea.idea_title }}" is a winning idea.
 {% endblock %}
 
 {% block cta_label %}
-Visit the project proposal
+Visit the idea
 {% endblock %}

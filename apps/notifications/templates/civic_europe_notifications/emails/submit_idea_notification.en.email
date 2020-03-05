@@ -1,30 +1,39 @@
 {% extends 'email_base.'|add:part_type %}
 
 {% block subject %}
-Thank you for submitting your project idea for the {{ site.name }} idea challenge!
+Welcome and thanks for sharing your idea!
 {% endblock %}
 
-{% block headline %}
-Thank you for submitting your project idea for the {{ site.name }} idea challenge!
-{% endblock  %}
+{% block greeting %}Hi,{% endblock %}
 
 {% block content %}
-{% if idea.project.active_phase %}You can edit your idea until {{ idea.project.active_phase.end_date|date:"d F Y (H:i T)"}}{% endif %}
+Thank you for submitting your project idea for the {{ site.name }} Idea Challenge!
 <br /><br />
 <h3>What happens next?</h3>
-Following the application deadline, a shortlist of approximately 30 proposals will be made from among the submitted proposals that meet the selection and eligibility criteria and fit our call 2017/2018.
+{% if idea.project.active_phase %}You can edit your proposal until {{ idea.project.active_phase.end_date|date:"d F Y (H:i T)"}}. {% endif %}Please note that all applications must be submitted <b>in English</b>, project proposals that are submitted in a language other than English will not be considered.
 <br /><br />
-If your idea has made it to the shortlist, we will meet in person at the Collaboration Camp in late April 2018. Only after the Collaboration Camp will our interdisciplinary jury select up to twelve winning ideas in June 2018.
+Following the application deadline approximately 30 proposals will be shortlisted from among the submitted proposals that meet the selection and eligibility criteria and fit our call 2020. We will publish the shortlist on our online platform.
+<br /><br />
+After that our interdisciplinary jury selects up to fifteen winning ideas in autumn 2020. Find out more about the selection process and each phase of the idea challenge on www.civic-europe.de.
+<br /><br />
+<h3>Add your co-workers</h3>
+You can add up to <b>five more co-workers</b> to your idea; you will find the field in the application form. All co-workers can edit the text until the application deadline and will appear as team members in your project idea.
 <br /><br />
 <h3>Take a look at the other submitted ideas</h3>
-All submitted project ideas are publically visible in our Idea Space. Who could be an interesting partner for you? What inspirations can you get from them? Use the opportunity to exchange experiences and knowledge, discuss topics and methods and expand your network.
+All submitted project ideas are publicly visible in our Idea Space on our website. Who could be an interesting partner for you? What inspirations can you get from them? Use the opportunity to <b>exchange experiences and knowledge,</b> discuss topics and methods and expand your network. Give each other food for thoughts, work together and learn from one another.
 <br /><br />
 {% if community_award_rating_phase %}
 <h3>Vote for the Community Award from {{ community_award_rating_phase.start_date|date:"d F Y" }} until {{ community_award_rating_phase.end_date|date:"d F Y" }}</h3>
-Anyone who has submitted an idea to one of the three idea challenges in 2017/2018, 2016 or 2015, is entitled to vote for our community award - both applicants and co-workers. The idea with the most votes will be included in the shortlist and receive start-up funding of € 1,000.
-Please note that you can choose your personal favourite submission. You and your co-workers can, however, not vote for your own project idea.
+Anyone who has submitted an idea is entitled to vote for our Community Award - both applicants and co-workers. The idea with the most votes will be included in the shortlist and receive start-up funding.
 <br /><br />
+Please note that you can choose your personal favourite project idea. However, you and your co-workers can not vote for your own project idea.
 {% endif %}
+
+<h3>Get support</h3>
+Please use our FAQ on our website.
+<br /><br />
+If you have any further questions, feel free to contact us: civiceurope@mitost.org.
+<br /><br />
 We are looking forward to an exciting exchange of thoughts and ideas on {{ site.name }}!
 <br /><br />
 Your {{ site.name }} Team
