@@ -4,33 +4,33 @@
     <nav aria-label="Page navigation">
         <ul class="pagination ae-pagination">
             {% if page_obj.has_previous %}
-                <li>
+                <li class="page-item">
                     {% combined_url_parameter request.GET page=page_obj.previous_page_number as url_par %}
-                    <a href="{{ url_par }}"><i class="fa fa-angle-left"></i></a>
+                    <a class="page-link" href="{{ url_par }}"><i class="fa fa-angle-left"></i></a>
                 </li>
             {% endif %}
             {% if page_obj.has_previous or page_obj.has_next %}
                 {% if page_obj.paginator.num_pages < 6 %}
                     {% for page_num in page_obj.paginator.page_range %}
-                        <li {% if page_num == page_obj.number %}class="active"{% endif %}>
+                        <li class="page-item {% if page_num == page_obj.number %}active{% endif %}">
                             {% combined_url_parameter request.GET page=page_num as url_par %}
-                            <a href="{{ url_par }}">{{ page_num }}</a>
+                            <a class="page-link" href="{{ url_par }}">{{ page_num }}</a>
                         </li>
                     {% endfor %}
                 {% else %}
                     {% get_range page_obj.number page_obj.paginator.num_pages as page_range %}
                     {% for page_num in page_range %}
-                        <li {% if page_num == page_obj.number %}class="active"{% endif %}>
+                        <li class="page-item {% if page_num == page_obj.number %}active{% endif %}">
                             {% combined_url_parameter request.GET page=page_num as url_par %}
-                            <a href="{{ url_par }}">{{ page_num }}</a>
+                            <a class="page-link" href="{{ url_par }}">{{ page_num }}</a>
                         </li>
                     {% endfor %}
                 {% endif %}
             {% endif %}
             {% if page_obj.has_next %}
-                <li>
+                <li class="page-item">
                     {% combined_url_parameter request.GET page=page_obj.next_page_number as url_par %}
-                    <a href="{{ url_par }}"><i class="fa fa-angle-right"></i></a>
+                    <a class="page-link" href="{{ url_par }}"><i class="fa fa-angle-right"></i></a>
                 </li>
             {% endif %}
         </ul>
