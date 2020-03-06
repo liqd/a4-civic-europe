@@ -9,20 +9,20 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Civic Europe | {{ idea.title }}">
     <meta name="twitter:description" content="{{ idea.pitch }}">
-    {% if idea.idea_image %}
-        <meta name="twitter:image" content="{% get_absolute_uri obj=idea.idea_image.url %}">
+    {% if idea.image %}
+        <meta name="twitter:image" content="{% get_absolute_uri obj=idea.image.url %}">
     {% else %}
         <meta name="twitter:image" content="{% get_absolute_uri_static obj='images/logo_01.png' %}">
     {% endif %}
 
 
     <meta property="og:url" content="{{ request.build_absolute_uri }}">
-    <meta property="og:title" content="Civic Europe | {{ idea.idea_title }}">
+    <meta property="og:title" content="Civic Europe | {{ idea.title }}">
     <meta property="og:description" content="{{ idea.pitch }}">
-    {% if idea.idea_image %}
-        <meta property="og:image" content="{% get_absolute_uri obj=idea.idea_image.url %}">
-        <meta property="og:image:width" content="{{ idea.idea_image.width }}">
-        <meta property="og:image:height" content="{{ idea.idea_image.height }}">
+    {% if idea.image %}
+        <meta property="og:image" content="{% get_absolute_uri obj=idea.image.url %}">
+        <meta property="og:image:width" content="{{ idea.image.width }}">
+        <meta property="og:image:height" content="{{ idea.image.height }}">
     {% else %}
         <meta property="og:image" content="{% get_absolute_uri_static obj='images/logo_01.png' %}">
         <meta property="og:image:width" content="360">
@@ -58,12 +58,12 @@
                     </li>
 
                     <li role="presentation" class="nav-item">
-                        <a href="#idea" class="nav-link {% if not idea.proposal or not idea.is_winner or idea.journeyentry_set.all.count == 0 %}active{% endif %}" aria-controls="idea" role="tab" data-toggle="tab">{% trans "Idea" %}</a>
+                        <a href="#idea" class="nav-link {% if not idea.is_winner or idea.journeyentry_set.all.count == 0 %}active{% endif %}" aria-controls="idea" role="tab" data-toggle="tab">{% trans "Idea" %}</a>
                     </li>
 
                     {% if idea.is_winner %}
-                        <li role="presentation" class="nav-item {% if idea.proposal and idea.is_winner and idea.journeyentry_set.all.count > 0 %}active{% endif %}">
-                            <a href="#journey" class="nav-link" aria-controls="idea" role="tab" data-toggle="tab">{% trans "Project Journey" %}</a>
+                        <li role="presentation" class="nav-item">
+                            <a href="#journey" class="nav-link {% if idea.is_winner and idea.journeyentry_set.all.count > 0 %}active{% endif %}" aria-controls="journey" role="tab" data-toggle="tab">{% trans "Project Journey" %}</a>
                         </li>
                     {% endif %}
 
@@ -80,18 +80,18 @@
                 <div role="tabpanel" class="offset-md-1 col-md-7 col-sm-8 col-xs-12 tab-pane" id="info">
                     {% include 'civic_europe_ideas/includes/idea_detail_tab_info.html' %}
                 </div>
-                <div role="tabpanel" class="offset-md-1 col-md-7 col-sm-8 col-xs-12 tab-pane  {% if not idea.proposal or not idea.is_winner or idea.journeyentry_set.all.count == 0 %} active {% endif %}" id="idea">
+                <div role="tabpanel" class="offset-md-1 col-md-7 col-sm-8 col-xs-12 tab-pane  {% if not idea.is_winner or idea.journeyentry_set.all.count == 0 %} active {% endif %}" id="idea">
                     {% include 'civic_europe_ideas/includes/idea_detail_tab_idea.html' %}
                 </div>
                 {% if idea.is_winner %}
-                    <div role="tabpanel" class="offset-md-1 col-md-7 col-sm-8 col-xs-12 tab-pane {% if idea.proposal and idea.is_winner and idea.journeyentry_set.all.count > 0 %} active {% endif %}" id="journey">
+                    <div role="tabpanel" class="offset-md-1 col-md-7 col-sm-8 col-xs-12 tab-pane {% if idea.is_winner and idea.journeyentry_set.all.count > 0 %} active {% endif %}" id="journey">
                         {% include 'civic_europe_ideas/includes/idea_detail_tab_journey.html' %}
                     </div>
                 {% endif %}
 
                 <div class="col-md-3 col-sm-4 col-xs-12 ideadetail-info-boxes">
 
-                    {% if idea.proposal and idea.jury_statement %}
+                    {% if idea.jury_statement %}
                         <div class="ideadetail-info-box jurystatement">
                             <h4><i class="fa fa-trophy" aria-hidden="true"></i> {% trans 'Why this idea?' %}</h4>
                             <p>{{ idea.jury_statement }}</p>
