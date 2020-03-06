@@ -268,7 +268,7 @@
         width: 22px;
     }
 
-    @media screen and (max-width: $screen-xs-max) {
+    @media screen and (max-width: $screen-sm-max) {
         .btn-idea:hover,
         .btn-follow:hover {
             background-color: darken($ce-brand-green-rgb, 10%);
