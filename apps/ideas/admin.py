@@ -60,7 +60,7 @@ set_is_winner_false.short_description = 'Unset winner'
 class IdeaAdmin(notification_admin.NotifyMixin, admin.ModelAdmin):
     exclude = ['module']
     raw_id_fields = ('creator', 'co_workers')
-    search_fields = ('idea_title',)
+    search_fields = ('title',)
     list_filter = (
         'module__project__name',
         'is_winner',

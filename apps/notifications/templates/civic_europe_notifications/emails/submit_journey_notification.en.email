@@ -9,7 +9,7 @@ Sucessfully submission!
 {% endblock  %}
 
 {% block content %}
-You have submitted your journey "{{ journey.title }}" to {{ journey.idea.type }} "{{ journey.idea.idea_title }}".
+You have submitted your journey "{{ journey.title }}" to {{ journey.idea.type }} "{{ journey.idea.title }}".
 {% endblock %}
 
 {% block cta_url %}{{ email.get_host }}{{ journey.get_absolute_url }}{% endblock %}

@@ -1,11 +1,11 @@
 {% extends 'email_base.'|add:part_type %}
 
 {% block subject %}
-You are invited to contribute to "{{ invite.subject.idea_title }}" on {{ site.name }}
+You are invited to contribute to "{{ invite.subject.title }}" on {{ site.name }}
 {% endblock %}
 
 {% block content %}
-You were invited by "{{ invite.creator.username }}" to become a team member for the idea "{{ invite.subject.idea_title }}". If you want to become a team member, please visit the idea by clicking the button below. After registering you will appear with you user name on the idea page and will be able to edit the idea.
+You were invited by "{{ invite.creator.username }}" to become a team member for the idea "{{ invite.subject.title }}". If you want to become a team member, please visit the idea by clicking the button below. After registering you will appear with you user name on the idea page and will be able to edit the idea.
 {% endblock %}
 
 {% block cta_url %}{{ email.get_host }}{{ invite.get_absolute_url }}{% endblock %}

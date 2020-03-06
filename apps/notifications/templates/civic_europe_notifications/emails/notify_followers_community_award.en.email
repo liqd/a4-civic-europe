@@ -1,15 +1,15 @@
 {% extends 'civic_europe_notifications/emails/follow.en.email' %}
 
 {% block subject %}
-"{{ idea.idea_title }}" has won the community award.
+"{{ idea.title }}" has won the community award.
 {% endblock %}
 
 {% block headline %}
-The idea "{{ idea.idea_title }}" has won the community award.
+The idea "{{ idea.title }}" has won the community award.
 {% endblock %}
 
 {% block content %}
-The idea "{{ idea.idea_title }}" is the
+The idea "{{ idea.title }}" is the
 community award winner of the {{ site.name }} {{ idea.module.name }} competition.
 The team behind the idea is now invited to the idea challenge camp, where they
 can meet other inovators and team up to increase thier changes. Afterwards they
