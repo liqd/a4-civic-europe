@@ -13,13 +13,13 @@
         {{ idea.last_name }}
         </p>
         <p>
-        {{ idea.organisation_name }}
+        {{ idea.lead_organisation_name }}
         </p>
-        <p><a target="_blank" href="{{ idea.organisation_website }}">
-        {{ idea.organisation_website }}
+        <p><a target="_blank" href="{{ idea.lead_organisation_website }}">
+        {{ idea.lead_organisation_website }}
         </a></p>
         <p>
-        {{ idea.get_organisation_country_display }}
+        {{ idea.get_lead_organisation_country_display }}
         </p>
     </div>
     {% if partner_list %}
