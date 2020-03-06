@@ -10,7 +10,7 @@ The journey entry "{{ action.obj.title }}" was added.
 {% endblock %}
 
 {% block content %}
-The team behind the idea "{{ action.obj.idea.idea_title }}" updated their project journey. Read about the development in their newest journey entry.
+The team behind the idea "{{ action.obj.idea.title }}" updated their project journey. Read about the development in their newest journey entry.
 {% endblock %}
 
 {% block cta_url %}

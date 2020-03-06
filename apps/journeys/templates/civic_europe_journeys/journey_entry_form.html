@@ -12,10 +12,10 @@
         <form class="journey-form-box custom-form container-medium" data-safe-form="wizard" method="post" enctype="multipart/form-data" novalidate>
             {% if view.is_create_view %}
             <h1>{% trans 'New entry' %} </h1>
-            <h4 class="journey-form-idea">{{ view.idea.idea_title }}</h4>
+            <h4 class="journey-form-idea">{{ view.idea.title }}</h4>
             {% else %}
             <h1>{% trans 'Update entry' %} </h1>
-            <h4 class="journey-form-idea">{{ journeyentry.idea.idea_title }}</h4>
+            <h4 class="journey-form-idea">{{ journeyentry.idea.title }}</h4>
             {% endif %}
 
             {% crispy form %}

@@ -2,11 +2,11 @@
 {% load verbose_name %}
 
 {% block subject %}
-The idea "{{ idea.idea_title }}" is a winning idea
+The idea "{{ idea.title }}" is a winning idea
 {% endblock %}
 
 {% block content %}
-The idea "{{ idea.idea_title }}" is a winning idea of the {{ site.name }}
+The idea "{{ idea.title }}" is a winning idea of the {{ site.name }}
 {{ idea.module.name }}.
 {% endblock %}
 

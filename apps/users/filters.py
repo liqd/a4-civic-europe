@@ -78,7 +78,7 @@ class ProfileIdeaFilterSet(DefaultsFilterSet):
     ordering = DistinctOrderingFilter(
         fields=(
             ('-created', 'newest'),
-            ('idea_title', 'alphabetical'),
+            ('title', 'alphabetical'),
         ),
         choices=(
             ('newest', _('Newest')),

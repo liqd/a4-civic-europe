@@ -2,7 +2,7 @@
 {% load verbose_name %}
 
 {% block subject %}
-A {{ action.obj|verbose_name }} was added "{{ action.target.title }}"
+A {{ action.obj|verbose_name }} was added to "{{ action.target.title }}"
 {% endblock %}
 
 {% block headline %}

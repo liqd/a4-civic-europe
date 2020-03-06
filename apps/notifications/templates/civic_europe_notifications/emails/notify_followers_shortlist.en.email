@@ -2,11 +2,11 @@
 {% load verbose_name %}
 
 {% block subject %}
-The idea "{{ idea.idea_title }}" was selected for the Civic Europe shortlist
+The idea "{{ idea.title }}" was selected for the Civic Europe shortlist
 {% endblock %}
 
 {% block headline %}
-The idea "{{ idea.idea_title }}" was selected for the Civic Europe shortlist.
+The idea "{{ idea.title }}" was selected for the Civic Europe shortlist.
 {% endblock %}
 
 {% block cta_url %}

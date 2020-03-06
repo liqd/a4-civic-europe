@@ -23,14 +23,14 @@
             {% endblocktrans %}
 
             {% elif action.type == 'idea' and action.verb == 'add' %}
-            {% blocktrans with url=action.actor.get_absolute_url name=action.actor.username item_url=action.obj.get_absolute_url item=action.obj|verbose_name item_title=action.obj.idea_title|truncatewords:50 %}
+            {% blocktrans with url=action.actor.get_absolute_url name=action.actor.username item_url=action.obj.get_absolute_url item=action.obj|verbose_name item_title=action.obj.title|truncatewords:50 %}
             <a href="{{ url }}">{{ name }}</a>
             added a new {{ item }}
             <a href="{{ item_url }}">{{ item_title }}</a>
             {% endblocktrans%}
 
             {% elif action.type == 'idea' and action.verb == 'update' %}
-            {% blocktrans with url=action.actor.get_absolute_url name=action.actor.username item_url=action.obj.get_absolute_url item=action.obj|verbose_name item_title=action.obj.idea_title|truncatewords:50 %}
+            {% blocktrans with url=action.actor.get_absolute_url name=action.actor.username item_url=action.obj.get_absolute_url item=action.obj|verbose_name item_title=action.obj.title|truncatewords:50 %}
             <a href="{{ url }}">{{ name }}</a>
             updated the {{ item }}
             <a href="{{ item_url }}">{{ item_title }}</a>
@@ -58,7 +58,7 @@
             {% endblocktrans%}
 
             {% elif action.type == 'follows' %}
-                {% blocktrans with url=action.actor.get_absolute_url name=action.actor.username item_url=action.obj.followable.get_absolute_url item=action.obj.followable|verbose_name item_title=action.obj.followable.idea_title|truncatewords:50 %}
+                {% blocktrans with url=action.actor.get_absolute_url name=action.actor.username item_url=action.obj.followable.get_absolute_url item=action.obj.followable|verbose_name item_title=action.obj.followable.title|truncatewords:50 %}
                 <a href="{{ url }}">{{ name }}</a>
                 now watches {{ item }}
                 <a href="{{ item_url }}">"{{ item_title }}"</a>
