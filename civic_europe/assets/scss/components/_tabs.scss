@@ -17,8 +17,8 @@
         border-radius: 0;
 
         @media screen and (max-width: $screen-xs-max) {
-            padding-right: $spacer;
-            padding-left: $spacer;
+            padding-right: 0.7 * $spacer;
+            padding-left: 0.7 * $spacer;
         }
     }
 
