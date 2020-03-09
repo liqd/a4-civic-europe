@@ -55,3 +55,19 @@
     margin-left: -$spacer;
     margin-bottom: 0.5*$spacer;
 }
+
+.nav-item.dropdown.show > .nav-link {
+    background-color: $ce-light-gray;
+}
+
+.nav-item.dropdown.show {
+    > .nav-link {
+        background-color: $ce-light-gray;
+    }
+
+    > .dropdown-menu {
+        margin: 0;
+        padding: 0;
+        top: auto;
+    }
+}
