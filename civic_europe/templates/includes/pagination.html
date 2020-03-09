@@ -1,8 +1,8 @@
 {% load contrib_tags %}
 
-<div class="text-center">
+<div>
     <nav aria-label="Page navigation">
-        <ul class="pagination ae-pagination">
+        <ul class="pagination ce-pagination justify-content-center">
             {% if page_obj.has_previous %}
                 <li class="page-item">
                     {% combined_url_parameter request.GET page=page_obj.previous_page_number as url_par %}
