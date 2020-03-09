@@ -18,9 +18,9 @@ STATUS_FILTER_CHOICES = [
 ]
 
 ORDERING_CHOICES = [
-    ('newest', _('Most Recent')),
-    ('comments', _('Most Comments')),
-    ('support', _('Most Support')),
+    ('newest', _('Most recent')),
+    ('comments', _('Most comments')),
+    ('support', _('Most support')),
     ('title', _('Alphabetical'))
 ]
 
@@ -110,7 +110,7 @@ class IdeaFilterSet(DefaultsFilterSet):
     status = django_filters.ChoiceFilter(
         method='what_status',
         choices=STATUS_FILTER_CHOICES,
-        widget=StatusFilterWidget
+        widget=StatusFilterWidget,
     )
 
     ordering = DistinctOrderingFilter(
