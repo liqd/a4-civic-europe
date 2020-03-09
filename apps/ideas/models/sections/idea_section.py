@@ -36,7 +36,7 @@ TOPIC_CHOICES = (
     (URBAN_AND_RURAL_PLANING, _('Urban and rural development')),
     (SOCIAL_INCLUSION, _('Social inclusion')),
     (MIGRATION, _('Migration')),
-    (ENVIRONMENT_AND_SUSTAINABILITY, _('Environment & sustainability')),
+    (ENVIRONMENT_AND_SUSTAINABILITY, _('Environment and sustainability')),
     (ARTS_AND_CULTURAL_ACTIVITIES, _('Arts and cultural activities'))
 )
 
