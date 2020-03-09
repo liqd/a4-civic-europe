@@ -1,18 +1,5 @@
 {% load i18n react_follows rules discovery_tags %}
 
-{% has_perm 'civic_europe_ideas.change_idea' request.user idea as can_change_idea %}
-
-{% if can_change_idea %}
-
-<li class="nav-idea {{ xs_class }}">
-    <a href="{% url 'idea-update' idea.slug %}" class="btn btn-idea" id="idea-edit">
-        <i class="fas fa-pencil-alt" aria-hidden="true"></i>
-        <span class="btn-idea-label">{% trans 'Edit' %}</span>
-    </a>
-</li>
-
-{% endif %}
-
 <li class="dropdown nav-idea {{ xs_class }}">
     <button class="btn btn-idea" type="button" id="dropdownShare" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
         <i class="fa fa-share" aria-hidden="true"></i>
@@ -44,4 +31,17 @@
         <span class="btn-idea-label">{% trans 'Watch' %}</span>
     </a>
 </li>
+{% endif %}
+
+{% has_perm 'civic_europe_ideas.change_idea' request.user idea as can_change_idea %}
+
+{% if can_change_idea %}
+
+<li class="nav-idea {{ xs_class }}">
+    <a href="{% url 'idea-update' idea.slug %}" class="btn btn-idea" id="idea-edit">
+        <i class="fas fa-pencil-alt" aria-hidden="true"></i>
+        <span class="btn-idea-label">{% trans 'Edit' %}</span>
+    </a>
+</li>
+
 {% endif %}
