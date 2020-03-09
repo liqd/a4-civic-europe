@@ -7,7 +7,7 @@
 {% block form %}
     <div class="custom-form">
         <fieldset>
-            <legend>{% trans "Social Connections" %}</legend>
+            <legend>{% trans "Account connections" %}</legend>
             {% if form.accounts %}
                 <p>{% blocktrans %}You can sign in to your account using any of the following third party
                     accounts:{% endblocktrans %}</p>
@@ -41,7 +41,7 @@
                 <p>{% trans 'You currently have no social network accounts connected to this account.' %}</p>
             {% endif %}
 
-    <h4>{% trans 'Add a 3rd Party Account' %}</h4>
+    <h4>{% trans 'Add a 3rd party account' %}</h4>
     <ul class="socialaccount_providers">
         {% include "socialaccount/snippets/provider_list.html" with process="connect" %}
     </ul>
