@@ -22,10 +22,10 @@ Django==2.2.10 # pyup: <2.3
 django-allauth==0.41.0
 django-autoslug==1.9.6
 django-background-tasks==1.2.0
-django-ckeditor==5.8.0
-django-countries==5.5
+django-ckeditor==5.9.0
+django-countries==6.0
 django-filter==2.2.0
-django-multiselectfield==0.1.11
+django-multiselectfield==0.1.12
 django-widget-tweaks==1.4.5
 djangorestframework==3.11.0
 easy-thumbnails==2.7
@@ -34,8 +34,8 @@ jsonfield==2.0.2
 psycopg2-binary==2.8.4
 python-dateutil==2.8.1
 python-magic==0.4.15
-rules==2.1
-XlsxWriter==1.2.7
+rules==2.2
+XlsxWriter==1.2.8
 
 # django multiform (released version 0.1 was too old).
 # 2019-04: This is seriously outdated. We should maybe see if there's an alternative
