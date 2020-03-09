@@ -26,13 +26,13 @@ class UserProfileForm(forms.ModelForm):
         helper.add_input(Submit('submit', 'Submit'))
         helper.layout = Layout(
             Fieldset(
-                _('Your Profile'),
+                _('Your profile'),
                 'username',
                 '_avatar',
                 'europe'
             ),
             Fieldset(
-                _('Social Media'),
+                _('Social media'),
                 Div(
                     Field('twitter_handle', wrapper_class='col-md-6'),
                     Field('facebook_handle', wrapper_class='col-md-6'),
@@ -63,7 +63,7 @@ class NotificationsForm(forms.ModelForm):
         helper.add_input(Submit('save', 'Save'))
         helper.layout = Layout(
             Fieldset(
-                _('Newsletter & Notifications'),
+                _('Newsletter & notifications'),
                 Div(
                     HTML("<p>I want to receive Civic Europe news</p>"),
                     Field('get_newsletters'),
