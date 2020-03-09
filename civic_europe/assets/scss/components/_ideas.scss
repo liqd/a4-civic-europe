@@ -136,7 +136,7 @@
         border-top-right-radius: 5px;
 
         @media screen and (min-width: $screen-md) {
-            height: 25rem;
+            height: 23rem;
             margin-top: 2.5*$spacer;
         }
     }
@@ -324,7 +324,6 @@
 
     .tabs {
         margin-top: 0;
-        padding-left: 0.5*$spacer;
         width: 100%;
     }
 }
