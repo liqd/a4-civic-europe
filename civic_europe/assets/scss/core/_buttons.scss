@@ -1,3 +1,55 @@
+@mixin button-variant($color, $background, $border) {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+
+    &.focus,
+    &:focus {
+        color: $color;
+        background-color: darken($background, 10%);
+        border-color: darken($border, 25%);
+    }
+
+    &:hover {
+        color: $color;
+        background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+    }
+
+    &.active,
+    &:active,
+    .open > &.dropdown-toggle {
+        color: $color;
+        background-color: darken($background, 10%);
+        background-image: none;
+        border-color: darken($border, 12%);
+
+        &.focus,
+        &:focus,
+        &:hover {
+            color: $color;
+            background-color: darken($background, 17%);
+            border-color: darken($border, 25%);
+        }
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &.focus,
+        &:focus,
+        &:hover {
+            background-color: $background;
+            border-color: $border;
+        }
+    }
+
+    .badge {
+        color: $background;
+        background-color: $color;
+    }
+}
+
 .btn-ce-primary {
     @include button-variant($btn-ce-secondary-bg, $btn-ce-secondary-bg, $btn-ce-secondary-border);
     color: $white;
@@ -14,22 +66,17 @@
 }
 
 .btn-github {
-    @include button-variant($btn-ae-github-color, $btn-ae-github-bg, $btn-ae-github-border);
+    @include button-variant($btn-ce-github-color, $btn-ce-github-bg, $btn-ce-github-border);
     color: white;
 }
 
 .btn-facebook {
-    @include button-variant($btn-ae-facebook-color, $btn-ae-facebook-bg, $btn-ae-facebook-border);
+    @include button-variant($btn-ce-facebook-color, $btn-ce-facebook-bg, $btn-ce-facebook-border);
     color: white;
 }
 
 .btn-google {
-    @include  button-variant($btn-ae-google-color, $btn-ae-google-bg, $btn-ae-google-border);
-    color: white;
-}
-
-.btn-instagram {
-    @include button-variant($btn-ae-instagram-color, $btn-ae-instagram-bg, $btn-ae-instagram-border);
+    @include  button-variant($btn-ce-google-color, $btn-ce-google-bg, $btn-ce-google-border);
     color: white;
 }
 
