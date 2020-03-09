@@ -2,6 +2,17 @@
     display: none;
 }
 
+.action-bar {
+    > .navbar-static {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    > .navbar {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
 .comment-box {
     & textarea {
         margin-top: 0.5*$spacer;
