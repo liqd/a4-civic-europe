@@ -20,7 +20,7 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
         max_length=75,
         unique=True,
         help_text=_(
-            'Required. 60 characters or fewer. Letters, digits, spaces and '
+            'Required. 60 characters or less. Letters, digits, spaces and '
             '@/./+/-/_ only.'),
         validators=[
             validators.RegexValidator(
@@ -56,9 +56,8 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
         upload_to='users/images',
         blank=True,
         verbose_name=_('Profile picture'),
-        help_text=_('Please upload a squared image, at least '
-                    '340x340 px. Allowed formats are jpg, gif '
-                    'and png.')
+        help_text=_('Please upload a picture in landscape format, at least '
+                    '340x340 px. You can upload a .jpg, .png or .gif.')
     )
 
     date_joined = models.DateTimeField(
@@ -96,8 +95,8 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
     website = models.URLField(
         blank=True,
         verbose_name=_('Website'),
-        help_text=_('Plase add either https:// or http:// '
-                    'to the front of your URL.')
+        help_text=_('Please add either https:// or http:// '
+                    'at the beginning of your URL.')
     )
 
     get_notifications = models.BooleanField(

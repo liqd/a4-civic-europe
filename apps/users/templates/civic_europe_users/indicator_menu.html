@@ -14,14 +14,14 @@
                 </a>
                 {% endif %}
                     <a href="{% url 'edit_profile' %}" class="dropdown-item">
-                        <i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span class="dropdown-text">{% trans "Account Settings" %}</span>
+                        <i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span class="dropdown-text">{% trans "Account settings" %}</span>
                     </a>
                 {% get_modules as modules %}
                 {% for module in modules %}
                     {% has_perm 'civic_europe_ideas.add_idea' request.user module as can_add %}
                     {% if can_add %}
                     <a href="{% url 'idea-create' module.slug %}" class="dropdown-item">
-                        <i class="fa fa-plus fa-fw" aria-hidden="true"></i>{% trans 'add idea sketch' %}
+                        <i class="fa fa-plus fa-fw" aria-hidden="true"></i>{% trans 'Add idea sketch' %}
                     </a>
                     {% endif %}
                 {% endfor %}
@@ -29,7 +29,7 @@
                     {% csrf_token %}
                     <input type="hidden" name="next" value="{{ redirect_field_value }}">
                     <button class="dropdown-item" type="submit" value="Register">
-                        <i class="fas fa-sign-out-alt fa-fw" aria-hidden="true"></i>{% trans "logout" %}
+                        <i class="fas fa-sign-out-alt fa-fw" aria-hidden="true"></i>{% trans "Logout" %}
                     </button>
                 </form>
             </div>
@@ -38,8 +38,8 @@
     {% else %}
     <li class="nav-item">
         <div class="login-register-btn-group">
-            <a class="btn btn-default" href="{% url 'account_login' %}?next={{redirect_field_value|urlencode }}">{% trans "login" %}</a>
-            <a class="btn btn-primary" href="{% url 'account_signup' %}?next={{redirect_field_value|urlencode }}">{% trans "register" %}</a>
+            <a class="btn btn-default" href="{% url 'account_login' %}?next={{redirect_field_value|urlencode }}">{% trans "Login" %}</a>
+            <a class="btn btn-primary" href="{% url 'account_signup' %}?next={{redirect_field_value|urlencode }}">{% trans "Register" %}</a>
         </div>
     </li>
     {% endif %}
