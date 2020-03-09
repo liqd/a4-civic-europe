@@ -1,14 +1,15 @@
-.ae-pagination {
-    text-align: center;
+.ce-pagination {
+    margin-top: $spacer;
+}
 
-    li > a {
-        color: $gray-dark;
-        border: solid 1px $ce-light-gray-shadow;
-    }
+.ce-pagination > .active > .page-link {
+    color: $gray-dark;
+    background-color: $ce-light-gray;
+    border: solid 1px $ce-light-gray-shadow;
+}
 
-    .active > a {
-        color: $gray-dark;
-        background-color: $ce-light-gray;
-        border: solid 1px $ce-light-gray-shadow;
-    }
+
+.ce-pagination > .page-item > .page-link {
+    color: $gray-dark;
+    border: solid 1px $ce-light-gray-shadow;
 }
