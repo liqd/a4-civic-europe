@@ -15,7 +15,7 @@ TERMS_OF_USE_LABEL = _('I accept the terms of use.')
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ['username', '_avatar', 'europe',
+        fields = ['username', '_avatar',
                   'twitter_handle', 'facebook_handle',
                   'instagram_handle', 'website']
 
@@ -28,8 +28,7 @@ class UserProfileForm(forms.ModelForm):
             Fieldset(
                 _('Your profile'),
                 'username',
-                '_avatar',
-                'europe'
+                '_avatar'
             ),
             Fieldset(
                 _('Social media'),

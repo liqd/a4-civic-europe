@@ -57,9 +57,6 @@
                   <div class="row tab-content" id="tabContent">
                     <div role="tabpanel" class="profile-info-pane tab-pane col-md-3" id="info" aria-labelledby="info_tab">
                         <h1 class="profile-title">{{ view.user.username }}</h1>
-                        <div>
-                            <P>{{ view.user.europe }}</P>
-                        </div>
                         <ul class="profile-traits">
                             {% with user=view.user %}
                                 {% if user.twitter_handle %}
