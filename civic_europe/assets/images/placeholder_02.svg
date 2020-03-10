@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 720 360" style="enable-background:new 0 0 720 360;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F5F5F5;}
+	.st1{clip-path:url(#SVGID_2_);}
+	.st2{fill:url(#SVGID_3_);}
+</style>
+<rect class="st0" width="720" height="360"/>
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="720" height="360"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st1">
+		
+			<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="180.546" y1="117.778" x2="733.0623" y2="204.3827" gradientTransform="matrix(1 0 0 -1 0 360)">
+			<stop  offset="0" style="stop-color:#01797F"/>
+			<stop  offset="9.722270e-02" style="stop-color:#0A777E"/>
+			<stop  offset="0.2532" style="stop-color:#21737C"/>
+			<stop  offset="0.4486" style="stop-color:#476C78"/>
+			<stop  offset="0.6755" style="stop-color:#7D6272"/>
+			<stop  offset="0.9262" style="stop-color:#C0556B"/>
+			<stop  offset="1" style="stop-color:#D55169"/>
+		</linearGradient>
+		<path class="st2" d="M720,452.3V270l-0.5-0.3l-145.8-89.1L720,91.1l0-182.2l-1.5,0.9L571.8-0.6L424.5-90.6L276.3,0v178.8L129,88.8
+			v182.1l0.5,0.2l294.9,180.6l0.5-0.3l146.7-89.7L720,452.3z M573.7,360.5l144.3-88.2v176.4L573.7,360.5z M717.1,90.5l-144.3,88.2
+			V2.4L717.1,90.5z M279.2,0.6l144.3-88.2V88.7L279.2,0.6z M422.6,90.6l-144.3,88.2V2.4L422.6,90.6z M132.3,270.4l144-88l0,176.2
+			L132.3,270.4z M569.8,180.5l-144.3,88.2V92.3L569.8,180.5z M423.5,268.7l-144.3-88.2l144.3-88.1V268.7z M278.3,182.3l144.3,88.2
+			l-144.3,88.2L278.3,182.3z M423.5,272.3v176.4l-144.1-88.3L423.5,272.3z M570.7,2.4v176.3L426.5,90.6L570.7,2.4z M570.7,182.3
+			v176.4l-144.3-88.2L570.7,182.3z M569.8,360.5l-144.3,88.2V272.3L569.8,360.5z M131.1,92.3l144.3,88.2l-144.3,88.2V92.3z
+			 M569.9,0.6L425.5,88.8V-87.7L569.9,0.6z M717.9-87.5l0,176.3L573.7,0.6L717.9-87.5z M717,270.5l-144.3,88.2V182.3L717,270.5z"/>
+	</g>
+</g>
+</svg>

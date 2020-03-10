@@ -112,8 +112,8 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
 
     @property
     def fallback_avatar(self):
-        number = self.pk % 5
-        return static('images/avatars/avatar-{0:02d}.svg'.format(number))
+        number = self.pk % 4
+        return static('images/avatar-{0:02d}.svg'.format(number))
 
     @property
     def is_innovator(self):
