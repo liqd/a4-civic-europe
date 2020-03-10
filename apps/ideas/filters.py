@@ -111,6 +111,7 @@ class IdeaFilterSet(DefaultsFilterSet):
         method='what_status',
         choices=STATUS_FILTER_CHOICES,
         widget=StatusFilterWidget,
+        empty_label=_('All ideas')
     )
 
     ordering = DistinctOrderingFilter(
