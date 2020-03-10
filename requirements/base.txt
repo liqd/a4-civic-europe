@@ -1,5 +1,5 @@
 # A4
-git+git://github.com/liqd/adhocracy4.git@717cba2931189a0fb2da68757cc4bea34f5dd05e#egg=adhocracy4
+git+git://github.com/liqd/adhocracy4.git@06b4f736658aac903dff4b10a534a2c914519403#egg=adhocracy4
 
 # Additional requirements
 appdirs==1.4.3
