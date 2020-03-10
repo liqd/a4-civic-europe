@@ -39,6 +39,9 @@ module.exports = {
       './civic_europe/assets/js/jquery-fix.js',
       'slick-carousel/slick/slick.min.js',
       'slick-carousel/slick/slick.css'
+    ],
+    image_uploader: [
+      'adhocracy4/adhocracy4/images/assets/image_uploader.js'
     ]
   },
   output: {
