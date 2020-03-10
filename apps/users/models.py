@@ -112,7 +112,7 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
 
     @property
     def fallback_avatar(self):
-        number = self.pk % 4
+        number = self.pk % 3
         return static('images/avatar-{0:02d}.svg'.format(number))
 
     @property
