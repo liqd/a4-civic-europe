@@ -65,15 +65,6 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
         default=timezone.now
     )
 
-    europe = models.TextField(
-        blank=True,
-        max_length=200,
-        verbose_name=_('Your interest in Europe'),
-        help_text=_('Why do you care about Europe? '
-                    'Where do you try to make a change? '
-                    '(max. 200 characters)')
-    )
-
     twitter_handle = models.CharField(
         blank=True,
         max_length=15,
