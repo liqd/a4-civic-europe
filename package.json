@@ -16,7 +16,7 @@
     "@babel/preset-react": "7.8.3",
     "@babel/runtime": "7.8.7",
     "@fortawesome/fontawesome-free": "5.12.1",
-    "adhocracy4": "github:liqd/adhocracy4#38813a50a48ea1def106b5c72a2a015434384141",
+    "adhocracy4": "github:liqd/adhocracy4#eeac104ddb1b37e3791617f0aea22009e2dae667",
     "autoprefixer": "9.7.4",
     "axios": "0.19.2",
     "babel-loader": "8.0.6",
