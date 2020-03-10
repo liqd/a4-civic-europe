@@ -361,7 +361,7 @@ class NetworkAndCommunitySectionEditForm(CoWorkersEmailsFormMixin, BaseForm):
         return helper
 
     def fallback_avatar(self, email):
-        number = adler32(bytes(email, 'UTF-8')) % 4
+        number = adler32(bytes(email, 'UTF-8')) % 3
         return static('images/avatar-{0:02d}.svg'.format(number))
 
     def clean(self):
