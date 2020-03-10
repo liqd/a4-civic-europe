@@ -50,7 +50,7 @@ class IdeaPhase(IdeaPhase):
     }
 
     default_filters = QueryDict('ordering=newest&'
-                                'status=idea_sketch&'
+                                'status=&'
                                 'project=',
                                 mutable=True
                                 )
@@ -68,7 +68,7 @@ class InterimPostSketchPhase(IdeaPhase):
     )
 
     default_filters = QueryDict('ordering=newest&'
-                                'status=idea_sketch&'
+                                'status=&'
                                 'project=',
                                 mutable=True
                                 )
@@ -90,7 +90,7 @@ class CommunityAwardRatingPhase(IdeaPhase):
     }
 
     default_filters = QueryDict('ordering=comments&'
-                                'status=idea_sketch&'
+                                'status=&'
                                 'project=',
                                 mutable=True
                                 )
@@ -106,7 +106,7 @@ class InterimShortlistSelectionPhase(IdeaPhase):
     description = _('ideas for the shortlist are chosen by the jury')
 
     default_filters = QueryDict('ordering=support&'
-                                'status=idea_sketch&'
+                                'status=&'
                                 'project=',
                                 mutable=True
                                 )
