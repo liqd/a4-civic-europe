@@ -1,5 +1,5 @@
 # A4
-git+git://github.com/liqd/adhocracy4.git@eeac104ddb1b37e3791617f0aea22009e2dae667#egg=adhocracy4
+git+git://github.com/liqd/adhocracy4.git@9f4bb81d810577b21e8196e8d2a2bfa1564d10d9#egg=adhocracy4
 
 # Additional requirements
 appdirs==1.4.3
@@ -30,7 +30,7 @@ django-widget-tweaks==1.4.5
 djangorestframework==3.11.0
 easy-thumbnails==2.7
 html5lib==1.0.1
-jsonfield==3.1.0
+jsonfield==2.0.2
 psycopg2-binary==2.8.4
 python-dateutil==2.8.1
 python-magic==0.4.15
