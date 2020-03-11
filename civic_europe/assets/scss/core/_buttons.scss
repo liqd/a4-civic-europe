@@ -51,13 +51,11 @@
 }
 
 .btn-ce-primary {
-    @include button-variant($btn-ce-secondary-bg, $btn-ce-secondary-bg, $btn-ce-secondary-border);
-    color: $white;
+    @include button-variant($white, $btn-ce-secondary-bg, $btn-ce-secondary-border);
 }
 
 .btn-ce-secondary {
-    @include button-variant($btn-ce-secondary-bg, $btn-ce-secondary-bg, $btn-ce-secondary-border);
-    color: $white;
+    @include button-variant($white, $btn-ce-secondary-bg, $btn-ce-secondary-border);
 }
 
 .btn-default {
@@ -67,17 +65,14 @@
 
 .btn-github {
     @include button-variant($btn-ce-github-color, $btn-ce-github-bg, $btn-ce-github-border);
-    color: white;
 }
 
 .btn-facebook {
     @include button-variant($btn-ce-facebook-color, $btn-ce-facebook-bg, $btn-ce-facebook-border);
-    color: white;
 }
 
 .btn-google {
     @include  button-variant($btn-ce-google-color, $btn-ce-google-bg, $btn-ce-google-border);
-    color: white;
 }
 
 .btn-back-to {
