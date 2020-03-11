@@ -1,4 +1,5 @@
 .simple-page {
+    overflow-wrap: break-word;
     margin-top: 3*$spacer;
     padding-left: 0;
     padding-bottom: 3*$spacer;
@@ -12,6 +13,7 @@
 }
 
 .structured-page {
+    overflow-wrap: break-word;
     padding-left: 0;
 
     .col-md-3 {
