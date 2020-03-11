@@ -81,9 +81,17 @@ a,
     }
 
     .footer-entry {
-        padding-top: 20px;
-        padding-bottom: 0;
+        padding: 1.5*$spacer $spacer 0 $spacer;
         line-height: 1.43;
+    }
+}
+
+.footer__navbar {
+    justify-content: space-between;
+
+    & .navbar-nav {
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
