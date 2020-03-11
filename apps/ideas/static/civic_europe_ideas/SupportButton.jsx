@@ -77,7 +77,7 @@ class SupportButton extends React.Component {
             : <i className='far fa-heart' aria-hidden='true' />
           }
           <span className='support-count'> {this.state.supports}</span>
-          <p className='btn-idea-label'>{django.gettext('Support')}</p>
+          <span className='btn-idea-label'>{django.gettext('Support')}</span>
         </button>
       )
     } else {
