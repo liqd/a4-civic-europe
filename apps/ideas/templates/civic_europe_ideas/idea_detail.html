@@ -38,11 +38,11 @@
             {% include 'civic_europe_ideas/includes/idea_detail_header.html' %}
 
             <div class="row d-md-none ideadetail-xs-support">
-                <ul class="nav col pr-0">
+                <ul class="nav col pr-0 pb-2">
                     <li class="nav-idea nav-support mr-auto">
                         {% has_perm 'civic_europe_ideas.may_rate_idea' request.user idea as may_rate_idea %}
                         {% if may_rate_idea %}
-                        {% react_supports idea True %}
+                            {% react_supports idea True %}
                         {% endif %}
                     </li>
                     {% include 'civic_europe_ideas/includes/idea_detail_watch_btns.html' with xs_class="" spacing="<br>" %}
@@ -50,7 +50,7 @@
             </div>
 
             <div class="row ideadetail-tab-bar">
-                <div class="col-md-7 col-lg-6">
+                <div class="col-md-7 col-lg-6 px-0 px-lg-3">
                 <ul class="nav nav-tab tabs" role="tablist">
 
                     <li role="presentation" class="nav-item">

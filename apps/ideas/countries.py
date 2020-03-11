@@ -1,5 +1,5 @@
-from django_countries import Countries
 from django.utils.translation import gettext_lazy as _
+from django_countries import Countries
 
 
 class EuropeanCountries(Countries):
