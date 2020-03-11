@@ -57,19 +57,21 @@
     margin-bottom: 0.5*$spacer;
 
     .panel-default {
-        border-radius: 5px;
         box-shadow: none;
+        border-radius: 5px;
+        border: 1px solid $ce-dark-gray;
     }
 
     .panel-heading {
         background-color: $ce-light-gray;
-        border-color: $ce-dark-gray;
     }
 
     .panel-title {
         font-size: $font-size-lg;
         line-height: 1.33;
         font-weight: normal;
+        margin: 0;
+        padding: 0.5*$spacer;
     }
 
     .panel-title-link {
@@ -89,6 +91,7 @@
 
     .panel-body {
         border-top: none !important;
+        padding: 0.5*$spacer;
     }
 }
 
