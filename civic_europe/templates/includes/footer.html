@@ -2,34 +2,32 @@
 {% load_site_menu "footer" as footer_menu_items %}
 
 <footer id="footer" class="footer">
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="float-left">
-                <ul class="nav navbar-nav">
-                    {% if settings.cms_settings.SocialMediaSettings.facebook %}
-                    <li><a href="{{ settings.cms_settings.SocialMediaSettings.facebook }}" target="_blank" class="footer-entry"><i class="fab fa-facebook" aria-hidden="true"></i> Facebook</a></li>
-                    {% endif %}
+  <div class="container px-0">
+        <nav class="navbar footer__navbar px-md-0">
+            <ul class="navbar-nav">
+                {% if settings.cms_settings.SocialMediaSettings.facebook %}
+                <li class="nav-item"><a href="{{ settings.cms_settings.SocialMediaSettings.facebook }}" target="_blank" class="nav-link footer-entry"><i class="fab fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+                {% endif %}
 
-                    {% if settings.cms_settings.SocialMediaSettings.twitter %}
-                    <li><a href="https://twitter.com/{{ settings.cms_settings.SocialMediaSettings.twitter }}" target="_blank" class="footer-entry"><i class="fab fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
-                    {% endif %}
+                {% if settings.cms_settings.SocialMediaSettings.twitter %}
+                <li class="nav-item"><a href="https://twitter.com/{{ settings.cms_settings.SocialMediaSettings.twitter }}" target="_blank" class="nav-link footer-entry"><i class="fab fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+                {% endif %}
 
-                    {% if settings.cms_settings.SocialMediaSettings.youtube %}
-                    <li><a href="{{ settings.cms_settings.SocialMediaSettings.youtube }}" target="_blank" class="footer-entry"><i class="fab fa-youtube" aria-hidden="true"></i> Youtube</a></li>
-                    {% endif %}
+                {% if settings.cms_settings.SocialMediaSettings.youtube %}
+                <li class="nav-item"><a href="{{ settings.cms_settings.SocialMediaSettings.youtube }}" target="_blank" class="nav-link footer-entry"><i class="fab fa-youtube" aria-hidden="true"></i> Youtube</a></li>
+                {% endif %}
 
-                    {% if settings.cms_settings.SocialMediaSettings.flickr %}
-                    <li><a href="{{ settings.cms_settings.SocialMediaSettings.flickr }}" target="_blank" class="footer-entry"><i class="fab fa-flickr" aria-hidden="true"></i> Flickr</a></li>
-                    {% endif %}
-                </ul>
-            </div>
-            <div class="float-right">
-                <ul class="nav navbar-nav">
-                    {% for menuitem in footer_menu_items %}
-                    <li><a href="{{ menuitem.url }}"class="footer-entry">{{ menuitem.menu_title }}</a></li>
-                    {% endfor %}
-                </ul>
-            </div>
-         </div>
-    </nav>
+                {% if settings.cms_settings.SocialMediaSettings.flickr %}
+                <li class="nav-item"><a href="{{ settings.cms_settings.SocialMediaSettings.flickr }}" target="_blank" class="nav-link footer-entry"><i class="fab fa-flickr" aria-hidden="true"></i> Flickr</a></li>
+                {% endif %}
+            </ul>
+            <ul class="nav navbar-nav">
+                {% for menuitem in footer_menu_items %}
+                <li class="nav-item">
+                  <a href="{{ menuitem.url }}"class="nav-link footer-entry">{{ menuitem.menu_title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
 </footer>
