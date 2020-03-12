@@ -47,7 +47,7 @@
   "devDependencies": {
     "husky": "4.2.3",
     "standard": "14.3.1",
-    "stylelint": "13.2.0"
+    "stylelint": "13.2.1"
   },
   "scripts": {
     "build:prod": "webpack --config ./webpack.prod.js --mode production",
