@@ -18,5 +18,5 @@ A {{ action.obj|verbose_name|lower }} was added to your {{ action.target|verbose
 {% endblock %}
 
 {% block reason %}
-This email was sent to {{ receiver }}. This email was sent to you because you are watching an idea. If you no longer wish to receive these notifications, you can unwatch the idea or disable notifications completely in your account settings.
+This email was sent to {{ receiver }}. You receive this email because you have submitted a {{ action.target|verbose_name|lower }} using this email address. If you no longer wish to receive these notifications, you can disable notifications in your account settings.
 {% endblock %}
