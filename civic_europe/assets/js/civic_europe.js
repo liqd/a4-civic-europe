@@ -18,16 +18,14 @@ $(document).ready(function () {
         breakpoint: 0,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false
+          slidesToScroll: 1
         }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
-          arrows: false
+          slidesToScroll: 2
         }
       },
       {
@@ -52,7 +50,7 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
-    arrows: false,
+    arrows: true,
     centerPadding: 30,
     mobileFirst: true,
     infinite: false,
