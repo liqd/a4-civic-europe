@@ -144,9 +144,10 @@ class ApplicantSectionForm(BaseForm):
 
 class PartnersSectionForm(BaseForm):
     section_name = _('Partners')
-    section_description = _('Please share the names '
-                            'of your partner organisations here. '
-                            'If you do not have any partner '
+    section_description_header = _('Please share the names '
+                                   'of your partner organisations here.')
+
+    section_description = _('If you do not have any partner '
                             'organisations, leave the fields empty. '
                             'You can update these fields any time '
                             'before the application deadline.')

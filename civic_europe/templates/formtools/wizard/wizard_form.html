@@ -7,6 +7,9 @@
 <div class="wizard-page">
     <form class="wizard custom-form container-narrow" method="post" enctype="multipart/form-data" novalidate>
         <h1>{{ view.title }} | {{ form.section_name }}</h1>
+        {% if form.section_description_header  %}
+        <span class="font-weight-bold">{{ form.section_description_header }}</span>
+        {% endif %}
         {% if form.section_description  %}
         <p>{{ form.section_description }}</p>
         {% endif %}

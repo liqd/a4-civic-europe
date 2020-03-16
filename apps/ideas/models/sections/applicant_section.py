@@ -4,6 +4,9 @@ from django_countries.fields import CountryField
 
 from apps.ideas.countries import EuropeanCountries
 
+FIRST_NAME_HELP = _('Your first and last name will be '
+                    'published together with the application.')
+
 LEAD_ORGANISATION_NAME_HELP = _('If you do not yet have '
                                 'a registered organisation, '
                                 'please write the name of '
@@ -36,7 +39,8 @@ LEAD_ORGANISATION_DETAILS_HELP = _('Please provide details about '
 
 class ApplicantSection(models.Model):
     first_name = models.CharField(
-        max_length=250
+        max_length=250,
+        help_text=FIRST_NAME_HELP
     )
     last_name = models.CharField(
         max_length=250
