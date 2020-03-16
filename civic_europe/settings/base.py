@@ -367,5 +367,7 @@ A4_ACTIONABLES = (
     ('civic_europe_ideas', 'ideafollow')
 )
 
+# bootstrap3 refers to crispyform template overwrites
+
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 CRISPY_FAIL_SILENTLY = False
