@@ -10,7 +10,7 @@
 }
 
 .idealist-no-entry {
-    background-color: $ce-brand-red-lighter;
+    background-color: $ce-brand-red;
     margin-top: 1.25*$spacer;
     margin-left: 0.25*$spacer;
     margin-right: 0.25*$spacer;
@@ -207,14 +207,10 @@
 
 .ideadetail-support-btn-group {
     float: right;
-    background-color: $brand-primary;
     border-radius: 5px;
-    color: #fff;
 
     .btn {
         font-size: $font-size-lg;
-        border: 0.5px solid $ce-brand-green;
-        color: #fff;
     }
 
     // @media screen and (min-width: $screen-sm) {
@@ -351,7 +347,7 @@
     padding: 0.5*$spacer 0.75*$spacer;
 
     &.jurystatement {
-        background-color: $ce-brand-red-lighter;
+        background-color: $ce-brand-red;
     }
 
     &-co-workers {

@@ -13,7 +13,7 @@ $ce-lighter-gray: #fafafa;
 $ce-light-gray: #f3f3f3;
 $ce-light-gray-shadow: #ccc;
 $ce-light-gray-darker: #e6e6e6;
-$ce-middle-gray: #999;
+$ce-middle-gray: #6c6c6c;
 $ce-dark-gray: #d8d8d8;
 $ce-font-size-extra-large: 48px;
 $ce-wizard-red: #dc3818;
@@ -24,8 +24,7 @@ $ce-github: #24292e;
 $ce-border--dark: 1px solid $ce-light-gray-shadow;
 $ce-border--light: 1px solid $ce-light-gray;
 
-$ce-brand-red: #d57480; //logo colour #d55169
-$ce-brand-red-lighter: #de8f9d;
+$ce-brand-red: #cc445c; //logo colour #d55169
 $ce-brand-green: #01797f;
 $ce-brand-green-lighter: #c4dcdd;
 $ce-brand-green-rgb: rgba(1, 121, 127, 0.2); // currently only use for active blog category
@@ -123,7 +122,7 @@ $theme-colors: map-merge(
 
 //CI custom Buttons
 $btn-ce-secondary-color:         $gray-dark !default;
-$btn-ce-secondary-bg:            $brand-secondary !default;
+$btn-ce-secondary-bg:            $ce-brand-red !default;
 $btn-ce-secondary-border:        darken($btn-ce-secondary-bg, 5%) !default;
 
 $btn-ce-github-color:            #fff !default;

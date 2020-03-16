@@ -92,7 +92,7 @@ class SupportButton extends React.Component {
               : <i className='far fa-heart' aria-hidden='true' />
             } {django.gettext('Support')}
           </button>
-          <div className='btn btn-addon'>{this.state.supports}</div>
+          <div className='btn btn-primary btn-addon'>{this.state.supports}</div>
         </div>
       )
     }
