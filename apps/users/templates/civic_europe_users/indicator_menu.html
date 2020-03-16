@@ -21,7 +21,7 @@
                     {% has_perm 'civic_europe_ideas.add_idea' request.user module as can_add %}
                     {% if can_add %}
                     <a href="{% url 'idea-create' module.slug %}" class="dropdown-item">
-                        <i class="fa fa-plus fa-fw" aria-hidden="true"></i>{% trans 'Add idea sketch' %}
+                        <i class="fa fa-plus fa-fw" aria-hidden="true"></i>{% trans 'Add idea' %}
                     </a>
                     {% endif %}
                 {% endfor %}
