@@ -40,17 +40,23 @@
     }
 
     @media (max-width: $screen-md) {
-        .slick-prev,
+        .slick-prev {
+            left: 0;
+        }
+
         .slick-next {
-            display: none;
+            right: 0;
         }
     }
 
     .slick-slide {
         margin: 0 10px;
         transition: opacity 0.2s;
-    }
 
+        div {
+            min-width: 100%;
+        }
+    }
 
     .slick-list {
         overflow: visible;
