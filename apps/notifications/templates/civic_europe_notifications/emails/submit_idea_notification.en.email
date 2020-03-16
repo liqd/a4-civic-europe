@@ -10,11 +10,11 @@ Welcome and thanks for sharing your idea!
 Thank you for submitting your project idea for the {{ site.name }} Idea Challenge!
 <br /><br />
 <h3>What happens next?</h3>
-{% if idea.project.active_phase %}You can edit your proposal until {{ idea.project.active_phase.end_date|date:"d F Y (H:i T)"}}. {% endif %}Please note that all applications must be submitted <b>in English</b>, project proposals that are submitted in a language other than English will not be considered.
+{% if idea.project.active_phase %}You can edit your proposal until <b>{{ idea.project.active_phase.end_date|date:"d F Y (H:i T)"}}</b>. {% endif %}Please note that all applications must be submitted <b>in English</b>, project proposals that are submitted in a language other than English will not be considered.
 <br /><br />
 Following the application deadline approximately 30 proposals will be shortlisted from among the submitted proposals that meet the selection and eligibility criteria and fit our call 2020. We will publish the shortlist on our online platform.
 <br /><br />
-After that our interdisciplinary jury selects up to fifteen winning ideas in autumn 2020. Find out more about the selection process and each phase of the idea challenge on www.civic-europe.de.
+After that our interdisciplinary jury selects <b>up to fifteen winning ideas</b> in autumn 2020. Find out more about the selection process and each phase of the idea challenge on www.civic-europe.de.
 <br /><br />
 <h3>Add your co-workers</h3>
 You can add up to <b>five more co-workers</b> to your idea; you will find the field in the application form. All co-workers can edit the text until the application deadline and will appear as team members in your project idea.
