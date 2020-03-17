@@ -19,6 +19,7 @@ This email has the purpose to validate your identity. Please use the link below 
 
 {% block content_extra %}
 Have fun and be inspired!
+<br /><br />
 {% endblock %}
 
 {% block sign_off %}Your {{ site.name }}-Team{% endblock %}
