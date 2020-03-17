@@ -5,7 +5,7 @@
 The idea "{{ idea.title }}" is a winning idea
 {% endblock %}
 
-{% block content %}
+{% block headline %}
 The idea "{{ idea.title }}" is a winning idea of the {{ site.name }}
 {{ idea.module.name }}.
 {% endblock %}

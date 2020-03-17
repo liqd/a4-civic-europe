@@ -5,7 +5,7 @@
 A {{ action.obj|verbose_name|lower }} was created by {{ action.actor.username }}
 {% endblock %}
 
-{% block content %}
+{% block headline %}
 A {{ action.obj|verbose_name|lower }} was added to your {{ action.target|verbose_name|lower }}
 {% endblock %}
 

@@ -37,6 +37,10 @@
             box-shadow: 0 1px 0 0 #cccccc;
         }
 
+        .content-left {
+            text-align: left;
+        }
+
         .footer {
             color: #999;
             padding: 30px;
@@ -55,7 +59,7 @@
     {% block greeting %}{% endblock %}
 
     <h3>{% block headline %}{% endblock %}</h3>
-    {% block content %}{% endblock %}
+    <div class="content-left">{% block content %}{% endblock %}</div>
 
     {% block cta %}
       <a href="{% block cta_url %}{% endblock %}" class="button">
@@ -64,6 +68,7 @@
     {% endblock %}
 
     {% block content_extra %}{% endblock %}
+
     <div>
       {% block sign_off %}{% endblock %}
     </div>

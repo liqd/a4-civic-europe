@@ -6,9 +6,11 @@ Welcome and thanks for sharing your idea!
 
 {% block greeting %}Hi,{% endblock %}
 
-{% block content %}
+{% block headline %}
 Thank you for submitting your project idea for the {{ site.name }} Idea Challenge!
-<br /><br />
+{% endblock  %}
+
+{% block content %}
 <h3>What happens next?</h3>
 {% if idea.project.active_phase %}You can edit your proposal until <b>{{ idea.project.active_phase.end_date|date:"d F Y (H:i T)"}}</b>. {% endif %}Please note that all applications must be submitted <b>in English</b>, project proposals that are submitted in a language other than English will not be considered.
 <br /><br />
