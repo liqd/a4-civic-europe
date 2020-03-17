@@ -232,3 +232,11 @@
         }
     }
 }
+
+.label {
+    @extend .badge;
+}
+
+.label-subtle {
+    @extend .badge-subtle;
+}
