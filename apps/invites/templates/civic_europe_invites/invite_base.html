@@ -9,7 +9,7 @@
                 <h2>{% blocktrans with object=object.subject %} Do you want to collaborate on "{{ object }}"?{% endblocktrans %}</h2>
                 {{ form.non_field_errors }}
                 <p>
-                    {% trans "If you accept you will be able to edit the idea and appear as a team member in the proposal. You can edit the text altogether until the application deadline." %}
+                    {% trans "If you accept you will be able to edit the idea and appear as a team member. You can edit the text altogether until the application deadline." %}
                 </p>
                 {% block invite_action %}{% endblock %}
             </div>
