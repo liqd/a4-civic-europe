@@ -18,13 +18,13 @@
     </ul>
 </li>
 
-{% has_perm 'civic_europe_ideas.follow_idea' request.user idea as can_watch_proposal %}
-{% would_have_perm 'civic_europe_ideas.follow_idea' idea as could_watch_proposal %}
-{% if can_watch_proposal %}
+{% has_perm 'civic_europe_ideas.follow_idea' request.user idea as can_watch_idea %}
+{% would_have_perm 'civic_europe_ideas.follow_idea' idea as could_watch_idea %}
+{% if can_watch_idea %}
 <li class="nav-idea {{ xs_class }}">
     {% react_follows idea %}
 </li>
-{% elif could_watch_proposal %}
+{% elif could_watch_idea %}
 <li class="nav-idea {{ xs_class }}">
     <a href="{% url 'account_login' %}?next={% url 'idea-detail' slug=idea.slug %}" class="btn btn-follow" id="idea-watch">
         <i class="fa fa-eye" aria-hidden="true"></i>
