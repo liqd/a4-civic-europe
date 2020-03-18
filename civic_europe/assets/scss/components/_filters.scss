@@ -127,11 +127,8 @@
         }
 
         .number-of-filters {
-            position: absolute;
             margin-left: 0.5*$spacer;
-            padding: 0.25*$spacer;
-            width: 25px;
-            height: 25px;
+            padding: 0.25*$spacer 0.5*$spacer;
             border-radius: 50%;
             background-color: $ce-brand-red;
             font-size: $font-size-base;
