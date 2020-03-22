@@ -6,7 +6,7 @@ from adhocracy4 import phases
 from . import apps, models
 
 
-class IdeaPhase(phases.PhaseContent):
+class BaseIdeaPhase(phases.PhaseContent):
     app = apps.Config.label
     weight = 10
     view = None
@@ -19,7 +19,7 @@ class IdeaPhase(phases.PhaseContent):
         return self.default_filters
 
 
-class PreCallPhase(IdeaPhase):
+class PreCallPhase(BaseIdeaPhase):
     phase = 'pre_call'
 
     name = _('Pre call phase')
@@ -36,7 +36,7 @@ class PreCallPhase(IdeaPhase):
 phases.content.register(PreCallPhase())
 
 
-class IdeaPhase(IdeaPhase):
+class IdeaPhase(BaseIdeaPhase):
     phase = 'ideas'
 
     name = _('Idea phase')
@@ -59,7 +59,7 @@ class IdeaPhase(IdeaPhase):
 phases.content.register(IdeaPhase())
 
 
-class InterimPostSketchPhase(IdeaPhase):
+class InterimPostSketchPhase(BaseIdeaPhase):
     phase = 'interim_post_sketch'
 
     name = _('Interim post sketch phase')
@@ -77,7 +77,7 @@ class InterimPostSketchPhase(IdeaPhase):
 phases.content.register(InterimPostSketchPhase())
 
 
-class CommunityAwardRatingPhase(IdeaPhase):
+class CommunityAwardRatingPhase(BaseIdeaPhase):
     phase = 'community_award_rating'
 
     name = _('Community award rating')
@@ -99,7 +99,7 @@ class CommunityAwardRatingPhase(IdeaPhase):
 phases.content.register(CommunityAwardRatingPhase())
 
 
-class InterimShortlistSelectionPhase(IdeaPhase):
+class InterimShortlistSelectionPhase(BaseIdeaPhase):
     phase = 'interim_shortlist_selection'
 
     name = _('Interim shortlist selection phase')
@@ -115,7 +115,7 @@ class InterimShortlistSelectionPhase(IdeaPhase):
 phases.content.register(InterimShortlistSelectionPhase())
 
 
-class InterimShortlistPublicationPhase(IdeaPhase):
+class InterimShortlistPublicationPhase(BaseIdeaPhase):
     phase = 'interim_shortlist_publication'
 
     name = _('Interim shortlist publication phase')
@@ -130,7 +130,7 @@ class InterimShortlistPublicationPhase(IdeaPhase):
 phases.content.register(InterimShortlistPublicationPhase())
 
 
-class InterimWinnersPhase(IdeaPhase):
+class InterimWinnersPhase(BaseIdeaPhase):
     phase = 'interim_winners'
 
     name = _('Interim winners phase')
