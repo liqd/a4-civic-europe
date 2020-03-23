@@ -152,7 +152,7 @@
 
         .filter-element {
             width: 90%;
-            margin: 0.25*$spacer 0.25*$spacer;
+            margin: auto;
         }
 
         .filter-element:nth-child(2n+3) .dropdown-menu {
