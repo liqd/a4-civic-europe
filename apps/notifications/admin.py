@@ -60,6 +60,15 @@ class NotifyMixin:
         ] + super().get_urls()
 
     def _notify(self, request, *, display_winners=False):
+        """ Send out the notification.
+
+        If the 'notify winners' button is clicked, the winners notification
+        is sent out. If the 'notify shortlist' is clicked, for the ideas that
+        also won the community award (and were shortlisted because of that),
+        the community award notification is sent out, while for ideas that
+        are only shortlisted and did not win the community award, the
+        shortlist notification is sent out.
+        """
         if not self.has_change_permission(request):
             raise PermissionDenied
 

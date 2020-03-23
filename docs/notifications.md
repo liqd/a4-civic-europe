@@ -45,14 +45,16 @@ Explains the civic europe specific notifications.
    - template: civic_europe_notifications/emails/notify_followers_winner
 
 7. NotifyFollowersOnShortlist
-   - sent to: followers of shortlisted ideas
-   - when: button in django-admin is clicked
+   - sent to: followers of shortlisted ideas, that did not win the community award
+   - when: button 'notify shortlist' in django-admin is clicked
    - not sent to: creators of shortlisted ideas
    - not sent to: followers who disabled the notifications
    - template: civic_europe_notifications/emails/notify_followers_shortlist
 
 
 8. NotifyFollowersOnCommunityAward
-   - is not sent at all
-   - is there in the templates and emails.py-code, but not added to the admin
+   - sent to: followers of shortlisted ideas, that also won the community award
+   - when: button 'notify shortlist' in django-admin is clicked
+   - not sent to: creators of shortlisted ideas
+   - not sent to: followers who disabled the notifications
    - template: civic_europe_notifications/emails/notify_followers_community_award
