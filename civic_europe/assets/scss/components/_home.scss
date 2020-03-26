@@ -33,6 +33,12 @@
 .structured-page-section {
     padding-bottom: 3*$spacer;
 
+    &__anchor {
+        display: inline-block;
+        height: 100px;
+        margin-top: -100px;
+    }
+
     h2 {
         margin-top: 0;
         margin-bottom: 1.25*$spacer;
