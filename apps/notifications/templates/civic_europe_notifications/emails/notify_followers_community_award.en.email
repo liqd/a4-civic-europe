@@ -11,7 +11,7 @@ The idea "{{ idea.title }}" has won the community award.
 {% block content %}
 The idea "{{ idea.title }}" is the
 community award winner of the {{ site.name }} {{ idea.module.name }} competition.
-The idea will now be included in the shortlist and receive start-up funding.
+Community award winners are automatically shortlist candidates for the idea challenge.
 {% endblock %}
 
 {% block cta_url %}
