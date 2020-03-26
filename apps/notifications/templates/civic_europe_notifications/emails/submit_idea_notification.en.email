@@ -12,20 +12,20 @@ Thank you for submitting your project idea for the {{ site.name }} Idea Challeng
 
 {% block content %}
 <h3>What happens next?</h3>
-{% if idea.project.active_phase %}You can edit your idea until <b>{{ idea.project.active_phase.end_date|date:"d F Y (H:i T)"}}</b>. {% endif %}Please note that all applications must be submitted <b>in English</b>, project ideas that are submitted in a language other than English will not be considered.
+{% if idea.project.active_phase %}You can edit your idea until <b>{{ idea.project.active_phase.end_date|date:"F d, Y (H:i T)"}}</b>. {% endif %}Please note that all applications must be submitted <b>in English</b>, project ideas that are submitted in a language other than English will not be considered.
 <br /><br />
 Following the application deadline approximately 30 ideas will be shortlisted from among the submitted ideas that meet the selection and eligibility criteria and fit our call 2020. We will publish the shortlist on our online platform.
 <br /><br />
-After that our interdisciplinary jury selects <b>up to fifteen winning ideas</b> in autumn 2020. Find out more about the selection process and each phase of the idea challenge on www.civic-europe.de.
+After that our interdisciplinary jury selects <b>up to fifteen winning ideas</b> in autumn 2020. Find out more about the selection process and each phase of the idea challenge on {{ site.name }}.
 <br /><br />
 <h3>Add your co-workers</h3>
-You can add up to <b>five more co-workers</b> to your idea; you will find the field in the application form. All co-workers can edit the text until the application deadline and will appear as team members in your project idea.
+You can add up to <b>five more co-workers</b> to your idea; you will find the field in the application form. All co-workers can edit the text until the application deadline and will appear as team members in your project ideas.
 <br /><br />
 <h3>Take a look at the other submitted ideas</h3>
 All submitted project ideas are publicly visible in our Idea Space on our website. Who could be an interesting partner for you? What inspirations can you get from them? Use the opportunity to <b>exchange experiences and knowledge,</b> discuss topics and methods and expand your network. Give each other food for thoughts, work together and learn from one another.
 <br /><br />
 {% if community_award_rating_phase %}
-<h3>Vote for the Community Award from {{ community_award_rating_phase.start_date|date:"d F Y" }} until {{ community_award_rating_phase.end_date|date:"d F Y" }}</h3>
+<h3>Vote for the Community Award from {{ community_award_rating_phase.start_date|date:"F d, Y" }} until {{ community_award_rating_phase.end_date|date:"F d, Y" }}</h3>
 Anyone who has submitted an idea is entitled to vote for our Community Award - both applicants and co-workers. The idea with the most votes will be included in the shortlist and receive start-up funding.
 <br /><br />
 Please note that you can choose your personal favourite project idea. However, you and your co-workers can not vote for your own project idea.
