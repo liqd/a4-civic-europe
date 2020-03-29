@@ -5,5 +5,5 @@ from django_countries import Countries
 class EuropeanCountries(Countries):
     only = ['BG', 'HR', 'GR', 'HU', 'IT', 'PL',
             'PT', 'RO', 'SK', 'SI', 'ES',
-            ('CZ', _('Czech republic'))
+            ('CZ', _('Czech Republic'))
             ]
