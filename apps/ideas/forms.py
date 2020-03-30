@@ -133,13 +133,16 @@ class ApplicantSectionForm(BaseForm):
             self.end_date = None
         super().__init__(*args, **kwargs)
         if self.end_date:
-            self.section_description = _('Applications may be submitted, '
-                                         'in English only, until {}. '
-                                         'After publishing, '
-                                         'you can continue to edit '
-                                         'all the fields '
-                                         'of your application right up to {}.'
-                                         .format(self.end_date, self.end_date))
+            self.section_description = _('Deadline for the submission '
+                                         'of project ideas is {}. '
+                                         'If you submit your idea '
+                                         'before the deadline, you '
+                                         'will still be able to edit your '
+                                         'application until this date. '
+                                         'Please note that only applications'
+                                         ' in English language will be '
+                                         'considered.'
+                                         .format(self.end_date))
 
 
 class PartnersSectionForm(BaseForm):
