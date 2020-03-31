@@ -105,7 +105,7 @@ class IdeaCreateWizard(PermissionRequiredMixin,
             settings_time_zone = timezone(settings.TIME_ZONE)
             end_date = self.module.active_phase.end_date
             return end_date.astimezone(settings_time_zone)\
-                .strftime("%d %B %Y (%H:%M CET)")
+                .strftime("%B %d %Y (%H:%M CET)")
 
     def get_form_kwargs(self, step=None):
         if step == '0':
