@@ -26,14 +26,6 @@ CONFIRM_PUBLICITY_LABEL = _('I hereby confirm and agree that '
 ACCEPT_CONDITIONS_LABEL = _('I hereby agree to the {}terms'
                             ' of use{} of the Civic'
                             ' Europe idea challenge.')
-CONFIRM_IDEA_CHALLENGE_CAMP_WITH_DATE = _('If selected, a representative of '
-                                          'my project will commit to joining '
-                                          'the Idea Challenge Camp '
-                                          'from {} to {}.')
-CONFIRM_IDEA_CHALLENGE_CAMP_WITHOUT_DATE = _('If selected, a representative '
-                                             'of my project will commit '
-                                             'to joining the Idea Challenge '
-                                             'Camp at the end of April 2018.')
 
 COWORKERS_TITLE = _('Please add your team members here.')
 COWORKERS_HELP = _('Here you can insert the email addresses of '
@@ -44,10 +36,6 @@ COWORKERS_HELP = _('Here you can insert the email addresses of '
                    'page and will be able to edit your idea. ')
 
 COWORKERS_EDIT_TITLE = _('Your team members')
-
-IDEA_CHALLENGE_CAMP_OPTION_LINK = _('More information about '
-                                    'the {}Idea Challenge Camp{}. '
-                                    '(max. 150 characters)')
 
 
 class BaseForm(forms.ModelForm):

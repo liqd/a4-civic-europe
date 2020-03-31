@@ -2,7 +2,7 @@ from django.utils.html import mark_safe
 from django.utils.translation import ugettext_lazy as _
 from wagtail.core.models import Site
 
-from cms.settings.models import CollaborationCampSettings, HelpPages
+from cms.settings.models import HelpPages
 
 LINK_TEXT = _('Please look {}here{} for more information.')
 
@@ -23,10 +23,3 @@ def add_link_to_helptext(help_text, help_page_name, link_text=None):
         return '{} {}'.format(help_text, mark_safe(link_text))
 
     return help_text
-
-
-def get_idea_challenge_camp_settings():
-    site = Site.objects.filter(
-        is_default_site=True
-    ).first()
-    return CollaborationCampSettings.for_site(site)
