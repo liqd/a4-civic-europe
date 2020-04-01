@@ -1,7 +1,6 @@
 .simple-page {
     overflow-wrap: break-word;
     margin-top: 3*$spacer;
-    padding-left: 0;
     padding-bottom: 3*$spacer;
 
     h1 {
@@ -14,20 +13,10 @@
 
 .structured-page {
     overflow-wrap: break-word;
-    padding-left: 0;
-
-    .col-md-3 {
-        padding-left: 0;
-    }
 }
 
 .structured-page-sections-container {
     margin-top: 3*$spacer;
-    padding-left: 0;
-
-    @media(max-width:$screen-sm-max) {
-        padding-left: 15px;
-    }
 }
 
 .structured-page-section {
