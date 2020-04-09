@@ -45,7 +45,7 @@
     "webpack-merge": "4.2.2"
   },
   "devDependencies": {
-    "husky": "4.2.4",
+    "husky": "4.2.5",
     "standard": "14.3.3",
     "stylelint": "13.3.1"
   },
