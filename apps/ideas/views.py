@@ -186,7 +186,8 @@ class IdeaDetailView(generic.DetailView):
         idea_list_1.append((_('What is the local challenge?'),
                             self.object.challenge))
         idea_list_1.append((_('How does your idea strengthen democracy and '
-                              'citizenship as a living practice?'),
+                              'active citizenship at a local and community '
+                              'level?'),
                             self.object.impact))
         idea_list_1.append((_('Who are you doing it for?'),
                             self.object.target_group))
