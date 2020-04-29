@@ -11,7 +11,8 @@ class UserAdmin(auth.admin.UserAdmin):
             'is_staff',
             'is_superuser',
             'groups',
-            'get_newsletters')}),
+            'get_newsletters',
+            'get_notifications')}),
         (_('Important dates'), {'fields': ('last_login', 'date_joined')}),
         (_('Profile data'), {'fields': (
             '_avatar',
