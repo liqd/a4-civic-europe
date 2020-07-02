@@ -61,6 +61,8 @@
                     {% if can_export %}
                         <a class="btn btn-ce-secondary export-btn btn-wide" href="
                                 {% url 'idea-export' %}{{ '?'|add:view.filter.data.urlencode }}">{% trans "export" %}</a>
+                        <a class="btn btn-ce-secondary export-btn btn-wide" href="
+                                    {% url 'idea-support-export' %}{{ '?'|add:view.filter.data.urlencode }}">{% trans "export support statistics" %}</a>
                     {% endif %}
                 </div>
                 <div class="col-md-9 idealist-list-container">

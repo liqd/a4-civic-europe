@@ -22,6 +22,8 @@ urlpatterns = [
         views.IdeaEditView.as_view(), name='idea-update-form'),
     url(r'list/export/$', views.IdeaExportView.as_view(),
         name='idea-export'),
+    url(r'support/export/$', views.IdeaSupportExportView.as_view(),
+        name='idea-support-export'),
     url(r'^$',
         views.IdeaListView.as_view(), name='idea-list')
 

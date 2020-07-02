@@ -1,5 +1,6 @@
+import numbers
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from django.conf import settings
 from django.contrib.messages.views import SuccessMessageMixin
@@ -81,6 +82,76 @@ class IdeaExportView(PermissionRequiredMixin,
             [co_worker.email for co_worker in item.idea.co_workers.all()]
         )
         return co_workers
+
+    def get_object_list(self):
+        return self.get_queryset()
+
+
+class IdeaSupportExportView(PermissionRequiredMixin,
+                            export_views.BaseExport,
+                            export_views.AbstractXlsxExportView,
+                            filter_views.FilteredListView,
+                            ):
+
+    permission_required = 'civic_europe_ideas.export_idea'
+    model = Idea
+    filter_set = filters.IdeaFilterSet
+
+    def get_fields(self):
+        # Get virtual fields in their order from the Mixins
+        header = []
+        names = []
+
+        names.append('id')
+        header.append('Idea ID')
+
+        sdate = datetime.now() - timedelta(days=30)
+        for i in range(30):
+            day = sdate + timedelta(days=i)
+            names.append(day)
+            header.append(str(day))
+
+        return names, header
+
+    def get_field_data(self, item, name):
+
+        if isinstance(name, datetime):
+            target_time = name
+            next_day_time = target_time + timedelta(days=1) \
+                - timedelta(seconds=1)
+
+            return item.ratings.filter(value=1,
+                                       created__range=(target_time,
+                                                       next_day_time)).count()
+
+        # Use custom getters if they are defined
+        get_field_attr_name = 'get_%s_data' % name
+        if hasattr(self, get_field_attr_name):
+            get_field_attr = getattr(self, get_field_attr_name)
+
+            if hasattr(get_field_attr, '__call__'):
+                return get_field_attr(item)
+            return get_field_attr
+
+        # Finally try to get the fields data as a property
+        value = getattr(item, name, '')
+        if isinstance(value, numbers.Number) and not isinstance(value, bool):
+            return value
+        return str(value)
+
+    def get_base_filename(self):
+        settings_time_zone = timezone(settings.TIME_ZONE)
+        return 'download_%s' % (
+            datetime.now(settings_time_zone).strftime('%Y%m%dT%H%M%S'))
+
+    def get_queryset(self):
+        queryset = super().get_queryset() \
+            .annotate_positive_rating_count()
+        return queryset
+
+    @property
+    def raise_exception(self):
+        return self.request.user.is_authenticated
 
     def get_object_list(self):
         return self.get_queryset()
