@@ -105,8 +105,11 @@ class IdeaSupportExportView(PermissionRequiredMixin,
         names.append('id')
         header.append('Idea ID')
 
-        sdate = datetime.now() - timedelta(days=30)
-        for i in range(30):
+        names.append('title')
+        header.append('Idea title')
+
+        sdate = datetime.strptime("08/06/2020", "%d/%m/%Y")
+        for i in range(12):
             day = sdate + timedelta(days=i)
             names.append(day)
             header.append(str(day))
