@@ -50,8 +50,8 @@ class BaseForm(forms.ModelForm):
 
 class CoWorkersEmailsFormMixin:
     def clean_co_workers_emails(self):
-        from email.utils import getaddresses
         import re
+        from email.utils import getaddresses
 
         value = self.cleaned_data['co_workers_emails'].strip(' ,')
         addresses = getaddresses([value])

@@ -13,9 +13,7 @@ class Config(AppConfig):
     label = 'civic_europe_contrib'
 
     def ready(self):
-        from multiselectfield.db.fields import (
-            MultiSelectField
-        )
+        from multiselectfield.db.fields import MultiSelectField
 
         MultiSelectField.from_db_value = (
             MultiSelectField__from_db_value
