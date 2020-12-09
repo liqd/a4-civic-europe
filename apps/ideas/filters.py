@@ -1,3 +1,4 @@
+from datetime import date
 from operator import itemgetter
 
 import django_filters
@@ -18,6 +19,7 @@ STATUS_FILTER_CHOICES = [
 ]
 
 ORDERING_CHOICES = [
+    ('?', _('Random')),
     ('newest', _('Most recent')),
     ('comments', _('Most comments')),
     ('support', _('Most support')),
@@ -67,7 +69,7 @@ class FreeTextSearchFilterWidget(widgets.FreeTextFilterWidget):
 class IdeaFilterSet(DefaultsFilterSet):
 
     defaults = {
-        'ordering': 'newest',
+        'ordering': '?',
         'status': 'winner',
     }
 
@@ -123,7 +125,8 @@ class IdeaFilterSet(DefaultsFilterSet):
         ),
         choices=ORDERING_CHOICES,
         empty_label=None,
-        widget=OrderingFilterWidget
+        widget=OrderingFilterWidget,
+        random_seed=date.today()
     )
 
     search = FreeTextFilter(
