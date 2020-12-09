@@ -3,7 +3,6 @@ import pytest
 from apps.notifications import emails as not_emails
 from tests.helpers import intercept_emails
 
-
 """
 Those notifications are sent immediatly:
 

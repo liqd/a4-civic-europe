@@ -10,7 +10,7 @@ class FollowableDefault:
         return self.context_value
 
     def __repr__(self):
-        return '{}()'.format(self.__class__.__name__, self.context_key)
+        return '{}()'.format(self.__class__.__name__)
 
 
 class FollowSerializer(serializers.ModelSerializer):
