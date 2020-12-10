@@ -120,17 +120,23 @@ module.exports = {
       filename: '[name].css',
       chunkFilename: '[id].css'
     }),
-    new CopyWebpackPlugin([
-      {
-        from: './civic_europe/assets/images/**/*',
-        to: 'images/',
-        flatten: true
-      },
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: './civic_europe/assets/images/**/*',
+          to: 'images/',
+          globOptions: {
+            flatten: true
+          }
+        },
       {
         from: './civic_europe/assets/icons/**/*',
         to: 'icons/',
-        flatten: true
+        globOptions: {
+          flatten: true
+        }
       }
-    ])
+    ]
+  })
   ]
 }
