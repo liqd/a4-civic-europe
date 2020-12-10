@@ -1,11 +1,11 @@
 /* global location */
 
-var widget = require('adhocracy4').widget
-var ReactComments = require('adhocracy4').comments
-var ReactCommentsAsync = require('adhocracy4').comments_async
-var ReactFollow = require('../../../apps/follows/static/follows/react_follows.jsx')
-var ReactSupport = require('../../../apps/ideas/static/civic_europe_ideas/react_supports.jsx')
-var $ = window.jQuery = window.$ = require('jquery')
+const widget = require('adhocracy4').widget
+const ReactComments = require('adhocracy4').comments
+const ReactCommentsAsync = require('adhocracy4').comments_async
+const ReactFollow = require('../../../apps/follows/static/follows/react_follows.jsx')
+const ReactSupport = require('../../../apps/ideas/static/civic_europe_ideas/react_supports.jsx')
+const $ = window.jQuery = window.$ = require('jquery')
 
 // load bootstrap components
 require('bootstrap')
@@ -19,7 +19,7 @@ $(function () {
   widget.initialise('ae', 'supports', ReactSupport.renderSupports)
 })
 
-var getCurrentPath = function () {
+const getCurrentPath = function () {
   return location.pathname
 }
 
