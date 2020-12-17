@@ -74,7 +74,7 @@ class NotificationsForm(forms.ModelForm):
         helper.add_input(Submit('save', 'Save'))
         helper.layout = Layout(
             Fieldset(
-                _('Notifications'), 
+                _('Notifications'),
                 Div(
                     HTML("<p>I want to receive mails with notifications "
                          "about:</p>"),
