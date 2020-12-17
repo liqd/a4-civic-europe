@@ -15,7 +15,9 @@ from .models.sections.applicant_section import ApplicantSection
 from .models.sections.idea_section import IdeaSection
 from .models.sections.local_dimension_section import LocalDimensionSection
 from .models.sections.network_community_section import NetworkSection
-from .models.sections.partners_section import PartnersSection
+from .models.sections.partners_section import (CO_WORKERS_HELP,
+                                               CO_WORKERS_LABEL,
+                                               PartnersSection)
 from .models.sections.road_to_impact_section import RoadToImpactSection
 
 CONFIRM_PUBLICITY_LABEL = _('I hereby confirm and agree that '
@@ -26,14 +28,6 @@ CONFIRM_PUBLICITY_LABEL = _('I hereby confirm and agree that '
 ACCEPT_CONDITIONS_LABEL = _('I hereby agree to the {}terms'
                             ' of use{} of the Civic'
                             ' Europe idea challenge.')
-
-COWORKERS_TITLE = _('Please add your team members here.')
-COWORKERS_HELP = _('Here you can insert the email addresses of '
-                   'up to 5 team members. They will receive an email '
-                   'inviting them to register on the Civic '
-                   'Europe website. After registering they '
-                   'will appear with their user name on your idea '
-                   'page and will be able to edit your idea. ')
 
 COWORKERS_EDIT_TITLE = _('Your team members')
 
@@ -141,10 +135,10 @@ class ApplicantSectionForm(BaseForm):
                                          .format(self.end_date))
 
 
-class PartnersSectionForm(BaseForm):
+class PartnersSectionForm(CoWorkersEmailsFormMixin, BaseForm):
     section_name = _('Partners')
-    section_description_header = _('Please share the names '
-                                   'of your partner organisations here.')
+    section_description_header = _('Please share information about '
+                                   'your partner organisations here.')
 
     section_description = _('If you do not have any partner '
                             'organisations, leave the fields empty. '
@@ -155,6 +149,10 @@ class PartnersSectionForm(BaseForm):
         _('Partner Organisation 2'),
         _('Partner Organisation 3'),
     ]
+    co_workers_emails = forms.CharField(
+        required=False,
+        help_text=CO_WORKERS_HELP,
+        label=CO_WORKERS_LABEL)
 
     class Meta:
         model = PartnersSection
@@ -162,10 +160,15 @@ class PartnersSectionForm(BaseForm):
             chain.from_iterable((
                 'partner_organisation_{}_name'.format(index),
                 'partner_organisation_{}_website'.format(index),
-                'partner_organisation_{}_country'.format(index)
+                'partner_organisation_{}_country'.format(index),
+                'partner_organisation_{}_location_name'.format(index),
+                'partner_organisation_{}_location'.format(index),
+                'partner_organisation_{}_details'.format(index),
+                'partner_organisation_{}_role'.format(index)
             ) for index in range(1, 4))
         )
         fields.append('partners_more_info')
+        fields.append('co_workers_emails')
 
     @property
     def helper(self):
@@ -177,11 +180,188 @@ class PartnersSectionForm(BaseForm):
                     heading,
                     'partner_organisation_{}_name'.format(index),
                     'partner_organisation_{}_website'.format(index),
-                    'partner_organisation_{}_country'.format(index)
+                    'partner_organisation_{}_country'.format(index),
+                    'partner_organisation_{}_location_name'.format(index),
+                    'partner_organisation_{}_location'.format(index),
+                    'partner_organisation_{}_details'.format(index),
+                    'partner_organisation_{}_role'.format(index)
                 ) for index, heading in enumerate(self.accordions, 1)
             ]
         )
         return helper
+
+    def clean_co_workers_emails(self):
+        addresses = super().clean_co_workers_emails()
+
+        if len(addresses) > 5:
+            raise ValidationError(_('Maximum 5 team members allowed'))
+
+        return addresses
+
+
+class PartnersSectionEditForm(CoWorkersEmailsFormMixin, BaseForm):
+    section_name = _('Partners')
+    accordions = [
+        _('Partner Organisation 1'),
+        _('Partner Organisation 2'),
+        _('Partner Organisation 3'),
+    ]
+    co_workers_emails = forms.CharField(
+        required=False,
+        help_text=CO_WORKERS_HELP,
+        label=CO_WORKERS_LABEL)
+
+    class Meta:
+        model = PartnersSection
+        fields = list(
+            chain.from_iterable((
+                'partner_organisation_{}_name'.format(index),
+                'partner_organisation_{}_website'.format(index),
+                'partner_organisation_{}_country'.format(index),
+                'partner_organisation_{}_location_name'.format(index),
+                'partner_organisation_{}_location'.format(index),
+                'partner_organisation_{}_details'.format(index),
+                'partner_organisation_{}_role'.format(index)
+            ) for index in range(1, 4))
+        )
+        fields.append('partners_more_info')
+        fields.append('co_workers_emails')
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        if self.instance:
+            invites = self.instance.ideainvite_set.all()
+            co_workers = self.instance.co_workers.all()
+            if invites or co_workers:
+                self.fields['co_workers'] = forms.MultipleChoiceField(
+                    required=False,
+                    label=COWORKERS_EDIT_TITLE,
+                    choices=[
+                        (
+                            'c:' + c.username,
+                            {
+                                'username': c.username,
+                                'avatar': c.avatar_or_fallback_url,
+                                'cta_checked': _('remove'),
+                                'cta_unchecked': _('will be removed on save')
+                            }
+                        ) for c in co_workers
+                    ] + [
+                        (
+                            'i:' + i.email,
+                            {
+                                'username': i.email,
+                                'avatar': self.fallback_avatar(i.email),
+                                'detail': _('Invitation pending'),
+                                'cta_checked': _('remove'),
+                                'cta_unchecked': _('will be removed on save')
+                            }
+                        ) for i in invites
+                    ],
+                    initial=['c:' + c.username for c in co_workers] +
+                            ['i:' + i.email for i in invites],
+                    widget=forms.CheckboxSelectMultiple
+                )
+
+    @property
+    def helper(self):
+        helper = super().helper
+        helper.render_unmentioned_fields = True
+
+        helper.layout = crisp.layout.Layout(
+            crisp.bootstrap.Accordion(
+                *[
+                    crisp.bootstrap.AccordionGroup(
+                        heading,
+                        'partner_organisation_{}_name'.format(index),
+                        'partner_organisation_{}_website'.format(index),
+                        'partner_organisation_{}_country'.format(index),
+                        'partner_organisation_{}_location_name'.format(index),
+                        'partner_organisation_{}_location'.format(index),
+                        'partner_organisation_{}_details'.format(index),
+                        'partner_organisation_{}_role'.format(index)
+                    ) for index, heading in enumerate(self.accordions, 1)
+                ]
+            ),
+            'partners_more_info',
+            'co_workers_emails'
+        )
+        if 'co_workers' in self.fields:
+            helper.layout.append(
+                crisp.layout.Field(
+                    'co_workers',
+                    template="bootstrap3/"
+                             "user_checkboxselectmultiple_field.html")
+            )
+
+        return helper
+
+    def fallback_avatar(self, email):
+        number = adler32(bytes(email, 'UTF-8')) % 3
+        return static('images/avatar-{0:02d}.svg'.format(number))
+
+    def clean(self):
+        super().clean()
+
+        addresses = self.cleaned_data.get('co_workers_emails', [])
+        invites = []
+        co_workers = []
+        for entry in self.cleaned_data.get('co_workers', []):
+            if entry[:2] == 'c:':
+                co_workers.append(entry[2:])
+            else:
+                invites.append(entry[2:])
+        self.cleaned_data['invites'] = invites
+        self.cleaned_data['co_workers'] = co_workers
+
+        duplicate_errors = []
+        for (name, address) in addresses:
+            if address in invites:
+                error = ValidationError({
+                    'co_workers_emails': _(
+                        'You already invited {email}'
+                    ).format(email=address)
+                })
+                duplicate_errors.append(error)
+        if duplicate_errors:
+            raise ValidationError(duplicate_errors)
+
+        co_worker_count = sum([
+            len(addresses),
+            len(invites),
+            len(co_workers),
+        ])
+
+        if co_worker_count > 5:
+            raise ValidationError(_('Maximum 5 team members allowed'))
+
+    def save(self, commit=True):
+        """
+        Deletes invites and co-workers and adds new invites of instance.
+        There is a little hack here, it uses the idea creator and not the
+        current user as creator for the invites. Therefor no user needs to
+        passed and it can be used in the edit view, just as all other forms.
+        """
+        super().save(commit)
+
+        co_workers = self.instance.co_workers.exclude(
+            username__in=self.cleaned_data.get('co_workers', [])
+        )
+        self.instance.co_workers.remove(*co_workers)
+
+        self.instance.ideainvite_set.exclude(
+            email__in=self.cleaned_data.get('invites', [])
+        ).delete()
+
+        if 'co_workers_emails' in self.cleaned_data:
+            for name, email in self.cleaned_data['co_workers_emails']:
+                self.instance.ideainvite_set.invite(
+                    self.instance.creator,
+                    email
+                )
+
+        return self.instance
 
 
 class IdeaSectionForm(BaseForm):
@@ -263,12 +443,8 @@ class FinanceSectionForm(BaseForm):
                                             "higher than the total budget"))
 
 
-class NetworkAndCommunitySectionForm(CoWorkersEmailsFormMixin, BaseForm):
+class NetworkAndCommunitySectionForm(BaseForm):
     section_name = _('Network & Community')
-    co_workers_emails = forms.CharField(
-        required=False,
-        help_text=COWORKERS_HELP,
-        label=COWORKERS_TITLE)
     confirm_publicity = forms.BooleanField(label=CONFIRM_PUBLICITY_LABEL)
     accept_conditions = forms.BooleanField(label='')
 
@@ -282,149 +458,20 @@ class NetworkAndCommunitySectionForm(CoWorkersEmailsFormMixin, BaseForm):
         model = NetworkSection
         fields = [
             'network',
-            'co_workers_emails',
             'feedback',
             'accept_conditions'
         ]
 
-    def clean_co_workers_emails(self):
-        addresses = super().clean_co_workers_emails()
 
-        if len(addresses) > 5:
-            raise ValidationError(_('Maximum 5 team members allowed'))
-
-        return addresses
-
-
-class NetworkAndCommunitySectionEditForm(CoWorkersEmailsFormMixin, BaseForm):
+class NetworkAndCommunitySectionEditForm(BaseForm):
     section_name = _('Network & Community')
-    co_workers_emails = forms.CharField(
-        required=False,
-        help_text=COWORKERS_HELP,
-        label=COWORKERS_TITLE)
 
     class Meta:
         model = Idea
         fields = [
             'network',
-            'co_workers_emails',
             'feedback',
         ]
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
-        if self.instance:
-            invites = self.instance.ideainvite_set.all()
-            co_workers = self.instance.co_workers.all()
-            if invites or co_workers:
-                self.fields['co_workers'] = forms.MultipleChoiceField(
-                    required=False,
-                    label=COWORKERS_EDIT_TITLE,
-                    choices=[
-                        (
-                            'c:' + c.username,
-                            {
-                                'username': c.username,
-                                'avatar': c.avatar_or_fallback_url,
-                                'cta_checked': _('remove'),
-                                'cta_unchecked': _('will be removed on save')
-                            }
-                        ) for c in co_workers
-                    ] + [
-                        (
-                            'i:' + i.email,
-                            {
-                                'username': i.email,
-                                'avatar': self.fallback_avatar(i.email),
-                                'detail': _('Invitation pending'),
-                                'cta_checked': _('remove'),
-                                'cta_unchecked': _('will be removed on save')
-                            }
-                        ) for i in invites
-                    ],
-                    initial=['c:' + c.username for c in co_workers] +
-                            ['i:' + i.email for i in invites],
-                    widget=forms.CheckboxSelectMultiple
-                )
-                self.fields.move_to_end('co_workers', last=False)
-
-            self.fields.move_to_end('co_workers_emails', last=False)
-
-    @property
-    def helper(self):
-        helper = super().helper
-        helper['co_workers'].wrap(
-            crisp.layout.Field,
-            template="bootstrap3/user_checkboxselectmultiple_field.html",
-        )
-        return helper
-
-    def fallback_avatar(self, email):
-        number = adler32(bytes(email, 'UTF-8')) % 3
-        return static('images/avatar-{0:02d}.svg'.format(number))
-
-    def clean(self):
-        super().clean()
-
-        addresses = self.cleaned_data.get('co_workers_emails', [])
-        invites = []
-        co_workers = []
-        for entry in self.cleaned_data.get('co_workers', []):
-            if entry[:2] == 'c:':
-                co_workers.append(entry[2:])
-            else:
-                invites.append(entry[2:])
-        self.cleaned_data['invites'] = invites
-        self.cleaned_data['co_workers'] = co_workers
-
-        duplicate_errors = []
-        for (name, address) in addresses:
-            if address in invites:
-                error = ValidationError({
-                    'co_workers_emails': _(
-                        'You already invited {email}'
-                    ).format(email=address)
-                })
-                duplicate_errors.append(error)
-        if duplicate_errors:
-            raise ValidationError(duplicate_errors)
-
-        co_worker_count = sum([
-            len(addresses),
-            len(invites),
-            len(co_workers),
-        ])
-
-        if co_worker_count > 5:
-            raise ValidationError(_('Maximum 5 team members allowed'))
-
-    def save(self, commit=True):
-        """
-        Deletes invites and co-workers and adds new invites of instance.
-        There is a little hack here, it uses the idea creator and not the
-        current user as creator for the invites. Therefor no user needs to
-        passed and it can be used in the edit view, just as all other forms.
-        """
-        super().save(commit)
-
-        co_workers = self.instance.co_workers.exclude(
-            username__in=self.cleaned_data.get('co_workers', [])
-        )
-        self.instance.co_workers.remove(*co_workers)
-
-        self.instance.ideainvite_set.exclude(
-            email__in=self.cleaned_data.get('invites', [])
-        ).delete()
-
-        if 'co_workers_emails' in self.cleaned_data:
-            for name, email in self.cleaned_data['co_workers_emails']:
-                self.instance.ideainvite_set.invite(
-                    self.instance.creator,
-                    email
-                )
-
-        return self.instance
 
 
 class FinishForm(forms.Form):
