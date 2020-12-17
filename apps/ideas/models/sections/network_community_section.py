@@ -1,4 +1,3 @@
-from django.conf import settings
 from django.db import models
 from django.utils.translation import ugettext as _
 
@@ -9,13 +8,6 @@ NETWORK_HELP = _('Winning projects meet at least one'
                  'Think about your skills, resources, networks and '
                  'partners when describing what you could offer and '
                  'what you would like to take away. (max. 800 characters)')
-
-CO_WORKERS_HELP = _('Here you can insert the email addresses of'
-                    ' up to 5 team members. They will receive an '
-                    'email inviting them to register on the Civic '
-                    'Europe website. After registering they will '
-                    'appear with their user name on your idea page '
-                    'and will be able to edit your idea.')
 
 FEEDBACK_HELP = _('What kind of advice, comments or feedback '
                   'would you like to receive about your idea '
@@ -29,14 +21,6 @@ class NetworkSection(models.Model):
         help_text=NETWORK_HELP,
         verbose_name=_('How will you contribute to and '
                        'benefit from the Civic Europe network? '))
-
-    co_workers = models.ManyToManyField(
-        settings.AUTH_USER_MODEL,
-        related_name='%(class)s_co_workers',
-        blank=True,
-        verbose_name=_('Please add your team members here.'),
-        help_text=CO_WORKERS_HELP)
-
     feedback = models.TextField(
         max_length=300,
         blank=True,

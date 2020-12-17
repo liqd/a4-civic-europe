@@ -154,7 +154,7 @@ class IdeaEditView(
 
     form_classes = [
         forms.ApplicantSectionForm,
-        forms.PartnersSectionForm,
+        forms.PartnersSectionEditForm,
         forms.IdeaSectionForm,
         forms.LocalDimensionSectionForm,
         forms.RoadToImpactSectionForm,
