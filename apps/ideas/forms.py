@@ -86,6 +86,9 @@ class CoWorkersEmailsFormMixin:
 class ApplicantSectionForm(BaseForm):
     section_name = _('About You')
 
+    section_description = _('Your first and last name will be '
+                            'published together with the application.')
+
     class Meta:
         model = ApplicantSection
         fields = [
@@ -93,13 +96,18 @@ class ApplicantSectionForm(BaseForm):
             'last_name',
             'lead_organisation_name',
             'lead_organisation_status',
+            'clarification_legal_status',
             'lead_organisation_details',
             'lead_organisation_website',
             'lead_organisation_country',
-            'lead_organisation_city',
+            'lead_organisation_location_name',
+            'lead_organisation_location',
             'contact_email',
             'year_of_registration'
         ]
+        widgets = {
+            'year_of_registration': forms.TextInput(attrs={'maxlength': 20})
+        }
 
     def clean(self):
         cleaned_data = super().clean()
