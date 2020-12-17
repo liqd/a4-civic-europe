@@ -65,7 +65,7 @@ class UserProfileForm(forms.ModelForm):
 class NotificationsForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ['get_notifications']
+        fields = ['get_notifications', 'get_newsletters']
 
     @property
     def helper(self):
@@ -74,7 +74,12 @@ class NotificationsForm(forms.ModelForm):
         helper.add_input(Submit('save', 'Save'))
         helper.layout = Layout(
             Fieldset(
-                _('Notifications'), 
+                _('Newsletter & notifications'),
+                Div(
+                    HTML("<p>I want to receive Civic Europe news</p>"),
+                    Field('get_newsletters'),
+                    css_class='notification-settings'
+                ),
                 Div(
                     HTML("<p>I want to receive mails with notifications "
                          "about:</p>"),
@@ -90,6 +95,8 @@ class SignUpForm(auth_forms.UserCreationForm):
     terms_of_use = forms.BooleanField(label=TERMS_OF_USE_LABEL)
 
     def signup(self, request, user):
+        user.get_newsletters = self.cleaned_data["get_newsletters"]
+
         user.signup(
             self.cleaned_data['username'],
             self.cleaned_data['email'],
@@ -103,4 +110,4 @@ class SignUpForm(auth_forms.UserCreationForm):
     class Meta:
         model = User
         fields = ('email', 'username', 'password1', 'password2',
-                  'terms_of_use')
+                  'get_newsletters', 'terms_of_use')

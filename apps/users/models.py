@@ -95,6 +95,11 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
         default=True
     )
 
+    get_newsletters = models.BooleanField(
+        verbose_name=_('Send me Civic Europe news.'),
+        default=False
+    )
+
     objects = auth_models.UserManager()
 
     USERNAME_FIELD = 'email'
