@@ -164,3 +164,32 @@ class ThreeImagesBlock(StructBlock):
         template = 'cms_home/blocks/three_images_block.html'
         label = 'Three images block'
         help_text = 'Three images in a row'
+
+
+class RichtextLinkBlock(StructBlock):
+    body = RichTextBlock(required=True)
+    link = URLBlock(required=False)
+    link_text = CharBlock(required=False)
+
+    class Meta:
+        template = 'cms_home/blocks/richtext_with_link.html'
+
+
+class ThreeColumnRichTextBlock(StructBlock):
+    title = CharBlock(required=False)
+    columns_count = ChoiceBlock(choices=[
+        (1, 'One column'),
+        (2, 'Two columns'),
+        (3, 'Three columns')
+
+    ], default=3)
+
+    columns = ListBlock(
+        RichtextLinkBlock(required=True)
+    )
+
+    class Meta:
+        template = 'cms_home/blocks/richtext_column_block.html'
+        icon = 'grip'
+        label = '1-3 Column Text'
+        help_text = 'Text in 1 - 3 columns with optional link.'
