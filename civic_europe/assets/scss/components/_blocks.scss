@@ -154,11 +154,16 @@
     }
 }
 
-.three-column-text-block {
-    background-color: $ce-light-gray;
+.column-text-block {
+    &__1,
+    &__2,
+    &__3,
+    &__three {
+        background-color: $ce-light-gray;
 
-    &-title {
-        margin-top: 0;
+        &-title {
+            margin-top: 0;
+        }
     }
 }
 
@@ -218,4 +223,19 @@
             margin-right: auto;
         }
     }
+}
+
+.block-col-1 {
+    text-align: center;
+
+    @extend .col-sm-6;
+    @extend .offset-3;
+}
+
+.block-col-2 {
+    @extend .col-sm-6;
+}
+
+.block-col-3 {
+    @extend .col-sm-4;
 }

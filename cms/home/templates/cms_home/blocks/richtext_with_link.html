@@ -1,0 +1,16 @@
+<div class="block-col-{{ column_count }} {% if column.body|wordcount < 50 %} text-center {% endif %}">
+  {% if column.body and not column.link %}
+    {{ column.body }}
+    {% elif column.body and column.link %}
+    {{ column.body }}
+    <div>
+        <a href="{{ column.link }}" class="btn btn-primary teasertextblock-btn">
+          <span class="teasertextblock-linktext">{{ column.link_text }}</span></a>
+    </div>
+    {% else %}
+    <div>
+        <a href="{{ column.link }}" class="btn btn-primary teasertextblock-btn">
+          <span class="teasertextblock-linktext">{{ column.link_text }}</span></a>
+    </div>
+  {% endif %}
+</div>

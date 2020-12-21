@@ -1,0 +1,16 @@
+{% load wagtailimages_tags wagtailcore_tags %}
+
+<div class="column-text-block__{{ value.columns_count }}">
+    <div class="container block">
+        <div class="row equal">
+          {% if value.title %}
+          <div class="col-12 text-center">
+              <h2 class="three-image-block-title"> {{ value.title }}</h2>
+          </div>
+          {% endif %}
+          {% for column in value.columns %}
+            {% include_block column with column_count=value.columns_count %}
+          {% endfor %}
+        </div>
+    </div>
+</div>

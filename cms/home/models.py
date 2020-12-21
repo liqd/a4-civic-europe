@@ -18,7 +18,8 @@ class HomePage(Page):
         ('call_to_action', custom_blocks.CallToActionBlock()),
         ('idea_carousel', custom_blocks.IdeaCarouselBlock()),
         ('blogs', custom_blocks.ThreeBlogEntriesBlock()),
-        ('three_images_block', custom_blocks.ThreeImagesBlock())
+        ('three_images_block', custom_blocks.ThreeImagesBlock()),
+        ('richtext_columns', custom_blocks.ThreeColumnRichTextBlock())
     ]
 
     description = models.TextField(blank=True)
@@ -142,7 +143,8 @@ class HomePage(Page):
 class SimplePage(Page):
     block_types = [
         ('text', blocks.RichTextBlock()),
-        ('FAQs', custom_blocks.FAQBlock())
+        ('FAQs', custom_blocks.FAQBlock()),
+        ('richtext_columns', custom_blocks.ThreeColumnRichTextBlock())
     ]
 
     body = StreamField(block_types, null=True)
@@ -160,7 +162,8 @@ class SimplePage(Page):
 
 class StructuredTextPage(Page):
     block_types = [
-        ('section', custom_blocks.SectionBlock())
+        ('section', custom_blocks.SectionBlock()),
+        ('richtext_columns', custom_blocks.ThreeColumnRichTextBlock())
     ]
 
     body = StreamField(block_types, null=True)
