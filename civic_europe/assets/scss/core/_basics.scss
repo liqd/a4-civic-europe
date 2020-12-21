@@ -155,11 +155,13 @@ a,
     }
 
     &.left {
+        width: 50%;
         float: left;
         margin-right: $spacer;
     }
 
     &.right {
+        width: 50%;
         float: right;
         margin-left: $spacer;
     }
