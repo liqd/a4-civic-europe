@@ -374,8 +374,9 @@ class IdeaSectionForm(BaseForm):
             'subtitle',
             'pitch',
             'image',
-            'topics',
-            'topics_other'
+            'country_of_implementation',
+            'field_of_action',
+            'field_of_action_other'
         ]
 
 
