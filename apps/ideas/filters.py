@@ -32,13 +32,13 @@ class StatusFilterWidget(widgets.DropdownLinkWidget):
     label = _('Status')
 
 
-class TopicFilterWidget(widgets.DropdownLinkWidget):
-    label = _('Topic')
+class FieldOfActionFilterWidget(widgets.DropdownLinkWidget):
+    label = _('Field Of Action')
 
     def __init__(self, attrs=None):
         choices = (('', _('All')),)
         choices += (models.sections.idea_section.
-                    TOPIC_CHOICES)
+                    FIELD_OF_ACTION_CHOICES)
 
         super().__init__(attrs, choices)
 
@@ -71,9 +71,9 @@ class IdeaFilterSet(DefaultsFilterSet):
         'status': 'winner',
     }
 
-    topics = django_filters.CharFilter(
+    field_of_action = django_filters.CharFilter(
         lookup_expr='icontains',
-        widget=TopicFilterWidget,
+        widget=FieldOfActionFilterWidget,
     )
 
     project = django_filters.ModelChoiceFilter(
@@ -149,5 +149,5 @@ class IdeaFilterSet(DefaultsFilterSet):
 
     class Meta:
         model = models.Idea
-        fields = ['search', 'project', 'status', 'topics', 'country',
+        fields = ['search', 'project', 'status', 'field_of_action', 'country',
                   'ordering']

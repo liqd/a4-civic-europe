@@ -96,8 +96,8 @@ class ProjectChooserBlock(ChooserBlock):
 class IdeaCarouselBlock(StructBlock):
     headline = CharBlock(required=False)
     year = ProjectChooserBlock(required=False)
-    topic = ChoiceBlock(choices=idea_section.TOPIC_CHOICES,
-                        required=False)
+    field_of_action = ChoiceBlock(choices=idea_section.FIELD_OF_ACTION_CHOICES,
+                                  required=False)
     ordering = ChoiceBlock(choices=filters.ORDERING_CHOICES, required=False)
     status = ChoiceBlock(choices=filters.STATUS_FILTER_CHOICES, required=False)
 

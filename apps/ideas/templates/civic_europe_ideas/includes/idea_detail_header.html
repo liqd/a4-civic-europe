@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-md-9 ideadetail-title">
                 <div class="ideadetail-category">
-                    {{ idea.all_idea_topics_names|join:", " }}
+                    {{ idea.all_idea_field_of_action_names|join:", " }}
                 </div>
                 <h3>{{ idea.title }} {% if idea.badge %}<span class="badge idea__badge {{ idea.badge|cut:" " }}">{{ idea.badge }}</span>{% endif %}</h3>
                 {% if idea.subtitle %}
