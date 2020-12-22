@@ -7,7 +7,7 @@ register = template.Library()
 
 
 @register.simple_tag(takes_context=False)
-def load_ideas(year, topic, ordering, status):
+def load_ideas(year, field_of_action, ordering, status):
 
     ideas = Idea.objects.all()\
         .annotate_comment_count()\
@@ -16,8 +16,9 @@ def load_ideas(year, topic, ordering, status):
 
     if year:
         ideas = idea_filter_set.filters['project'].filter(ideas, year)
-    if topic:
-        ideas = idea_filter_set.filters['idea_topics'].filter(ideas, topic)
+    if field_of_action:
+        ideas = idea_filter_set.filters['idea_field_of_action']\
+            .filter(ideas, field_of_action)
     if ordering:
         ideas = idea_filter_set.filters['ordering'].filter(ideas, [ordering])
     if status:

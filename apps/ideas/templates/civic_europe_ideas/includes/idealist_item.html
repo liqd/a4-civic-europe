@@ -9,8 +9,8 @@
         </a>
         <div class="idealist-text">
             <div class="idealist-category">
-                {% if idea.topics %}
-                    {{ idea.idea_topics_names|join:" | " }}
+                {% if idea.field_of_action %}
+                    {{ idea.idea_field_of_action_names|join:" | " }}
                 {% else %}
                     &nbsp;
                 {% endif %}
