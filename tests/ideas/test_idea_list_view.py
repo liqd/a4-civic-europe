@@ -17,7 +17,7 @@ def test_idea_list_view(client, idea_factory):
     assert len(response.context_data['object_list']) == 0
     assert response.status_code == 200
 
-    response = client.get(url + '?topics=ES&ordering=newest&'
+    response = client.get(url + '?field_of_action=ES&ordering=newest&'
                           'project=&status=')
     assert len(response.context_data['object_list']) == 3
     assert response.status_code == 200
@@ -37,7 +37,7 @@ def test_idea_list_view_idea_phase(client, idea_factory, module):
         assert len(response.context_data['object_list']) == 2
         assert response.status_code == 200
 
-        response = client.get(url + '?topics=ES&ordering=newest&'
+        response = client.get(url + '?field_of_action=ES&ordering=newest&'
                               'project=&status=')
         assert len(response.context_data['object_list']) == 2
         assert response.status_code == 200

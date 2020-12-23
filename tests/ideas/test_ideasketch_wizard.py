@@ -1,4 +1,5 @@
 import pytest
+from django.contrib.staticfiles import finders
 from django.core import mail
 from django.urls import reverse
 
@@ -8,7 +9,7 @@ from tests.helpers import active_phase
 
 
 @pytest.mark.django_db
-def test_ideasketch_create_wizard(client, user, module):
+def test_ideasketch_create_wizard(client, user, module, image):
     client.login(username=user.email,
                  password='password')
     url = reverse('idea-create',
@@ -57,29 +58,40 @@ def test_ideasketch_create_wizard(client, user, module):
         response = client.post(url, data)
         assert response.status_code == 200
 
+        img_file = open(finders.find('images/cta_tile_logo_colour.png'), "rb")
+
         data = {
             'idea_create_wizard-current_step': '2',
             '2-title': 'My very good idea',
             '2-pitch': 'My very good idea is such a good idea!',
-            '2-topics': 'CE'
+            '2-image': img_file,
+            '2-country_of_implementation': 'CZ',
+            '2-field_of_action': 'YP'
         }
 
         response = client.post(url, data)
         assert response.context['form'].errors == {}
         assert response.status_code == 200
+
+        img_file.close()
+        img_file2 = open(finders.find('images/cta_tile_logo.png'), "rb")
 
         data = {
             'idea_create_wizard-current_step': '2',
             '2-title': 'My very good idea',
             '2-subtitle': 'My very good idea - subtitle',
             '2-pitch': 'My very good idea is such a good idea!',
-            '2-topics': 'CE'
+            '2-image': img_file2,
+            '2-country_of_implementation': 'CZ',
+            '2-field_of_action': 'YP'
         }
 
         # Form 4 (Local Dimension)
         response = client.post(url, data)
         assert response.context['form'].errors == {}
         assert response.status_code == 200
+
+        img_file2.close()
 
         data = {
             'idea_create_wizard-current_step': '3',

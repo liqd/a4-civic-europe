@@ -19,7 +19,7 @@ class IdeaFactory(factory.django.DjangoModelFactory):
     # idea section
     title = factory.Faker('name')
     pitch = factory.Faker('text')
-    topics = ['ES', 'SI']
+    field_of_action = ['ES', 'SI']
     # local dimension section
     location = factory.Faker('city')
     challenge = factory.Faker('text')
