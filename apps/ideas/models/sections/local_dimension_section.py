@@ -1,14 +1,25 @@
 from django.db import models
 from django.utils.translation import ugettext as _
+from multiselectfield import MultiSelectField
 
-LOCATION_HELP = _('We are looking for initiatives that '
-                  'will take place outside of the big urban '
-                  'centres that are attuned to polarisation '
-                  'or have a low density of cohesion in society '
-                  'and with few possibilities for engagement. '
-                  'Which region is mainly affected by your project? '
-                  'Please name city, country and/or region e.g. '
-                  'Teleorman, south Romania. (max. 100 characters)')
+from .applicant_section import LEAD_ORGANISATION_LOCATION_CHOICES
+
+MIXED_LOCATION = 'ML'
+LOCATION_DETAILS_CHOICES = LEAD_ORGANISATION_LOCATION_CHOICES + \
+                           ((MIXED_LOCATION, _('Mixed location (if your '
+                                               'project will take place '
+                                               'in several locations)')),)
+
+LOCATION_HELP = _('Please name city, country and/or region (max. 100 '
+                  'characters). For instance: “Teleorman, south Romania.” ')
+
+LOCATION_DETAILS_HELP = _('Please specify the type of the location. We are '
+                          'aware that national definitions of urban and '
+                          'rural areas differ significantly and places with '
+                          'the same number of inhabitants can be perceived '
+                          'in some countries as urban and in others as '
+                          'rural. This question merely helps us to better '
+                          'categorize the prospective locations.')
 
 CHALLENGE_HELP = _('Tell us more about the region your project idea is based '
                    'in and what challenges it faces regarding democracy and '
@@ -46,8 +57,15 @@ UNIQUENESS_HELP = _('Please describe what niche your initiative '
 class LocalDimensionSection(models.Model):
     location = models.TextField(
         max_length=100,
-        verbose_name=_('Where will your project idea take place? '),
+        verbose_name=_('Where will your project take place?'),
         help_text=LOCATION_HELP
+    )
+    location_details = MultiSelectField(
+        max_length=255,
+        choices=LOCATION_DETAILS_CHOICES,
+        verbose_name=_('Location'),
+        help_text=LOCATION_DETAILS_HELP,
+        max_choices=1
     )
     challenge = models.TextField(
         max_length=800,
