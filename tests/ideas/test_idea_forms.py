@@ -8,30 +8,26 @@ from apps.ideas import forms as idea_forms
 @pytest.mark.parametrize('idea__co_workers', [[]])
 def test_community_section_empty_edit(idea):
     """
-    Check that the CommunitySectionEdit form works if no co-workers and
+    Check that the PartnersSectionEdit form works if no co-workers and
     and invites are present.
     """
 
-    form = idea_forms.NetworkAndCommunitySectionEditForm(
+    form = idea_forms.PartnersSectionEditForm(
         instance=idea,
     )
 
     assert list(idea.co_workers.all()) == []
     assert list(idea.ideainvite_set.all()) == []
 
-    form = idea_forms.NetworkAndCommunitySectionEditForm(
+    form = idea_forms.PartnersSectionEditForm(
         instance=idea,
         data={
             'co_workers_emails': 'test@test.de, test2@test.de',
-            'network': 'edit_network',
-            'feedback': 'feedback'
         }
     )
 
     assert form.is_valid()
     idea = form.save()
-    assert idea.network == 'edit_network'
-    assert idea.feedback == 'feedback'
     invites = ['test@test.de', 'test2@test.de']
     new_invites = list(
         idea.ideainvite_set.values_list('email', flat=True)
@@ -51,11 +47,11 @@ def test_co_worker_edit(idea):
     one operation.
     """
     co_workers = list(idea.co_workers.all())
-    form = idea_forms.NetworkAndCommunitySectionEditForm(
+    form = idea_forms.PartnersSectionEditForm(
         instance=idea,
     )
 
-    form = idea_forms.NetworkAndCommunitySectionEditForm(
+    form = idea_forms.PartnersSectionEditForm(
         instance=idea,
         data={
             'co_workers_emails': 'test1@test.de, test2@test.de',
@@ -64,20 +60,20 @@ def test_co_worker_edit(idea):
     )
     assert not form.is_valid()
 
-    form = idea_forms.NetworkAndCommunitySectionEditForm(
+    form = idea_forms.PartnersSectionEditForm(
         instance=idea,
         data={
             'co_workers_emails': 'test1@test.de, test2@test.de',
             'co_workers': ['c:Erich', 'i:foo@test.de'],
-            'network': 'edit_network',
-            'feedback': 'feedback'
+            'partner_organisation_1_name': 'my partner organisation',
+            'partner_organisation_1_role': 'big help'
         }
     )
 
     form.is_valid()
     assert not form.errors
     idea = form.save()
-    assert idea.network == 'edit_network'
+    assert idea.partner_organisation_1_name == 'my partner organisation'
     invites = ['foo@test.de', 'test1@test.de', 'test2@test.de']
     new_invites = list(
         idea.ideainvite_set.values_list('email', flat=True)
@@ -93,12 +89,10 @@ def test_co_worker_edit(idea):
                          [['test1@test.de', 'test2@test.de', 'test3@test.de']])
 @pytest.mark.parametrize('idea__co_workers', [['test4', 'test5']])
 def test_co_worker_edit_too_many(idea):
-    form = idea_forms.NetworkAndCommunitySectionEditForm(
+    form = idea_forms.PartnersSectionEditForm(
         instance=idea,
         data={
             'co_workers_emails': 'test6@test.de',
-            'network': 'edit_network',
-            'feedback': 'feedback',
             'co_workers': ['c:test4', 'c:test5', 'i:test1@test.de',
                            'i:test2@test.de', 'i:test3@test.de'],
         }
@@ -112,12 +106,12 @@ def test_co_worker_edit_too_many(idea):
                          [['test1@test.de', 'test2@test.de', 'test3@test.de']])
 @pytest.mark.parametrize('idea__co_workers', [['test4', 'test5']])
 def test_co_worker_edit_replace_one(idea):
-    form = idea_forms.NetworkAndCommunitySectionEditForm(
+    form = idea_forms.PartnersSectionEditForm(
         instance=idea,
         data={
+            'partner_organisation_1_name': 'my partner organisation',
+            'partner_organisation_1_role': 'big help',
             'co_workers_emails': 'test6@test.de',
-            'network': 'edit_network',
-            'feedback': 'feedback',
             'co_workers': ['c:test4', 'i:test1@test.de',
                            'i:test2@test.de', 'i:test3@test.de'],
         }
@@ -129,12 +123,12 @@ def test_co_worker_edit_replace_one(idea):
 @pytest.mark.django_db
 @pytest.mark.parametrize('idea__invites', [['test@test.de']])
 def test_collaborators_reinvite(idea):
-    form = idea_forms.NetworkAndCommunitySectionEditForm(
+    form = idea_forms.PartnersSectionEditForm(
         instance=idea,
         data={
+            'partner_organisation_1_name': 'my partner organisation',
+            'partner_organisation_1_role': 'big help',
             'co_workers_emails': 'test@test.de',
-            'network': 'edit_network',
-            'feedback': 'feedback',
             'co_workers': ['i:test@test.de'],
         }
     )
