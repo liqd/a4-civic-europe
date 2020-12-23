@@ -387,12 +387,18 @@ class LocalDimensionSectionForm(BaseForm):
         model = LocalDimensionSection
         fields = [
             'location',
+            'location_details',
+            'location_details_mixed',
+            'cohesion',
             'challenge',
-            'impact',
             'target_group',
             'local_embedding',
-            'uniqueness'
+            'perspective_and_dialog'
         ]
+
+        widgets = {
+            'location_details': forms.RadioSelect()
+        }
 
 
 class RoadToImpactSectionForm(BaseForm):
