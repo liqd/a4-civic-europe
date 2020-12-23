@@ -96,11 +96,12 @@ def test_ideasketch_create_wizard(client, user, module, image):
         data = {
             'idea_create_wizard-current_step': '3',
             '3-location': 'Balance a ball on your nose',
+            '3-location_details': 'UA',
+            '3-cohesion': 'Because there`re no balls around',
             '3-challenge': 'I balanced a ball on my nose',
-            '3-impact': 'I will balance a ball on my nose',
             '3-target_group': 'Children',
             '3-local_embedding': 'Children',
-            '3-uniqueness': 'Me and my ball',
+            '3-perspective_and_dialog': 'The ball can`t talk',
         }
 
         # Form 5 (Road to Impact)
