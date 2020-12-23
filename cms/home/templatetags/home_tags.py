@@ -17,7 +17,7 @@ def load_ideas(year, field_of_action, ordering, status):
     if year:
         ideas = idea_filter_set.filters['project'].filter(ideas, year)
     if field_of_action:
-        ideas = idea_filter_set.filters['idea_field_of_action']\
+        ideas = idea_filter_set.filters['field_of_action']\
             .filter(ideas, field_of_action)
     if ordering:
         ideas = idea_filter_set.filters['ordering'].filter(ideas, [ordering])
