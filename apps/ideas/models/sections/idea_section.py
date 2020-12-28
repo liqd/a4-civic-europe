@@ -6,25 +6,31 @@ from multiselectfield import MultiSelectField
 from adhocracy4.images import fields
 from apps.ideas.countries import EuropeanCountries
 
-COMMUNITY_DEVELOPMENT = 'CD'
-SOCIAL_INCLUSION = 'SI'
-ENVIRONMENT_AND_SUSTAINABILITY = 'ES'
 ARTS_AND_CULTURAL_ACTIVITIES = 'AC'
+COMMUNITY_DEVELOPMENT = 'CD'
+EDUCATION_AND_RESEARCH = 'ER'
+ENVIRONMENT_AND_SUSTAINABILITY = 'ES'
+HEALTH = 'HL'
 HUMAN_RIGHTS = 'HR'
-YOUTH_PARTICIPATION = 'YP'
 JOURNALISM = 'JL'
+LAW_ADVOCACY_AND_POLICY = 'LP'
 SOCIAL_ENTREPRENEURSHIP = 'SE'
+SOCIAL_INCLUSION = 'SI'
+YOUTH_PARTICIPATION = 'YP'
 OTHER = 'OT'
 
 FIELD_OF_ACTION_CHOICES = (
-    (COMMUNITY_DEVELOPMENT, _('Community development')),
-    (SOCIAL_INCLUSION, _('Social inclusion')),
-    (ENVIRONMENT_AND_SUSTAINABILITY, _('Environment and sustainability')),
     (ARTS_AND_CULTURAL_ACTIVITIES, _('Arts and cultural activities')),
+    (COMMUNITY_DEVELOPMENT, _('Community development')),
+    (EDUCATION_AND_RESEARCH, _('Education and research')),
+    (ENVIRONMENT_AND_SUSTAINABILITY, _('Environment and sustainability')),
+    (HEALTH, _('Health')),
     (HUMAN_RIGHTS, _('Human rights')),
-    (YOUTH_PARTICIPATION, _('Youth participation and empowerment')),
     (JOURNALISM, _('Journalism')),
+    (LAW_ADVOCACY_AND_POLICY, _('Law, advocacy and policy')),
     (SOCIAL_ENTREPRENEURSHIP, _('(Social) Entrepreneurship')),
+    (SOCIAL_INCLUSION, _('Social inclusion')),
+    (YOUTH_PARTICIPATION, _('Youth participation and empowerment')),
     (OTHER, _('Other'))
 )
 
