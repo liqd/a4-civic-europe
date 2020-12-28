@@ -410,9 +410,8 @@ class RoadToImpactSectionForm(BaseForm):
             'plan',
             'reach_out',
             'results',
+            'impact',
             'sustainability',
-            'contribution',
-            'knowledge',
             'motivation'
         ]
 

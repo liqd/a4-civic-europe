@@ -99,15 +99,6 @@ class LocalDimensionSection(models.Model):
                        'your project? '),
         help_text=CHALLENGE_HELP
     )
-    impact = models.TextField(
-        blank=True,
-        max_length=800,
-        verbose_name=_('How does your idea strengthen democracy '
-                       'and active citizenship at a local and '
-                       'community level? Please refer to your '
-                       'described challenge. '),
-        help_text=IMPACT_HELP
-    )
     target_group = models.TextField(
         max_length=800,
         verbose_name=_('Who are you doing it for? '),

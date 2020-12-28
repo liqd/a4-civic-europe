@@ -195,9 +195,6 @@ class IdeaDetailView(generic.DetailView):
                             self.object.plan))
         idea_list_1.append((_('What are the expected results?'),
                             self.object.results))
-        idea_list_1.append((_('How does your initiative contribute to '
-                              'strengthening democracy in Europe?'),
-                            self.object.contribution))
         idea_list_1.append((_('What is your story?'),
                             self.object.motivation))
 
