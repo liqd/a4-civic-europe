@@ -1,3 +1,4 @@
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.utils.translation import ugettext as _
 
@@ -24,11 +25,18 @@ DURATION_HELP = _('How many months will it take to implement your idea?')
 class FinancesSection(models.Model):
     total_budget = models.IntegerField(
         verbose_name=_('Total budget'),
-        help_text=TOTAL_BUDGET_HELP
+        help_text=TOTAL_BUDGET_HELP,
+        validators=[
+            MinValueValidator(0)
+        ]
     )
     budget_requested = models.IntegerField(
         verbose_name=_('Funding requested from Civic Europe'),
-        help_text=BUDGET_REQUESTED_HELP
+        help_text=BUDGET_REQUESTED_HELP,
+        validators=[
+            MaxValueValidator(50000),
+            MinValueValidator(0)
+        ]
     )
     major_expenses = models.TextField(
         max_length=500,

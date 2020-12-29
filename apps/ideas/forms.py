@@ -419,16 +419,6 @@ class RoadToImpactSectionForm(BaseForm):
 class FinanceSectionForm(BaseForm):
     section_name = _('Finances')
 
-    budget_requested = forms.IntegerField(
-        max_value=50000,
-        min_value=0,
-        help_text=finances_section.BUDGET_REQUESTED_HELP
-    )
-    total_budget = forms.IntegerField(
-        min_value=0,
-        help_text=finances_section.TOTAL_BUDGET_HELP
-    )
-
     class Meta:
         model = finances_section.FinancesSection
         fields = [
@@ -437,6 +427,11 @@ class FinanceSectionForm(BaseForm):
             'major_expenses',
             'duration'
         ]
+        widgets = {
+            'total_budget': forms.TextInput(attrs={'maxlength': 20}),
+            'budget_requested': forms.TextInput(attrs={'maxlength': 20}),
+            'duration': forms.TextInput(attrs={'maxlength': 20})
+        }
 
     def clean(self):
         cleaned_data = super().clean()
