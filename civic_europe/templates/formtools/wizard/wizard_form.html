@@ -5,10 +5,10 @@
 
 {% block content %}
 <div class="wizard-page">
-    {% if wizard.steps.current == wizard.steps.first %}
-      <div class="container-narrow wizard-warning-text text-center">{% trans "Please note: Your application will NOT be saved until you hit the “Submit” button at the very end of the application form. Please save an offline version of your answers to avoid data lost" %}</div>
-    {% endif %}
     <form class="wizard custom-form container-narrow" method="post" enctype="multipart/form-data" novalidate>
+        {% if wizard.steps.current == wizard.steps.first %}
+          <div class="text-danger mb-3">{% trans "<b>Please note:</b> Your application will NOT be saved until you hit the “Submit” button at the very end of the application form. Please save an offline version of your answers to avoid data lost" %}</div>
+        {% endif %}
         <h1>{{ view.title }} | {{ form.section_name }}</h1>
         {% if form.section_description_header  %}
         <span class="font-weight-bold">{{ form.section_description_header }}</span>
@@ -51,7 +51,7 @@
             <div class="col-md-12">
 
               {% if wizard.steps.next %}
-              <div class="wizard-warning-text">{% trans "Please note: Your application will NOT be saved until you hit the “Submit” button at the very end of the application form. Please save an offline version of your answers to avoid data lost" %}</div>
+              <div class="mb-2">{% trans "<b>Please note:</b> Your application will NOT be saved until you hit the “Submit” button at the very end of the application form. Please <b>save an offline</b> version of your answers to avoid data lost" %}</div>
               {% endif %}
 
                 {% if wizard.steps.prev and wizard.steps.next %}
