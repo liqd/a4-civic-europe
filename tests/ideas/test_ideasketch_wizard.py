@@ -114,6 +114,7 @@ def test_ideasketch_create_wizard(client, user, module, image):
             '4-plan': 'not_sure',
             '4-reach_out': 'Mr. Not So Sure',
             '4-results': 'email@example.com',
+            '4-impact': 'I will balance a ball on my nose',
             '4-sustainability': 'We will be very sure afterwards',
             '4-contribution': 'contribution',
             '4-knowledge': 'knowledge',
