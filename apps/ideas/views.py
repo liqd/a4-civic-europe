@@ -183,25 +183,25 @@ class IdeaDetailView(generic.DetailView):
                             self.object.pitch))
         idea_list_1.append((_('Where will your project idea take place?'),
                             self.object.location))
-        idea_list_1.append((_('What is the local challenge?'),
+        idea_list_1.append((_('What is the specific societal challenge '
+                              'faced by this region?'),
                             self.object.challenge))
-        idea_list_1.append((_('How does your idea strengthen democracy and '
-                              'active citizenship at a local and community '
-                              'level?'),
-                            self.object.impact))
         idea_list_1.append((_('Who are you doing it for?'),
                             self.object.target_group))
         idea_list_1.append((_('How do you plan to get there?'),
                             self.object.plan))
         idea_list_1.append((_('What are the expected results?'),
                             self.object.results))
-        idea_list_1.append((_('What is your story?'),
+        idea_list_1.append((_('How does your idea strengthen active '
+                              'citizenship at a local and community level?'),
+                            self.object.impact))
+        idea_list_1.append((_('Why is this idea important to you?'),
                             self.object.motivation))
 
-        budget_list.append((_('Funding requested from Civic Europe'),
-                            self.object.budget_requested))
         budget_list.append((_('Total budget'),
                             self.object.total_budget))
+        budget_list.append((_('Funding requested from Civic Europe'),
+                            self.object.budget_requested))
 
         idea_list_2.append((_('Major expenses'),
                             self.object.major_expenses))
