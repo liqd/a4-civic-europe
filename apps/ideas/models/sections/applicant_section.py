@@ -1,3 +1,4 @@
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.utils.translation import ugettext as _
 from django_countries.fields import CountryField
@@ -129,6 +130,10 @@ class ApplicantSection(models.Model):
     year_of_registration = models.IntegerField(
         blank=True,
         null=True,
+        validators=[
+            MaxValueValidator(2050),
+            MinValueValidator(0)
+        ]
     )
 
     class Meta:
