@@ -109,7 +109,8 @@ class IdeaSection(models.Model):
     @property
     def idea_field_of_action_names(self):
         choices = dict(FIELD_OF_ACTION_CHOICES)
-        return [choices[action] for action in self.field_of_action]
+        return [choices[action] for action in
+                self.field_of_action if action != 'OT']
 
     @property
     def all_idea_field_of_action_names(self):
