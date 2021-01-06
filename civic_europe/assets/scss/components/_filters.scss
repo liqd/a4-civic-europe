@@ -64,9 +64,18 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        width: 95%;
 
-        @media screen and (max-width: $screen-md-max) {
-            width: 76px;
+        @media screen and (min-width: $screen-sm) {
+            width: 85%;
+        }
+
+        @media screen and (min-width: $screen-md) {
+            width: 90%;
+        }
+
+        @media screen and (min-width: $screen-lg) {
+            width: 92%;
         }
     }
 
