@@ -79,6 +79,14 @@
         color: $brand-danger;
         font-size: $font-size-md;
     }
+
+    .help-block {
+        margin-bottom: $spacer;
+    }
+
+    .form-check-span {
+        font-weight: 400;
+    }
 }
 
 .accordion-toggle {
