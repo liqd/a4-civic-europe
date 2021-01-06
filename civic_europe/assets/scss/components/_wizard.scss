@@ -7,7 +7,7 @@
         padding: 0.5*$spacer;
     }
 
-    background: linear-gradient(to bottom, $ce-lighter-gray 360px, #fff 0%);
+    background: $ce-lighter-gray;
 
     .wizard {
         max-width: 670px;
