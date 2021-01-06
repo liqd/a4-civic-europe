@@ -112,7 +112,7 @@ class ApplicantSectionForm(BaseForm):
             if not details:
                 self.add_error('lead_organisation_details',
                                ("You selected 'other' as "
-                                "organisation status. "
+                                "organization status. "
                                 "Please provide more information "
                                 "about your current status."))
 
@@ -138,16 +138,19 @@ class ApplicantSectionForm(BaseForm):
 class PartnersSectionForm(CoWorkersEmailsFormMixin, BaseForm):
     section_name = _('Partners')
     section_description_header = _('Please share information about '
-                                   'your partner organisations here.')
+                                   'your partner organizations here.')
 
     section_description = _('If you do not have any partner '
-                            'organisations, leave the fields empty. '
+                            'organizations, leave the fields empty. '
                             'You can update these fields any time '
-                            'before the application deadline.')
+                            'before the application deadline. The '
+                            'names of your partner organizations '
+                            'and their online presence will be '
+                            'published in the idea space.')
     accordions = [
-        _('Partner Organisation 1'),
-        _('Partner Organisation 2'),
-        _('Partner Organisation 3'),
+        _('Partner Organization 1'),
+        _('Partner Organization 2'),
+        _('Partner Organization 3'),
     ]
     co_workers_emails = forms.CharField(
         required=False,
@@ -201,10 +204,20 @@ class PartnersSectionForm(CoWorkersEmailsFormMixin, BaseForm):
 
 class PartnersSectionEditForm(CoWorkersEmailsFormMixin, BaseForm):
     section_name = _('Partners')
+    section_description_header = _('Please share information about '
+                                   'your partner organizations here.')
+
+    section_description = _('If you do not have any partner '
+                            'organizations, leave the fields empty. '
+                            'You can update these fields any time '
+                            'before the application deadline. The '
+                            'names of your partner organizations '
+                            'and their online presence will be '
+                            'published in the idea space.')
     accordions = [
-        _('Partner Organisation 1'),
-        _('Partner Organisation 2'),
-        _('Partner Organisation 3'),
+        _('Partner Organization 1'),
+        _('Partner Organization 2'),
+        _('Partner Organization 3'),
     ]
     co_workers_emails = forms.CharField(
         required=False,
