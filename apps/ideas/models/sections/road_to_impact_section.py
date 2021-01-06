@@ -3,15 +3,17 @@ from django.utils.translation import ugettext as _
 
 PLAN_HELP = _('Please describe the activities, specific steps, '
               'methods and approach you will undertake to implement '
-              'your project. (max. 1400 characters)')
+              'your project. This section will be published in the '
+              'idea space. (Max. 1400 characters.)')
 
 REACH_OUT_HELP = _('What actions, measures or (communication) channels '
                    'will you use to reach out to your key target groups '
                    'and others to whom your project is relevant? '
-                   '(max. 400 characters)')
+                   '(Max. 400 characters.)')
 
 RESULTS_HELP = _('At the end of your project phase, what will have changed '
-                 'for the better thanks to it? (max. 800 characters)')
+                 'for the better thanks to it? This section will be '
+                 'published in the idea space. (Max. 800 characters.)')
 
 IMPACT_HELP = _('How will your project help community members get '
                 'actively involved in a social or political issue in '
@@ -21,17 +23,18 @@ IMPACT_HELP = _('How will your project help community members get '
                 'using the means of civic education: providing '
                 'knowledge about institutions, power structures, '
                 'policies and processes etc. or skills like debating '
-                'etc., please describe them. (max. 800 characters)')
+                'etc., please describe them. This section will be '
+                'published in the idea space. (Max. 800 characters.)')
 
 SUSTAINABILITY_HELP = _('What seeds will you plant in order to ensure that '
                         'your initiative continues beyond the project '
                         'funding and that you make an impact? Try to be as '
                         'specific and as realistic as possible. '
-                        '(max. 800 characters)')
+                        '(Max. 800 characters.)')
 
 CONTRIBUTION_HELP = _('Please share how your idea relates to the '
                       'bigger picture and strengthens democracy '
-                      'in Europe. (max. 800 characters)')
+                      'in Europe. (Max. 800 characters.)')
 
 KNOWLEDGE_HELP = _('We are looking for people that know the '
                    'community and region they are working with, '
@@ -40,7 +43,7 @@ KNOWLEDGE_HELP = _('We are looking for people that know the '
                    'summarise their experience and skills. Tell us how you '
                    'are connected to the region your idea will take place '
                    'in and how do you know about the specificities of its '
-                   'civic landscape. (max. 800 characters).')
+                   'civic landscape. (Max. 800 characters).')
 
 MOTIVATION_HELP = _('We are looking for people who know the community '
                     'and region they work with, although anyone with a '
@@ -49,8 +52,9 @@ MOTIVATION_HELP = _('We are looking for people who know the community '
                     'and skills. Tell us how you are connected to the region '
                     'your idea targets and how you know the specifics of its '
                     'civic landscape.  What motivates you to bring this idea '
-                    'to life? What is your connection and mission? '
-                    '(max. 800 characters)')
+                    'to life? What is your connection and mission? This '
+                    'section will be published in the idea space. (Max. 800 '
+                    'characters.)')
 
 
 class RoadToImpactSection(models.Model):

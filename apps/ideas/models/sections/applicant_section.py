@@ -14,12 +14,12 @@ OTHER = 'OT'
 
 LEAD_ORGANISATION_STATUS_CHOICES = (
     (NON_PROFIT, _('I am applying on behalf of '
-                   'a registered non-profit organisation')),
+                   'a registered non-profit organization')),
     (CHARITY, _('I am applying on behalf of a registered '
-                'organisation with charitable purpose')),
+                'organization with charitable purpose')),
     (PUBLIC_INSTITUTION, _('I am applying on behalf of a public institution')),
-    (NON_PROFIT_PLANNED, _('Registration as a non-profit organisation or '
-                           'organisation with charitable purpose is planned '
+    (NON_PROFIT_PLANNED, _('Registration as a non-profit organization or '
+                           'organization with charitable purpose is planned '
                            'or is already underway')),
     (OTHER, _('Other'))
 )
@@ -36,34 +36,36 @@ LEAD_ORGANISATION_LOCATION_CHOICES = (
                          'inhabitants)')),
     (URBAN_AREA, _('City/urban area (population of at least 50,000 '
                    'inhabitants and a density of >1,500 inhabitants '
-                   'per km2, most inhabitants have nonagricultural jobs, '
+                   'per km², most inhabitants have nonagricultural jobs, '
                    'there is good infrastructure such as housing, commercial '
                    'buildings, roads, bridges, and railways)')),
     (TOWN, _('Town (population of at least 5,000 inhabitants and a density of '
-             'at least 300 inhabitants per km2)')),
+             'at least 300 inhabitants per km²)')),
     (RURAL_AREA, _('Village/rural area (population less than 5,000 '
                    'inhabitants, low population density, largely lacking '
                    'or poor infrastructure)')),
 )
 
 LEAD_ORGANISATION_NAME_HELP = _('If you do not yet have '
-                                'a registered organisation, '
+                                'a registered organization, '
                                 'please write the name of '
                                 'your initiative or planned '
-                                'organisation here.')
+                                'organization here. This section '
+                                'will be published in the idea space.')
 CLARIFICATION_LEGAL_STATUS_HELP = _('If you selected “Other,” please provide '
-                                    'details about your current organisation '
-                                    'status (max. 200 characters)')
+                                    'details about your current organization '
+                                    'status. (Max. 200 characters.)')
 LEAD_ORGANISATION_DETAILS_HELP = _('Please describe main goals, vision and '
-                                   'activities of your organisation (max. 500 '
-                                   'characters)')
+                                   'activities of your organization. (Max. '
+                                   '500 characters.)')
 LEAD_ORGANISATION_WEBSITE_HELP = _('Please enter the website of your '
-                                   'organisation here. If you don’t have one, '
+                                   'organization here. If you don’t have one, '
                                    'please enter your Facebook page or '
-                                   'similar online presence.')
+                                   'similar online presence. This section '
+                                   'will be published in the idea space.')
 LEAD_ORGANISATION_LOCATION_HELP = _('Please specify the type of the location '
                                     'to help us better understand the ideas. '
-                                    'If your partner organisation is based in '
+                                    'If your organization is based in '
                                     'more than one location, you can choose '
                                     'more options. The numbers here are more '
                                     'for orientation, you don’t have to look '
@@ -81,12 +83,12 @@ class ApplicantSection(models.Model):
     lead_organisation_name = models.CharField(
         max_length=300,
         blank=True,
-        verbose_name=_('Lead organisation name'),
+        verbose_name=_('Lead organization name'),
         help_text=LEAD_ORGANISATION_NAME_HELP
     )
     lead_organisation_status = models.CharField(
         max_length=255,
-        verbose_name=_('Lead organisation status'),
+        verbose_name=_('Lead organization status'),
         choices=LEAD_ORGANISATION_STATUS_CHOICES
     )
     clarification_legal_status = models.TextField(
@@ -98,23 +100,25 @@ class ApplicantSection(models.Model):
     lead_organisation_details = models.TextField(
         max_length=500,
         blank=True,
-        verbose_name=_('Lead organisation details'),
+        verbose_name=_('Lead organization details'),
         help_text=LEAD_ORGANISATION_DETAILS_HELP
     )
     lead_organisation_website = models.URLField(
         max_length=500,
         blank=True,
-        verbose_name=_('Lead organisation online presence '
+        verbose_name=_('Lead organization online presence '
                        '(website or social media presence)'),
         help_text=LEAD_ORGANISATION_WEBSITE_HELP
     )
     lead_organisation_country = CountryField(
         blank=True,
-        countries=EuropeanCountries
+        countries=EuropeanCountries,
+        verbose_name=_('Lead organization country')
     )
     lead_organisation_location_name = models.CharField(
         max_length=250,
         blank=True,
+        verbose_name=_('Lead organization location name')
     )
     lead_organisation_location = MultiSelectField(
         max_length=255,
@@ -125,7 +129,7 @@ class ApplicantSection(models.Model):
     )
     contact_email = models.EmailField(
         blank=True,
-        verbose_name=_('Lead organisation email')
+        verbose_name=_('Lead organization email')
     )
     year_of_registration = models.IntegerField(
         blank=True,

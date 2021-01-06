@@ -34,18 +34,20 @@ FIELD_OF_ACTION_CHOICES = (
     (OTHER, _('Other'))
 )
 
-TITLE_HELP = _('Give your idea a short and '
-               'meaningful title (max. 50 characters). For instance: '
-               '“Islands of Hope”')
-SUBTITLE_HELP = _('Here you can add a short explanation of your title '
-                  '(max. 200 characters). For instance: “Fostering a '
-                  'culture of democratic dialogue and co-designing a '
-                  'vision for the development of a small island.”')
+TITLE_HELP = _('Give your idea a short and meaningful title, for '
+               'instance: “Islands of Hope”. This section will be '
+               'published in the idea space. (Max. 50 characters.)')
+SUBTITLE_HELP = _('Here you can add a short explanation of your title, '
+                  'for instance: “Fostering a culture of democratic '
+                  'dialogue and co-designing a vision for the '
+                  'development of a small island.”. This section will '
+                  'be published in the idea space. (Max. 200 characters.)')
 PITCH_HELP = _('Share a concise and appealing text that summarizes your '
                'idea, makes the reader want to learn more and that is '
                'memorable. Summarize the challenge you are tackling, '
                'your objective, target group and approach in 3-5 '
-               'sentences. (max. 500 characters)')
+               'sentences. This section will be published in the idea '
+               'space. (Max. 500 characters.)')
 IMAGE_HELP = _('Upload a photo or illustration that visually supports '
                'or explains your idea. The picture will not influence '
                'the selection process but it will be used as a header '
@@ -65,7 +67,8 @@ FIELD_OF_ACTION_HELP = _('Project ideas should be based on democratic values '
                          'education. Please choose 1-2 of the fields below '
                          'that suit your idea. This will not influence the '
                          'selection process, but will help users to filter '
-                         'the ideas in the idea space.')
+                         'the ideas in the idea space. This section will be '
+                         'published in the idea space.')
 
 
 class IdeaSection(models.Model):
@@ -88,7 +91,7 @@ class IdeaSection(models.Model):
     image = fields.ConfiguredImageField(
         'image',
         upload_to='ideas/images',
-        verbose_name=_('Visualise your idea'),
+        verbose_name=_('Visualize your idea'),
         help_text=IMAGE_HELP,
     )
     country_of_implementation = CountryField(
@@ -106,7 +109,7 @@ class IdeaSection(models.Model):
         max_length=50,
         blank=True,
         verbose_name=_('If you chose “Other” please specify briefly here'),
-        help_text=_('(max. 50 characters)')
+        help_text=_('(Max. 50 characters.)')
     )
 
     class Meta:
