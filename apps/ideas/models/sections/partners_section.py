@@ -8,35 +8,38 @@ from apps.ideas.countries import EuropeanCountries
 
 from .applicant_section import LEAD_ORGANISATION_LOCATION_CHOICES
 
-PARTNERS_NAME_LABEL = _('Organisation Name')
+PARTNERS_NAME_LABEL = _('Organization Name')
+PARTNERS_NAME_HELP = _('This section will be published in the idea space.')
 PARTNERS_WEBSITE_LABEL = _('Online presence (website or social media '
                            'presence)')
 PARTNERS_WEBSITE_HELP = _('Please enter the website of your partner here. If '
                           'they don’t have one, please enter their Facebook '
-                          'page or similar online presence.')
+                          'page or similar online presence. This section will '
+                          'be published in the idea space.')
 PARTNERS_COUNTRY_LABEL = _('country')
 PARTNERS_LOCATION_NAME_LABEL = _('Location Name')
 PARTNERS_LOCATION_HELP = _('Please specify the type of the location to help '
                            'us better understand the ideas. If your partner '
-                           'organisation is based in more than one location, '
+                           'organization is based in more than one location, '
                            'you can choose more options. The numbers here '
                            'are more for orientation, you don’t have to look '
                            'up the exact numbers; a rough estimate will '
                            'suffice.')
-PARTNERS_DETAILS_LABEL = _('Partner organisation details')
+PARTNERS_DETAILS_LABEL = _('Partner organization details')
 PARTNERS_DETAILS_HELP = _('Please describe main goals, vision and activities '
-                          'of the organisation. Please also mention the '
-                          'organisation status (NGO, public institution, '
-                          'enterprise, etc.). Any organisation status is '
-                          'possible for partners. (max. 400 characters)')
+                          'of the organization. Please also mention the '
+                          'organization status (NGO, public institution, '
+                          'enterprise, etc.). Any organization status is '
+                          'possible for partners. (Max. 400 characters.)')
 PARTNERS_ROLE_LABEL = _('Please describe the role of your partner in your '
                         'project')
 PARTNERS_ROLE_HELP = _('Why did you choose this partner and how will your '
-                       'partner support you? (max. 400 characters)')
+                       'partner support you? (Max. 400 characters.)')
 PARTNERS_MORE_INFO_HELP = _('Please use this field if you have more than '
-                            'three partner organisations. Please also let '
-                            'us know about planned partnerships. (max. '
-                            '200 characters)')
+                            'three partner organizations. Please also let '
+                            'us know about planned partnerships. This '
+                            'section will be published in the idea space. '
+                            '(Max. 200 characters.)')
 CO_WORKERS_LABEL = _('Please add your team members here.')
 CO_WORKERS_HELP = _('Here you can insert the email addresses of up to four '
                     'team members, separated with commas. They will receive '
@@ -54,12 +57,14 @@ class PartnersSection(models.Model):
     partner_organisation_1_name = models.CharField(
         max_length=300,
         blank=True,
-        verbose_name=PARTNERS_NAME_LABEL
+        verbose_name=PARTNERS_NAME_LABEL,
+        help_text=PARTNERS_NAME_HELP
     )
     partner_organisation_1_website = models.URLField(
         max_length=500,
         blank=True,
-        verbose_name=PARTNERS_WEBSITE_LABEL
+        verbose_name=PARTNERS_WEBSITE_LABEL,
+        help_text=PARTNERS_WEBSITE_HELP
     )
     partner_organisation_1_country = CountryField(
         blank=True,
@@ -93,12 +98,14 @@ class PartnersSection(models.Model):
     partner_organisation_2_name = models.CharField(
         max_length=300,
         blank=True,
-        verbose_name=PARTNERS_NAME_LABEL
+        verbose_name=PARTNERS_NAME_LABEL,
+        help_text=PARTNERS_NAME_HELP
     )
     partner_organisation_2_website = models.URLField(
         max_length=500,
         blank=True,
-        verbose_name=PARTNERS_WEBSITE_LABEL
+        verbose_name=PARTNERS_WEBSITE_LABEL,
+        help_text=PARTNERS_WEBSITE_HELP
     )
     partner_organisation_2_country = CountryField(
         blank=True,
@@ -132,12 +139,14 @@ class PartnersSection(models.Model):
     partner_organisation_3_name = models.CharField(
         max_length=300,
         blank=True,
-        verbose_name=PARTNERS_NAME_LABEL
+        verbose_name=PARTNERS_NAME_LABEL,
+        help_text=PARTNERS_NAME_HELP
     )
     partner_organisation_3_website = models.URLField(
         max_length=500,
         blank=True,
-        verbose_name=PARTNERS_WEBSITE_LABEL
+        verbose_name=PARTNERS_WEBSITE_LABEL,
+        help_text=PARTNERS_WEBSITE_HELP
     )
     partner_organisation_3_country = CountryField(
         blank=True,

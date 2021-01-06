@@ -9,8 +9,9 @@ LOCATION_DETAILS_CHOICES = LEAD_ORGANISATION_LOCATION_CHOICES + \
                         'project will take place '
                         'in several locations)')),)
 
-LOCATION_HELP = _('Please name city, country and/or region (max. 100 '
-                  'characters). For instance: “Teleorman, south Romania.” ')
+LOCATION_HELP = _('Please name city, country and/or region, for instance: '
+                  '“Teleorman, south Romania.”. This section will be '
+                  'published in the idea space. (Max. 100 characters.)')
 
 LOCATION_DETAILS_HELP = _('Please specify the type of the location. We are '
                           'aware that national definitions of urban and '
@@ -20,7 +21,7 @@ LOCATION_DETAILS_HELP = _('Please specify the type of the location. We are '
                           'rural. This question merely helps us to better '
                           'categorize the prospective locations.')
 
-LOCATION_DETAILS_MIXED_HELP = _('(max. 100 characters)')
+LOCATION_DETAILS_MIXED_HELP = _('(Max. 100 characters.)')
 
 COHESION_HELP = _('Civic cohesion is defined as the ability, knowledge and '
                   'willingness of individuals to cooperate with each other '
@@ -32,29 +33,26 @@ COHESION_HELP = _('Civic cohesion is defined as the ability, knowledge and '
                   'include a striving civil society sector, informal groups, '
                   'access to decision and policymaking, community centers, '
                   'libraries, museums, etc.? Please specify. '
-                  '(max. 800 characters)')
+                  '(Max. 800 characters.)')
 
 CHALLENGE_HELP = _('Please be concise and refer only to the challenge(s) '
                    'that your project will address. If possible, link this '
-                   'answer to your previous answer. (max. 800 characters) ')
-
-IMPACT_HELP = _('We are looking for ideas that strengthen democracy and '
-                'active citizenship in local communities. How does your idea '
-                'enhance citizens’ engagement and participation? '
-                '(max. 800 characters)')
+                   'answer to your previous answer. This section will be '
+                   'published in the idea space. (Max. 800 characters.)')
 
 TARGET_GROUP_HELP = _('Please describe the key target groups that you want '
                       'to reach with your project. Try to add some key '
                       'figures about the groups you will be working with. '
-                      '(max. 800 characters)')
+                      'This section will be published in the idea space. '
+                      '(Max. 800 characters.)')
 
 LOCAL_EMBEDDING_HELP = _('Networks, allies, public bodies or others you '
                          'want to include in order to implement your '
-                         'project successfully. (max. 800 characters)')
+                         'project successfully. (Max. 800 characters.)')
 
 UNIQUENESS_HELP = _('Please describe what niche your initiative '
                     'is filling in the specific region and context '
-                    'you are describing above. (max. 800 characters)')
+                    'you are describing above. (Max. 800 characters.)')
 
 PERSPECTIVE_AND_DIALOG_HELP = _('We are looking for ideas that try to build '
                                 'bridges between differently-minded people. '
@@ -62,7 +60,7 @@ PERSPECTIVE_AND_DIALOG_HELP = _('We are looking for ideas that try to build '
                                 'different opinions or different perspectives '
                                 'to engage? How will you ensure that '
                                 'marginalized voices or perspectives can '
-                                'be heard? (max. 800 characters)')
+                                'be heard? (Max. 800 characters.)')
 
 
 class LocalDimensionSection(models.Model):
@@ -86,7 +84,6 @@ class LocalDimensionSection(models.Model):
         help_text=LOCATION_DETAILS_MIXED_HELP
     )
     cohesion = models.TextField(
-        default=_('This question did not exist when this idea was created'),
         max_length=800,
         verbose_name=_('Why is this region or community lacking civic '
                        'cohesion and engagement?'),
@@ -119,7 +116,6 @@ class LocalDimensionSection(models.Model):
         help_text=UNIQUENESS_HELP
     )
     perspective_and_dialog = models.TextField(
-        default=_('This question did not exist when this idea was created'),
         max_length=800,
         verbose_name=_('How will you engage different perspectives in '
                        'dialogue around the societal challenge that you '

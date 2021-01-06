@@ -9,7 +9,7 @@ NETWORK_HELP = _('Winning projects meet at least '
                  'resources, networks and partners when '
                  'describing what you could offer and '
                  'what you would like to take away from '
-                 'such network meetings. (max. 800 characters)')
+                 'such network meetings. (Max. 800 characters.)')
 
 FEEDBACK_HELP = _('Shortened versions of all ideas will be '
                   'published in our idea space, an open space '
@@ -17,7 +17,8 @@ FEEDBACK_HELP = _('Shortened versions of all ideas will be '
                   'ideas. What kind of advice, comments or '
                   'feedback would you like to receive about '
                   'your idea from others on the platform? '
-                  '(max. 300 characters)')
+                  'This section will be published in the idea '
+                  'space. (Max. 300 characters.)')
 
 
 class NetworkSection(models.Model):
