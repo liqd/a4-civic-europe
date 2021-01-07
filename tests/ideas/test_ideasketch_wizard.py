@@ -31,7 +31,7 @@ def test_ideasketch_create_wizard(client, user, module, image):
         response = client.post(url, data)
         assert response.context['form'].errors == {'lead_organisation_details':
                                                    ["You selected 'other' as "
-                                                    "organisation status. "
+                                                    "organization status. "
                                                     "Please provide more "
                                                     "information about your "
                                                     "current status."]}
