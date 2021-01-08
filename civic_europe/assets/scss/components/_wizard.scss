@@ -1,4 +1,7 @@
 .wizard-page {
+    min-height: 82vh;
+    background: $ce-lighter-gray;
+
     @media screen and (min-width: $screen-md) {
         padding: 4*$spacer;
     }
@@ -6,8 +9,6 @@
     @media screen and (max-width: $screen-sm-max) {
         padding: 0.5*$spacer;
     }
-
-    background: $ce-lighter-gray;
 
     .wizard {
         max-width: 670px;
