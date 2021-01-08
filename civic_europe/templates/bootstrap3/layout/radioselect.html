@@ -12,7 +12,7 @@
     {% for choice in field.field.choices %}
       {% if not inline_class %}<div class="form-check">{% endif %}
         <label class="{% if inline_class %}radio-{{ inline_class }}{% endif %}">
-            <input class="form-check-input" type="radio"{% if choice.0|stringformat:"s" == field.value|stringformat:"s" %} checked="checked"{% endif %} name="{{ field.html_name }}" id="id_{{ field.html_name }}_{{ forloop.counter }}" value="{{ choice.0|unlocalize }}" {{ field.field.widget.attrs|flatatt }}><span>{{ choice.1|unlocalize }}</span></input>
+            <input class="form-check-input" type="radio"{% if choice.0|stringformat:"s" == field.value|stringformat:"s" %} checked="checked"{% endif %} name="{{ field.html_name }}" id="id_{{ field.html_name }}_{{ forloop.counter }}" value="{{ choice.0|unlocalize }}" {{ field.field.widget.attrs|flatatt }}><span class="form-check-span">{{ choice.1|unlocalize }}</span></input>
         </label>
       {% if not inline_class %}</div>{% endif %}
     {% endfor %}
