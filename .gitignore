@@ -48,7 +48,14 @@ db.sqlite3*
 static/
 
 # Media
-media/
+media/*
+!media/ideas/
+
+media/ideas/*
+!media/ideas/images/
+
+media/ideas/images/*
+!media/ideas/images/fixture/
 
 # setuptools
 /build
