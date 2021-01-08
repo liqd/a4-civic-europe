@@ -414,6 +414,7 @@
         font-size: $font-size-md;
 
         @media screen and (max-width: $screen-xs-max) {
+            margin-bottom: $spacer;
             font-size: $font-size-base;
         }
 
