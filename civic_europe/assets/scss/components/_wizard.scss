@@ -39,13 +39,10 @@
 
 .wizard {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    padding: 0.25*$spacer 0.5*$spacer;
 
     @media screen and (min-width: $screen-sm) {
         padding: 2*$spacer;
-    }
-
-    @media screen and (max-width: $screen-xs-max) {
-        padding: 0.25*$spacer 0.5*$spacer;
     }
 
     background-color: #fff;

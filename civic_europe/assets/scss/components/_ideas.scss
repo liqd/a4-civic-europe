@@ -482,17 +482,18 @@
     margin-top: 20px;
 
     .well {
-        width: 30%;
+        width: 45%;
         background-color: $ce-light-gray;
         border-radius: 0;
         border: none;
         padding: 10px;
         margin-right: 10px;
-        min-height: 85px;
+        min-height: 120px;
         box-shadow: 0 1px 0 0 $ce-light-gray-shadow;
 
-        @media screen and (max-width: $screen-sm-max) {
-            min-height: 120px;
+        @media screen and (min-width: $screen-sm) {
+            width: 30%;
+            min-height: 85px;
         }
     }
 
