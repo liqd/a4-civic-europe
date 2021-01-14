@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "husky": "4.3.7",
-    "postcss": "8.2.3",
+    "postcss": "8.2.4",
     "standard": "16.0.3",
     "stylelint": "13.8.0"
   },
