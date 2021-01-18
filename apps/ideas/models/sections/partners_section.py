@@ -83,13 +83,13 @@ class PartnersSection(models.Model):
         verbose_name=_('Location'),
         help_text=PARTNERS_LOCATION_HELP
     )
-    partner_organisation_1_details = models.CharField(
+    partner_organisation_1_details = models.TextField(
         max_length=400,
         blank=True,
         verbose_name=PARTNERS_DETAILS_LABEL,
         help_text=PARTNERS_DETAILS_HELP
     )
-    partner_organisation_1_role = models.CharField(
+    partner_organisation_1_role = models.TextField(
         max_length=400,
         blank=True,
         verbose_name=PARTNERS_ROLE_LABEL,
@@ -124,13 +124,13 @@ class PartnersSection(models.Model):
         verbose_name=_('Location'),
         help_text=PARTNERS_LOCATION_HELP
     )
-    partner_organisation_2_details = models.CharField(
+    partner_organisation_2_details = models.TextField(
         max_length=400,
         blank=True,
         verbose_name=PARTNERS_DETAILS_LABEL,
         help_text=PARTNERS_DETAILS_HELP
     )
-    partner_organisation_2_role = models.CharField(
+    partner_organisation_2_role = models.TextField(
         max_length=400,
         blank=True,
         verbose_name=PARTNERS_ROLE_LABEL,
@@ -165,13 +165,13 @@ class PartnersSection(models.Model):
         verbose_name=_('Location'),
         help_text=PARTNERS_LOCATION_HELP
     )
-    partner_organisation_3_details = models.CharField(
+    partner_organisation_3_details = models.TextField(
         max_length=400,
         blank=True,
         verbose_name=PARTNERS_DETAILS_LABEL,
         help_text=PARTNERS_DETAILS_HELP
     )
-    partner_organisation_3_role = models.CharField(
+    partner_organisation_3_role = models.TextField(
         max_length=400,
         blank=True,
         verbose_name=PARTNERS_ROLE_LABEL,
