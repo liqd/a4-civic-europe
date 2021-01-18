@@ -391,6 +391,9 @@ class IdeaSectionForm(BaseForm):
             'field_of_action',
             'field_of_action_other'
         ]
+        widgets = {
+            'country_of_implementation': forms.CheckboxSelectMultiple()
+        }
 
 
 class LocalDimensionSectionForm(BaseForm):
