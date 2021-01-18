@@ -19,7 +19,7 @@ STATUS_FILTER_CHOICES = [
 ]
 
 ORDERING_CHOICES = [
-    ('?', _('Random')),
+    ('?', _('Daily random')),
     ('newest', _('Most recent')),
     ('comments', _('Most comments')),
     ('support', _('Most support')),
