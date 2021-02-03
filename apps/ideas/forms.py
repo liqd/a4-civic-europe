@@ -4,6 +4,7 @@ from zlib import adler32
 import crispy_forms as crisp
 from django import forms
 from django.core.exceptions import ValidationError
+from django.core.validators import RegexValidator
 from django.templatetags.static import static
 from django.utils.translation import ugettext_lazy as _
 
@@ -434,6 +435,7 @@ class RoadToImpactSectionForm(BaseForm):
 
 class FinanceSectionForm(BaseForm):
     section_name = _('Finances')
+    regex_clean = RegexValidator(r'^[0-9]*$')
 
     class Meta:
         model = finances_section.FinancesSection
@@ -453,6 +455,7 @@ class FinanceSectionForm(BaseForm):
         cleaned_data = super().clean()
         budget_requested = cleaned_data.get('budget_requested')
         total_budget = cleaned_data.get('total_budget')
+        self.regex_clean(budget_requested)
 
         if budget_requested and total_budget:
             if budget_requested > total_budget:
