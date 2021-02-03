@@ -1,4 +1,4 @@
-<div class="block-col-{{ column_count }} {% if column.body|wordcount < 50 %} text-center {% endif %}">
+<div class="block-col-{{ column_count }}">
   {% if column.body and not column.link %}
     {{ column.body }}
     {% elif column.body and column.link %}

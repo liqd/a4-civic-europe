@@ -16,13 +16,18 @@
         </div>
         <div class="col-md-6 structured-page-sections-container" data-spy="scroll" data-target="#structured-page-side-nav" data-offset="70">
             {% for block in page.body %}
-            <span class="structured-page-section__anchor" id="section{{ forloop.counter }}"></span>
+              {% if block.block_types == richtext_columns %}
+                <span class="structured-page-section__anchor" id="section{{ forloop.counter }}"></span>
+                {% include_block block %}
+              {% else %}
+                <span class="structured-page-section__anchor" id="section{{ forloop.counter }}"></span>
                 <div class="structured-page-section">
                     <h2>{{ block.value.title }}</h2>
                     {% for block_content in block.value.content %}
                         {% include_block block_content %}
                     {% endfor %}
                 </div>
+              {% endif %}
             {% endfor %}
         </div>
         </div>
