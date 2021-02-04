@@ -9,12 +9,12 @@
     "url": "https://liqd.net"
   },
   "dependencies": {
-    "@babel/core": "7.12.10",
-    "@babel/plugin-transform-modules-commonjs": "7.12.1",
-    "@babel/plugin-transform-runtime": "7.12.10",
-    "@babel/preset-env": "7.12.11",
-    "@babel/preset-react": "7.12.10",
-    "@babel/runtime": "7.12.5",
+    "@babel/core": "7.12.13",
+    "@babel/plugin-transform-modules-commonjs": "7.12.13",
+    "@babel/plugin-transform-runtime": "7.12.13",
+    "@babel/preset-env": "7.12.13",
+    "@babel/preset-react": "7.12.13",
+    "@babel/runtime": "7.12.13",
     "@fortawesome/fontawesome-free": "5.15.2",
     "adhocracy4": "github:liqd/adhocracy4#ce-v2101",
     "autoprefixer": "10.2.4",
