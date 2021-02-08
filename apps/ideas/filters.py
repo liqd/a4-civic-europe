@@ -50,7 +50,7 @@ class ProjectFilterWidget(widgets.DropdownLinkWidget):
 
 
 class CountryFilterWidget(widgets.DropdownLinkWidget):
-    label = _('Organisation Country')
+    label = _('Organization Country')
 
     def __init__(self, attrs=None):
         choices = [('', _('All')), ]
