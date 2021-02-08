@@ -27,7 +27,7 @@ CONFIRM_PUBLICITY_LABEL = _('I hereby confirm and agree that '
                             'used.')
 ACCEPT_CONDITIONS_LABEL = _('I hereby agree to the {}terms'
                             ' of use{} of the Civic'
-                            ' Europe idea challenge.')
+                            ' Europe Idea Challenge.')
 
 COWORKERS_EDIT_TITLE = _('Your team members')
 
