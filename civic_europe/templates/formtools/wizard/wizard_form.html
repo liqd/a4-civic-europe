@@ -7,10 +7,10 @@
 <div class="wizard-page">
     <form class="wizard custom-form container-narrow" method="post" enctype="multipart/form-data" novalidate>
         {% if wizard.steps.current == wizard.steps.first %}
-          <div class="mb-3">{% trans "<b>Please note:</b> Your application will NOT be saved until you hit the “Submit” button at the very end of the application form. Please save an offline version of your answers to avoid lost data." %}</div>
+          <div class="mb-3">{% trans "<b>Please note:</b> Your application will NOT be saved until you hit the “Submit” button at the very end of the application form. Please <b>save an offline</b> version of your answers to avoid lost data." %}</div>
         {% endif %}
         <h1>{{ view.title }} | {{ form.section_name }}</h1>
-        {% if form.section_description_header  %}
+        {% if form.section_description_header  %}s
         <span class="font-weight-bold">{{ form.section_description_header }}</span>
         {% endif %}
         {% if form.section_description  %}
