@@ -37,8 +37,9 @@
 }
 
 .structured-page-side-nav {
-    position: fixed;
+    position: sticky;
     margin-top: 4*$spacer;
+    top: 4*$spacer + $navbar-height;
 
     li {
         font-size: $font-size-md;
