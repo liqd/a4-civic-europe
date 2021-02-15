@@ -19,14 +19,18 @@
               {% if block.block_types == richtext_columns %}
                 <span class="structured-page-section__anchor" id="section{{ forloop.counter }}"></span>
                 <h2>{{ block.value.title }}</h2>
+                <div class="clearfix">
                 {% include_block block.value.content %}
+                </div>
               {% else %}
                 <span class="structured-page-section__anchor" id="section{{ forloop.counter }}"></span>
                 <div class="structured-page-section">
                     <h2>{{ block.value.title }}</h2>
+                    <div class="clearfix">
                     {% for block_content in block.value.content %}
                         {% include_block block_content %}
                     {% endfor %}
+                    </div>
                 </div>
               {% endif %}
             {% endfor %}
