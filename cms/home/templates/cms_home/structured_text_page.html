@@ -18,7 +18,8 @@
             {% for block in page.body %}
               {% if block.block_types == richtext_columns %}
                 <span class="structured-page-section__anchor" id="section{{ forloop.counter }}"></span>
-                {% include_block block %}
+                <h2>{{ block.value.title }}</h2>
+                {% include_block block.value.content %}
               {% else %}
                 <span class="structured-page-section__anchor" id="section{{ forloop.counter }}"></span>
                 <div class="structured-page-section">
