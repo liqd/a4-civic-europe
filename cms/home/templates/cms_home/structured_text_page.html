@@ -7,34 +7,21 @@
 {% block content %}
     <div class="container structured-page">
         <div class="row">
-        <div class="d-none col-md-3 d-md-block">
-            <ul id="structured-page-side-nav" class="nav flex-column structured-page-side-nav">
-                {% for block in page.body %}
-                    <li role="presentation"><a href="#section{{ forloop.counter }}" class="structured-page-side-nav-link"><i class="fa fa-angle-right" aria-hidden="true"></i> {{ block.value.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="col-md-7 structured-page-sections-container" data-spy="scroll" data-target="#structured-page-side-nav" data-offset="70">
-            {% for block in page.body %}
-              {% if block.block_types == richtext_columns %}
-                <span class="structured-page-section__anchor" id="section{{ forloop.counter }}"></span>
-                <h2>{{ block.value.title }}</h2>
-                <div class="clearfix">
-                {% include_block block.value.content %}
-                </div>
-              {% else %}
-                <span class="structured-page-section__anchor" id="section{{ forloop.counter }}"></span>
-                <div class="structured-page-section">
-                    <h2>{{ block.value.title }}</h2>
-                    <div class="clearfix">
-                    {% for block_content in block.value.content %}
-                        {% include_block block_content %}
+            <div class="d-none col-md-3 d-md-block">
+                <ul id="structured-page-side-nav" class="nav flex-column structured-page-side-nav">
+                    {% for block in page.body %}
+                        <li role="presentation"><a href="#section{{ forloop.counter }}" class="structured-page-side-nav-link"><i class="fa fa-angle-right" aria-hidden="true"></i> {{ block.value.title }}</a></li>
                     {% endfor %}
-                    </div>
+                </ul>
+            </div>
+            <div class="col-md-7 structured-page-sections-container" data-spy="scroll" data-target="#structured-page-side-nav" data-offset="70">
+                {% for block in page.body %}
+                <span class="structured-page-section__anchor" id="section{{ forloop.counter }}"></span>
+                <div class="structured-page-section clearfix">
+                  {% include_block block %}
                 </div>
-              {% endif %}
-            {% endfor %}
-        </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock %}

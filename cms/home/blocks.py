@@ -133,6 +133,9 @@ class SectionBlock(StructBlock):
         ]
     )
 
+    class Meta:
+        template = 'cms_home/blocks/section_block.html'
+
 
 class ThreeBlogEntriesBlock(StructBlock):
     title = CharBlock(required=False,
