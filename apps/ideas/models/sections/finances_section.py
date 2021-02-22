@@ -2,6 +2,8 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.utils.translation import ugettext as _
 
+from apps.contrib import fields as custom_fields
+
 TOTAL_BUDGET_HELP = _('Please indicate your overall budget. '
                       'The total budget may (but does not '
                       'have to) include the applicant’s own '
@@ -29,7 +31,7 @@ DURATION_HELP = _('How many months will it take to implement your idea?')
 
 
 class FinancesSection(models.Model):
-    total_budget = models.IntegerField(
+    total_budget = custom_fields.CustomIntegerField(
         verbose_name=_('Total budget'),
         help_text=TOTAL_BUDGET_HELP,
         validators=[
