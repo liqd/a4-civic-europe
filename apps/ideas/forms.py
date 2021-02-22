@@ -99,9 +99,6 @@ class ApplicantSectionForm(BaseForm):
             'contact_email',
             'year_of_registration'
         ]
-        widgets = {
-            'year_of_registration': forms.TextInput(attrs={'maxlength': 20})
-        }
 
     def clean(self):
         cleaned_data = super().clean()
@@ -443,11 +440,6 @@ class FinanceSectionForm(BaseForm):
             'major_expenses',
             'duration'
         ]
-        widgets = {
-            'total_budget': forms.TextInput(attrs={'maxlength': 20}),
-            'budget_requested': forms.TextInput(attrs={'maxlength': 20}),
-            'duration': forms.TextInput(attrs={'maxlength': 20})
-        }
 
     def clean(self):
         cleaned_data = super().clean()
