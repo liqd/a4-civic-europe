@@ -4,6 +4,7 @@ from django.utils.translation import ugettext as _
 from django_countries.fields import CountryField
 from multiselectfield import MultiSelectField
 
+from apps.ideas import fields as custom_fields
 from apps.ideas.countries import EuropeanCountries
 
 NON_PROFIT = 'NP'
@@ -131,7 +132,7 @@ class ApplicantSection(models.Model):
         blank=True,
         verbose_name=_('Lead organization email')
     )
-    year_of_registration = models.IntegerField(
+    year_of_registration = custom_fields.CustomIntegerField(
         blank=True,
         null=True,
         validators=[
