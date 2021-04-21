@@ -27,8 +27,7 @@ class PreCallPhase(BaseIdeaPhase):
         'get an idea how the idea challenge is run'
     )
 
-    default_filters = QueryDict('ordering=newest&'
-                                'status=winner',
+    default_filters = QueryDict('status=winner',
                                 mutable=True
                                 )
 
@@ -67,8 +66,7 @@ class InterimPostSketchPhase(BaseIdeaPhase):
         'submitting of idea sketches is closed'
     )
 
-    default_filters = QueryDict('ordering=newest&'
-                                'status=&'
+    default_filters = QueryDict('status=&'
                                 'project=',
                                 mutable=True
                                 )
@@ -89,8 +87,7 @@ class CommunityAwardRatingPhase(BaseIdeaPhase):
         # rating only for users, that added an idea in this (or previous) years
     }
 
-    default_filters = QueryDict('ordering=comments&'
-                                'status=&'
+    default_filters = QueryDict('status=&'
                                 'project=',
                                 mutable=True
                                 )
@@ -105,8 +102,7 @@ class InterimShortlistSelectionPhase(BaseIdeaPhase):
     name = _('Interim shortlist selection phase')
     description = _('ideas for the shortlist are chosen by the jury')
 
-    default_filters = QueryDict('ordering=support&'
-                                'status=&'
+    default_filters = QueryDict('status=&'
                                 'project=',
                                 mutable=True
                                 )
@@ -121,8 +117,7 @@ class InterimShortlistPublicationPhase(BaseIdeaPhase):
     name = _('Interim shortlist publication phase')
     description = _('the shortlist is published')
 
-    default_filters = QueryDict('ordering=title&'
-                                'status=shortlist&project=',
+    default_filters = QueryDict('status=shortlist&project=',
                                 mutable=True
                                 )
 
@@ -137,8 +132,7 @@ class InterimWinnersPhase(BaseIdeaPhase):
     description = _('winning ideas are from the current idea '
                     'challenge are shown')
 
-    default_filters = QueryDict('ordering=newest&'
-                                'status=winner&'
+    default_filters = QueryDict('status=winner&'
                                 'project=',
                                 mutable=True
                                 )
