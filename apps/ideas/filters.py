@@ -1,4 +1,3 @@
-from datetime import date
 from operator import itemgetter
 
 import django_filters
@@ -7,7 +6,8 @@ from django.utils.translation import ugettext_lazy as _
 
 from adhocracy4.filters import widgets
 from adhocracy4.filters.filters import (DefaultsFilterSet,
-                                        DistinctOrderingFilter, FreeTextFilter)
+                                        DistinctOrderingWithDailyRandomFilter,
+                                        FreeTextFilter)
 from adhocracy4.projects.models import Project
 
 from . import countries, models
@@ -19,7 +19,7 @@ STATUS_FILTER_CHOICES = [
 ]
 
 ORDERING_CHOICES = [
-    ('?', _('Daily random')),
+    ('dailyrandom', _('Daily random')),
     ('newest', _('Most recent')),
     ('comments', _('Most comments')),
     ('support', _('Most support')),
@@ -69,7 +69,7 @@ class FreeTextSearchFilterWidget(widgets.FreeTextFilterWidget):
 class IdeaFilterSet(DefaultsFilterSet):
 
     defaults = {
-        'ordering': '?',
+        'ordering': 'dailyrandom',
         'status': 'winner',
     }
 
@@ -116,7 +116,7 @@ class IdeaFilterSet(DefaultsFilterSet):
         empty_label=_('All ideas')
     )
 
-    ordering = DistinctOrderingFilter(
+    ordering = DistinctOrderingWithDailyRandomFilter(
         fields=(
             ('-created', 'newest'),
             ('-comment_count', 'comments'),
@@ -126,7 +126,6 @@ class IdeaFilterSet(DefaultsFilterSet):
         choices=ORDERING_CHOICES,
         empty_label=None,
         widget=OrderingFilterWidget,
-        random_seed=date.today()
     )
 
     search = FreeTextFilter(
