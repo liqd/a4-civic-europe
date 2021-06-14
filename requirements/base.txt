@@ -9,7 +9,7 @@ django-crispy-forms==1.12.0
 django-cloudflare-push==0.2.0
 django-formtools==2.3
 django-sites==0.10
-feedparser==6.0.2
+feedparser==6.0.5
 micawber==0.5.3
 packaging==20.9
 raven==6.10.0
