@@ -11,7 +11,7 @@ django-formtools==2.3
 django-sites==0.10
 feedparser==6.0.8
 micawber==0.5.3
-packaging==20.9
+packaging==21.0
 raven==6.10.0
 wagtail==2.11.5 # pyup: <2.8
 whitenoise==5.2.0
