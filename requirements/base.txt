@@ -13,7 +13,7 @@ feedparser==6.0.2
 micawber==0.5.3
 packaging==20.9
 raven==6.10.0
-wagtail==2.11.5 # pyup: <2.8
+wagtail==2.11.5 # pyup: <2.12
 whitenoise==5.2.0
 
 # Inherited a4-core requirements
@@ -32,7 +32,7 @@ djangorestframework==3.12.4
 easy-thumbnails==2.7.1
 html5lib==1.1
 jsonfield==3.1.0
-psycopg2-binary==2.8.6
+psycopg2-binary==2.8.6 # pyup: <2.9
 python-dateutil==2.8.1
 python-magic==0.4.22
 rules==2.2
