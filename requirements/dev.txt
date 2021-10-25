@@ -3,7 +3,7 @@ django-debug-toolbar==3.2.2
 factory-boy==3.2.0
 Faker==9.5.3
 flake8-docstrings==1.6.0
-flake8==3.9.1
+flake8==4.0.1
 freezegun==1.1.0
 isort==5.8.0
 pytest-cov==2.11.1
