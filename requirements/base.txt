@@ -27,7 +27,7 @@ django-countries==7.2.1
 django-enumfield==2.0.2
 django-filter==21.1
 django-multiselectfield==0.1.12
-django-widget-tweaks==1.4.8
+django-widget-tweaks==1.4.11
 djangorestframework==3.12.4
 easy-thumbnails==2.7.1
 html5lib==1.1
