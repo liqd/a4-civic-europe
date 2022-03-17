@@ -1,5 +1,5 @@
 # A4
-git+git://github.com/liqd/adhocracy4.git@ce-v2105#egg=adhocracy4
+git+https://github.com/liqd/adhocracy4.git@ce-v2105#egg=adhocracy4
 
 # Additional requirements
 appdirs==1.4.4
@@ -40,4 +40,4 @@ XlsxWriter==1.4.0
 
 # django multiform (released version 0.1 was too old).
 # 2019-04: This is seriously outdated. We should maybe see if there's an alternative
-git+git://github.com/bmispelon/django-multiform.git@0e02f0d5729a80502a290070b474f3e3ac85c926
+git+https://github.com/bmispelon/django-multiform.git@0e02f0d5729a80502a290070b474f3e3ac85c926
