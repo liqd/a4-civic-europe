@@ -143,6 +143,8 @@ DATABASES = {
     }
 }
 
+# default primary key field
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 AUTHENTICATION_BACKENDS = (
     'rules.permissions.ObjectPermissionBackend',
