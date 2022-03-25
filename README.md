@@ -4,7 +4,7 @@ Civic Europe is a platform for an idea challenge. It is
 based on [adhocracy 4](https://github.com/liqd/adhocracy4).
 
 ![Build Status](https://github.com/liqd/a4-civic-europe/actions/workflows/django.yml/badge.svg)
-[![Coverage Status](https://coveralls.io/repos/github/liqd/a4-civic-europe/badge.svg?branch=master)](https://coveralls.io/github/liqd/a4-civic-europe?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/liqd/a4-civic-europe/badge.svg?branch=main)](https://coveralls.io/github/liqd/a4-civic-europe?branch=main)
 
 ## Requirements
 
