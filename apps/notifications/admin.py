@@ -1,8 +1,8 @@
-from django.conf.urls import url
 from django.contrib import messages
 from django.core.exceptions import PermissionDenied
 from django.shortcuts import redirect
 from django.template.response import TemplateResponse
+from django.urls import path
 
 from adhocracy4.phases import models as phase_models
 
@@ -47,13 +47,13 @@ class NotifyMixin:
 
     def get_urls(self):
         return [
-            url(
-                r'^notify/shortlist$',
+            path(
+                'notify/shortlist',
                 self.admin_site.admin_view(self.notify_shortlist),
                 name='civic_europe_ideas_idea_notify_shortlist',
             ),
-            url(
-                r'^notify/winners$',
+            path(
+                'notify/winners',
                 self.admin_site.admin_view(self.notify_winners),
                 name='civic_europe_ideas_idea_notify_winners',
             ),

@@ -1,9 +1,10 @@
 from allauth import urls as allauth_urls
 from ckeditor_uploader import views as ck_views
 from django.conf import settings
-from django.conf.urls import i18n, include, url
+from django.conf.urls import i18n
 from django.contrib import admin
 from django.contrib.auth.decorators import login_required
+from django.urls import include, path, re_path
 from django.views.decorators.cache import never_cache
 from django.views.generic import TemplateView
 from django.views.i18n import JavaScriptCatalog
@@ -46,35 +47,35 @@ sitemaps = {
 }
 
 urlpatterns = [
-    url(r'^django-admin/', admin.site.urls),
-    url(r'^admin/', include(wagtailadmin_urls)),
-    url(r'^documents/', include(wagtaildocs_urls)),
-    url(r'^api/', include(router.urls)),
-    url(r'^api/', include(ct_router.urls)),
-    url(r'^upload/',
-        login_required(ck_views.upload), name='ckeditor_upload'),
-    url(r'^browse/',
-        never_cache(login_required(ck_views.browse)), name='ckeditor_browse'),
+    path('django-admin/', admin.site.urls),
+    path('admin/', include(wagtailadmin_urls)),
+    path('documents/', include(wagtaildocs_urls)),
+    path('api/', include(router.urls)),
+    path('api/', include(ct_router.urls)),
+    path('upload/',
+         login_required(ck_views.upload), name='ckeditor_upload'),
+    path('browse/',
+         never_cache(login_required(ck_views.browse)), name='ckeditor_browse'),
 ]
 
 urlpatterns += [
-    url(r'^accounts/', include(allauth_urls)),
-    url(r'', include(user_urls)),
-    url(r'^ideas/', include(idea_urls)),
-    url(r'^invites/', include(invite_urls)),
-    url(r'^journeys/', include(journey_urls)),
-    url(r'^jsi18n/$', JavaScriptCatalog.as_view(), name='javascript-catalog'),
-    url(r'^i18n/', include(i18n)),
+    path('accounts/', include(allauth_urls)),
+    path('', include(user_urls)),
+    path('ideas/', include(idea_urls)),
+    path('invites/', include(invite_urls)),
+    path('journeys/', include(journey_urls)),
+    path('jsi18n/', JavaScriptCatalog.as_view(), name='javascript-catalog'),
+    path('i18n/', include(i18n)),
 
-    url(r'^sitemap\.xml$', wagtail_sitemap_views.index,
-        {'sitemaps': sitemaps, 'sitemap_url_name': 'sitemaps'}),
-    url(r'^sitemap-(?P<section>.+)\.xml$', wagtail_sitemap_views.sitemap,
-        {'sitemaps': sitemaps}, name='sitemaps'),
-    url(r'^robots\.txt$', TemplateView.as_view(
-        template_name='robots.txt',
-        content_type="text/plain"), name="robots_file"),
+    re_path(r'^sitemap\.xml$', wagtail_sitemap_views.index,
+            {'sitemaps': sitemaps, 'sitemap_url_name': 'sitemaps'}),
+    re_path(r'^sitemap-(?P<section>.+)\.xml$', wagtail_sitemap_views.sitemap,
+            {'sitemaps': sitemaps}, name='sitemaps'),
+    re_path(r'^robots\.txt$', TemplateView.as_view(
+            template_name='robots.txt',
+            content_type="text/plain"), name="robots_file"),
 
-    url(r'', include(wagtail_urls))
+    path('', include(wagtail_urls))
 ]
 
 
@@ -93,5 +94,5 @@ if settings.DEBUG:
         pass
     else:
         urlpatterns = [
-            url(r'^__debug__/', include(debug_toolbar.urls)),
+            path('__debug__/', include(debug_toolbar.urls)),
         ] + urlpatterns
