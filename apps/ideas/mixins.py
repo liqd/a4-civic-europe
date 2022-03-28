@@ -1,6 +1,6 @@
 from django.core.paginator import Paginator
 from django.http import Http404
-from django.utils.http import is_safe_url
+from django.utils.http import url_has_allowed_host_and_scheme
 from django.views import generic
 
 from adhocracy4.exports.mixins import VirtualFieldMixin
@@ -62,7 +62,8 @@ class MultiFormEditMixin():
         # only allow same host as request
         allowed_hosts = {self.request.get_host()}
 
-        if next and is_safe_url(next, allowed_hosts=allowed_hosts):
+        if next and url_has_allowed_host_and_scheme(
+                next, allowed_hosts=allowed_hosts):
             return next
         else:
             return self.request.path
