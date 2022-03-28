@@ -36,7 +36,7 @@ psycopg2-binary==2.8.6 # pyup: <2.9
 python-dateutil==2.8.2
 python-magic==0.4.25
 rules==3.3
-XlsxWriter==1.4.0
+XlsxWriter==3.0.3
 
 # django multiform (released version 0.1 was too old).
 # 2019-04: This is seriously outdated. We should maybe see if there's an alternative
