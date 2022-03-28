@@ -2,7 +2,7 @@ import re
 from urllib.parse import quote
 
 from allauth.account.adapter import DefaultAccountAdapter
-from django.utils.http import is_safe_url
+from django.utils.http import url_has_allowed_host_and_scheme
 
 from adhocracy4.emails import Email
 from adhocracy4.emails.mixins import SyncEmailMixin
@@ -24,8 +24,9 @@ class AccountAdapter(DefaultAccountAdapter):
     def get_email_confirmation_url(self, request, emailconfirmation):
         url = super().get_email_confirmation_url(request, emailconfirmation)
         if ('next' in request.POST and
-            is_safe_url(request.POST['next'],
-                        allowed_hosts={request.get_host()})):
+            url_has_allowed_host_and_scheme(
+                request.POST['next'],
+                allowed_hosts={request.get_host()})):
             return '{}?next={}'.format(url, quote(request.POST['next']))
         else:
             return url
@@ -39,8 +40,9 @@ class AccountAdapter(DefaultAccountAdapter):
 
     def get_email_confirmation_redirect_url(self, request):
         if ('next' in request.GET and
-            is_safe_url(request.GET['next'],
-                        allowed_hosts={request.get_host()})):
+            url_has_allowed_host_and_scheme(
+                request.GET['next'],
+                allowed_hosts={request.get_host()})):
             return request.GET['next']
         else:
             return super().get_email_confirmation_redirect_url(request)

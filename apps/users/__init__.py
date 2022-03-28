@@ -1,5 +1,5 @@
 from django.urls import Resolver404, resolve
-from django.utils.http import is_safe_url
+from django.utils.http import url_has_allowed_host_and_scheme
 from django.utils.translation import gettext_lazy as _
 
 default_app_config = 'apps.users.apps.Config'
@@ -27,7 +27,8 @@ def sanatize_next(request):
 
     if url_name in _get_account_url_names():
         nextparam = request.GET.get('next') or request.POST.get('next') or '/'
-        if is_safe_url(nextparam, allowed_hosts={request.get_host()}):
+        if url_has_allowed_host_and_scheme(nextparam,
+                                           allowed_hosts={request.get_host()}):
             next = nextparam
         else:
             next = '/'
