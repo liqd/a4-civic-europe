@@ -5,7 +5,7 @@ import crispy_forms as crisp
 from django import forms
 from django.core.exceptions import ValidationError
 from django.templatetags.static import static
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from cms.contrib import helpers
 

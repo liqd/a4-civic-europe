@@ -1,5 +1,5 @@
 from django.db import models
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext as _
 
 PLAN_HELP = _('Please describe the activities, specific steps, '
               'methods and approach you will undertake to implement '
