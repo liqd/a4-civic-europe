@@ -1,6 +1,6 @@
 from django.urls import Resolver404, resolve
 from django.utils.http import is_safe_url
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 default_app_config = 'apps.users.apps.Config'
 

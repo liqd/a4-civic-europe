@@ -3,7 +3,7 @@ from django.conf import settings
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext as _
 
 from adhocracy4 import transforms
 from apps.ideas.models import Idea
