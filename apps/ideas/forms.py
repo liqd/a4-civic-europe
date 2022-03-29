@@ -10,15 +10,7 @@ from django.utils.translation import gettext_lazy as _
 from cms.contrib import helpers
 
 from .models import Idea
-from .models.sections import finances_section
-from .models.sections.applicant_section import ApplicantSection
-from .models.sections.idea_section import IdeaSection
-from .models.sections.local_dimension_section import LocalDimensionSection
-from .models.sections.network_community_section import NetworkSection
-from .models.sections.partners_section import (CO_WORKERS_HELP,
-                                               CO_WORKERS_LABEL,
-                                               PartnersSection)
-from .models.sections.road_to_impact_section import RoadToImpactSection
+from .models.sections.partners_section import CO_WORKERS_HELP, CO_WORKERS_LABEL
 
 CONFIRM_PUBLICITY_LABEL = _('I hereby confirm and agree that '
                             'my idea will be public once published. '
@@ -84,7 +76,7 @@ class ApplicantSectionForm(BaseForm):
                             'published together with the application.')
 
     class Meta:
-        model = ApplicantSection
+        model = Idea
         fields = [
             'first_name',
             'last_name',
@@ -158,7 +150,7 @@ class PartnersSectionForm(CoWorkersEmailsFormMixin, BaseForm):
         label=CO_WORKERS_LABEL)
 
     class Meta:
-        model = PartnersSection
+        model = Idea
         fields = list(
             chain.from_iterable((
                 'partner_organisation_{}_name'.format(index),
@@ -225,7 +217,7 @@ class PartnersSectionEditForm(CoWorkersEmailsFormMixin, BaseForm):
         label=CO_WORKERS_LABEL)
 
     class Meta:
-        model = PartnersSection
+        model = Idea
         fields = list(
             chain.from_iterable((
                 'partner_organisation_{}_name'.format(index),
@@ -381,7 +373,7 @@ class IdeaSectionForm(BaseForm):
     section_name = _('Idea')
 
     class Meta:
-        model = IdeaSection
+        model = Idea
         fields = [
             'title',
             'subtitle',
@@ -400,7 +392,7 @@ class LocalDimensionSectionForm(BaseForm):
     section_name = _('Local Dimension')
 
     class Meta:
-        model = LocalDimensionSection
+        model = Idea
         fields = [
             'location',
             'location_details',
@@ -421,7 +413,7 @@ class RoadToImpactSectionForm(BaseForm):
     section_name = _('Road to impact & Motivation')
 
     class Meta:
-        model = RoadToImpactSection
+        model = Idea
         fields = [
             'plan',
             'reach_out',
@@ -436,7 +428,7 @@ class FinanceSectionForm(BaseForm):
     section_name = _('Finances')
 
     class Meta:
-        model = finances_section.FinancesSection
+        model = Idea
         fields = [
             'total_budget',
             'budget_requested',
@@ -472,7 +464,7 @@ class NetworkAndCommunitySectionForm(BaseForm):
             ACCEPT_CONDITIONS_LABEL)
 
     class Meta:
-        model = NetworkSection
+        model = Idea
         fields = [
             'network',
             'feedback',
