@@ -25,7 +25,6 @@ def test_idea_export_view_admin(rf, admin, idea_factory):
     request.user = admin
     response = view(request)
     assert response.status_code == 200
-    assert (response._headers['content-type'] ==
-            ('Content-Type', 'application/vnd.openxmlformats-officedocument.'
-                             'spreadsheetml.sheet'))
-    assert ('download' in response._headers['content-disposition'][1])
+    assert response.headers['Content-type'] == \
+           'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+    assert 'download' in response.headers['Content-disposition']
