@@ -15,7 +15,7 @@
     "@babel/preset-env": "7.12.13",
     "@babel/preset-react": "7.12.13",
     "@babel/runtime": "7.12.13",
-    "@fortawesome/fontawesome-free": "5.15.2",
+    "@fortawesome/fontawesome-free": "5.15.4",
     "adhocracy4": "github:liqd/adhocracy4#7a6ad7685f489ed7c06c19bbf456760755b4eca7",
     "autoprefixer": "10.2.4",
     "axios": "0.21.1",
