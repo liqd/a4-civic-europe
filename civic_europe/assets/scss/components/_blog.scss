@@ -3,7 +3,7 @@
 .blog-category {
     font-size: $font-size-sm;
     font-weight: bold;
-    letter-spacing: .8px;
+    letter-spacing: 0.8px;
     text-transform: uppercase;
     color: $brand-primary;
 }
@@ -20,7 +20,6 @@
         height: auto;
     }
 }
-
 
 // ---------------------- blog_index_page -------------------------------
 
@@ -171,6 +170,7 @@
     .btn-groupie {
         padding: 0;
         white-space: normal;
+
         // make btns in group same height
         float: none;
         display: table-cell;
@@ -184,7 +184,6 @@
         }
     }
 }
-
 
 // ---------------------- blog_page --------------------------
 

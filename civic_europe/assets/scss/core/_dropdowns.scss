@@ -1,4 +1,3 @@
-
 /* Extend the bootstrap dropdown to also work with buttons as entries
    https://github.com/twbs/bootstrap-sass/blob/5d6b2ebba0c2a5885ce2f0e01e9218db3d3b5e47/assets/stylesheets/bootstrap/_dropdowns.scss#L65
 */
@@ -7,6 +6,7 @@
     > li {
         padding-left: 0.5*$padding;
     }
+
     > button,
     > li > button,
     > li > form > button,
