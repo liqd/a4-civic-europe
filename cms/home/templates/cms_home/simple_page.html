@@ -8,9 +8,15 @@
             <div class="col-md-8 offset-md-2">
                 <h1>{{ page.title }}</h1>
                 {% for block in page.body %}
-                <div class="clearfix">
-                	{% include_block block %}
-                </div>
+                  {% if block.block_type == 'text' %}
+                      <div class="rich-text">
+                          {% include_block block %}
+                      </div>
+                  {% else %}
+                      <div class="clearfix">
+                      	  {% include_block block %}
+                      </div>
+                  {% endif %}
                 {% endfor %}
             </div>
         </div>
