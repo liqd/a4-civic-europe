@@ -5,6 +5,9 @@
   "ignoreFiles": [
     "**/_bootstrap-variables.scss"
   ],
+  "plugins": [
+    "stylelint-declaration-strict-value"
+  ],
   "rules": {
     "font-family-name-quotes": "always-unless-keyword",
 
