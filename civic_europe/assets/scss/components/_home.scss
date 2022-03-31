@@ -1,13 +1,13 @@
 .simple-page {
     overflow-wrap: break-word;
-    margin-top: 3*$spacer;
-    padding-bottom: 3*$spacer;
+    margin-top: 3 * $spacer;
+    padding-bottom: 3 * $spacer;
 
     h1 {
         font-size: $h1-font-size;
         font-weight: bold;
         margin-top: 0;
-        margin-bottom: 1.25*$spacer;
+        margin-bottom: 1.25 * $spacer;
     }
 }
 
@@ -16,11 +16,11 @@
 }
 
 .structured-page-sections-container {
-    margin-top: 3*$spacer;
+    margin-top: 3 * $spacer;
 }
 
 .structured-page-section {
-    padding-bottom: 3*$spacer;
+    padding-bottom: 3 * $spacer;
 
     &__anchor {
         display: inline-block;
@@ -30,7 +30,7 @@
 
     h2 {
         margin-top: 0;
-        margin-bottom: 1.25*$spacer;
+        margin-bottom: 1.25 * $spacer;
         font-size: $h2-font-size;
         font-weight: bold;
     }
@@ -38,8 +38,8 @@
 
 .structured-page-side-nav {
     position: sticky;
-    margin-top: 4*$spacer;
-    top: 4*$spacer + $navbar-height;
+    margin-top: 4 * $spacer;
+    top: 4 * $spacer + $navbar-height;
 
     li {
         font-size: $font-size-md;

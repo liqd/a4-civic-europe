@@ -1,9 +1,8 @@
 // Variables
-//
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
-//== Custom
+// == Custom
 $footer-height: 120px;
 $footer-screen-sm-hight: 185px;
 $navbar-height: (4.4 * 1rem);
@@ -23,7 +22,7 @@ $ce-instagram: #e4405f;
 $ce-github: #24292e;
 $ce-border--dark: 1px solid $ce-light-gray-shadow;
 $ce-border--light: 1px solid $ce-light-gray;
-$ce-brand-red: #cc445c; //logo colour #d55169
+$ce-brand-red: #cc445c; // logo colour #d55169
 $ce-brand-green: #01797f;
 $ce-brand-green-lighter: #c4dcdd;
 $ce-brand-green-rgb: rgba(1, 121, 127, 0.2); // currently only use for active blog category
@@ -77,10 +76,10 @@ $colors: map-merge(
     $colors
 );
 
-//CI custom colours
+// CI custom colours
 $brand-primary: #01797f !default;
 $brand-secondary: #d57480 !default;
-$brand-success: #73be46 !default; //was: #5cb85c
+$brand-success: #73be46 !default; // was: #5cb85c
 $brand-info: #5bc0de !default;
 $brand-warning: #f0ad4e !default;
 $brand-danger: #db3918 !default; // was: #db3918
@@ -116,7 +115,7 @@ $theme-colors: map-merge(
     $theme-colors
 );
 
-//CI custom Buttons
+// CI custom Buttons
 $btn-ce-secondary-color: $gray-dark !default;
 $btn-ce-secondary-bg: $ce-brand-red !default;
 $btn-ce-secondary-border: darken($btn-ce-secondary-bg, 5%) !default;
@@ -134,13 +133,11 @@ $btn-default-border: darken($ce-light-gray, 5%) !default;
 $btn-primary-bg: $brand-primary !default;
 
 // Options
-//
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-caret: false !default;
 
 // Spacing
-//
 // Control the default styling of most Bootstrap elements by modifying these
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
@@ -162,14 +159,12 @@ $spacers: map-merge(
 $padding: $spacer !default;
 
 // Body
-//
 // Settings for the `<body>` element.
 
 $body-bg: $white !default;
 $body-color: $gray-900 !default;
 
 // Links
-//
 // Style anchor elements.
 
 $link-color: theme-color("primary") !default;
@@ -182,13 +177,11 @@ $dropdown-link-color: $gray-dark;
 $emphasized-link-hover-darken-percentage: 15% !default;
 
 // Paragraphs
-//
 // Style p element.
 
 $paragraph-margin-bottom: 1rem !default;
 
 // Grid breakpoints
-//
 // Define the minimum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
 
@@ -215,7 +208,6 @@ $screen-sm-max: $screen-sm - 0.1px !default;  // sm
 $screen-md-max: $screen-md - 0.1px !default;
 
 // Grid containers
-//
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
@@ -228,7 +220,6 @@ $container-max-widths: (
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
 // Grid columns
-//
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns: 12 !default;
@@ -236,7 +227,6 @@ $grid-gutter-width: 30px !default;
 $grid-row-columns: 6 !default;
 
 // Components
-//
 // Define common padding and border radius sizes and more.
 
 $line-height-lg: 1.5 !default;
@@ -254,14 +244,13 @@ $component-active-color: $white !default;
 $component-active-bg: theme-color("primary") !default;
 
 // Typography
-//
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
 $font-family-sans-serif: "Lato", Helvetica, Arial, sans-serif !default;
 $font-family-serif: Georgia, "Times New Roman", Times, serif !default;
 
-//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+// ** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base: $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
@@ -284,7 +273,7 @@ $h4-font-size: $font-size-base * 1.5 !default;
 $h5-font-size: $font-size-base * 1.25 !default;
 $h6-font-size: $font-size-base !default;
 
-//custom font size
+// custom font size
 $ce-font-size-extra-large: $font-size-base * 3 !default;
 $headings-margin-bottom: $spacer / 2 !default;
 $headings-font-family: null !default;
@@ -293,7 +282,6 @@ $headings-line-height: 1.2 !default;
 $headings-color: null !default;
 
 // Buttons
-//
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 $btn-font-weight: $demibold !default;
@@ -307,4 +295,4 @@ $btn-block-spacing-y: 0.5rem !default;
 $btn-border-radius: $border-radius !default;
 $btn-border-radius-lg: $border-radius-lg !default;
 $btn-border-radius-sm: $border-radius-sm !default;
-$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default; /* stylelint-disable-line */

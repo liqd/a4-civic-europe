@@ -3,11 +3,11 @@
     background: $ce-lighter-gray;
 
     @media screen and (min-width: $screen-md) {
-        padding: 4*$spacer;
+        padding: 4 * $spacer;
     }
 
     @media screen and (max-width: $screen-sm-max) {
-        padding: 0.5*$spacer;
+        padding: 0.5 * $spacer;
     }
 
     .wizard {
@@ -16,7 +16,7 @@
 
     .breadcrumps {
         max-width: 670px;
-        padding: 0 0 1.25*$spacer 0;
+        padding: 0 0 1.25 * $spacer 0;
     }
 
     .wizard-submit-form {
@@ -28,23 +28,23 @@
     }
 
     .wizard-submit-btn {
-        padding: 0.75*$spacer 1.5*$spacer;
-        margin-top: 0.5*$spacer;
-        margin-bottom: 0.5*$spacer;
+        padding: 0.75 * $spacer 1.5 * $spacer;
+        margin-top: 0.5 * $spacer;
+        margin-bottom: 0.5 * $spacer;
         font-size: $font-size-lg;
         font-weight: bold;
     }
 }
 
-.wizard {
+.wizard { /* stylelint-disable-line */
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
-    padding: 0.25*$spacer 0.5*$spacer;
+    padding: 0.25 * $spacer 0.5 * $spacer;
 
     @media screen and (min-width: $screen-sm) {
-        padding: 2*$spacer;
+        padding: 2 * $spacer;
     }
 
-    background-color: #fff;
+    background-color: $white;
     border-radius: 4px;
     position: relative;
 
@@ -52,7 +52,7 @@
         @media screen and (min-width: $screen-sm) {
             position: absolute;
             left: 102%;
-            top: 1.25*$spacer;
+            top: 1.25 * $spacer;
         }
     }
 }
@@ -101,7 +101,7 @@
             border-radius: 100%;
             border: solid 2px $ce-dark-gray;
 
-            background-color: #fff;
+            background-color: $white;
             margin: 0 auto;
 
             content: "";

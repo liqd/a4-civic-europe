@@ -4,9 +4,9 @@
     // overwrite more specific styling for element in dropdown menu
     // can probably made unimportant with bootstrap update?!
     // and if we change our bootstrap-like styling in dropdowns.scss
-    padding-left: 2*$spacer !important;
-    padding-top: 0.25*$spacer !important;
-    padding-bottom: 0.25*$spacer !important;
+    padding-left: 2 * $spacer !important;
+    padding-top: 0.25 * $spacer !important;
+    padding-bottom: 0.25 * $spacer !important;
 
     position: relative;
 
@@ -29,6 +29,6 @@
 
 .select-item-indicator {
     position: absolute;
-    top: 0.25*$spacer;
-    left: 0.5*$spacer;
+    top: 0.25 * $spacer;
+    left: 0.5 * $spacer;
 }

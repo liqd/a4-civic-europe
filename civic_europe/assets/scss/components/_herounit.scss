@@ -28,7 +28,7 @@
     @media only screen and (max-width: $screen-xs) {
         min-height: 235px;
 
-        //background-size: 100% 60%;
+        // background-size: 100% 60%;
     }
 }
 
@@ -61,7 +61,7 @@
     }
 
     .button {
-        margin-top: 0.75*$spacer;
+        margin-top: 0.75 * $spacer;
     }
 
     a:not(.btn) {
@@ -75,7 +75,7 @@
 
 .herounit-title {
     font-size: $ce-font-size-extra-large;
-    margin: 0 0 0.5*$spacer 0;
+    margin: 0 0 0.5 * $spacer 0;
     font-weight: bold;
     color: $black;
     position: absolute;
@@ -98,14 +98,14 @@
 
 .herounit-content {
     @media screen and (max-width: $screen-xs) {
-        padding-top: 0.5*$spacer;
-        padding-bottom: 1.25*$spacer;
+        padding-top: 0.5 * $spacer;
+        padding-bottom: 1.25 * $spacer;
     }
 }
 
 .herounit-description {
     margin-bottom: $spacer;
-    font-size: 1.25*$spacer;
+    font-size: 1.25 * $spacer;
     font-weight: bold;
     line-height: 1.38;
 

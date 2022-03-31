@@ -43,7 +43,7 @@ a,
         @content;
     }
 
-    ::moz-selection {
+    ::moz-selection { /*  stylelint-disable-line  */
         @content;
     }
 }
@@ -76,12 +76,12 @@ a,
     .navbar {
         margin-bottom: 0;
         border-bottom: none;
-        border-color: #fff;
+        border-color: $white;
         background-color: $ce-light-gray;
     }
 
     .footer-entry {
-        padding: 1.5*$spacer $spacer 0 $spacer;
+        padding: 1.5 * $spacer $spacer 0 $spacer;
         line-height: 1.43;
     }
 }
@@ -174,10 +174,10 @@ a,
 blockquote {
     background-color: $ce-brand-green-lighter;
     border-left: none;
-    padding: 0.5*$spacer 0.75*$spacer;
+    padding: 0.5 * $spacer 0.75 * $spacer;
     font-size: inherit;
 }
 
-quote {
+quote { /* stylelint-disable-line */
     background-color: $ce-brand-green-lighter;
 }

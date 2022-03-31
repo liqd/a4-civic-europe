@@ -4,17 +4,7 @@
     border: $ce-border--light;
     height: $navbar-height;
     padding: 0 0.5 * $padding;
-}
 
-.navbar-brand.navbar-brand {
-    padding: 0.5$spacer 0;
-
-    .navbar-brand-logo {
-        height: 3rem;
-    }
-}
-
-.navbar--default {
     .nav-link {
         background-color: $white;
         font-size: $font-size-base;
@@ -24,6 +14,14 @@
         @media screen and (min-width: $screen-md) {
             padding: 1.5rem 1rem 1rem !important;
         }
+    }
+}
+
+.navbar-brand.navbar-brand {
+    padding: 0.5 * $spacer 0;
+
+    .navbar-brand-logo {
+        height: 3rem;
     }
 }
 
@@ -52,15 +50,11 @@
     overflow-x: visible;
     margin-right: -$spacer;
     margin-left: -$spacer;
-    margin-bottom: 0.5*$spacer;
+    margin-bottom: 0.5 * $spacer;
 }
 
 .navbar-nav .dropdown-menu {
     position: absolute !important;
-}
-
-.nav-item.dropdown.show > .nav-link {
-    background-color: $ce-light-gray;
 }
 
 .nav-item.dropdown.show {

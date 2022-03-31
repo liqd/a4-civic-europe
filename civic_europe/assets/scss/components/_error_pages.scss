@@ -1,13 +1,13 @@
 .error-top {
-    padding-top: 2.5*$spacer;
-    padding-bottom: 2.5*$spacer;
+    padding-top: 2.5 * $spacer;
+    padding-bottom: 2.5 * $spacer;
 }
 
 .error-box {
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
-    background-color: #fff;
+    background-color: $white;
     border-radius: 4px;
-    padding: 2.5*$spacer;
+    padding: 2.5 * $spacer;
 
     .fa,
     .fas,
@@ -16,32 +16,32 @@
     }
 
     .error-status {
-        font-size: 5*$font-size-base;
+        font-size: 5 * $font-size-base;
         font-weight: bold;
     }
 
     .error-message {
         font-size: $font-size-lg;
         font-weight: $demibold;
-        margin-top: 1.25*$spacer;
-        margin-bottom: 1.25*$spacer;
+        margin-top: 1.25 * $spacer;
+        margin-bottom: 1.25 * $spacer;
     }
 
     .error-btn {
         font-size: $font-size-md;
-        padding: 0.5*$spacer 1.25*$spacer;
+        padding: 0.5 * $spacer 1.25 * $spacer;
     }
 }
 
 // The fa-stacking was too small.
 // The following classes work like the fa-classes as commented
-//.fa-3x
+// .fa-3x
 
 .error-stack-size {
-    font-size: 5*$font-size-base;
+    font-size: 5 * $font-size-base;
 }
 
-//still the same as .fa-stack
+// still the same as .fa-stack
 
 .error-stack {
     position: relative;
@@ -52,8 +52,8 @@
     vertical-align: middle;
 }
 
-//.fa-stack-1x,
-//.fa-stack-2x
+// .fa-stack-1x,
+// .fa-stack-2x
 
 .error-stack-1x,
 .error-stack-2x {
@@ -65,9 +65,9 @@
 
 .error-stack-1x {
     line-height: inherit;
-    padding-top: 0.5*$spacer;
+    padding-top: 0.5 * $spacer;
 }
 
 .error-stack-2x {
-    font-size: 10*$font-size-base;
+    font-size: 10 * $font-size-base;
 }

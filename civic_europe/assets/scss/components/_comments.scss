@@ -16,7 +16,7 @@
 
 .comment-box {
     & textarea {
-        margin-top: 0.5*$spacer;
+        margin-top: 0.5 * $spacer;
         border-radius: 5px;
         background-color: $ce-lighter-gray;
         border: 1px solid $ce-light-gray-shadow;
@@ -26,7 +26,7 @@
     .submit-button {
         @extend .btn;
         @extend .btn-primary;
-        margin-right: 0.25*$spacer;
+        margin-right: 0.25 * $spacer;
     }
 
     .cancel-button {
@@ -36,11 +36,11 @@
 }
 
 .comment {
-    margin-top: 0.5*$spacer;
+    margin-top: 0.5 * $spacer;
 
     .comment-author {
         display: inline-block;
-        margin-right: 0.5*$spacer;
+        margin-right: 0.5 * $spacer;
 
         a {
             font-size: $font-size-md;
@@ -61,14 +61,14 @@
 
     .comment-deleted-author {
         display: inline-block;
-        margin-right: 0.5*$spacer;
+        margin-right: 0.5 * $spacer;
         font-size: $font-size-md;
         font-weight: $demibold;
         line-height: 1.5;
     }
 
     .comment-child-list {
-        padding-left: 1.25*$spacer;
+        padding-left: 1.25 * $spacer;
 
         .general-form {
             margin-top: 40px;
@@ -103,7 +103,7 @@
         .dropdown-toggle {
             @extend .btn;
             @extend .btn-default;
-            margin-left: 0.25*$spacer;
+            margin-left: 0.25 * $spacer;
             border: none;
             height: 2rem;
             width: 2rem;
@@ -116,7 +116,7 @@
 
     .open .dropdown-menu {
         position: absolute;
-        background-color: #fff;
+        background-color: $white;
         padding: 0;
         border: none;
         border-radius: 5px;
@@ -140,13 +140,13 @@
             font-size: $font-size-base;
             color: $gray-dark;
             text-align: left;
-            padding: 0.25*$spacer 0.5*$spacer;
+            padding: 0.25 * $spacer 0.5 * $spacer;
         }
     }
 
     .navbar {
         min-height: 0;
-        padding-top: 0.5*$spacer;
+        padding-top: 0.5 * $spacer;
 
         // show answers
 
@@ -179,12 +179,12 @@
         float: right;
         display: block;
 
-        .comment-reply-button {
+        .comment-reply-button { /* stylelint-disable-line */
             @extend .btn;
             @extend .btn-default;
             background-color: $btn-default-bg;
             border: none;
-            padding: 0 0.75*$spacer;
+            padding: 0 0.75 * $spacer;
             height: 2rem;
             vertical-align: baseline;
             font-size: $font-size-md;
@@ -193,7 +193,7 @@
         i.fa,
         i.fas,
         i.far {
-            padding-right: 0.25*$spacer;
+            padding-right: 0.25 * $spacer;
         }
     }
 }
@@ -218,7 +218,7 @@
         i.fa,
         i.fas,
         i.far {
-            padding-right: 0.25*$spacer;
+            padding-right: 0.25 * $spacer;
             color: $brand-success;
         }
     }
@@ -229,7 +229,7 @@
         i.fa,
         i.fas,
         i.far {
-            padding-right: 0.25*$spacer;
+            padding-right: 0.25 * $spacer;
             color: $brand-danger;
         }
     }

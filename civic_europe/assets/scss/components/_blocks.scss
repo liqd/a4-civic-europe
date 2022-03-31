@@ -1,6 +1,6 @@
 .block {
-    padding-top: 1.25*$spacer;
-    padding-bottom: 2*$spacer;
+    padding-top: 1.25 * $spacer;
+    padding-bottom: 2 * $spacer;
 
     &-title {
         margin: 0;
@@ -8,7 +8,7 @@
 }
 
 .block-cta {
-    color: #fff;
+    color: $white;
     background-color: $brand-primary;
 
     &-title {
@@ -16,12 +16,12 @@
     }
 
     &-text {
-        margin-top: 0.5*$spacer;
+        margin-top: 0.5 * $spacer;
     }
 
     &-btn {
         font-size: $font-size-md;
-        padding: 0.5*$spacer $spacer;
+        padding: 0.5 * $spacer $spacer;
         max-width: 100%;
     }
 
@@ -54,7 +54,7 @@
 }
 
 .block-qa {
-    margin-bottom: 0.5*$spacer;
+    margin-bottom: 0.5 * $spacer;
 
     .panel-default {
         box-shadow: none;
@@ -71,7 +71,7 @@
         line-height: 1.33;
         font-weight: normal;
         margin: 0;
-        padding: 0.5*$spacer;
+        padding: 0.5 * $spacer;
     }
 
     .panel-title-link {
@@ -91,14 +91,14 @@
 
     .panel-body {
         border-top: none !important;
-        padding: 0.5*$spacer;
+        padding: 0.5 * $spacer;
     }
 }
 
 .blockblog {
     &-list {
-        margin-top: 1.25*$spacer;
-        margin-bottom: 1.25*$spacer;
+        margin-top: 1.25 * $spacer;
+        margin-bottom: 1.25 * $spacer;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -115,7 +115,7 @@
             margin-bottom: 0;
         }
 
-        margin: 0.25*$spacer $spacer;
+        margin: 0.25 * $spacer $spacer;
         background-color: $ce-light-gray;
         box-shadow: 0 1px 0 0 $ce-light-gray-shadow;
     }
@@ -144,13 +144,13 @@
     }
 
     &-createdates {
-        margin-top: 0.5*$spacer;
+        margin-top: 0.5 * $spacer;
     }
 
     &-btn {
         border-radius: 5px;
         font-size: $font-size-md;
-        padding: 0.5*$spacer $spacer;
+        padding: 0.5 * $spacer $spacer;
     }
 }
 
@@ -195,12 +195,12 @@
         text-align: center;
         font-size: $font-size-lg;
         line-height: 1.33;
-        margin-top: 0.5*$spacer;
-        margin-bottom: 2*$spacer;
+        margin-top: 0.5 * $spacer;
+        margin-bottom: 2 * $spacer;
     }
 
     .three-image-block-row {
-        padding-bottom: 2*$spacer;
+        padding-bottom: 2 * $spacer;
     }
 
     .three-image-block-image-container {
@@ -213,7 +213,7 @@
             height: 3rem;
         }
 
-        img {
+        img { /* stylelint-disable-line */
             max-width: 100%;
             height: auto;
             display: block;
@@ -231,13 +231,13 @@
 }
 
 .block-col-2 {
-    margin-bottom: 1.25*$spacer;
+    margin-bottom: 1.25 * $spacer;
 
     @extend .col-sm-6;
 }
 
 .block-col-3 {
-    margin-bottom: 1.25*$spacer;
+    margin-bottom: 1.25 * $spacer;
 
     @extend .col-sm-4;
 }

@@ -4,7 +4,7 @@
 
 .dropdown-menu {
     > li {
-        padding-left: 0.5*$padding;
+        padding-left: 0.5 * $padding;
     }
 
     > button,
@@ -30,6 +30,7 @@
     }
 }
 
+/* stylelint-disable */
 .dropdown-menu > button,
 .dropdown-menu > li > button,
 .dropdown-menu > li > form > button {
@@ -40,6 +41,7 @@
         background-color: $dropdown-link-hover-bg;
     }
 }
+/* stylelint-enable */
 
 /* Same behaviour for buttons and links in collapsed navbar dropdowns
     https://github.com/twbs/bootstrap-sass/blob/5d6b2ebba0c2a5885ce2f0e01e9218db3d3b5e47/assets/stylesheets/bootstrap/_navbar.scss#L241
@@ -53,9 +55,10 @@
 
             > li > button,
             > li > form > button {
-                padding: 0.25*$spacer $spacer 0.25*$spacer 1.5*$spacer;
+                padding: 0.25 * $spacer $spacer 0.25 * $spacer 1.5 * $spacer;
             }
 
+/* stylelint-disable */
             > li > button,
             > li > form > button {
                 line-height: $line-height-sm;
@@ -69,5 +72,4 @@
         }
     }
 }
-
-/* stylelint-enable max-nesting-depth */
+/* stylelint-enable */

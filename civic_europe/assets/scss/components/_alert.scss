@@ -7,7 +7,7 @@
 .alert-danger {
     background-color: $brand-danger;
     font-size: $font-size-md;
-    color: #fff;
+    color: $white;
     font-weight: bold;
     border: none;
     padding: 0.5rem 0 0.5rem 1rem;
@@ -25,7 +25,7 @@
         display: inline;
         font-family: "Font Awesome 5 Free", sans-serif;
         font-weight: 900;
-        content: "\F071"; //exclamation-triangle
+        content: "\F071"; // exclamation-triangle
     }
 }
 
