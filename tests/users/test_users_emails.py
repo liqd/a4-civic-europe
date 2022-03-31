@@ -17,7 +17,7 @@ def test_register(client, signup_url):
     email = 'testuser@liqd.de'
     response = client.post(
         signup_url, {
-            'username': 'testuser2',
+            'username': 'testuser',
             'email': email,
             'password1': 'password',
             'password2': 'password',
@@ -49,7 +49,7 @@ def test_register(client, signup_url):
 @pytest.mark.django_db
 def test_register_with_next(client, signup_url):
     assert EmailAddress.objects.count() == 0
-    email = 'testuser@liqd.de'
+    email = 'testuser2@liqd.de'
     response = client.post(
         signup_url, {
             'username': 'testuser2',
