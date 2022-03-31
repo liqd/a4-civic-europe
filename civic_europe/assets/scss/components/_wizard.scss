@@ -36,7 +36,6 @@
     }
 }
 
-
 .wizard {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
     padding: 0.25*$spacer 0.5*$spacer;
@@ -57,7 +56,6 @@
         }
     }
 }
-
 
 .wizard-progress {
     position: relative;
@@ -106,14 +104,13 @@
             background-color: #fff;
             margin: 0 auto;
 
-            content: '';
+            content: "";
         }
 
         &.active:before {
-            border-color: $brand-primary ;
+            border-color: $brand-primary;
             background-color: $brand-primary;
         }
-
 
         &.filled:before {
             border-color: $brand-primary;
@@ -133,6 +130,6 @@
         width: 2px;
 
         background: $ce-dark-gray;
-        content: '';
+        content: "";
     }
 }

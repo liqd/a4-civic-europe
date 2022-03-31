@@ -72,7 +72,7 @@
 }
 
 .btn-google {
-    @include  button-variant($btn-ce-google-color, $btn-ce-google-bg, $btn-ce-google-border);
+    @include button-variant($btn-ce-google-color, $btn-ce-google-bg, $btn-ce-google-border);
 }
 
 .btn-back-to {

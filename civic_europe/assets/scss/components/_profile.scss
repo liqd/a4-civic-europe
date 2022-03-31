@@ -27,7 +27,7 @@
 }
 
 .profile-image {
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2)
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .profile-navbar {
@@ -60,9 +60,7 @@
     }
 }
 
-
 @media screen and (min-width: $screen-md) {
-
     /* Ensure that info sidebar is always visible in md
        and above and only a tab in xs
      */
