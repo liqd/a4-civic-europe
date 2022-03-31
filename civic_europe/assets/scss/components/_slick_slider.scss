@@ -61,7 +61,7 @@
     .slick-list {
         overflow: visible;
 
-        padding: 1.25*$spacer 0 0;
+        padding: 1.25 * $spacer 0 0;
 
         @media (max-width: $screen-md) {
             overflow: hidden;
@@ -88,7 +88,7 @@
         }
 
         button {
-            background-color: #fff;
+            background-color: $white;
             border: 0;
             font-size: 0;
             display: block;

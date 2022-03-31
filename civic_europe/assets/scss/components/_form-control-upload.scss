@@ -18,10 +18,10 @@
     .btn-default,
     .btn-danger {
         font-size: $h4-font-size;
-        width: 2.5*$spacer;
+        width: 2.5 * $spacer;
         border: 0;
         border-radius: 0;
-        color: #fff;
+        color: $white;
         padding: 0;
     }
 
@@ -35,7 +35,7 @@
 
     .alert-info {
         clear: left;
-        margin-top: 1.25*$spacer;
+        margin-top: 1.25 * $spacer;
     }
 
     .form-control {

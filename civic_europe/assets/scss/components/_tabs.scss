@@ -3,7 +3,7 @@
     min-height: 0;
 
     .nav-item {
-        margin-top: 0.7*$spacer;
+        margin-top: 0.7 * $spacer;
     }
 
     .nav-item > a:link,
@@ -24,7 +24,7 @@
 
     .nav-item > .active {
         color: $brand-primary;
-        background-color: white;
+        background-color: $white;
         border: 1px solid $border-color;
         border-bottom: 1px solid transparent;
     }

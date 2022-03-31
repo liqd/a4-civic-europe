@@ -1,40 +1,40 @@
 .account-top {
     @media screen and (min-width: $screen-md) {
-        padding-top: 4*$spacer;
-        padding-bottom: 4*$spacer;
+        padding-top: 4 * $spacer;
+        padding-bottom: 4 * $spacer;
     }
 
     @media screen and (max-width: $screen-sm-max) {
-        padding-top: 2.5*$spacer;
-        padding-bottom: 2.5*$spacer;
+        padding-top: 2.5 * $spacer;
+        padding-bottom: 2.5 * $spacer;
     }
 }
 
 .account-box {
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
-    background-color: #fff;
+    background-color: $white;
     border-radius: 4px;
 
     @media screen and (min-width: $screen-sm) {
-        padding: 2*$spacer 4*$spacer;
+        padding: 2 * $spacer 4 * $spacer;
     }
 
     @media screen and (max-width: $screen-xs-max) {
-        padding: 0.5*$spacer;
+        padding: 0.5 * $spacer;
     }
 }
 
 .account-settings {
-    margin-top: 4*$spacer;
+    margin-top: 4 * $spacer;
 
     h1 {
         font-size: $h4-font-size;
-        margin-top: 0.25*$spacer;
-        margin-left: 0.25*$spacer;
+        margin-top: 0.25 * $spacer;
+        margin-left: 0.25 * $spacer;
     }
 
     .well {
-        padding: 0.5*$spacer;
+        padding: 0.5 * $spacer;
         margin-left: $spacer;
         border: none;
         border-radius: 0;
@@ -43,7 +43,7 @@
         box-shadow: 0 1px 0 0 $ce-light-gray-shadow;
 
         .active {
-            background-color: #fff;
+            background-color: $white;
             color: $gray-dark;
             border-radius: 5px;
         }
@@ -53,13 +53,14 @@
         .active .far {
             color: $brand-primary;
         }
-
+/* stylelint-disable */
         .fa,
         .fas,
         .far {
-            margin-right: 0.5*$spacer;
+            margin-right: 0.5 * $spacer;
         }
     }
+/* stylelint-enable */
 
     legend {
         border: none;
@@ -74,7 +75,7 @@
     .list-group-item {
         border: none;
         background-color: $ce-light-gray;
-        padding: 0.25*$spacer $spacer;
+        padding: 0.25 * $spacer $spacer;
 
         a,
         a:hover {

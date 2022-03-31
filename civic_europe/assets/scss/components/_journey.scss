@@ -1,10 +1,10 @@
 .journey {
-    margin-top: 2*$spacer;
+    margin-top: 2 * $spacer;
 
     h3 {
         font-size: $font-size-lg;
-        margin-top: 0.25*$spacer;
-        margin-bottom: 0.25*$spacer;
+        margin-top: 0.25 * $spacer;
+        margin-bottom: 0.25 * $spacer;
     }
 }
 
@@ -17,7 +17,7 @@
 }
 
 .journey-entry {
-    margin-bottom: 3*$spacer;
+    margin-bottom: 3 * $spacer;
     font-size: $font-size-md;
 
     img {
@@ -27,12 +27,12 @@
     }
 
     .co-worker {
-        margin-left: 0.5*$spacer;
+        margin-left: 0.5 * $spacer;
         color: $ce-middle-gray;
     }
 
     .co-worker-link {
-        margin-right: 0.5*$spacer;
+        margin-right: 0.5 * $spacer;
         color: $gray-dark;
         font-size: 14px;
     }
@@ -40,29 +40,29 @@
 
 .journey-link {
     padding: 0;
-    margin-left: 0.5*$spacer;
+    margin-left: 0.5 * $spacer;
     text-decoration: underline $brand-primary;
 }
 
 .journey-btn {
     margin: 0;
-    padding: 0.5*$spacer $spacer;
+    padding: 0.5 * $spacer $spacer;
     border: none;
     font-size: $font-size-md;
     line-height: 1.25;
 }
 
-//---------- Journey Create/Update Views --------------------
+// ---------- Journey Create/Update Views --------------------
 
 .journey-form-top {
     @media screen and (min-width: $screen-md) {
-        padding-top: 2.5*$spacer;
-        padding-bottom: 4*$spacer;
+        padding-top: 2.5 * $spacer;
+        padding-bottom: 4 * $spacer;
     }
 
     @media screen and (max-width: $screen-sm-max) {
-        padding-top: 2.5*$spacer;
-        padding-bottom: 2.5*$spacer;
+        padding-top: 2.5 * $spacer;
+        padding-bottom: 2.5 * $spacer;
     }
 
     background: linear-gradient(to bottom, $ce-lighter-gray 360px, #fff 0%);
@@ -70,7 +70,7 @@
 
 .journey-form-btn-box {
     padding-left: 0;
-    padding-bottom: 1.25*$spacer;
+    padding-bottom: 1.25 * $spacer;
 
     .journey-form-btn {
         font-size: $font-size-md;
@@ -78,7 +78,7 @@
         .fa,
         .fas,
         .far {
-            padding-right: 0.25*$spacer;
+            padding-right: 0.25 * $spacer;
         }
 
         @media screen and (max-width: $screen-sm-max) {
@@ -89,15 +89,15 @@
 
 .journey-form-box {
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
-    background-color: #fff;
+    background-color: $white;
     border-radius: 4px;
 
     @media screen and (min-width: $screen-sm) {
-        padding: 1.25*$spacer;
+        padding: 1.25 * $spacer;
     }
 
     @media screen and (max-width: $screen-xs-max) {
-        padding: 0.5*$spacer;
+        padding: 0.5 * $spacer;
     }
 
     .journey-form-idea {
@@ -108,7 +108,7 @@
 
 .journey-form-save-btn {
     font-size: $font-size-md;
-    padding: 0.25*$spacer $spacer;
+    padding: 0.25 * $spacer $spacer;
 
     @media screen and (max-width: $screen-sm-max) {
         font-size: $font-size-base;

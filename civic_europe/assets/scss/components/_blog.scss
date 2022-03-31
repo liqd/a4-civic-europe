@@ -1,4 +1,4 @@
-//blog_index_page and blog_page
+// blog_index_page and blog_page
 
 .blog-category {
     font-size: $font-size-sm;
@@ -9,7 +9,7 @@
 }
 
 .blog-createdates {
-    margin-top: 0.5*$spacer;
+    margin-top: 0.5 * $spacer;
     font-size: $font-size-base;
     color: $ce-middle-gray;
 }
@@ -33,13 +33,13 @@
 }
 
 .blogindex-no-entry {
-    margin-top: 6*$spacer;
+    margin-top: 6 * $spacer;
     margin-left: 0;
     margin-right: 0;
     text-align: center;
 
     @media screen and (max-width: $screen-xs-max) {
-        margin-top: 1.25*$spacer;
+        margin-top: 1.25 * $spacer;
     }
 }
 
@@ -52,11 +52,11 @@
     }
 
     .blogindex-featured {
-        margin-bottom: 2*$spacer;
+        margin-bottom: 2 * $spacer;
     }
 
     .blogindex-all {
-        margin-bottom: 0.5*$spacer;
+        margin-bottom: 0.5 * $spacer;
     }
 
     .blogindex-text {
@@ -119,25 +119,26 @@
     }
 }
 
-// *********** blogindex category buttons **********************
+//  * ********** blogindex category buttons **********************
 
 .category-title {
     margin-top: 0;
 }
 
-// if theres no featured blog entry shown, the categories have to be shown a bit further down, so that they are below the blue header banner
+// if theres no featured blog entry shown, the categories have to be shown as
+// bit further down, so that they are below the blue header banner
 
 .topics-no-featured {
-    margin-top: 4.5*$spacer;
+    margin-top: 4.5 * $spacer;
 
     @media screen and (max-width: $screen-xs-max) {
-        margin-top: 4*$spacer;
-        margin-bottom: 1.25*$spacer;
+        margin-top: 4 * $spacer;
+        margin-bottom: 1.25 * $spacer;
     }
 }
 
 .blogindex-category-btn {
-    margin-bottom: 0.25*$spacer;
+    margin-bottom: 0.25 * $spacer;
     white-space: normal;
     font-size: $font-size-sm;
     font-weight: bold;
@@ -163,7 +164,7 @@
         max-width: 150px;
     }
 
-    .category-name {
+    .category-name { /* stylelint-disable-line */
         word-wrap: break-word;
     }
 
@@ -188,27 +189,27 @@
 // ---------------------- blog_page --------------------------
 
 .blogpage {
-    margin-top: 2.5*$spacer;
-    margin-bottom: 4*$spacer;
+    margin-top: 2.5 * $spacer;
+    margin-bottom: 4 * $spacer;
 
     .blog-image {
-        margin-top: 2*$spacer;
-        margin-bottom: 2*$spacer;
+        margin-top: 2 * $spacer;
+        margin-bottom: 2 * $spacer;
     }
 
     .blog-image-caption {
         font-style: italic;
-        margin-top: 0.25*$spacer;
+        margin-top: 0.25 * $spacer;
         font-size: $font-size-base;
     }
 
     .blog-category {
-        margin-top: 2.5*$spacer;
+        margin-top: 2.5 * $spacer;
         color: $brand-primary;
     }
 
     .blog-createdates {
-        margin-top: 0.5*$spacer;
+        margin-top: 0.5 * $spacer;
     }
 }
 
@@ -216,12 +217,14 @@
     font-size: $font-size-md;
     font-weight: bold;
 
+/* stylelint-disable */
     .fa,
     .fas,
     .far {
-        padding-right: 0.25*$spacer;
+        padding-right: 0.25 * $spacer;
     }
 }
+/* stylelint-enable */
 
 .blogpage-taeser {
     font-size: $font-size-lg;

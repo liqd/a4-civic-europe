@@ -24,11 +24,11 @@
         align-items: center;
         flex-wrap: wrap;
 
-        padding: 0.25*$spacer;
+        padding: 0.25 * $spacer;
     }
 
     &-label-text {
-        padding-left: 0.25*$spacer;
+        padding-left: 0.25 * $spacer;
         font-size: $font-size-base;
         font-weight: $demibold;
 
@@ -80,6 +80,7 @@
         }
     }
 
+/* stylelint-disable */
     &-cta-unchecked {
         color: $gray;
 
@@ -87,4 +88,5 @@
             color: $gray-light;
         }
     }
+/* stylelint-enable */
 }

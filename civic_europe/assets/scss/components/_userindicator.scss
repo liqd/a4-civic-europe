@@ -57,10 +57,10 @@
         }
 
         .user-indicator-profile-username {
-            padding: 0.5*$spacer 0.75*$spacer;
+            padding: 0.5 * $spacer 0.75 * $spacer;
         }
 
-        .user-indicator-profile-btn {
+        .user-indicator-profile-btn { /* stylelint-disable-line */
             border-right: 2px solid $ce-dark-gray;
             padding: 0;
         }
@@ -104,7 +104,7 @@
     }
 }
 
-.user-indicator-logout-form {
+.user-indicator-logout-form { /* stylelint-disable-line */
     background-color: $ce-light-gray;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
@@ -121,6 +121,6 @@
     }
 
     .btn-default {
-        margin-right: 0.25*$spacer;
+        margin-right: 0.25 * $spacer;
     }
 }

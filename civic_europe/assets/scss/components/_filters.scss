@@ -4,7 +4,7 @@
     border-top-left-radius: 5px;
 
     @media screen and (max-width: $screen-xs-max) {
-        background-color: white;
+        background-color: $white;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
@@ -17,7 +17,7 @@
 .idealist-filter {
     .filter-element {
         @media screen and (min-width: $screen-md) {
-            margin: 0.5*$spacer 0.5*$spacer 0.5*$spacer 0;
+            margin: 0.5 * $spacer 0.5 * $spacer 0.5 * $spacer 0;
         }
     }
 
@@ -37,7 +37,7 @@
         color: $ce-middle-gray;
     }
 
-    .filter-element {
+    .filter-element { /* stylelint-disable-line */
         width: 100%;
 
         .dropdown-menu {
@@ -50,7 +50,7 @@
 
     .filter-element .btn-filter {
         .drop-down-caret {
-            margin-left: 0.5*$spacer;
+            margin-left: 0.5 * $spacer;
             float: right;
             line-height: $font-size-lg;
         }
@@ -88,7 +88,7 @@
 
     .filter-element .search-filter {
         border-radius: 5px;
-        background-color: #fff;
+        background-color: $white;
         border: solid 1px $ce-light-gray-shadow;
         color: $gray-dark;
 
@@ -101,14 +101,14 @@
     .search-filter-input {
         border: none;
         height: 100%;
-        line-height: 1.25*$spacer;
+        line-height: 1.25 * $spacer;
         border-radius: 5px;
         width: 100%;
         float: left;
     }
 
     .mobile-filter {
-        margin-top: 1.25*$spacer;
+        margin-top: 1.25 * $spacer;
         float: none;
         width: 100%;
         border-radius: 5px;
@@ -116,9 +116,9 @@
 
         .btn-collapse {
             width: 100%;
-            height: 2.5*$spacer;
+            height: 2.5 * $spacer;
             margin: 0;
-            padding: 0.25*$spacer 0.75*$spacer;
+            padding: 0.25 * $spacer 0.75 * $spacer;
             background-color: $gray-lighter;
             border: none;
             font-size: $font-size-lg;
@@ -132,12 +132,12 @@
         .btn-collapse .fas,
         .btn-collapse .far {
             float: right;
-            margin-top: 0.25*$spacer;
+            margin-top: 0.25 * $spacer;
         }
 
         .number-of-filters {
-            margin-left: 0.5*$spacer;
-            padding: 0.25*$spacer 0.5*$spacer;
+            margin-left: 0.5 * $spacer;
+            padding: 0.25 * $spacer 0.5 * $spacer;
             border-radius: 50%;
             background-color: $ce-brand-red;
             font-size: $font-size-base;
@@ -173,8 +173,8 @@
 
 .filter-list {
     padding-left: 0;
-    margin-left: 0.25*$spacer;
-    margin-right: 0.25*$spacer;
+    margin-left: 0.25 * $spacer;
+    margin-right: 0.25 * $spacer;
     list-style: none;
 }
 
@@ -205,9 +205,9 @@
 }
 
 .filter-ordering {
-    padding-bottom: 2.5*$spacer;
+    padding-bottom: 2.5 * $spacer;
 
-    .filter-element {
-        padding-top: 2.5*$spacer;
+    .filter-element { /* stylelint-disable-line */
+        padding-top: 2.5 * $spacer;
     }
 }

@@ -12,18 +12,18 @@
     }
 
     h1 {
-        margin-top: 0.5*$spacer;
-        margin-bottom: 1.25*$spacer;
+        margin-top: 0.5 * $spacer;
+        margin-bottom: 1.25 * $spacer;
         font-size: $h4-font-size;
     }
 
     .form-text {
         margin-top: 0;
-        margin-bottom: 0.25*$spacer;
+        margin-bottom: 0.25 * $spacer;
     }
 
     .form-group {
-        margin-bottom: 1.25*$spacer;
+        margin-bottom: 1.25 * $spacer;
     }
 
     .form-control {
@@ -58,7 +58,7 @@
         .error-block {
             position: relative;
             background: $brand-danger;
-            color: #fff;
+            color: $white;
             margin: 0;
             padding: 2px;
         }
@@ -69,7 +69,7 @@
             display: inline;
             font-family: "Font Awesome 5 Free", sans-serif;
             font-weight: 900;
-            content: "\F071"; //exclamation-triangle
+            content: "\F071"; // exclamation-triangle
         }
     }
 
@@ -106,7 +106,7 @@
 .form-link {
     font-weight: bold;
     font-size: $font-size-md;
-    margin-top: -(1.25*$spacer);
-    margin-bottom: 2*$spacer;
+    margin-top: -(1.25 * $spacer);
+    margin-bottom: 2 * $spacer;
     text-transform: capitalize;
 }

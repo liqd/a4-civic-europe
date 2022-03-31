@@ -26,7 +26,7 @@
     }
 }
 
-.profile-image {
+.profile-image { /* stylelint-disable-line */
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -52,7 +52,7 @@
     padding-bottom: $padding;
 
     @media screen and (min-width: $screen-sm) {
-        padding-bottom: 4*$padding;
+        padding-bottom: 4 * $padding;
     }
 
     .profile-navbar {
@@ -67,6 +67,6 @@
 
     .profile-tab-content .profile-info-pane {
         display: block;
-        padding-top: 2*$spacer;
+        padding-top: 2 * $spacer;
     }
 }

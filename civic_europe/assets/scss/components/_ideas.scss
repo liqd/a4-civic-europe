@@ -1,9 +1,9 @@
 .idealist-list-container {
-    padding-bottom: 2.5*$spacer;
+    padding-bottom: 2.5 * $spacer;
 }
 
 .idealist-content {
-    background-color: white;
+    background-color: $white;
     border-radius: 5px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
     margin-bottom: 40px;
@@ -12,9 +12,9 @@
 .idealist-no-entry {
     color: $white;
     background-color: $ce-brand-red;
-    margin-top: 1.25*$spacer;
-    margin-left: 0.25*$spacer;
-    margin-right: 0.25*$spacer;
+    margin-top: 1.25 * $spacer;
+    margin-left: 0.25 * $spacer;
+    margin-right: 0.25 * $spacer;
     padding-top: 30px;
     padding-bottom: 30px;
 
@@ -25,7 +25,7 @@
 }
 
 .idealist-list {
-    margin-top: 1.25*$spacer;
+    margin-top: 1.25 * $spacer;
     display: flex;
     flex-wrap: wrap;
 
@@ -42,24 +42,25 @@
     }
 }
 
-.idealist-itemwrapper {
+.idealist-itemwrapper { /* stylelint-disable-line */
     display: flex;
     flex-direction: column;
 
     width: 100%;
 
     .idealist-item {
-        //https://github.com/philipwalton/flexbugs/tree/676abf342f9284c0fc616ee9c69006eb35a0b2d6#7-flex-basis-doesnt-account-for-box-sizingborder-box
-        margin: 0.25*$spacer;
+        margin: 0.25 * $spacer;
     }
 }
 
+/* stylelint-disable */
 .idealist-item {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 1;
+/* stylelint-enable */
 
     background-color: $ce-light-gray;
     min-height: 400px;
@@ -77,7 +78,7 @@
     }
 
     .idealist-text {
-        padding: 0.75*$spacer;
+        padding: 0.75 * $spacer;
 
         a {
             color: $gray-dark;
@@ -85,13 +86,13 @@
     }
 
     .idealist-footer {
-        padding: 0.75*$spacer;
+        padding: 0.75 * $spacer;
         box-shadow: 0 -1px 0 0 $ce-dark-gray;
 
         .fa,
         .fas,
         .far {
-            padding-left: 0.5*$spacer;
+            padding-left: 0.5 * $spacer;
         }
     }
 
@@ -114,7 +115,7 @@
     text-align: center;
 
     &.margin {
-        margin-top: 1.25*$spacer;
+        margin-top: 1.25 * $spacer;
     }
 }
 
@@ -137,14 +138,14 @@
 
         @media screen and (min-width: $screen-md) {
             height: 23rem;
-            margin-top: 2.5*$spacer;
+            margin-top: 2.5 * $spacer;
         }
     }
 
     // .ideadetailheader-content {
     //     height: 100%;
-    //     margin-left: 0.5 * $spacer;
-    //
+    //     margin-left: 0.5  *  $spacer;
+
     //     @media screen and (min-width: $screen-sm) {
     //         margin-left: $spacer;
     //     }
@@ -161,7 +162,7 @@
     // }
 
     .ideadetail-title {
-        color: #fff;
+        color: $white;
 
         // position: absolute;
         // left: 0;
@@ -196,10 +197,10 @@
 }
 
 .ideadetail-btn {
-    margin-top: 1.25*$spacer;
+    margin-top: 1.25 * $spacer;
 
     @media screen and (max-width: $screen-sm-max) {
-        margin-top: 0.5*$spacer;
+        margin-top: 0.5 * $spacer;
     }
 }
 
@@ -215,12 +216,12 @@
 
     // @media screen and (min-width: $screen-sm) {
     //     // position: absolute;
-    //     // right: 1.25*$spacer;
-    //     // bottom: 0.5*$spacer;
+    //     // right: 1.25 * $spacer;
+    //     // bottom: 0.5 * $spacer;
     // }
-    //
+
     // @media screen and (min-width: $screen-md) {
-    //     // bottom: 1.25*$spacer;
+    //     // bottom: 1.25 * $spacer;
     // }
 }
 
@@ -244,7 +245,7 @@
     .btn-idea,
     .btn-follow {
         background-color: transparent;
-        padding: $spacer 1.25*$spacer;
+        padding: $spacer 1.25 * $spacer;
 
         margin-right: 0;
         border: none;
@@ -270,9 +271,10 @@
             background-color: darken($ce-brand-green-rgb, 10%);
         }
 
+/* stylelint-disable */
         .btn-idea,
         .btn-follow {
-            padding: 0.75*$spacer 1.25*$spacer 0.5*$spacer 1.25*$spacer;
+            padding: 0.75 * $spacer 1.25*$spacer 0.5*$spacer 1.25*$spacer;
             border: none;
             color: #fff;
             background-color: $ce-brand-green;
@@ -286,6 +288,7 @@
         }
     }
 }
+/* stylelint-enable */
 
 .nav .nav-support {
     float: left;
@@ -299,6 +302,7 @@
         background-color: darken($btn-primary-bg, 10%);
     }
 
+/* stylelint-disable */
     a,
     a:hover,
     a:active,
@@ -307,9 +311,10 @@
         background-color: transparent;
         padding: 0;
     }
+/* stylelint-enable */
 
     .btn-support {
-        padding: 0.5*$spacer 1.25*$spacer;
+        padding: 0.5 * $spacer 1.25 * $spacer;
     }
 }
 
@@ -325,26 +330,26 @@
 }
 
 .ideadetail-content {
-    margin-bottom: 4*$spacer;
-    background-color: #fff;
+    margin-bottom: 4 * $spacer;
+    background-color: $white;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
-    border-bottom-left-radius: 0.25*$spacer;
-    border-bottom-right-radius: 0.25*$spacer;
-    padding-bottom: 4*$spacer;
+    border-bottom-left-radius: 0.25 * $spacer;
+    border-bottom-right-radius: 0.25 * $spacer;
+    padding-bottom: 4 * $spacer;
 }
 
 .ideadetail-info-boxes {
-    margin-top: 1.25*$spacer;
+    margin-top: 1.25 * $spacer;
 
     @media screen and (min-width: $screen-md) {
-        margin-top: 2.5*$spacer;
+        margin-top: 2.5 * $spacer;
     }
 }
 
 .ideadetail-info-box {
-    margin-bottom: 0.5*$spacer;
+    margin-bottom: 0.5 * $spacer;
     background-color: $ce-light-gray;
-    padding: 0.5*$spacer 0.75*$spacer;
+    padding: 0.5 * $spacer 0.75 * $spacer;
 
     &.jurystatement {
         background-color: $ce-brand-red;
@@ -355,16 +360,16 @@
     }
 
     .co-worker {
-        margin-left: 0.5*$spacer;
+        margin-left: 0.5 * $spacer;
 
-        a {
+        a { /* stylelint-disable-line */
             color: $gray-dark;
         }
     }
 }
 
 .ideadetailtab-header-content-switcher {
-    a {
+    a { /* stylelint-disable-line */
         color: $gray-dark;
     }
 
@@ -375,11 +380,11 @@
 
 .ideadetail-tab {
     .ideadetailtab-header {
-        margin-top: 2.5*$spacer;
+        margin-top: 2.5 * $spacer;
 
         h2 {
-            margin-top: 1.25*$spacer;
-            margin-bottom: 1.25*$spacer;
+            margin-top: 1.25 * $spacer;
+            margin-bottom: 1.25 * $spacer;
         }
 
         &-content-switcher {
@@ -387,25 +392,25 @@
         }
     }
 
-    h2 {
-        margin-top: 2.5*$spacer;
+    h2 { /* stylelint-disable-line */
+        margin-top: 2.5 * $spacer;
 
         @media screen and (max-width: $screen-xs-max) {
-            margin-top: 1.25*$spacer;
+            margin-top: 1.25 * $spacer;
         }
     }
 
     h4 {
-        margin-bottom: 0.25*$spacer;
-        margin-top: 2*$spacer;
+        margin-bottom: 0.25 * $spacer;
+        margin-top: 2 * $spacer;
 
         @media screen and (max-width: $screen-sm-max) {
-            margin-top: 1.25*$spacer;
+            margin-top: 1.25 * $spacer;
         }
 
         @media screen and (max-width: $screen-xs-max) {
             font-size: $font-size-md;
-            margin-top: 0.5*$spacer;
+            margin-top: 0.5 * $spacer;
         }
     }
 
@@ -422,7 +427,7 @@
             margin-bottom: 0;
         }
 
-        a {
+        a { /* stylelint-disable-line */
             color: $black;
         }
     }
@@ -433,13 +438,13 @@
 }
 
 .ideadetail-controls {
-    padding-top: 1.25*$spacer;
+    padding-top: 1.25 * $spacer;
 }
 
 // -------------------- Idea Detail Comments --------------------
 
 .ideadetail-comments {
-    margin-bottom: 4*$spacer;
+    margin-bottom: 4 * $spacer;
 
     &-title {
         font-weight: $demibold;
@@ -448,7 +453,7 @@
 
 .idea__badge {
     text-transform: uppercase;
-    padding: 0.25*$spacer 0.5*$spacer;
+    padding: 0.25 * $spacer 0.5 * $spacer;
     font-size: $font-size-sm;
     vertical-align: middle;
 }
@@ -456,8 +461,8 @@
 .idealist__badge {
     @extend .idea__badge;
     position: absolute;
-    bottom: 0.5*$spacer;
-    left: 0.5*$spacer;
+    bottom: 0.5 * $spacer;
+    left: 0.5 * $spacer;
     z-index: 1;
 }
 
@@ -502,7 +507,7 @@
         margin-bottom: 5px;
     }
 
-    p {
+    p { /* stylelint-disable-line */
         margin-bottom: 0;
     }
 }
