@@ -41,28 +41,32 @@ module.exports = {
       'slick-carousel/slick/slick.css'
     ],
     image_uploader: [
-      'adhocracy4/adhocracy4/images/assets/image_uploader.js'
+        'adhocracy4/adhocracy4/images/assets/image_uploader.js'
     ]
   },
   output: {
-    libraryTarget: 'var',
-    library: '[name]',
+    library: {
+      name: '[name]',
+      type: 'var'
+    },
     path: path.resolve('./civic_europe/static/'),
     publicPath: '/static/',
     filename: '[name].js'
   },
   externals: {
-    'django': 'django'
+    django: 'django'
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules\/(?!(adhocracy4|bootstrap)\/).*/,  // exclude all dependencies but adhocracy4
-        loader: 'babel-loader',
-        query: {
-          presets: ['@babel/preset-env', '@babel/preset-react'].map(require.resolve),
-          plugins: ['@babel/plugin-transform-runtime', '@babel/plugin-transform-modules-commonjs']
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'].map(require.resolve),
+            plugins: ['@babel/plugin-transform-runtime', '@babel/plugin-transform-modules-commonjs']
+          }
         }
       },
       {
@@ -98,11 +102,19 @@ module.exports = {
       },
       {
         test: /fonts\/.*\.(svg|woff2?|ttf|eot)(\?.*)?$/,
-        loader: 'file-loader?name=fonts/[name].[ext]'
+        // defines asset should always have seperate file
+        type: 'asset/resource',
+        generator: {
+          // defines custom location of those files
+          filename: 'fonts/[name][ext]'
+        }
       },
       {
         test: /\.svg$|\.png$/,
-        loader: 'file-loader?name=images/[name].[ext]'
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext]'
+        }
       }
     ]
   },
@@ -120,17 +132,16 @@ module.exports = {
       filename: '[name].css',
       chunkFilename: '[id].css'
     }),
-    new CopyWebpackPlugin([
-      {
-        from: './civic_europe/assets/images/**/*',
-        to: 'images/',
-        flatten: true
-      },
-      {
-        from: './civic_europe/assets/icons/**/*',
-        to: 'icons/',
-        flatten: true
-       }
-    ])
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: './civic_europe/assets/images/**/*',
+          to: 'images/[name][ext]'
+        },
+        {
+          from: './civic_europe/assets/icons/**/*',
+          to: 'icons/[name][ext]'
+         }
+    ]})
   ]
 }
