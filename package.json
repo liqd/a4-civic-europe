@@ -48,7 +48,7 @@
     "husky": "7.0.4",
     "postcss": "8.2.13",
     "standard": "16.0.4",
-    "stylelint": "13.13.1"
+    "stylelint": "14.6.1"
   },
   "scripts": {
     "build:prod": "webpack --config ./webpack.prod.js --mode production",
