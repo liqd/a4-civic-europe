@@ -10,6 +10,7 @@ const $ = window.jQuery = window.$ = require('jquery')
 require('bootstrap')
 
 require('../../../civic_europe/assets/js/civic_europe')
+require('../../../civic_europe/assets/js/wagtail-videoembed-fix')
 
 $(function () {
   widget.initialise('a4', 'comment', ReactComments.renderComment)
