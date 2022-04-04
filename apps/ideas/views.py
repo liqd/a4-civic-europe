@@ -48,12 +48,6 @@ class IdeaExportView(PermissionRequiredMixin,
         return 'download_%s' % (
             datetime.now(settings_time_zone).strftime('%Y%m%dT%H%M%S'))
 
-    def get_queryset(self):
-        queryset = super().get_queryset()\
-            .annotate_comment_count()\
-            .annotate_positive_rating_count()
-        return queryset
-
     @property
     def raise_exception(self):
         return self.request.user.is_authenticated
@@ -247,12 +241,6 @@ class IdeaListView(mixins.CtaPaginatorMixin, filter_views.FilteredListView):
     @property
     def active_phase(self):
         return Phase.objects.active_phases().last()
-
-    def get_queryset(self):
-        queryset = super().get_queryset()\
-            .annotate_comment_count()\
-            .annotate_positive_rating_count()
-        return queryset
 
     def filter_kwargs(self):
         default_kwargs = super().filter_kwargs()
