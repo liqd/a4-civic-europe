@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const videoEmbeds = document.querySelectorAll('.rich-text iframe')
 
   for (const videoEmbed of videoEmbeds) {
