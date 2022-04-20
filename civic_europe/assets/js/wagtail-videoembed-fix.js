@@ -1,5 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const videoEmbeds = document.querySelectorAll('.rich-text iframe')
+  const iframeSelectors = [
+    '.rich-text iframe',
+    '.block-qa iframe',
+    '.block-col-1 iframe',
+    '.block-col-2 iframe',
+    '.block-col-3 iframe'
+  ]
+
+  const videoEmbeds = document.querySelectorAll(iframeSelectors.join(', '))
 
   for (const videoEmbed of videoEmbeds) {
     const parentOfEmbed = videoEmbed.parentElement
