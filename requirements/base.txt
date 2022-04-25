@@ -5,7 +5,7 @@ git+https://github.com/liqd/adhocracy4.git@ce-v2204#egg=adhocracy4
 appdirs==1.4.4
 bcrypt==3.2.0
 brotli==1.0.9
-django-crispy-forms==1.13.0
+django-crispy-forms==1.14.0
 django-cloudflare-push==0.2.1
 django-formtools==2.3
 django-sites==0.11
