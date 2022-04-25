@@ -154,16 +154,19 @@ a,
         width: 100%;
     }
 
-    &.left {
+    &.left,
+    &.right {
         width: 50%;
-        float: left;
         margin-right: $spacer;
+        margin-bottom: $spacer;
+    }
+
+    &.left {
+        float: left;
     }
 
     &.right {
-        width: 50%;
         float: right;
-        margin-left: $spacer;
     }
 }
 
