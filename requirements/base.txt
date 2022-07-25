@@ -14,7 +14,7 @@ micawber==0.5.3
 packaging==21.3
 raven==6.10.0
 wagtail==3.0.1
-whitenoise==6.0.0
+whitenoise==6.2.0
 
 # Inherited a4-core requirements
 bleach==4.1.0
