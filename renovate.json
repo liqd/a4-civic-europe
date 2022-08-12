@@ -24,8 +24,18 @@
       {
         "packagePatterns": ["^eslint"],
         "groupName": "eslint packages"
+      },
+      {
+        "matchPackageNames": ["Django"],
+        "allowedVersions": "=3.2"
+      },
+      {
+        "matchPackageNames": ["psycopg2-binary"],
+        "allowedVersions": "=2.8"
       }
     ],
 
-  "schedule": ["on thursday"]
+  "pip_requirements": {
+    "fileMatch": ["^requirements/.*\\.txt$"]
+  }
 }
