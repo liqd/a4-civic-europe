@@ -19,7 +19,7 @@
     "adhocracy4": "github:liqd/adhocracy4#ce-v2204.1",
     "autoprefixer": "10.4.7",
     "babel-loader": "8.2.5",
-    "bootstrap": "4.6.1",
+    "bootstrap": "5.2.3",
     "classnames": "2.3.1",
     "copy-webpack-plugin": "10.2.4",
     "css-loader": "6.7.1",
